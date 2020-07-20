@@ -1,0 +1,8 @@
+com\droom\automation\RegistrationTest.class
+com\droom\automation\credit\SignUpAsBorrowerTest.class
+com\droom\automation\credit\SignUpAsPplLenderTest.class
+com\droom\automation\LoginTest.class
+com\droom\automation\credit\SignUpAsPptLenderTest.class
+com\droom\automation\HomePageTest.class
+com\droom\automation\credit\HomePageTest.class
+com\droom\automation\SellFeatureTest.class
