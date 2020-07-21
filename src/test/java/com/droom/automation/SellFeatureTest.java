@@ -22,7 +22,6 @@ public class SellFeatureTest extends AbstractBaseTest
 		sp.activateListing();
 		PaymentPage paymentpage=new PaymentPage();
 		paymentpage.paymentViaNetBanking();
-		//paymentpage.proceedToCheckout();
 	}
 
 }
