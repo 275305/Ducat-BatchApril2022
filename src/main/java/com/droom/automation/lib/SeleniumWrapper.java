@@ -3,6 +3,7 @@ package com.droom.automation.lib;
 import com.droom.automation.constants.UIConstants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
@@ -14,6 +15,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -161,7 +167,7 @@ public class SeleniumWrapper {
         webelement.sendKeys(keysToSend);
     }
 
-    public void selectOptionByText(final By by, final String visibleValue) 
+    public void selectOptionByText(final By by, final String visibleValue)
     {
         Select select = new Select(WebDriverFactory.getDriver().findElement(by));
         select.selectByVisibleText(visibleValue);
@@ -188,7 +194,7 @@ public class SeleniumWrapper {
         select.selectByIndex(index);
     }
 
-    public List<String> getDropDownOptionText(final By by) 
+    public List<String> getDropDownOptionText(final By by)
     {
         List<String> optionsText = new ArrayList<>();
         Select select = new Select(WebDriverFactory.getDriver().findElement(by));
@@ -252,7 +258,7 @@ public class SeleniumWrapper {
     }
 
     public void executeScrollDownScript(final int pixels) {
-        ((JavascriptExecutor)WebDriverFactory.getDriver()).executeScript("window.scrollBy(0, " + pixels + ")", "");
+        ((JavascriptExecutor)WebDriverFactory.getDriver()).executeScript("window.scrollBy(0, " + pixels + ")");
     }
 
     public void executeScrollIntoViewScript(final WebElement webElement) 
@@ -327,7 +333,48 @@ public class SeleniumWrapper {
 		System.out.println(actual_text+" is displaying hence verified");
 		
 	}
+	
+	public void selectCity() throws InterruptedException
+	{
+		String jscode="document.getElementsByClassName('form-control floating-control lp-search')[1].setAttribute('value','Delhi')";
+		JavascriptExecutor js=(JavascriptExecutor)WebDriverFactory.getDriver();
+		js.executeScript(jscode); 
+	}
+	
+	public void scrolling(String path)
+	{
+		String jsCode = "arguments[0].scrollIntoView";
+		String xpath = path;
+		JavascriptExecutor je=(JavascriptExecutor) WebDriverFactory.getDriver();
+		je.executeScript(jsCode, WebDriverFactory.getDriver().findElement(By.xpath(xpath)));
+		WebDriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		String jsCode2 = "arguments[0].click()";
+		je.executeScript(jsCode2, WebDriverFactory.getDriver().findElement(By.xpath(xpath)));
+    }
     
+	public void enterKey(final By locator)
+	{
+		WebDriverFactory.getDriver().findElement(locator).sendKeys(Keys.ENTER);
+	}
+	
+	public void driverClick(final By locator)
+	{
+		WebDriverFactory.getDriver().findElement(locator).click();
+	}
+	
+	public void fileUpload(String file) throws AWTException
+	{
+		Robot rb=new Robot();
+		StringSelection str=new StringSelection(file);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
+		rb.keyPress(KeyEvent.VK_CONTROL);
+		rb.keyPress(KeyEvent.VK_V);
+		rb.keyRelease(KeyEvent.VK_CONTROL);
+		rb.keyRelease(KeyEvent.VK_V);
+		rb.keyPress(KeyEvent.VK_ENTER);
+		rb.keyRelease(KeyEvent.VK_ENTER);
+    }
+	
     
 /*    public void cusAssertEquals(String actual, String expected) {
     	Assert.assertEquals(actual, expected);

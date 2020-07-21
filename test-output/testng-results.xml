@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39439" started-at="2020-07-20T20:26:40 IST" finished-at="2020-07-20T20:27:19 IST">
+  <suite name="Default suite" duration-ms="197238" started-at="2020-07-21T15:22:19 IST" finished-at="2020-07-21T15:25:36 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39439" started-at="2020-07-20T20:26:40 IST" finished-at="2020-07-20T20:27:19 IST">
-      <class name="com.droom.automation.RegistrationTest">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.RegistrationTest@778d1062]" name="beforeSuite" is-config="true" duration-ms="40" started-at="2020-07-20T20:26:40 IST" finished-at="2020-07-20T20:26:40 IST">
+    <test name="Default test" duration-ms="197238" started-at="2020-07-21T15:22:19 IST" finished-at="2020-07-21T15:25:36 IST">
+      <class name="com.droom.automation.SellFeatureTest">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.SellFeatureTest@778d1062]" name="beforeSuite" is-config="true" duration-ms="25" started-at="2020-07-21T15:22:19 IST" finished-at="2020-07-21T15:22:19 IST">
           <params>
             <param index="0">
               <value>
@@ -18,30 +18,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.RegistrationTest@778d1062]" name="beforeTest" is-config="true" duration-ms="22" started-at="2020-07-20T20:26:40 IST" finished-at="2020-07-20T20:26:40 IST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.SellFeatureTest@778d1062]" name="beforeTest" is-config="true" duration-ms="13" started-at="2020-07-21T15:22:19 IST" finished-at="2020-07-21T15:22:19 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.RegistrationTest@778d1062]" name="init" is-config="true" duration-ms="14828" started-at="2020-07-20T20:26:40 IST" finished-at="2020-07-20T20:26:55 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.SellFeatureTest@778d1062]" name="init" is-config="true" duration-ms="49393" started-at="2020-07-21T15:22:19 IST" finished-at="2020-07-21T15:23:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="RegistrationForProSellerAccount()[pri:2, instance:com.droom.automation.RegistrationTest@778d1062]" name="RegistrationForProSellerAccount" duration-ms="23481" started-at="2020-07-20T20:26:55 IST" finished-at="2020-07-20T20:27:18 IST">
+        <test-method status="PASS" signature="sellFeatureValidation()[pri:0, instance:com.droom.automation.SellFeatureTest@778d1062]" name="sellFeatureValidation" duration-ms="146623" started-at="2020-07-21T15:23:09 IST" finished-at="2020-07-21T15:25:36 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RegistrationForProSellerAccount -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.RegistrationTest@778d1062]" name="afterMethod" is-config="true" duration-ms="842" started-at="2020-07-20T20:27:19 IST" finished-at="2020-07-20T20:27:19 IST">
+        </test-method> <!-- sellFeatureValidation -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.SellFeatureTest@778d1062]" name="afterMethod" is-config="true" duration-ms="803" started-at="2020-07-21T15:25:36 IST" finished-at="2020-07-21T15:25:36 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=RegistrationForProSellerAccount status=SUCCESS method=RegistrationTest.RegistrationForProSellerAccount()[pri:2, instance:com.droom.automation.RegistrationTest@778d1062] output={null}]]]>
+                <![CDATA[[TestResult name=sellFeatureValidation status=SUCCESS method=SellFeatureTest.sellFeatureValidation()[pri:0, instance:com.droom.automation.SellFeatureTest@778d1062] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.droom.automation.RegistrationTest -->
+      </class> <!-- com.droom.automation.SellFeatureTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
