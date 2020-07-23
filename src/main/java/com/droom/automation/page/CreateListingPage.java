@@ -34,38 +34,43 @@ public class CreateListingPage extends SeleniumWrapper
 	private final static By Click_Get_Later=By.xpath("//button[text()='Maybe Later']");
 	private final static By Click_Save_And_Continue_After_Selecting_ListingType=By.xpath("//input[@id='original_submit-button']");
 	private final static By Click_For_Premium=By.xpath("//div[text()='₹499/-']");
-	private final static By Click_For_Free=By.xpath("//div[text()='free']");
+	private final static By Click_For_Normal=By.xpath("//div[text()='free']");
 	private final static By Click_For_Concierge=By.xpath("//div[text()='₹699/-']");
 	private final static By Click_Activate_Listing_Button=By.xpath("//input[@id='activate']");
-	//private final static By =By.xpath("");
-	
+	private final static By Click_Cirtification_Tool_Continue_Button=By.xpath("(//input[@value='Save and Continue'])[6]");
+	private final static By Verify_Catogory_Car=By.xpath("//select[@id='wizard_category_id']//option[text()='Car']");
+	private final static By Check_Image=By.xpath("//div[@id='photo']//img");
+	private final static By Verify_Listing_Save_And_Continue=By.xpath("(//input[@value='Save & Continue'])[1]");
 
 	
 	public void createYourListing() throws InterruptedException
 	{
 		LoginPage lp=new LoginPage();
-		lp.EnterLoginPage();
-		lp.LoginValidation();
-		sleep(3000);
+		lp.enterLoginPage();
+		lp.loginValidationForIndividualAccount();
 		executeClickOnElement(Go_To_Home);
 		sleep(3000);
 		HomePage hp=new HomePage();
-		hp.enterSell();
+		hp.enterSellByTopPanel();
 		selectOptionByText( Select_Catogory, "Car");
+		sleep(2000);
+		verifyByText(Verify_Catogory_Car, "Car");
 		sleep(3000);
 		executeClickOnElement(Click_Location);
 		selectCity();
 		scrolling("(//li[text()='Delhi'])[3]");
-		selectOptionByText(Select_Make, "Audi");
-		verifyByContains("//select[@id='make']", "Audi");
-		selectOptionByText(Select_Model, "Q3");
-		verifyByContains("//select[@id='model']", "Q3");
+		sleep(2000);
+		selectOptionByText(Select_Make,"Audi" );
+		verifyByContains(Select_Make, "Audi");
+		selectOptionByText(Select_Model,"Q3" );
+		verifyByContains(Select_Model, "Q3");
 		selectOptionByText(Select_Year, "2020");
-		verifyByContains("//select[@id='year']", "2020");
+		verifyByContains(Select_Year, "2020");
 		selectOptionByText(Select_Trim, "30 TFSI PREMIUM");
-		verifyByContains("//select[@id='trim']", "30 TFSI PREMIUM");
+		verifyByContains(Select_Trim, "30 TFSI PREMIUM");
 		executeClickOnElement(Click_Create_Listing_Now);
 		sleep(5000);
+		verifyByContains(Login_To_Continue, "Create Listing");
 		executeClickOnElement(Login_To_Continue);
 		sleep(5000);
     }
@@ -76,33 +81,46 @@ public class CreateListingPage extends SeleniumWrapper
 		executeScrollDownScript(700);
 		driverClick(Select_Location);
 		enterTextboxDetails(findElement(Search_Location), "Allahabad");
-		sleep(2000);
+		//sleep(1000);
 		enterKey(Search_Location);
-		enterTextboxDetails(findElement(Select_Registration_Number), "AP31CG9867");
+		verifyByText(Select_Location, "Allahabad");
+		String registerNumber = generateRandomNumber();
+		enterTextboxDetails(findElement(Select_Registration_Number),registerNumber );
+		verifyByAttribute(Select_Registration_Number, registerNumber);
 		driverClick(Select_Registration_State);
 		enterTextboxDetails(findElement(Select_Registartion_Search), "Delhi");
 		sleep(2000);
 		enterKey(Select_Registartion_Search);
+		sleep(2000);
+		//verifyByText(Select_Registration_State, "Delhi");
 		enterTextboxDetails(findElement(Enter_KM_Driven), "15000");
+		verifyByAttribute(Enter_KM_Driven, "15000");
 		executeClickOnElement(Continue_After_Key_Information);
 		sleep(5000);
     }
 	
+
 	public void pricing()
 	{
+		sleep(4000);
 		enterTextboxDetails(findElement(Enter_Selling_Price), "300000");
+		verifyByAttribute(Enter_Selling_Price, "300000");
 		executeScrollDownScript(1000);
 		executeClickOnElement(Click_Save_Continue_After_SellingPrice);
 	}
 	
-	public void uploadPicture() throws AWTException
+	public void uploadPicture() throws Exception
 	{
-		doPageRefresh();
+		//doPageRefresh();
 		executeClickOnElement(Click_To_Upload);
 		sleep(2000);
 		fileUpload("C:\\Users\\Honey\\Desktop\\cycle.png");
-		sleep(5000);
+		sleep(12000);
+		CheckImage(Check_Image);
+		//verifyByContains(Continue_After_Upload, "Save and Continue");
 		executeClickOnElement(Continue_After_Upload);
+		sleep(3000);
+		verifyByContains(Click_Get_Later, "Maybe Later");
 		executeClickOnElement(Click_Get_Later);
 		sleep(8000);
 		
@@ -110,27 +128,44 @@ public class CreateListingPage extends SeleniumWrapper
 	
 	public void normalListing()
 	{
-		executeClickOnElement(Click_For_Free);
+		verifyByText(Click_For_Normal, "FREE");
+		executeClickOnElement(Click_For_Normal);
+		sleep(2000);
+		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
 		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
+		doPageRefresh();
 	}
 	
 	
 	public void premiumListing()
 	{
+		verifyByText(Click_For_Premium, "₹499/-");
 		executeClickOnElement(Click_For_Premium);
+		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
 		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
     }
 	
 	public void conciergeListing()
 	{
+		verifyByText(Click_For_Concierge, "₹699/-");
 		executeClickOnElement(Click_For_Concierge);
+		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
 		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
+	}
+	
+	public void certificationTool()
+	{
+		waitForPageLoad();
+		executeScrollDownScript(1400);
+		executeClickOnElement(Click_Cirtification_Tool_Continue_Button);
 	}
 	
 	public void activateListing()
 	{
 		waitForPageLoad();
+		doPageRefresh();
 		executeClickOnElement(Click_Activate_Listing_Button);
+	    sleep(5000);
 	}
 	
 }

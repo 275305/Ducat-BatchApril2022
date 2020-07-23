@@ -42,15 +42,15 @@ public class RegistrationPage extends SeleniumWrapper
 	public void creatIndividualAccount() throws Exception
 	{
 		LoginPage loginpage=new LoginPage();
-		loginpage.EnterIconPopup();
+		loginpage.enterIconPopup();
 		executeClickOnElement(Create_Individual_Account);
 		sleep(3000);
-		enterTextboxDetails(findElement(Enter_Email_Address), "honey.maurya@droom.in");
+		enterTextboxDetails(findElement(Enter_Email_Address), "honey.maurya6@droom.in");
 		//sleep(2000);
-		enterTextboxDetails(findElement(Enter_Mobile_No), "6307641802");
+		enterTextboxDetails(findElement(Enter_Mobile_No), "9456024687");
 		executeClickOnElement(Radio_Button);
 		executeClickOnElement(Create_Account_SendOTP);
-		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='6307641802' order by id desc limit 1;");
+		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='9456024687' order by id desc limit 1;");
 		String otpValue = Integer.toString(otp);
 		System.out.println(otpValue);
 		sleep(3000);
@@ -72,20 +72,20 @@ public class RegistrationPage extends SeleniumWrapper
 	public void createProSellerAccount() throws Exception
 	{
 		LoginPage loginpage=new LoginPage();
-		loginpage.EnterIconPopup();
+		loginpage.enterIconPopup();
 		executeClickOnElement(Create_Pro_Account);
 		sleep(3000);
 		enterTextboxDetails(findElement(Enter_First_Name), "honey");
 		enterTextboxDetails(findElement(Enter_Last_Name), "maurya");
-		enterTextboxDetails(findElement(Enter_ProEmail_Address), "kumar.vishwas2@gmail.com");
-		enterTextboxDetails(findElement(Enter_ProMobile_No), "9889481816");
+		enterTextboxDetails(findElement(Enter_ProEmail_Address), "honey.maurya7@droom.in");
+		enterTextboxDetails(findElement(Enter_ProMobile_No), "9889484649");
 		executeClickOnElement(Click_SendOTP);
 		sleep(5000);
-		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='9889481816' order by id desc limit 1;");
+		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='9889484649' order by id desc limit 1;");
 		String otpValue = Integer.toString(otp);
 		System.out.println(otpValue);
 		enterTextboxDetails(findElement(Enter_ProOTP), otpValue);
-		enterTextboxDetails(findElement(Enter_Business_Name), "MY SECOND GARAGE");
+		enterTextboxDetails(findElement(Enter_Business_Name), "MY personal GARAGE");
 		enterTextboxDetails(findElement(Enter_Pro_Password), "India@123");
 		enterTextboxDetails(findElement(Enter_Pro_Confirm_Password), "India@123");
 		executeClickOnElement(Create_Pro_Seller_Account);

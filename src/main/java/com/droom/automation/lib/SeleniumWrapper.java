@@ -20,12 +20,15 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class SeleniumWrapper {
+public class SeleniumWrapper extends JavaLibrary
+{
 
     private int timeout = 60;
     private static final Logger LOG = LoggerFactory.getLogger(SeleniumWrapper.class);
@@ -294,13 +297,13 @@ public class SeleniumWrapper {
         WebDriverFactory.getDriver().switchTo().window(windowHandle);
     }
 
-    public void switchToWindow(final String title) 
+    public void switchToWindow(final String title)
     {
         final WebDriver driver = WebDriverFactory.getDriver();
         for (final String windowHandle : driver.getWindowHandles()) 
         {
             driver.switchTo().window(windowHandle);
-            if (driver.getTitle().equalsIgnoreCase(title)) 
+            if (driver.getTitle().equalsIgnoreCase(title))
             {
                 return;
             }
@@ -317,21 +320,46 @@ public class SeleniumWrapper {
     	return  WebDriverFactory.getDriver().findElement(by).getText();
     }
     
-    public void verifyByText(String xpath, String text)
+    public void verifyByText(final By by, String text)
 	{
-		String actual_text = WebDriverFactory.getDriver().findElement(By.xpath(xpath)).getText();
+		String actual_text = WebDriverFactory.getDriver().findElement(by).getText();
 		String expected_Text = text;
 		Assert.assertEquals(actual_text, expected_Text);
 		System.out.println(actual_text+" is displaying hence verified");
 		
 	}
 	
-	public void verifyByContains(String xpath, String text)
+	public void verifyByContains(final By by, String text)
 	{
-		String actual_text = WebDriverFactory.getDriver().findElement(By.xpath(xpath)).getText();
+		String actual_text = WebDriverFactory.getDriver().findElement(by).getText();
 		Assert.assertTrue(actual_text.contains(text));
 		System.out.println(actual_text+" is displaying hence verified");
 		
+	}
+	
+	public void verifyByAttribute(final By by, String text)
+	{
+		String actual_attribute = WebDriverFactory.getDriver().findElement(by).getAttribute("value");
+		//String expected_Text = text;
+		Assert.assertTrue(actual_attribute.contains(text));
+		System.out.println(actual_attribute+" is displaying hence verified");
+	}
+	
+	public void verifyByAttributeByID(final By by, String text)
+	{
+		String actual_attribute = WebDriverFactory.getDriver().findElement(by).getAttribute("id");
+		//String expected_Text = text;
+		Assert.assertTrue(actual_attribute.contains(text));
+		System.out.println(actual_attribute+" is displaying hence verified");
+	}
+	
+	public void verifyByWebElements(final By by1,final By by2) throws InterruptedException
+	{
+		String actual = WebDriverFactory.getDriver().findElement(by1).getText();
+		Thread.sleep(3000);
+		String expected = WebDriverFactory.getDriver().findElement(by2).getText();
+		Assert.assertEquals(actual, expected);
+		System.out.println("its matching");
 	}
 	
 	public void selectCity() throws InterruptedException
@@ -362,20 +390,21 @@ public class SeleniumWrapper {
 		WebDriverFactory.getDriver().findElement(locator).click();
 	}
 	
-	public void fileUpload(String file) throws AWTException
+	public void CheckImage(final By by) throws Exception
 	{
-		Robot rb=new Robot();
-		StringSelection str=new StringSelection(file);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
-		rb.keyPress(KeyEvent.VK_CONTROL);
-		rb.keyPress(KeyEvent.VK_V);
-		rb.keyRelease(KeyEvent.VK_CONTROL);
-		rb.keyRelease(KeyEvent.VK_V);
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.keyRelease(KeyEvent.VK_ENTER);
-    }
-	
-    
+	WebElement ImageFile = WebDriverFactory.getDriver().findElement(by);
+	        
+    Boolean ImagePresent = (Boolean) ((JavascriptExecutor)WebDriverFactory.getDriver()).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", ImageFile);
+	        if (!ImagePresent)
+	        {
+	             System.out.println("Image not displayed.");
+	        }
+	        else
+	        {
+	            System.out.println("Image displayed.");
+	        }
+		}
+
 /*    public void cusAssertEquals(String actual, String expected) {
     	Assert.assertEquals(actual, expected);
     	public String TEXTFOUND = actual + "found";

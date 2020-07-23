@@ -1,8 +1,10 @@
-com\droom\automation\RegistrationTest.class
 com\droom\automation\credit\SignUpAsBorrowerTest.class
+com\droom\automation\BuyFeatureTest.class
 com\droom\automation\credit\SignUpAsPplLenderTest.class
-com\droom\automation\LoginTest.class
 com\droom\automation\credit\SignUpAsPptLenderTest.class
+com\droom\automation\UserLoginTest.class
 com\droom\automation\HomePageTest.class
+com\droom\automation\UserRegistrationTest.class
 com\droom\automation\credit\HomePageTest.class
-com\droom\automation\SellFeatureTest.class
+com\droom\automation\CreateListingTest.class
+com\droom\automation\BuyGermShieldServiceTest.class

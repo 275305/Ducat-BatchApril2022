@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.droom.automation.SellFeatureTest">
+      <class name="com.droom.automation.CreateListingTest">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
-          <include name="sellFeatureValidation"/>
+          <include name="createPremiumListingAsLoggedInUser"/>
           <include name="init"/>
         </methods>
-      </class> <!-- com.droom.automation.SellFeatureTest -->
+      </class> <!-- com.droom.automation.CreateListingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

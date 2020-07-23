@@ -31,13 +31,6 @@
 </dependency>
 
  
- <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
-<dependency>
-    <groupId>io.qameta.allure</groupId>
-    <artifactId>allure-testng</artifactId>
-    <version>2.13.3</version>
-    
-</dependency>
 
  <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 <dependency>
@@ -102,6 +95,22 @@
     	<artifactId>slf4j-jdk14</artifactId>
     	<version>1.7.25</version>
 </dependency>
+
+ <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.13.3</version>
+    
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.21</version>
+</dependency>
+
 
     </dependencies>
 

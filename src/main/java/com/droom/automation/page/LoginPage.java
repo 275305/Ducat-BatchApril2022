@@ -23,30 +23,52 @@ public class LoginPage extends SeleniumWrapper
 	private static final By Click_Reset_Password= By.xpath("//input[@value='Reset password']");
 	private static final By Enter_Password= By.xpath("//input[@id='password']");
 	private static final By Login_Button_To_Home= By.xpath("//input[@value='Login']");
+	private final static By Go_To_Home=By.xpath("//a[text()='Home']");
+	private final static By Go_To_Buy_Via_My_Account_Page=By.xpath("//a[text()='Buy on Droom']");
+	private static final By Click_On_My_Account=By.xpath("(//a[text()='My Account'])[2]");
+	private static final By Click_On_PopUp_For_Proseller=By.xpath("//a[@id='close-welcome-modal']");
+	private static final By Verify_Text_For_ProSeller_Registration=By.xpath("//div[text()='Register As a Pro-Seller']");
 	
 	
-	public void EnterIconPopup()
+	public void enterIconPopup()
 	{
 		executeClickOnElement(Login_Icon);
 	}
 	
-	public void EnterLoginPage()
+	public void goToHome()
+	{
+		executeClickOnElement(Go_To_Home);
+	}
+	
+	public void enterLoginPage()
 	{
 		executeClickOnElement(Login_Icon);
 		executeClickOnElement(Login_Button);
 	}
 
-	public void LoginValidation()
+	public void loginValidationForIndividualAccount()
 	{
 		enterTextboxDetails(findElement(Enter_MAIL_ID), "honey.maurya@droom.in");
-		sleep(3000);
 		executeClickOnElement(Login_Via_Password);
-		sleep(3000);
+		sleep(2000);
 		enterTextboxDetails(findElement(Enter_Password), "India@123");
 		executeClickOnElement(Login_Button_To_Home);
+		sleep(3000);
+		verifyByText(Click_On_My_Account, "My Account");
 	}
 	
-	public void LoginValidationByOTP() throws Exception
+	public void loginValidationForPro_SellerAccount()
+	{
+		enterTextboxDetails(findElement(Enter_MAIL_ID), "kumar.vishwas2@gmail.com");
+		executeClickOnElement(Login_Via_Password);
+		sleep(2000);
+		enterTextboxDetails(findElement(Enter_Password), "India@123");
+		executeClickOnElement(Login_Button_To_Home);
+		executeClickOnElement(Click_On_PopUp_For_Proseller);
+		verifyByText(Verify_Text_For_ProSeller_Registration, "Register As a Pro-Seller");
+	}
+	
+	public void loginValidationByOTPForIndividualAccount() throws Exception
 	{
 		enterTextboxDetails(findElement(Enter_MAIL_ID), "honey.maurya@droom.in");
 		sleep(3000);
@@ -55,16 +77,36 @@ public class LoginPage extends SeleniumWrapper
 		executeClickOnElement(Click_Via_MobileOTP_Radio_Button);
 		executeClickOnElement(Click_SendOTP_Button);
 		sleep(3000);
-		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='9599946816' order by id desc limit 1;");
+		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='6307641802' order by id desc limit 1;");
 		String otpValue = Integer.toString(otp);
 		enterTextboxDetails(findElement(Enter_OTP), otpValue);
 		executeClickOnElement(Click_Login_ViaOTP);
+		sleep(3000);
+		verifyByText(Click_On_My_Account, "My Account");
 		
 	}
 	
-	public void LoginValidationByForgotYourPassword()
+	public void loginValidationForPro_SellerByOTP() throws Exception
 	{
-		EnterLoginPage();
+		enterTextboxDetails(findElement(Enter_MAIL_ID), "kumar.vishwas2@gmail.com");
+		sleep(3000);
+		executeClickOnElement(Login_Via_OTP);
+		sleep(3000);
+		executeClickOnElement(Click_Via_MobileOTP_Radio_Button);
+		executeClickOnElement(Click_SendOTP_Button);
+		sleep(3000);
+		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='9889481816' order by id desc limit 1;");
+		String otpValue = Integer.toString(otp);
+		enterTextboxDetails(findElement(Enter_OTP), otpValue);
+		executeClickOnElement(Click_Login_ViaOTP);
+		executeClickOnElement(Click_On_PopUp_For_Proseller);
+		verifyByText(Verify_Text_For_ProSeller_Registration, "Register As a Pro-Seller");
+		
+	}
+	
+	public void loginValidationByForgotYourPassword()
+	{
+		enterLoginPage();
 		executeClickOnElement(Click_On_Forgot_Your_Password);
 		enterTextboxDetails(findElement(Enter_Forgot_MailID), "superhoney1558maurya@gmail.com");
 		enterTextboxDetails(findElement(Enter_Captcha_Value), "");
@@ -72,6 +114,11 @@ public class LoginPage extends SeleniumWrapper
 		sleep(3000);
 	}
 	
-	
+	public void goToBuyViaMyAccount()
+	{
+		enterLoginPage();
+		loginValidationForIndividualAccount();
+		executeClickOnElement(Go_To_Buy_Via_My_Account_Page);
+	}
 	
 }
