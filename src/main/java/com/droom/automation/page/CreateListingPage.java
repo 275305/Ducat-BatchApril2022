@@ -4,6 +4,7 @@ import java.awt.AWTException;
 
 import org.openqa.selenium.By;
 
+import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.lib.SeleniumWrapper;
 import com.droom.automation.lib.WebDriverFactory;
 
@@ -43,11 +44,27 @@ public class CreateListingPage extends SeleniumWrapper
 	private final static By Verify_Listing_Save_And_Continue=By.xpath("(//input[@value='Save & Continue'])[1]");
 
 	
+	
+	
+	String filepath;
+	ExcelUtilities eu;
+	
+	public CreateListingPage()
+	{
+		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
+		this.eu=new ExcelUtilities(filepath);
+	}
+	
+	
 	public void createYourListing() throws InterruptedException
 	{
+		String username = eu.readData("CreateListingSheet", 1, 1);
+		String password = eu.readData("CreateListingSheet", 1, 2);
+		System.out.println(username);
+		System.out.println(password);
 		LoginPage lp=new LoginPage();
 		lp.enterLoginPage();
-		lp.loginValidationForIndividualAccount();
+		lp.loginValidationForIndividualAccount(username, password);
 		executeClickOnElement(Go_To_Home);
 		sleep(3000);
 		HomePage hp=new HomePage();

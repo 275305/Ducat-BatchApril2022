@@ -7,7 +7,7 @@
     
     
         <classes>
-            <class name="com.droom.automation.CreateListingTest" /> 
+            <class name="com.droom.automation.UserLoginTest" /> 
              
         </classes>
         

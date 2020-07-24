@@ -8,7 +8,7 @@
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
-          <include name="createPremiumListingAsLoggedInUser"/>
+          <include name="createNormalListingAsLoggedInUser"/>
           <include name="init"/>
         </methods>
       </class> <!-- com.droom.automation.CreateListingTest -->

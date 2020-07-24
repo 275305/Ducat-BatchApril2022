@@ -1,10 +1,12 @@
 package com.droom.automation.page;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.droom.automation.lib.DataBaseDemo;
 import com.droom.automation.lib.SeleniumDataBaseTest;
 import com.droom.automation.lib.SeleniumWrapper;
+import com.droom.automation.lib.WebDriverFactory;
 
 public class LoginPage extends SeleniumWrapper
 {
@@ -28,6 +30,8 @@ public class LoginPage extends SeleniumWrapper
 	private static final By Click_On_My_Account=By.xpath("(//a[text()='My Account'])[2]");
 	private static final By Click_On_PopUp_For_Proseller=By.xpath("//a[@id='close-welcome-modal']");
 	private static final By Verify_Text_For_ProSeller_Registration=By.xpath("//div[text()='Register As a Pro-Seller']");
+	private final static By Incorrect_Email_or_Password_Error_Massage=By.xpath("//div[text()='Incorrect Email or Password']");
+	private final static By Invalid_OTP_Code_Massage=By.xpath("//div[text()='Invalid OTP code.']");
 	
 	
 	public void enterIconPopup()
@@ -46,31 +50,33 @@ public class LoginPage extends SeleniumWrapper
 		executeClickOnElement(Login_Button);
 	}
 
-	public void loginValidationForIndividualAccount()
+	public void loginValidationForIndividualAccount(String username, String password)
 	{
-		enterTextboxDetails(findElement(Enter_MAIL_ID), "honey.maurya@droom.in");
+		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
 		executeClickOnElement(Login_Via_Password);
-		sleep(2000);
-		enterTextboxDetails(findElement(Enter_Password), "India@123");
+		sleep(1000);
+		enterTextboxDetails(findElement(Enter_Password), password);
+		sleep(1000);
 		executeClickOnElement(Login_Button_To_Home);
 		sleep(3000);
 		verifyByText(Click_On_My_Account, "My Account");
 	}
 	
-	public void loginValidationForPro_SellerAccount()
+	public void invalidLoginValidation(String username, String password)
 	{
-		enterTextboxDetails(findElement(Enter_MAIL_ID), "kumar.vishwas2@gmail.com");
+		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
 		executeClickOnElement(Login_Via_Password);
-		sleep(2000);
-		enterTextboxDetails(findElement(Enter_Password), "India@123");
+		sleep(1000);
+		enterTextboxDetails(findElement(Enter_Password), password);
 		executeClickOnElement(Login_Button_To_Home);
-		executeClickOnElement(Click_On_PopUp_For_Proseller);
-		verifyByText(Verify_Text_For_ProSeller_Registration, "Register As a Pro-Seller");
+		verifyByText(Incorrect_Email_or_Password_Error_Massage, "Incorrect Email or Password");
+		
 	}
 	
-	public void loginValidationByOTPForIndividualAccount() throws Exception
+	
+	public void loginValidationByOTPForIndividualAccount(String username) throws Exception
 	{
-		enterTextboxDetails(findElement(Enter_MAIL_ID), "honey.maurya@droom.in");
+		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
 		sleep(3000);
 		executeClickOnElement(Login_Via_OTP);
 		sleep(3000);
@@ -86,9 +92,37 @@ public class LoginPage extends SeleniumWrapper
 		
 	}
 	
-	public void loginValidationForPro_SellerByOTP() throws Exception
+	
+	public void invalidOTPloginValidation(String username, String otp)
 	{
-		enterTextboxDetails(findElement(Enter_MAIL_ID), "kumar.vishwas2@gmail.com");
+		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
+		sleep(3000);
+		executeClickOnElement(Login_Via_OTP);
+		sleep(3000);
+		executeClickOnElement(Click_Via_MobileOTP_Radio_Button);
+		executeClickOnElement(Click_SendOTP_Button);
+		enterTextboxDetails(findElement(Enter_OTP), otp);
+		executeClickOnElement(Click_Login_ViaOTP);
+		sleep(3000);
+		verifyByText(Invalid_OTP_Code_Massage, "Invalid OTP code.");
+	}
+	
+	
+	public void loginValidationForProSellerAccount(String username, String password)
+	{
+		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
+		executeClickOnElement(Login_Via_Password);
+		sleep(2000);
+		enterTextboxDetails(findElement(Enter_Password), password);
+		executeClickOnElement(Login_Button_To_Home);
+		executeClickOnElement(Click_On_PopUp_For_Proseller);
+		verifyByText(Verify_Text_For_ProSeller_Registration, "Register As a Pro-Seller");
+	}
+	
+	
+	public void loginValidationForProSellerByOTP(String username) throws Exception
+	{
+		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
 		sleep(3000);
 		executeClickOnElement(Login_Via_OTP);
 		sleep(3000);
@@ -117,7 +151,7 @@ public class LoginPage extends SeleniumWrapper
 	public void goToBuyViaMyAccount()
 	{
 		enterLoginPage();
-		loginValidationForIndividualAccount();
+		//loginValidationForIndividualAccount();
 		executeClickOnElement(Go_To_Buy_Via_My_Account_Page);
 	}
 	
