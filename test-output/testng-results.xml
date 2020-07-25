@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="223890" started-at="2020-07-24T20:44:08 IST" finished-at="2020-07-24T20:47:52 IST">
+  <suite name="Default suite" duration-ms="57292" started-at="2020-07-25T20:40:31 IST" finished-at="2020-07-25T20:41:29 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="223890" started-at="2020-07-24T20:44:08 IST" finished-at="2020-07-24T20:47:52 IST">
-      <class name="com.droom.automation.CreateListingTest">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.CreateListingTest@1184ab05]" name="beforeSuite" is-config="true" duration-ms="20" started-at="2020-07-24T20:44:08 IST" finished-at="2020-07-24T20:44:08 IST">
+    <test name="Default test" duration-ms="57292" started-at="2020-07-25T20:40:31 IST" finished-at="2020-07-25T20:41:29 IST">
+      <class name="com.droom.automation.UserRegistrationTest">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.UserRegistrationTest@22a637e7]" name="beforeSuite" is-config="true" duration-ms="36" started-at="2020-07-25T20:40:31 IST" finished-at="2020-07-25T20:40:31 IST">
           <params>
             <param index="0">
               <value>
@@ -18,30 +18,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.CreateListingTest@1184ab05]" name="beforeTest" is-config="true" duration-ms="12" started-at="2020-07-24T20:44:08 IST" finished-at="2020-07-24T20:44:08 IST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.UserRegistrationTest@22a637e7]" name="beforeTest" is-config="true" duration-ms="17" started-at="2020-07-25T20:40:31 IST" finished-at="2020-07-25T20:40:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.CreateListingTest@1184ab05]" name="init" is-config="true" duration-ms="48825" started-at="2020-07-24T20:44:08 IST" finished-at="2020-07-24T20:44:57 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.UserRegistrationTest@22a637e7]" name="init" is-config="true" duration-ms="35457" started-at="2020-07-25T20:40:31 IST" finished-at="2020-07-25T20:41:07 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="createNormalListingAsLoggedInUser()[pri:1, instance:com.droom.automation.CreateListingTest@1184ab05]" name="createNormalListingAsLoggedInUser" duration-ms="174920" started-at="2020-07-24T20:44:57 IST" finished-at="2020-07-24T20:47:52 IST">
+        <test-method status="PASS" signature="inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount()[pri:9, instance:com.droom.automation.UserRegistrationTest@22a637e7]" name="inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount" duration-ms="20692" started-at="2020-07-25T20:41:07 IST" finished-at="2020-07-25T20:41:28 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNormalListingAsLoggedInUser -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.CreateListingTest@1184ab05]" name="afterMethod" is-config="true" duration-ms="4" started-at="2020-07-24T20:47:52 IST" finished-at="2020-07-24T20:47:52 IST">
+        </test-method> <!-- inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.UserRegistrationTest@22a637e7]" name="afterMethod" is-config="true" duration-ms="812" started-at="2020-07-25T20:41:28 IST" finished-at="2020-07-25T20:41:29 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createNormalListingAsLoggedInUser status=SUCCESS method=CreateListingTest.createNormalListingAsLoggedInUser()[pri:1, instance:com.droom.automation.CreateListingTest@1184ab05] output={null}]]]>
+                <![CDATA[[TestResult name=inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount status=SUCCESS method=UserRegistrationTest.inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount()[pri:9, instance:com.droom.automation.UserRegistrationTest@22a637e7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.droom.automation.CreateListingTest -->
+      </class> <!-- com.droom.automation.UserRegistrationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

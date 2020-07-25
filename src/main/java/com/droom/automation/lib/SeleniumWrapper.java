@@ -1,6 +1,8 @@
 package com.droom.automation.lib;
 
 import com.droom.automation.constants.UIConstants;
+import com.google.common.base.Verify;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -14,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -337,6 +340,19 @@ public class SeleniumWrapper extends JavaLibrary
 		
 	}
 	
+	public void verifyRadioButton(final By by)
+	{
+		boolean checked = WebDriverFactory.getDriver().findElement(by).isSelected();
+		if (!checked) 
+		{
+			System.out.println("Declaration is not Selected.");
+		}
+		else
+		{
+		System.out.println("Declaration is Selected.");
+		}
+	}
+	
 	public void verifyByAttribute(final By by, String text)
 	{
 		String actual_attribute = WebDriverFactory.getDriver().findElement(by).getAttribute("value");
@@ -360,6 +376,32 @@ public class SeleniumWrapper extends JavaLibrary
 		String expected = WebDriverFactory.getDriver().findElement(by2).getText();
 		Assert.assertEquals(actual, expected);
 		System.out.println("its matching");
+	}
+	
+	public void verifyErrorMsgByText(final By by,String text) throws InterruptedException
+	{
+		String actual_attribute = WebDriverFactory.getDriver().findElement(by).getText();
+		String expected_Text = text;
+		SoftAssert softassert=new SoftAssert();
+		softassert.assertEquals(actual_attribute, expected_Text);
+		System.out.println(actual_attribute+" Error Massage is displaying hence verified");
+	}
+	
+	public void verifyErrormsgByContains(final By by, String text)
+	{
+		String actual_text = WebDriverFactory.getDriver().findElement(by).getText();
+		SoftAssert softassert=new SoftAssert();
+		softassert.assertTrue(actual_text.contains(text));
+		System.out.println(actual_text+" Error Massage is displaying hence verified");
+		
+	}
+	
+	public void verifyErrorMsgByAttribute(final By by, String text)
+	{
+		String actual_attribute = WebDriverFactory.getDriver().findElement(by).getAttribute("value");
+		SoftAssert softassert=new SoftAssert();
+		softassert.assertTrue(actual_attribute.contains(text));
+		System.out.println(actual_attribute+" Error Massage is displaying hence verified");
 	}
 	
 	public void selectCity() throws InterruptedException

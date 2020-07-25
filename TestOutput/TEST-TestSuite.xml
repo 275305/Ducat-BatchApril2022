@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="476.866" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="841.669" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -19,7 +19,7 @@
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\Honey\AppData\Local\Temp\surefire1116776453797345773\surefirebooter2263547386372635845.jar C:\Users\Honey\AppData\Local\Temp\surefire1116776453797345773 2020-07-24T18-12-43_984-jvmRun1 surefire642011776057116985tmp surefire_01157525851298383028tmp"/>
+    <property name="sun.java.command" value="C:\Users\Honey\AppData\Local\Temp\surefire6440620039678443359\surefirebooter8645991549207599028.jar C:\Users\Honey\AppData\Local\Temp\surefire6440620039678443359 2020-07-25T21-01-46_097-jvmRun1 surefire4121829916546687465tmp surefire_01176703038597038220tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\Honey\Desktop\droomWorkspace\droom-automation\target\test-classes;C:\Users\Honey\Desktop\droomWorkspace\droom-automation\target\classes;C:\Users\Honey\.m2\repository\org\testng\testng\7.1.0\testng-7.1.0.jar;C:\Users\Honey\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\Honey\.m2\repository\com\google\inject\guice\4.1.0\guice-4.1.0-no_aop.jar;C:\Users\Honey\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\Honey\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\Honey\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\Users\Honey\.m2\repository\org\apache\poi\poi\4.1.2\poi-4.1.2.jar;C:\Users\Honey\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\Honey\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\Honey\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\Honey\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\Honey\.m2\repository\org\apache\poi\poi-ooxml\4.1.2\poi-ooxml-4.1.2.jar;C:\Users\Honey\.m2\repository\org\apache\poi\poi-ooxml-schemas\4.1.2\poi-ooxml-schemas-4.1.2.jar;C:\Users\Honey\.m2\repository\org\apache\xmlbeans\xmlbeans\3.1.0\xmlbeans-3.1.0.jar;C:\Users\Honey\.m2\repository\org\apache\commons\commons-compress\1.19\commons-compress-1.19.jar;C:\Users\Honey\.m2\repository\com\github\virtuald\curvesapi\1.06\curvesapi-1.06.jar;C:\Users\Honey\.m2\repository\io\testproject\java-sdk\0.63.2-RELEASE\java-sdk-0.63.2-RELEASE-sources.jar;C:\Users\Honey\.m2\repository\io\appium\java-client\7.3.0\java-client-7.3.0.jar;C:\Users\Honey\.m2\repository\cglib\cglib\3.2.12\cglib-3.2.12.jar;C:\Users\Honey\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.jar;C:\Users\Honey\.m2\repository\commons-validator\commons-validator\1.6\commons-validator-1.6.jar;C:\Users\Honey\.m2\repository\commons-beanutils\commons-beanutils\1.9.2\commons-beanutils-1.9.2.jar;C:\Users\Honey\.m2\repository\commons-digester\commons-digester\1.8.1\commons-digester-1.8.1.jar;C:\Users\Honey\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\Honey\.m2\repository\org\springframework\spring-context\5.1.8.RELEASE\spring-context-5.1.8.RELEASE.jar;C:\Users\Honey\.m2\repository\org\springframework\spring-aop\5.1.8.RELEASE\spring-aop-5.1.8.RELEASE.jar;C:\Users\Honey\.m2\repository\org\springframework\spring-beans\5.1.8.RELEASE\spring-beans-5.1.8.RELEASE.jar;C:\Users\Honey\.m2\repository\org\springframework\spring-core\5.1.8.RELEASE\spring-core-5.1.8.RELEASE.jar;C:\Users\Honey\.m2\repository\org\springframework\spring-jcl\5.1.8.RELEASE\spring-jcl-5.1.8.RELEASE.jar;C:\Users\Honey\.m2\repository\org\springframework\spring-expression\5.1.8.RELEASE\spring-expression-5.1.8.RELEASE.jar;C:\Users\Honey\.m2\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;C:\Users\Honey\.m2\repository\com\github\spotbugs\spotbugs-annotations\4.0.2\spotbugs-annotations-4.0.2.jar;C:\Users\Honey\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Honey\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Honey\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Honey\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Honey\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Honey\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Honey\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\Honey\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Honey\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Honey\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Honey\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Honey\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Honey\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Honey\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Honey\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\Honey\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Honey\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Honey\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Honey\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Honey\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.5\selenium-chrome-driver-3.141.5.jar;C:\Users\Honey\.m2\repository\io\github\bonigarcia\webdrivermanager\3.6.1\webdrivermanager-3.6.1.jar;C:\Users\Honey\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\Honey\.m2\repository\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar;C:\Users\Honey\.m2\repository\org\apache\commons\commons-lang3\3.8.1\commons-lang3-3.8.1.jar;C:\Users\Honey\.m2\repository\org\apache\httpcomponents\httpclient\4.5.6\httpclient-4.5.6.jar;C:\Users\Honey\.m2\repository\org\apache\httpcomponents\httpcore\4.4.10\httpcore-4.4.10.jar;C:\Users\Honey\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Honey\.m2\repository\org\rauschig\jarchivelib\1.0.0\jarchivelib-1.0.0.jar;C:\Users\Honey\.m2\repository\org\jsoup\jsoup\1.11.3\jsoup-1.11.3.jar;C:\Users\Honey\.m2\repository\org\slf4j\slf4j-api\1.6.0\slf4j-api-1.6.0.jar;C:\Users\Honey\.m2\repository\org\slf4j\slf4j-jdk14\1.7.25\slf4j-jdk14-1.7.25.jar;C:\Users\Honey\.m2\repository\io\qameta\allure\allure-testng\2.13.3\allure-testng-2.13.3.jar;C:\Users\Honey\.m2\repository\io\qameta\allure\allure-java-commons\2.13.3\allure-java-commons-2.13.3.jar;C:\Users\Honey\.m2\repository\io\qameta\allure\allure-model\2.13.3\allure-model-2.13.3.jar;C:\Users\Honey\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;C:\Users\Honey\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\Honey\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;C:\Users\Honey\.m2\repository\org\apache\tika\tika-core\1.20\tika-core-1.20.jar;C:\Users\Honey\.m2\repository\org\jooq\joor-java-8\0.9.10\joor-java-8-0.9.10.jar;C:\Users\Honey\.m2\repository\mysql\mysql-connector-java\8.0.21\mysql-connector-java-8.0.21.jar;C:\Users\Honey\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Honey"/>
@@ -32,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Honey\AppData\Local\Temp\surefire1116776453797345773\surefirebooter2263547386372635845.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Honey\AppData\Local\Temp\surefire6440620039678443359\surefirebooter8645991549207599028.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_181\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -62,382 +62,455 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="loginAsIndividualUserViaPassword" classname="com.droom.automation.UserLoginTest" time="32.795">
+  <testcase name="registerAsIndividualUser" classname="com.droom.automation.UserRegistrationTest" time="82.152">
     <system-out><![CDATA[Info : Page load completed Successfully ..
-My Account is displaying hence verified
-]]></system-out>
-    <system-err><![CDATA[Jul 24, 2020 6:12:47 PM com.droom.automation.lib.AbstractBaseTest beforeSuite
-INFO: IN BEFORE SUITE ======>
-Jul 24, 2020 6:12:47 PM com.droom.automation.lib.AbstractBaseTest beforeTest
-INFO: IN BEFORE TEST ======>
-Jul 24, 2020 6:12:47 PM com.droom.automation.lib.AbstractBaseTest beforeTest
-INFO: -------------- Before Test -----------------
-Jul 24, 2020 6:12:47 PM com.droom.automation.lib.AbstractBaseTest init
-INFO: IN BEFORE METHOD ======>
-Jul 24, 2020 6:12:47 PM java.util.prefs.WindowsPreferences <init>
-WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
-Jul 24, 2020 6:12:48 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
-INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
-Jul 24, 2020 6:12:48 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
-INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
-Jul 24, 2020 6:12:48 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE DOWNLOAD DIRECTORY
-Jul 24, 2020 6:12:48 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE BROWSER CAPABILITIES
-Jul 24, 2020 6:12:48 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: Instantiating a Driver to Chrome
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 44650
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1595594570.823][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
-Jul 24, 2020 6:12:52 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Jul 24, 2020 6:12:54 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
-INFO: configure remote driver with machine ip-address
-Jul 24, 2020 6:12:54 PM com.droom.automation.lib.WebDriverFactory startDriver
-INFO: Info : ...... Start opening application in browser .....
-]]></system-err>
-  </testcase>
-  <testcase name="inValidIDloginAsIndividualUserViaPassword" classname="com.droom.automation.UserLoginTest" time="9.914">
-    <system-out><![CDATA[Info : Page load completed Successfully ..
-Incorrect Email or Password is displaying hence verified
-]]></system-out>
-    <system-err><![CDATA[Jul 24, 2020 6:13:50 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: IN AFTER METHOD ======>
-Jul 24, 2020 6:13:50 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: QUIT DRIVER
-Jul 24, 2020 6:13:50 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: Closing browser and application ...
-Jul 24, 2020 6:13:51 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: WEBDRIVER SET TO NULL
-Jul 24, 2020 6:13:51 PM com.droom.automation.lib.AbstractBaseTest init
-INFO: IN BEFORE METHOD ======>
-Jul 24, 2020 6:13:51 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
-INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
-Jul 24, 2020 6:13:51 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
-INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
-Jul 24, 2020 6:13:51 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE DOWNLOAD DIRECTORY
-Jul 24, 2020 6:13:51 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE BROWSER CAPABILITIES
-Jul 24, 2020 6:13:51 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: Instantiating a Driver to Chrome
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 45313
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1595594632.976][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
-Jul 24, 2020 6:13:55 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Jul 24, 2020 6:13:57 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
-INFO: configure remote driver with machine ip-address
-Jul 24, 2020 6:13:57 PM com.droom.automation.lib.WebDriverFactory startDriver
-INFO: Info : ...... Start opening application in browser .....
-]]></system-err>
-  </testcase>
-  <testcase name="inValidPasswordloginAsIndividualUserViaPassword" classname="com.droom.automation.UserLoginTest" time="21.287">
-    <system-out><![CDATA[Info : Page load completed Successfully ..
-Incorrect Email or Password is displaying hence verified
-]]></system-out>
-    <system-err><![CDATA[Jul 24, 2020 6:14:24 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: IN AFTER METHOD ======>
-Jul 24, 2020 6:14:24 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: QUIT DRIVER
-Jul 24, 2020 6:14:24 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: Closing browser and application ...
-Jul 24, 2020 6:14:25 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: WEBDRIVER SET TO NULL
-Jul 24, 2020 6:14:25 PM com.droom.automation.lib.AbstractBaseTest init
-INFO: IN BEFORE METHOD ======>
-Jul 24, 2020 6:14:25 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
-INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
-Jul 24, 2020 6:14:25 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
-INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
-Jul 24, 2020 6:14:25 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE DOWNLOAD DIRECTORY
-Jul 24, 2020 6:14:25 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE BROWSER CAPABILITIES
-Jul 24, 2020 6:14:25 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: Instantiating a Driver to Chrome
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 5157
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1595594666.561][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
-Jul 24, 2020 6:14:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Jul 24, 2020 6:14:30 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
-INFO: configure remote driver with machine ip-address
-Jul 24, 2020 6:14:30 PM com.droom.automation.lib.WebDriverFactory startDriver
-INFO: Info : ...... Start opening application in browser .....
-]]></system-err>
-  </testcase>
-  <testcase name="loginAsIndividualUserViaOTP" classname="com.droom.automation.UserLoginTest" time="42.662">
-    <system-out><![CDATA[Info : Page load completed Successfully ..
+Create an Individual Account is displaying hence verified
+Info : Page load completed Successfully ..
+honey.maurya112@droom.in is displaying hence verified
+9419419890 is displaying hence verified
+Declaration is Selected.
+createAccountAndSendOtp is displaying hence verified
 connected
-7268
-7268
-7268
-My Account is displaying hence verified
+1909
+1909
+1909
+1909 is displaying hence verified
+Verify OTP is displaying hence verified
+Honey is displaying hence verified
+Maurya is displaying hence verified
+India@123 is displaying hence verified
+India@123 is displaying hence verified
+Continue is displaying hence verified
 ]]></system-out>
-    <system-err><![CDATA[Jul 24, 2020 6:15:29 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: IN AFTER METHOD ======>
-Jul 24, 2020 6:15:29 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: QUIT DRIVER
-Jul 24, 2020 6:15:29 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: Closing browser and application ...
-Jul 24, 2020 6:15:30 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: WEBDRIVER SET TO NULL
-Jul 24, 2020 6:15:30 PM com.droom.automation.lib.AbstractBaseTest init
+    <system-err><![CDATA[Jul 25, 2020 9:01:48 PM com.droom.automation.lib.AbstractBaseTest beforeSuite
+INFO: IN BEFORE SUITE ======>
+Jul 25, 2020 9:01:48 PM com.droom.automation.lib.AbstractBaseTest beforeTest
+INFO: IN BEFORE TEST ======>
+Jul 25, 2020 9:01:48 PM com.droom.automation.lib.AbstractBaseTest beforeTest
+INFO: -------------- Before Test -----------------
+Jul 25, 2020 9:01:48 PM com.droom.automation.lib.AbstractBaseTest init
 INFO: IN BEFORE METHOD ======>
-Jul 24, 2020 6:15:30 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
+Jul 25, 2020 9:01:48 PM java.util.prefs.WindowsPreferences <init>
+WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
+Jul 25, 2020 9:01:49 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
 INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
-Jul 24, 2020 6:15:30 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
+Jul 25, 2020 9:01:49 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
 INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
-Jul 24, 2020 6:15:30 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+Jul 25, 2020 9:01:49 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
 INFO: SET THE DOWNLOAD DIRECTORY
-Jul 24, 2020 6:15:30 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+Jul 25, 2020 9:01:49 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
 INFO: SET THE BROWSER CAPABILITIES
-Jul 24, 2020 6:15:30 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+Jul 25, 2020 9:01:49 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
 INFO: Instantiating a Driver to Chrome
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 48280
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 41290
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1595594731.836][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
-Jul 24, 2020 6:15:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1595691111.770][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+Jul 25, 2020 9:01:53 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Jul 24, 2020 6:15:35 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
+Jul 25, 2020 9:01:55 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
 INFO: configure remote driver with machine ip-address
-Jul 24, 2020 6:15:35 PM com.droom.automation.lib.WebDriverFactory startDriver
+Jul 25, 2020 9:01:55 PM com.droom.automation.lib.WebDriverFactory startDriver
 INFO: Info : ...... Start opening application in browser .....
 Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 ]]></system-err>
   </testcase>
-  <testcase name="inValidOTPloginAsIndividualUserViaOTP" classname="com.droom.automation.UserLoginTest" time="20.702">
+  <testcase name="registerAsProSeller" classname="com.droom.automation.UserRegistrationTest" time="65.947">
     <system-out><![CDATA[Info : Page load completed Successfully ..
-Invalid OTP code. is displaying hence verified
-]]></system-out>
-    <system-err><![CDATA[Jul 24, 2020 6:16:37 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: IN AFTER METHOD ======>
-Jul 24, 2020 6:16:37 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: QUIT DRIVER
-Jul 24, 2020 6:16:37 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: Closing browser and application ...
-Jul 24, 2020 6:16:38 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: WEBDRIVER SET TO NULL
-Jul 24, 2020 6:16:38 PM com.droom.automation.lib.AbstractBaseTest init
-INFO: IN BEFORE METHOD ======>
-Jul 24, 2020 6:16:38 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
-INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
-Jul 24, 2020 6:16:38 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
-INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
-Jul 24, 2020 6:16:38 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE DOWNLOAD DIRECTORY
-Jul 24, 2020 6:16:38 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE BROWSER CAPABILITIES
-Jul 24, 2020 6:16:38 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: Instantiating a Driver to Chrome
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 26215
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1595594800.053][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
-Jul 24, 2020 6:16:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Jul 24, 2020 6:16:44 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
-INFO: configure remote driver with machine ip-address
-Jul 24, 2020 6:16:44 PM com.droom.automation.lib.WebDriverFactory startDriver
-INFO: Info : ...... Start opening application in browser .....
-]]></system-err>
-  </testcase>
-  <testcase name="loginAsProSellerViaPassword" classname="com.droom.automation.UserLoginTest" time="17.828">
-    <system-out><![CDATA[Info : Page load completed Successfully ..
-Register As a Pro-Seller is displaying hence verified
-]]></system-out>
-    <system-err><![CDATA[Jul 24, 2020 6:17:17 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: IN AFTER METHOD ======>
-Jul 24, 2020 6:17:17 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: QUIT DRIVER
-Jul 24, 2020 6:17:17 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: Closing browser and application ...
-Jul 24, 2020 6:17:18 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: WEBDRIVER SET TO NULL
-Jul 24, 2020 6:17:18 PM com.droom.automation.lib.AbstractBaseTest init
-INFO: IN BEFORE METHOD ======>
-Jul 24, 2020 6:17:18 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
-INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
-Jul 24, 2020 6:17:18 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
-INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
-Jul 24, 2020 6:17:18 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE DOWNLOAD DIRECTORY
-Jul 24, 2020 6:17:18 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE BROWSER CAPABILITIES
-Jul 24, 2020 6:17:18 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: Instantiating a Driver to Chrome
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 28602
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1595594839.992][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
-Jul 24, 2020 6:17:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Jul 24, 2020 6:17:24 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
-INFO: configure remote driver with machine ip-address
-Jul 24, 2020 6:17:24 PM com.droom.automation.lib.WebDriverFactory startDriver
-INFO: Info : ...... Start opening application in browser .....
-]]></system-err>
-  </testcase>
-  <testcase name="inValidLoginIDAsProSellerViaPassword" classname="com.droom.automation.UserLoginTest" time="18.29">
-    <system-out><![CDATA[Info : Page load completed Successfully ..
-Incorrect Email or Password is displaying hence verified
-]]></system-out>
-    <system-err><![CDATA[Jul 24, 2020 6:17:57 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: IN AFTER METHOD ======>
-Jul 24, 2020 6:17:57 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: QUIT DRIVER
-Jul 24, 2020 6:17:57 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: Closing browser and application ...
-Jul 24, 2020 6:17:58 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: WEBDRIVER SET TO NULL
-Jul 24, 2020 6:17:58 PM com.droom.automation.lib.AbstractBaseTest init
-INFO: IN BEFORE METHOD ======>
-Jul 24, 2020 6:17:58 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
-INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
-Jul 24, 2020 6:17:58 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
-INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
-Jul 24, 2020 6:17:58 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE DOWNLOAD DIRECTORY
-Jul 24, 2020 6:17:58 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE BROWSER CAPABILITIES
-Jul 24, 2020 6:17:58 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: Instantiating a Driver to Chrome
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 15348
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1595594879.695][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
-Jul 24, 2020 6:18:01 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Jul 24, 2020 6:18:03 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
-INFO: configure remote driver with machine ip-address
-Jul 24, 2020 6:18:03 PM com.droom.automation.lib.WebDriverFactory startDriver
-INFO: Info : ...... Start opening application in browser .....
-]]></system-err>
-  </testcase>
-  <testcase name="inValidLoginPasswordAsProSellerViaPassword" classname="com.droom.automation.UserLoginTest" time="10.673">
-    <system-out><![CDATA[Info : Page load completed Successfully ..
-Incorrect Email or Password is displaying hence verified
-]]></system-out>
-    <system-err><![CDATA[Jul 24, 2020 6:18:40 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: IN AFTER METHOD ======>
-Jul 24, 2020 6:18:40 PM com.droom.automation.lib.AbstractBaseTest afterMethod
-INFO: QUIT DRIVER
-Jul 24, 2020 6:18:40 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: Closing browser and application ...
-Jul 24, 2020 6:18:41 PM com.droom.automation.lib.WebDriverFactory closeDriver
-INFO: WEBDRIVER SET TO NULL
-Jul 24, 2020 6:18:41 PM com.droom.automation.lib.AbstractBaseTest init
-INFO: IN BEFORE METHOD ======>
-Jul 24, 2020 6:18:41 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
-INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
-Jul 24, 2020 6:18:41 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
-INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
-Jul 24, 2020 6:18:41 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE DOWNLOAD DIRECTORY
-Jul 24, 2020 6:18:41 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: SET THE BROWSER CAPABILITIES
-Jul 24, 2020 6:18:41 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
-INFO: Instantiating a Driver to Chrome
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 36966
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1595594923.037][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
-Jul 24, 2020 6:18:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Jul 24, 2020 6:18:47 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
-INFO: configure remote driver with machine ip-address
-Jul 24, 2020 6:18:47 PM com.droom.automation.lib.WebDriverFactory startDriver
-INFO: Info : ...... Start opening application in browser .....
-]]></system-err>
-  </testcase>
-  <testcase name="loginAsProSellerViaOTP" classname="com.droom.automation.UserLoginTest" time="24.873">
-    <system-out><![CDATA[Info : Page load completed Successfully ..
+Create a Pro-Seller Account is displaying hence verified
+Info : Page load completed Successfully ..
+Rahul is displaying hence verified
+Singhaaa is displaying hence verified
+rahulkumar.singhaa110@droom.in is displaying hence verified
+9822038619 is displaying hence verified
+validateEmailAndPhone is displaying hence verified
 connected
-5435
-5435
-5435
+6916
+6916
+6916
+6916 is displaying hence verified
+Rahul Sharma Garage is displaying hence verified
+India@123 is displaying hence verified
+India@123 is displaying hence verified
+Create  Pro-Seller  Account is displaying hence verified
+Info : Page load completed Successfully ..
+Proceed is displaying hence verified
 Register As a Pro-Seller is displaying hence verified
 ]]></system-out>
-    <system-err><![CDATA[Jul 24, 2020 6:19:11 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+    <system-err><![CDATA[Jul 25, 2020 9:04:48 PM com.droom.automation.lib.AbstractBaseTest afterMethod
 INFO: IN AFTER METHOD ======>
-Jul 24, 2020 6:19:11 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+Jul 25, 2020 9:04:48 PM com.droom.automation.lib.AbstractBaseTest afterMethod
 INFO: QUIT DRIVER
-Jul 24, 2020 6:19:11 PM com.droom.automation.lib.WebDriverFactory closeDriver
+Jul 25, 2020 9:04:48 PM com.droom.automation.lib.WebDriverFactory closeDriver
 INFO: Closing browser and application ...
-Jul 24, 2020 6:19:12 PM com.droom.automation.lib.WebDriverFactory closeDriver
+Jul 25, 2020 9:04:49 PM com.droom.automation.lib.WebDriverFactory closeDriver
 INFO: WEBDRIVER SET TO NULL
-Jul 24, 2020 6:19:12 PM com.droom.automation.lib.AbstractBaseTest init
+Jul 25, 2020 9:04:49 PM com.droom.automation.lib.AbstractBaseTest init
 INFO: IN BEFORE METHOD ======>
-Jul 24, 2020 6:19:12 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
+Jul 25, 2020 9:04:49 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
 INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
-Jul 24, 2020 6:19:12 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
+Jul 25, 2020 9:04:49 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
 INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
-Jul 24, 2020 6:19:12 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+Jul 25, 2020 9:04:49 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
 INFO: SET THE DOWNLOAD DIRECTORY
-Jul 24, 2020 6:19:12 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+Jul 25, 2020 9:04:49 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
 INFO: SET THE BROWSER CAPABILITIES
-Jul 24, 2020 6:19:12 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+Jul 25, 2020 9:04:49 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
 INFO: Instantiating a Driver to Chrome
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 22530
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 25323
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1595594953.394][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
-Jul 24, 2020 6:19:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1595691290.968][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+Jul 25, 2020 9:04:53 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Jul 24, 2020 6:19:17 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
+Jul 25, 2020 9:04:55 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
 INFO: configure remote driver with machine ip-address
-Jul 24, 2020 6:19:17 PM com.droom.automation.lib.WebDriverFactory startDriver
+Jul 25, 2020 9:04:55 PM com.droom.automation.lib.WebDriverFactory startDriver
 INFO: Info : ...... Start opening application in browser .....
 ]]></system-err>
   </testcase>
-  <testcase name="inValidOTPloginAsProSellerViaOTP" classname="com.droom.automation.UserLoginTest" time="17.379">
+  <testcase name="invalidInputErrorMsgVerificationWhileCreatingIndividualAccount" classname="com.droom.automation.UserRegistrationTest" time="57.813">
     <system-out><![CDATA[Info : Page load completed Successfully ..
-Invalid OTP code. is displaying hence verified
+Create an Individual Account is displaying hence verified
+Info : Page load completed Successfully ..
+createAccountAndSendOtp is displaying hence verified
+Declaration is not Selected.
+Please enter valid Email Address Error Massage is displaying hence verified
+Please enter valid Mobile Number Error Massage is displaying hence verified
+Please accept Terms & Conditions Error Massage is displaying hence verified
 ]]></system-out>
-    <system-err><![CDATA[Jul 24, 2020 6:19:58 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+    <system-err><![CDATA[Jul 25, 2020 9:07:03 PM com.droom.automation.lib.AbstractBaseTest afterMethod
 INFO: IN AFTER METHOD ======>
-Jul 24, 2020 6:19:58 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+Jul 25, 2020 9:07:03 PM com.droom.automation.lib.AbstractBaseTest afterMethod
 INFO: QUIT DRIVER
-Jul 24, 2020 6:19:58 PM com.droom.automation.lib.WebDriverFactory closeDriver
+Jul 25, 2020 9:07:03 PM com.droom.automation.lib.WebDriverFactory closeDriver
 INFO: Closing browser and application ...
-Jul 24, 2020 6:19:59 PM com.droom.automation.lib.WebDriverFactory closeDriver
+Jul 25, 2020 9:07:04 PM com.droom.automation.lib.WebDriverFactory closeDriver
 INFO: WEBDRIVER SET TO NULL
-Jul 24, 2020 6:19:59 PM com.droom.automation.lib.AbstractBaseTest init
+Jul 25, 2020 9:07:04 PM com.droom.automation.lib.AbstractBaseTest init
 INFO: IN BEFORE METHOD ======>
-Jul 24, 2020 6:20:00 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
+Jul 25, 2020 9:07:04 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
 INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
-Jul 24, 2020 6:20:00 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
+Jul 25, 2020 9:07:04 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
 INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
-Jul 24, 2020 6:20:00 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+Jul 25, 2020 9:07:04 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
 INFO: SET THE DOWNLOAD DIRECTORY
-Jul 24, 2020 6:20:00 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+Jul 25, 2020 9:07:04 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
 INFO: SET THE BROWSER CAPABILITIES
-Jul 24, 2020 6:20:00 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+Jul 25, 2020 9:07:04 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
 INFO: Instantiating a Driver to Chrome
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 38244
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 47047
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1595595001.188][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
-Jul 24, 2020 6:20:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1595691425.953][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+Jul 25, 2020 9:07:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Jul 24, 2020 6:20:05 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
+Jul 25, 2020 9:07:10 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
 INFO: configure remote driver with machine ip-address
-Jul 24, 2020 6:20:05 PM com.droom.automation.lib.WebDriverFactory startDriver
+Jul 25, 2020 9:07:10 PM com.droom.automation.lib.WebDriverFactory startDriver
+INFO: Info : ...... Start opening application in browser .....
+]]></system-err>
+  </testcase>
+  <testcase name="emptyErrorMsgVerificationWhileRegisterAsIndividualAccount" classname="com.droom.automation.UserRegistrationTest" time="26.863">
+    <system-out><![CDATA[Info : Page load completed Successfully ..
+Create an Individual Account is displaying hence verified
+Info : Page load completed Successfully ..
+createAccountAndSendOtp is displaying hence verified
+Declaration is not Selected.
+The email field is required Error Massage is displaying hence verified
+The mobile number field is required Error Massage is displaying hence verified
+Please accept Terms & Conditions Error Massage is displaying hence verified
+]]></system-out>
+    <system-err><![CDATA[Jul 25, 2020 9:08:43 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: IN AFTER METHOD ======>
+Jul 25, 2020 9:08:43 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: QUIT DRIVER
+Jul 25, 2020 9:08:43 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: Closing browser and application ...
+Jul 25, 2020 9:08:44 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: WEBDRIVER SET TO NULL
+Jul 25, 2020 9:08:44 PM com.droom.automation.lib.AbstractBaseTest init
+INFO: IN BEFORE METHOD ======>
+Jul 25, 2020 9:08:44 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
+INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
+Jul 25, 2020 9:08:44 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
+INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
+Jul 25, 2020 9:08:44 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE DOWNLOAD DIRECTORY
+Jul 25, 2020 9:08:44 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE BROWSER CAPABILITIES
+Jul 25, 2020 9:08:44 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: Instantiating a Driver to Chrome
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 30121
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1595691526.246][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+Jul 25, 2020 9:08:48 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Jul 25, 2020 9:08:50 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
+INFO: configure remote driver with machine ip-address
+Jul 25, 2020 9:08:50 PM com.droom.automation.lib.WebDriverFactory startDriver
+INFO: Info : ...... Start opening application in browser .....
+]]></system-err>
+  </testcase>
+  <testcase name="emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount" classname="com.droom.automation.UserRegistrationTest" time="37.867">
+    <system-out><![CDATA[Info : Page load completed Successfully ..
+Create an Individual Account is displaying hence verified
+Info : Page load completed Successfully ..
+shive.sharma30@gmail.com is displaying hence verified
+8954221278 is displaying hence verified
+Declaration is Selected.
+createAccountAndSendOtp is displaying hence verified
+connected
+8771
+8771
+8771
+8771 is displaying hence verified
+Verify OTP is displaying hence verified
+Continue is displaying hence verified
+Please enter first name Error Massage is displaying hence verified
+Please enter last name Error Massage is displaying hence verified
+Please enter password Error Massage is displaying hence verified
+Please re-enter password Error Massage is displaying hence verified
+]]></system-out>
+    <system-err><![CDATA[Jul 25, 2020 9:10:15 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: IN AFTER METHOD ======>
+Jul 25, 2020 9:10:15 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: QUIT DRIVER
+Jul 25, 2020 9:10:15 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: Closing browser and application ...
+Jul 25, 2020 9:10:16 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: WEBDRIVER SET TO NULL
+Jul 25, 2020 9:10:16 PM com.droom.automation.lib.AbstractBaseTest init
+INFO: IN BEFORE METHOD ======>
+Jul 25, 2020 9:10:16 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
+INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
+Jul 25, 2020 9:10:16 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
+INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
+Jul 25, 2020 9:10:16 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE DOWNLOAD DIRECTORY
+Jul 25, 2020 9:10:16 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE BROWSER CAPABILITIES
+Jul 25, 2020 9:10:16 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: Instantiating a Driver to Chrome
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 22296
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1595691617.754][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+Jul 25, 2020 9:10:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Jul 25, 2020 9:10:21 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
+INFO: configure remote driver with machine ip-address
+Jul 25, 2020 9:10:21 PM com.droom.automation.lib.WebDriverFactory startDriver
+INFO: Info : ...... Start opening application in browser .....
+]]></system-err>
+  </testcase>
+  <testcase name="errorMsgVerificationForPasswordWhileRegisterAsIndividualAccount" classname="com.droom.automation.UserRegistrationTest" time="29.827">
+    <system-out><![CDATA[Info : Page load completed Successfully ..
+Create an Individual Account is displaying hence verified
+Info : Page load completed Successfully ..
+shive44.sharma44@gmail.com is displaying hence verified
+8564491418 is displaying hence verified
+Declaration is Selected.
+createAccountAndSendOtp is displaying hence verified
+connected
+4315
+4315
+4315
+4315 is displaying hence verified
+Verify OTP is displaying hence verified
+shive is displaying hence verified
+sharma is displaying hence verified
+Continue is displaying hence verified
+Password should have at least 6 characters Error Massage is displaying hence verified
+Re-entered Password is not matching with Password. Error Massage is displaying hence verified
+]]></system-out>
+    <system-err><![CDATA[Jul 25, 2020 9:11:42 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: IN AFTER METHOD ======>
+Jul 25, 2020 9:11:42 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: QUIT DRIVER
+Jul 25, 2020 9:11:42 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: Closing browser and application ...
+Jul 25, 2020 9:11:43 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: WEBDRIVER SET TO NULL
+Jul 25, 2020 9:11:43 PM com.droom.automation.lib.AbstractBaseTest init
+INFO: IN BEFORE METHOD ======>
+Jul 25, 2020 9:11:43 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
+INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
+Jul 25, 2020 9:11:43 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
+INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
+Jul 25, 2020 9:11:43 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE DOWNLOAD DIRECTORY
+Jul 25, 2020 9:11:43 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE BROWSER CAPABILITIES
+Jul 25, 2020 9:11:43 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: Instantiating a Driver to Chrome
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 8388
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1595691705.165][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+Jul 25, 2020 9:11:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Jul 25, 2020 9:11:49 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
+INFO: configure remote driver with machine ip-address
+Jul 25, 2020 9:11:49 PM com.droom.automation.lib.WebDriverFactory startDriver
+INFO: Info : ...... Start opening application in browser .....
+]]></system-err>
+  </testcase>
+  <testcase name="emptyErrorMsgVerificationWhileRegisterAsProSellerAccount" classname="com.droom.automation.UserRegistrationTest" time="35.447">
+    <system-out><![CDATA[Info : Page load completed Successfully ..
+Create a Pro-Seller Account is displaying hence verified
+Info : Page load completed Successfully ..
+Create  Pro-Seller  Account is displaying hence verified
+The first name field is required Error Massage is displaying hence verified
+The last name field is required Error Massage is displaying hence verified
+The email field is required Error Massage is displaying hence verified
+The mobile number field is required Error Massage is displaying hence verified
+The OTP field is required Error Massage is displaying hence verified
+The business name field is required Error Massage is displaying hence verified
+Please enter password Error Massage is displaying hence verified
+Please re-enter password Error Massage is displaying hence verified
+]]></system-out>
+    <system-err><![CDATA[Jul 25, 2020 9:12:44 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: IN AFTER METHOD ======>
+Jul 25, 2020 9:12:44 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: QUIT DRIVER
+Jul 25, 2020 9:12:44 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: Closing browser and application ...
+Jul 25, 2020 9:12:45 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: WEBDRIVER SET TO NULL
+Jul 25, 2020 9:12:45 PM com.droom.automation.lib.AbstractBaseTest init
+INFO: IN BEFORE METHOD ======>
+Jul 25, 2020 9:12:45 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
+INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
+Jul 25, 2020 9:12:45 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
+INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
+Jul 25, 2020 9:12:45 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE DOWNLOAD DIRECTORY
+Jul 25, 2020 9:12:45 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE BROWSER CAPABILITIES
+Jul 25, 2020 9:12:45 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: Instantiating a Driver to Chrome
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 46612
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1595691766.595][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+Jul 25, 2020 9:12:48 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Jul 25, 2020 9:12:50 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
+INFO: configure remote driver with machine ip-address
+Jul 25, 2020 9:12:50 PM com.droom.automation.lib.WebDriverFactory startDriver
+INFO: Info : ...... Start opening application in browser .....
+]]></system-err>
+  </testcase>
+  <testcase name="allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount" classname="com.droom.automation.UserRegistrationTest" time="20.514">
+    <system-out><![CDATA[Info : Page load completed Successfully ..
+Info : Page load completed Successfully ..
+Rahul is displaying hence verified
+Singhaaa is displaying hence verified
+rahulkumar.singhaa110@droom.in is displaying hence verified
+9822038619 is displaying hence verified
+validateEmailAndPhone is displaying hence verified
+connected
+6916
+6916
+6916
+6916 is displaying hence verified
+Rahul Sharma Garage is displaying hence verified
+India@123 is displaying hence verified
+India@123 is displaying hence verified
+Create  Pro-Seller  Account is displaying hence verified
+This Email ID is already in use. Error Massage is displaying hence verified
+This phone number is already associated with another verified droom account Error Massage is displaying hence verified
+This business name has already been taken Error Massage is displaying hence verified
+]]></system-out>
+    <system-err><![CDATA[Jul 25, 2020 9:14:09 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: IN AFTER METHOD ======>
+Jul 25, 2020 9:14:09 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: QUIT DRIVER
+Jul 25, 2020 9:14:09 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: Closing browser and application ...
+Jul 25, 2020 9:14:10 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: WEBDRIVER SET TO NULL
+Jul 25, 2020 9:14:10 PM com.droom.automation.lib.AbstractBaseTest init
+INFO: IN BEFORE METHOD ======>
+Jul 25, 2020 9:14:10 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
+INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
+Jul 25, 2020 9:14:10 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
+INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
+Jul 25, 2020 9:14:10 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE DOWNLOAD DIRECTORY
+Jul 25, 2020 9:14:10 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE BROWSER CAPABILITIES
+Jul 25, 2020 9:14:10 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: Instantiating a Driver to Chrome
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 18356
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1595691852.091][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+Jul 25, 2020 9:14:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Jul 25, 2020 9:14:16 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
+INFO: configure remote driver with machine ip-address
+Jul 25, 2020 9:14:16 PM com.droom.automation.lib.WebDriverFactory startDriver
+INFO: Info : ...... Start opening application in browser .....
+]]></system-err>
+  </testcase>
+  <testcase name="inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount" classname="com.droom.automation.UserRegistrationTest" time="20.43">
+    <system-out><![CDATA[Info : Page load completed Successfully ..
+Info : Page load completed Successfully ..
+Adarsh is displaying hence verified
+Rawat is displaying hence verified
+adarsh.rawatgmail.com is displaying hence verified
+1030001190 is displaying hence verified
+validateEmailAndPhone is displaying hence verified
+0 is displaying hence verified
+Rawatt Ka Garage is displaying hence verified
+India@123 is displaying hence verified
+India@123 is displaying hence verified
+Create  Pro-Seller  Account is displaying hence verified
+Please enter valid Email Address Error Massage is displaying hence verified
+Please enter valid Mobile Number Error Massage is displaying hence verified
+OTP must have 4 digits Error Massage is displaying hence verified
+]]></system-out>
+    <system-err><![CDATA[Jul 25, 2020 9:15:06 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: IN AFTER METHOD ======>
+Jul 25, 2020 9:15:06 PM com.droom.automation.lib.AbstractBaseTest afterMethod
+INFO: QUIT DRIVER
+Jul 25, 2020 9:15:06 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: Closing browser and application ...
+Jul 25, 2020 9:15:07 PM com.droom.automation.lib.WebDriverFactory closeDriver
+INFO: WEBDRIVER SET TO NULL
+Jul 25, 2020 9:15:07 PM com.droom.automation.lib.AbstractBaseTest init
+INFO: IN BEFORE METHOD ======>
+Jul 25, 2020 9:15:07 PM io.github.bonigarcia.wdm.WebDriverManager detectDriverVersionFromBrowser
+INFO: Using chromedriver 84.0.4147.30 (since Google Chrome 84 is installed in your machine)
+Jul 25, 2020 9:15:07 PM io.github.bonigarcia.wdm.WebDriverManager exportDriver
+INFO: Exporting webdriver.chrome.driver as C:\Users\Honey\.m2\repository\webdriver\chromedriver\win32\84.0.4147.30\chromedriver.exe
+Jul 25, 2020 9:15:07 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE DOWNLOAD DIRECTORY
+Jul 25, 2020 9:15:07 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: SET THE BROWSER CAPABILITIES
+Jul 25, 2020 9:15:07 PM com.droom.automation.lib.WebDriverFactory getChromeDriver
+INFO: Instantiating a Driver to Chrome
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 6171
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1595691909.268][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+Jul 25, 2020 9:15:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Jul 25, 2020 9:15:13 PM com.droom.automation.lib.WebDriverFactory getWebDriverInstance
+INFO: configure remote driver with machine ip-address
+Jul 25, 2020 9:15:13 PM com.droom.automation.lib.WebDriverFactory startDriver
 INFO: Info : ...... Start opening application in browser .....
 ]]></system-err>
   </testcase>
