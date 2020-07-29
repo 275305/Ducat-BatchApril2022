@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57292" started-at="2020-07-25T20:40:31 IST" finished-at="2020-07-25T20:41:29 IST">
+  <suite name="Default suite" duration-ms="402548" started-at="2020-07-29T17:21:52 IST" finished-at="2020-07-29T17:28:35 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="57292" started-at="2020-07-25T20:40:31 IST" finished-at="2020-07-25T20:41:29 IST">
-      <class name="com.droom.automation.UserRegistrationTest">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.UserRegistrationTest@22a637e7]" name="beforeSuite" is-config="true" duration-ms="36" started-at="2020-07-25T20:40:31 IST" finished-at="2020-07-25T20:40:31 IST">
+    <test name="Default test" duration-ms="402548" started-at="2020-07-29T17:21:52 IST" finished-at="2020-07-29T17:28:35 IST">
+      <class name="com.droom.automation.BuyGermShieldServiceTest">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.BuyGermShieldServiceTest@22a637e7]" name="beforeSuite" is-config="true" duration-ms="39" started-at="2020-07-29T17:21:52 IST" finished-at="2020-07-29T17:21:52 IST">
           <params>
             <param index="0">
               <value>
@@ -18,30 +18,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.UserRegistrationTest@22a637e7]" name="beforeTest" is-config="true" duration-ms="17" started-at="2020-07-25T20:40:31 IST" finished-at="2020-07-25T20:40:31 IST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.BuyGermShieldServiceTest@22a637e7]" name="beforeTest" is-config="true" duration-ms="20" started-at="2020-07-29T17:21:52 IST" finished-at="2020-07-29T17:21:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.UserRegistrationTest@22a637e7]" name="init" is-config="true" duration-ms="35457" started-at="2020-07-25T20:40:31 IST" finished-at="2020-07-25T20:41:07 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.BuyGermShieldServiceTest@22a637e7]" name="init" is-config="true" duration-ms="44762" started-at="2020-07-29T17:21:52 IST" finished-at="2020-07-29T17:22:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount()[pri:9, instance:com.droom.automation.UserRegistrationTest@22a637e7]" name="inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount" duration-ms="20692" started-at="2020-07-25T20:41:07 IST" finished-at="2020-07-25T20:41:28 IST">
+        <test-method status="PASS" signature="buyGermShieldForAutomobileAsCar()[pri:0, instance:com.droom.automation.BuyGermShieldServiceTest@22a637e7]" name="buyGermShieldForAutomobileAsCar" duration-ms="357448" started-at="2020-07-29T17:22:37 IST" finished-at="2020-07-29T17:28:35 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.UserRegistrationTest@22a637e7]" name="afterMethod" is-config="true" duration-ms="812" started-at="2020-07-25T20:41:28 IST" finished-at="2020-07-25T20:41:29 IST">
+        </test-method> <!-- buyGermShieldForAutomobileAsCar -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.BuyGermShieldServiceTest@22a637e7]" name="afterMethod" is-config="true" duration-ms="7" started-at="2020-07-29T17:28:35 IST" finished-at="2020-07-29T17:28:35 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount status=SUCCESS method=UserRegistrationTest.inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount()[pri:9, instance:com.droom.automation.UserRegistrationTest@22a637e7] output={null}]]]>
+                <![CDATA[[TestResult name=buyGermShieldForAutomobileAsCar status=SUCCESS method=BuyGermShieldServiceTest.buyGermShieldForAutomobileAsCar()[pri:0, instance:com.droom.automation.BuyGermShieldServiceTest@22a637e7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.droom.automation.UserRegistrationTest -->
+      </class> <!-- com.droom.automation.BuyGermShieldServiceTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

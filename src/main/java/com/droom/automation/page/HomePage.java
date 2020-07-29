@@ -1,6 +1,8 @@
 package com.droom.automation.page;
 
 import com.droom.automation.lib.SeleniumWrapper;
+import com.droom.automation.lib.WebDriverFactory;
+
 import org.openqa.selenium.By;
 
 public class HomePage extends SeleniumWrapper {
@@ -15,6 +17,9 @@ public class HomePage extends SeleniumWrapper {
     private static final By Click_Sell_From_Home_Popup=By.xpath("//h2[text()='Sell from Home']");
     private static final By Click_Create_Listion_Button=By.xpath("//a[text()='Create Listing']");
     private static final By Click_Sell_As_ProSeller_From_Home_Popup=By.xpath("//h2[text()='Sell as ProSeller']");
+    private static final By Click_Search_Box=By.xpath("//input[@id='main_search']");
+//    private static final By =By.xpath("");
+//    private static final By =By.xpath("");
 //    private static final By =By.xpath("");
     
     public void enterSearch(String text) 
@@ -61,8 +66,19 @@ public class HomePage extends SeleniumWrapper {
     public void enterGermShieldAntimicrobialCoating()
     {
     	executeClickOnElement(Click_Germ_Shield_Antimicrobial_Coating);
-    	sleep(1000);
-    	verifyByText(Click_Buy_Germ_Shield, "Buy Germ Shield");
+    	sleep(4000);
+    	//verifyByText(Click_Buy_Germ_Shield, "Buy Germ Shield");
     	executeClickOnElement(Click_Buy_Germ_Shield);
     }
+    
+    public void enterSearchBox(String searchvalue)
+    {
+    	verifyByAttributeByID(Click_Search_Box, "main_search");
+    	enterTextboxDetails(findElement(Click_Search_Box), searchvalue);
+    	verifyByAttribute(Click_Search_Box, searchvalue);
+    	enterKey(Click_Search_Box);
+    }
+    
+    
+    
 }

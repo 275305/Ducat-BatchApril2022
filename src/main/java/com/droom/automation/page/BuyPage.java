@@ -2,6 +2,7 @@ package com.droom.automation.page;
 
 import org.openqa.selenium.By;
 
+import com.droom.automation.lib.DataBaseDemo;
 import com.droom.automation.lib.SeleniumWrapper;
 
 public class BuyPage extends SeleniumWrapper
@@ -20,6 +21,8 @@ public class BuyPage extends SeleniumWrapper
 	private final static By Pay_Fully_Refundable_Token_Amount=By.xpath("//button[@id='cart_add']//span");
 	private final static By Click_Proceed=By.xpath("//button[@type='button'and@class='btn btn-success proceed']");
 	private final static By Proceed_To_Payment=By.xpath("//button[@id='add_listing_services_to_cart']");
+	
+	//for automobile services webelements
 	private final static By Click_For_Automobile_Services=By.xpath("//label[text()='Automobile Services']");
 	private final static By Click_For_RTO_Service=By.xpath("//label[text()='RTO Services']");
 	private final static By Click_On_Get_Assistance=By.xpath("//a[contains(text(),' Get Assistance')]");
@@ -38,24 +41,34 @@ public class BuyPage extends SeleniumWrapper
 	private final static By Select_Car_Hyundai=By.xpath("//img[@alt='Mahindra Scorpio SLE 7S BSIV 2011']");
 	private final static By Verify_Token_Amount=By.xpath("//button[@id='cart_add']//span");
 	private final static By Verify_Token_Amount_Popup=By.xpath("//span[text()='₹25,669']");
+	private final static By Select_Car_As_Vehicle_Catogory=By.xpath("//label[text()='Car']");
+	private final static By Select_Motorcycle_Bike_As_Vehicle_Catogory=By.xpath("//label[text()='Motorcycle/bike']");
+	
+	//Webelements for enter detail for popup
+	private final static By Enter_Full_Name=By.xpath("//input[@id='wg-full-name']");
+	private final static By Enter_Mail_Id=By.xpath("//input[@id='wg-email']");
+	private final static By Enter_Mobile_Number=By.xpath("//input[@id='wg-phone']");
+//	private final static By =By.xpath("");
 //	private final static By =By.xpath("");
 	
 	
 	
 	LoginPage loginpage;
 	PaymentPage payemntpage;
+	HomePage homepage;
 	
 	
 	public BuyPage()
 	{
 		loginpage=new LoginPage();
 		payemntpage=new PaymentPage();
+		homepage=new HomePage();
 	}
 	
 	
-	public void selectBuyCategory() throws InterruptedException
+	public void selectBuyCategory(String username, String password) throws InterruptedException
 	{
-		loginpage.goToBuyViaMyAccount();
+		loginpage.goToBuyViaMyAccount(username, password);
 		waitForPageLoad();
 		executeClickOnElement(Select_Vehicle);
 		sleep(3000);
@@ -87,9 +100,9 @@ public class BuyPage extends SeleniumWrapper
 		//verifyByText(Verify_Token_Amount_Popup, "₹13,273");
 		//verifyByWebElements(Verify_Token_Amount, Verify_Token_Amount_Popup);
 		executeClickOnElement(Proceed_To_Payment);
-		PaymentPage paymentpage=new PaymentPage();
-		paymentpage.proceedToCheckout();
-		paymentpage.paymentViaNetBanking();
+//		PaymentPage paymentpage=new PaymentPage();
+//		paymentpage.proceedToCheckout();
+//		paymentpage.paymentViaNetBanking();
 		
 		
 	}
@@ -102,9 +115,9 @@ public class BuyPage extends SeleniumWrapper
 	}
 	
 	
-	public void buyAutomobileServicesViaRTO()
+	public void buyAutomobileServicesViaRTO(String username, String password)
 	{
-		loginpage.goToBuyViaMyAccount();
+		loginpage.goToBuyViaMyAccount(username, password);
 		waitForPageLoad();
 		selectAutomobileServices();
 		executeClickOnElement(Click_For_RTO_Service);
@@ -121,9 +134,9 @@ public class BuyPage extends SeleniumWrapper
 		
 	}
 	
-	public void buyAutomobileServicesViaJumpstart()
+	public void buyAutomobileServicesViaJumpstart(String username, String password)
 	{
-		loginpage.goToBuyViaMyAccount();
+		loginpage.goToBuyViaMyAccount(username, password);
 		waitForPageLoad();
 		selectAutomobileServices();
 		executeClickOnElement(Click_Automobile_Services_Via_Jumpstart);
@@ -141,9 +154,9 @@ public class BuyPage extends SeleniumWrapper
 		
 	}
 	
-	public void buyAutomobileServicesViaCarCareAndDetailing()
+	public void buyAutomobileServicesViaCarCareAndDetailing(String username, String password)
 	{
-		loginpage.goToBuyViaMyAccount();
+		loginpage.goToBuyViaMyAccount(username, password);
 		waitForPageLoad();
 		selectAutomobileServices();
 		executeClickOnElement(Click_Car_Care_And_Detailing);
@@ -160,6 +173,38 @@ public class BuyPage extends SeleniumWrapper
 		
 	}
 
+	
+	
+	
+	public void buyAutomobileServicesViaRTOAsLoggedInLater(String username, String fullname,String mobilenumber) throws Exception
+	{
+		homepage.enterBuy();
+		homepage.selectStartShopping();
+		waitForPageLoad();
+		selectAutomobileServices();
+		executeClickOnElement(Click_For_RTO_Service);
+		sleep(3000);
+		executeClickOnElement(Click_On_Get_Assistance);
+		sleep(3000);
+		executeClickOnElement(Select_City_Delhi);
+		sleep(3000);
+//		executeClickOnElement(Select_Car_As_Vehicle_Catogory);
+//		sleep(3000);
+		executeClickOnElement(Click_Buy_Now);
+		sleep(3000);
+		enterTextboxDetails(findElement(Enter_Full_Name), fullname);
+		enterTextboxDetails(findElement(Enter_Mail_Id), username);
+		enterTextboxDetails(findElement(Enter_Mobile_Number), mobilenumber);
+		executeClickOnElement(Click_Send_OTP);
+		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='"+mobilenumber+"' order by id desc limit 1;");
+		String otpValue = Integer.toString(otp);
+		//enterTextboxDetails(findElement(Enter_OTP), otpValue);
+		sleep(2000);
+		executeClickOnElement(Click_Submit_Button);
+		//payemntpage.proceedToCheckout();
+		//payemntpage.paymentViaNetBanking();
+		
+	}
 	
 	
 }

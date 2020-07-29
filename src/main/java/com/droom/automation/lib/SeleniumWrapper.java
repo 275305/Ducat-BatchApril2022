@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -277,6 +278,13 @@ public class SeleniumWrapper extends JavaLibrary
         ((JavascriptExecutor)WebDriverFactory.getDriver() ).executeScript("arguments[0].click();", findElement(locator));
     }
 
+    public void enterValueByJS(final By by ,String inputvalue)
+    {
+    	String inputText = inputvalue;
+    	WebElement myElement = WebDriverFactory.getDriver().findElement(by);
+    	String js = "arguments[0].setAttribute('value','"+inputText+"')";
+    	((JavascriptExecutor) WebDriverFactory.getDriver()).executeScript(js, myElement);
+    }
     public String openURLInNewWindow(final String url) 
     {
         final WebDriver driver = WebDriverFactory.getDriver();
@@ -303,7 +311,7 @@ public class SeleniumWrapper extends JavaLibrary
     public void switchToWindow(final String title)
     {
         final WebDriver driver = WebDriverFactory.getDriver();
-        for (final String windowHandle : driver.getWindowHandles()) 
+        for (final String windowHandle : driver.getWindowHandles())
         {
             driver.switchTo().window(windowHandle);
             if (driver.getTitle().equalsIgnoreCase(title))
@@ -378,6 +386,8 @@ public class SeleniumWrapper extends JavaLibrary
 		System.out.println("its matching");
 	}
 	
+	
+	
 	public void verifyErrorMsgByText(final By by,String text) throws InterruptedException
 	{
 		String actual_attribute = WebDriverFactory.getDriver().findElement(by).getText();
@@ -446,6 +456,19 @@ public class SeleniumWrapper extends JavaLibrary
 	            System.out.println("Image displayed.");
 	        }
 		}
+	
+	
+	public void elementToBeClickedThenSendData(final By by, String text)
+	{
+		 final WebDriver webDriver = WebDriverFactory.getDriver();
+	   new WebDriverWait(webDriver, 20).until(ExpectedConditions.elementToBeClickable(findElement(by))).sendKeys(text);
+	}
+	
+	public void moveToElementAndEnter(final By by)
+	{
+		Actions action=new Actions(WebDriverFactory.getDriver());
+		action.moveToElement(findElement(by)).click(findElement(by)).perform();
+	}
 
 /*    public void cusAssertEquals(String actual, String expected) {
     	Assert.assertEquals(actual, expected);

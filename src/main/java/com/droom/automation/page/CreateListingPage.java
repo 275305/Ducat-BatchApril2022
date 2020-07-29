@@ -109,7 +109,6 @@ public class CreateListingPage extends SeleniumWrapper
 		sleep(2000);
 		enterKey(Select_Registartion_Search);
 		sleep(2000);
-		//verifyByText(Select_Registration_State, "Delhi");
 		enterTextboxDetails(findElement(Enter_KM_Driven), "15000");
 		verifyByAttribute(Enter_KM_Driven, "15000");
 		executeClickOnElement(Continue_After_Key_Information);
@@ -128,13 +127,11 @@ public class CreateListingPage extends SeleniumWrapper
 	
 	public void uploadPicture() throws Exception
 	{
-		//doPageRefresh();
 		executeClickOnElement(Click_To_Upload);
 		sleep(2000);
 		fileUpload("C:\\Users\\Honey\\Desktop\\cycle.png");
 		sleep(12000);
 		CheckImage(Check_Image);
-		//verifyByContains(Continue_After_Upload, "Save and Continue");
 		executeClickOnElement(Continue_After_Upload);
 		sleep(3000);
 		verifyByContains(Click_Get_Later, "Maybe Later");

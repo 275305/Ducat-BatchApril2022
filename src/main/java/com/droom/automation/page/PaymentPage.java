@@ -25,17 +25,33 @@ public class PaymentPage extends SeleniumWrapper
 		
 	}
 	
+	public void continueToAddressToContinueToPayment()
+	{
+		
+		verifyByText(Continue_To_Address, "Continue To Addresses");
+		executeClickOnElement(Continue_To_Address);
+		sleep(3000);
+		verifyByText(Click_On_Use_This_Address, "Use This Address");
+		executeClickOnElement(Click_On_Use_This_Address);
+		verifyByAttribute(Continue_To_Payment, "Continue to Payment");
+		executeClickOnElement(Continue_To_Payment);
+	}
+	
 	public void proceedToCheckout()
 	{
 		waitForPageLoad();
+		verifyByAttributeByID(Click_Proceed_To_Continue, "proceed-to-checkout");
 		executeClickOnElement(Click_Proceed_To_Continue);
-		sleep(3000);
-		executeClickOnElement(Continue_To_Address);
-		sleep(3000);
-		executeClickOnElement(Click_On_Use_This_Address);
-		executeClickOnElement(Continue_To_Payment);
-		
-		
+		waitForPageLoad();
+		continueToAddressToContinueToPayment();
+    }
+	
+	public void proceedToCheckoutWithoutLoggedIn()
+	{
+		waitForPageLoad();
+		verifyByAttributeByID(Click_Proceed_To_Continue, "proceed-to-checkout");
+		executeClickOnElement(Click_Proceed_To_Continue);
+		waitForPageLoad();
 	}
 	
 }

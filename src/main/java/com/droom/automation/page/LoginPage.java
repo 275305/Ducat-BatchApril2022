@@ -33,6 +33,22 @@ public class LoginPage extends SeleniumWrapper
 	private final static By Incorrect_Email_or_Password_Error_Massage=By.xpath("//div[text()='Incorrect Email or Password']");
 	private final static By Invalid_OTP_Code_Massage=By.xpath("//div[text()='Invalid OTP code.']");
 	
+	//login webelements at checkout
+	private final static By Enter_Mail_At_Checkout=By.xpath("//input[@id='email'and@placeholder='E-mail Address']");
+	private final static By Click_Login_Via_Password_At_Checkout=By.xpath("//a[contains(text(),'Login Via Password')]");
+	private final static By Enter_Password_At_Checkout=By.xpath("(//input[@id='password'])[1]");
+	private final static By Click_Login_At_Checkout=By.xpath("//input[@value='Login']");
+	
+	//login webelements at checkout via fb
+	private final static By Click_Fb_Link_At_Checkout=By.xpath("//a[text()='Login with Facebook']");
+	private final static By Enter_Fb_Username=By.xpath("//input[@id='email']");
+	private final static By Enter_Fb_Password=By.xpath("//input[@id='pass']");
+	private final static By Click_Fb_Continue_Button=By.xpath("//input[@value='Log In']");
+	
+//	private final static By =By.xpath("");
+//	private final static By =By.xpath("");
+//	private final static By =By.xpath("");
+	
 	
 	public void enterIconPopup()
 	{
@@ -148,11 +164,34 @@ public class LoginPage extends SeleniumWrapper
 		sleep(3000);
 	}
 	
-	public void goToBuyViaMyAccount()
+	public void goToBuyViaMyAccount(String username, String password)
 	{
 		enterLoginPage();
-		//loginValidationForIndividualAccount();
+		loginValidationForIndividualAccount(username, password);
 		executeClickOnElement(Go_To_Buy_Via_My_Account_Page);
+	}
+	
+	public void loginAtCheckout(String username, String password)
+	{
+		enterTextboxDetails(findElement(Enter_Mail_At_Checkout), username);
+		executeClickOnElement(Click_Login_Via_Password_At_Checkout);
+		enterTextboxDetails(findElement(Enter_Password_At_Checkout), password);
+		executeClickOnElement(Click_Login_At_Checkout);
+		
+	}
+	
+	public void loginViaFacebookAtCheckout()
+	{
+		executeClickOnElement(Click_Fb_Link_At_Checkout);
+		sleep(2000);
+		String parent = WebDriverFactory.getDriver().getWindowHandle();
+		switchToWindow("New Tab");
+		sleep(2000);
+		enterTextboxDetails(findElement(Enter_Fb_Username), "honey.maurya@droom.in");
+		enterTextboxDetails(findElement(Enter_Fb_Password), "India@123");
+		executeClickOnElement(Click_Fb_Continue_Button);
+		sleep(3000);
+		WebDriverFactory.getDriver().switchTo().window(parent);
 	}
 	
 }

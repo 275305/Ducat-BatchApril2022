@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.droom.automation.UserRegistrationTest">
+      <class name="com.droom.automation.BuyGermShieldServiceTest">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
-          <include name="inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount"/>
           <include name="init"/>
+          <include name="buyGermShieldForAutomobileAsCar"/>
         </methods>
-      </class> <!-- com.droom.automation.UserRegistrationTest -->
+      </class> <!-- com.droom.automation.BuyGermShieldServiceTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
