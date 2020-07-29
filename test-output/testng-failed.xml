@@ -7,9 +7,9 @@
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
+          <include name="buyGermShieldForOtherFacility"/>
           <include name="beforeSuite"/>
           <include name="init"/>
-          <include name="buyGermShieldForAutomobileAsCar"/>
         </methods>
       </class> <!-- com.droom.automation.BuyGermShieldServiceTest -->
     </classes>

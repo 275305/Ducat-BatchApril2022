@@ -154,6 +154,7 @@ public class GermShieldAntimicrobialCoatingPage extends SeleniumWrapper
 		executeClickOnElement(Click_To_Remove_Discount);
 		sleep(2000);
 		executeClickOnElement(Click_To_Accept_Discount);
+		sleep(8000);
 		verifyByContains(Final_Amount_Added_For_Hospital, "1,500");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();

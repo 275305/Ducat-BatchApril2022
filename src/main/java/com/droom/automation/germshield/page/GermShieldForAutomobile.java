@@ -41,6 +41,8 @@ public class GermShieldForAutomobile extends SeleniumWrapper
 	private static final By Click_On_Checkout_Popup= By.xpath("//a[text()='Checkout Now']");
 	private static final By Verify_Amount_Added_For_HatchBack=By.xpath("//span[contains(text(),'(₹1179 Incl. GST)')]");
 	private static final By Verify_Amount_Added_For_HatchBack_At_Checkout=By.xpath("//strong[text()='₹  1,179']");
+	private static final By Verify_Amount_Added_For_Sedan=By.xpath("//span[contains(text(),'(₹1651 Incl. GST)')]");
+	private static final By Verify_Amount_Added_For_Sedan_At_Checkout=By.xpath("//strong[text()='₹  1,651']");
 	private static final By Click_Button_Not_Intrested= By.xpath("//button[text()='I Am Not Interested']");
 	private static final By Verify_Amount_Added_For_Bike=By.xpath("//span[contains(text(),'(₹589 Incl. GST)')]");
 	private static final By Verify_Amount_Added_For_Scooter=By.xpath("//span[contains(text(),'(₹599 Incl. GST)')]");
@@ -80,7 +82,7 @@ public class GermShieldForAutomobile extends SeleniumWrapper
 		executeScrollDownScript(500);
 	}
 	
-	public void germShieldValidationForCar(String username,String password)
+	public void germShieldValidationForCarAsHatchback(String username,String password)
 	{
 		getGermShieldPage(username, password);
 		verifyByContains(Click_For_Automobile, "Automobile");
@@ -100,6 +102,32 @@ public class GermShieldForAutomobile extends SeleniumWrapper
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
 		verifyByContains(Verify_Amount_Added_For_HatchBack_At_Checkout, "1,179");
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
+		executeClickOnElement(Click_Button_Not_Intrested);
+		
+	}
+	
+	public void germShieldValidationForCarAsSedan(String username,String password)
+	{
+		getGermShieldPage(username, password);
+		verifyByContains(Click_For_Automobile, "Automobile");
+		executeClickOnElement(Click_For_Automobile);
+		verifyByContains(Click_For_Car, "Car");
+		executeClickOnElement(Click_For_Car);
+		verifyByContains(Amount_For_Sedan, "₹ 1651");
+		verifyByContains(Click_View_Details_For_Sedan, "View Details");
+		executeClickOnElement(Click_View_Details_For_Sedan);
+		sleep(3000);
+		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
+		executeClickOnElement(Click_On_Buy_Now_PopUp);
+		enterTextboxDetails(findElement(Enter_Pincode), "110005");
+		verifyByContains(Verify_Amount_Added_For_Sedan, "(₹1651 Incl. GST)");
+		executeClickOnElement(Click_On_Buy_Now_After_Pin);
+		sleep(2000);
+		executeClickOnElement(Click_On_Checkout_Popup);
+		waitForPageLoad();
+		verifyByContains(Verify_Amount_Added_For_Sedan_At_Checkout, "1,651");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
 		executeClickOnElement(Click_Button_Not_Intrested);

@@ -24,38 +24,46 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 	}
 	
 	
-	@Test
-	public void buyGermShieldServiceViaHomePageAsLoggedInUser()
-	{
-		germshield.germShieldAntimicrobialCoatingValidation();
-	}
-
+//	@Test(priority=1)
+//	public void buyGermShieldServiceViaHomePageAsLoggedInUser()
+//	{
+//		germshield.germShieldAntimicrobialCoatingValidation();
+//	}
+//
+//	
+//	@Test(priority = 2)
+//	public void buyGermShieldElevatorService()
+//	{
+//		String username = eu.readData("GermShieldSheet", 1, 1);
+//		String password = eu.readData("GermShieldSheet", 1, 2);
+//		germshield.germShieldForElevator(username, password);
+//	}
+//	
+//	@Test(priority = 3)
+//	public void buyGermShieldForOtherFacility()
+//	{
+//		String username = eu.readData("GermShieldSheet", 1, 1);
+//		String password = eu.readData("GermShieldSheet", 1, 2);
+//		germshield.germShieldForOtherFacility(username, password);
+//	}
 	
-	@Test
-	public void buyGermShieldElevatorService()
+	@Test(priority = 4)
+	public void buyGermShieldForAutomobileAsHatchback()
 	{
 		String username = eu.readData("GermShieldSheet", 1, 1);
 		String password = eu.readData("GermShieldSheet", 1, 2);
-		germshield.germShieldForElevator(username, password);
+		automobilegermshield.germShieldValidationForCarAsHatchback(username, password);
 	}
 	
-	@Test
-	public void buyGermShieldForOtherFacility()
+	@Test(priority = 5)
+	public void buyGermShieldForAutomobileAsSedan()
 	{
 		String username = eu.readData("GermShieldSheet", 1, 1);
 		String password = eu.readData("GermShieldSheet", 1, 2);
-		germshield.germShieldForOtherFacility(username, password);
+		automobilegermshield.germShieldValidationForCarAsSedan(username, password);
 	}
 	
-	@Test
-	public void buyGermShieldForAutomobileAsCar()
-	{
-		String username = eu.readData("GermShieldSheet", 1, 1);
-		String password = eu.readData("GermShieldSheet", 1, 2);
-		automobilegermshield.germShieldValidationForCar(username, password);
-	}
-	
-	@Test
+	@Test(priority = 6)
 	public void buyGermShieldForAutomobileAsBike()
 	{
 		String username = eu.readData("GermShieldSheet", 1, 1);
@@ -63,7 +71,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		automobilegermshield.germShieldValidationForBike(username, password);
 	}
 	
-	@Test
+	@Test(priority = 7)
 	public void buyGermShieldForAutomobileAsScooter()
 	{
 		String username = eu.readData("GermShieldSheet", 1, 1);
