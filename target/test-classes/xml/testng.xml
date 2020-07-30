@@ -3,9 +3,14 @@
 
 <suite name="suite" parallel="false" preserve-order="true">
 
-    <test name="RegistrationTest">
+    <test name="DroomWebAutomationTest">
+    
+    
         <classes>
-            <class name="com.droom.automation.RegistrationTest" />
+            <class name="com.droom.automation.SearchFeatureTest" />
+             
         </classes>
+        
+        
     </test>
-</suite>
+</suite>     

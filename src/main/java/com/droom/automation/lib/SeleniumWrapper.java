@@ -1,11 +1,14 @@
 package com.droom.automation.lib;
 
 import com.droom.automation.constants.UIConstants;
+import com.google.common.base.Verify;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,18 +17,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class SeleniumWrapper {
+public class SeleniumWrapper extends JavaLibrary
+{
 
     private int timeout = 60;
     private static final Logger LOG = LoggerFactory.getLogger(SeleniumWrapper.class);
@@ -271,6 +278,13 @@ public class SeleniumWrapper {
         ((JavascriptExecutor)WebDriverFactory.getDriver() ).executeScript("arguments[0].click();", findElement(locator));
     }
 
+    public void enterValueByJS(final By by ,String inputvalue)
+    {
+    	String inputText = inputvalue;
+    	WebElement myElement = WebDriverFactory.getDriver().findElement(by);
+    	String js = "arguments[0].setAttribute('value','"+inputText+"')";
+    	((JavascriptExecutor) WebDriverFactory.getDriver()).executeScript(js, myElement);
+    }
     public String openURLInNewWindow(final String url) 
     {
         final WebDriver driver = WebDriverFactory.getDriver();
@@ -294,13 +308,13 @@ public class SeleniumWrapper {
         WebDriverFactory.getDriver().switchTo().window(windowHandle);
     }
 
-    public void switchToWindow(final String title) 
+    public void switchToWindow(final String title)
     {
         final WebDriver driver = WebDriverFactory.getDriver();
-        for (final String windowHandle : driver.getWindowHandles()) 
+        for (final String windowHandle : driver.getWindowHandles())
         {
             driver.switchTo().window(windowHandle);
-            if (driver.getTitle().equalsIgnoreCase(title)) 
+            if (driver.getTitle().equalsIgnoreCase(title))
             {
                 return;
             }
@@ -317,21 +331,87 @@ public class SeleniumWrapper {
     	return  WebDriverFactory.getDriver().findElement(by).getText();
     }
     
-    public void verifyByText(String xpath, String text)
+    public void verifyByText(final By by, String text)
 	{
-		String actual_text = WebDriverFactory.getDriver().findElement(By.xpath(xpath)).getText();
+		String actual_text = WebDriverFactory.getDriver().findElement(by).getText();
 		String expected_Text = text;
 		Assert.assertEquals(actual_text, expected_Text);
 		System.out.println(actual_text+" is displaying hence verified");
 		
 	}
 	
-	public void verifyByContains(String xpath, String text)
+	public void verifyByContains(final By by, String text)
 	{
-		String actual_text = WebDriverFactory.getDriver().findElement(By.xpath(xpath)).getText();
+		String actual_text = WebDriverFactory.getDriver().findElement(by).getText();
 		Assert.assertTrue(actual_text.contains(text));
 		System.out.println(actual_text+" is displaying hence verified");
 		
+	}
+	
+	public void verifyRadioButton(final By by)
+	{
+		boolean checked = WebDriverFactory.getDriver().findElement(by).isSelected();
+		if (!checked) 
+		{
+			System.out.println("Declaration is not Selected.");
+		}
+		else
+		{
+		System.out.println("Declaration is Selected.");
+		}
+	}
+	
+	public void verifyByAttribute(final By by, String text)
+	{
+		String actual_attribute = WebDriverFactory.getDriver().findElement(by).getAttribute("value");
+		//String expected_Text = text;
+		Assert.assertTrue(actual_attribute.contains(text));
+		System.out.println(actual_attribute+" is displaying hence verified");
+	}
+	
+	public void verifyByAttributeByID(final By by, String text)
+	{
+		String actual_attribute = WebDriverFactory.getDriver().findElement(by).getAttribute("id");
+		//String expected_Text = text;
+		Assert.assertTrue(actual_attribute.contains(text));
+		System.out.println(actual_attribute+" is displaying hence verified");
+	}
+	
+	public void verifyByWebElements(final By by1,final By by2) throws InterruptedException
+	{
+		String actual = WebDriverFactory.getDriver().findElement(by1).getText();
+		Thread.sleep(3000);
+		String expected = WebDriverFactory.getDriver().findElement(by2).getText();
+		Assert.assertEquals(actual, expected);
+		System.out.println("its matching");
+	}
+	
+	
+	
+	public void verifyErrorMsgByText(final By by,String text) throws InterruptedException
+	{
+		String actual_attribute = WebDriverFactory.getDriver().findElement(by).getText();
+		String expected_Text = text;
+		SoftAssert softassert=new SoftAssert();
+		softassert.assertEquals(actual_attribute, expected_Text);
+		System.out.println(actual_attribute+" Error Massage is displaying hence verified");
+	}
+	
+	public void verifyErrormsgByContains(final By by, String text)
+	{
+		String actual_text = WebDriverFactory.getDriver().findElement(by).getText();
+		SoftAssert softassert=new SoftAssert();
+		softassert.assertTrue(actual_text.contains(text));
+		System.out.println(actual_text+" Error Massage is displaying hence verified");
+		
+	}
+	
+	public void verifyErrorMsgByAttribute(final By by, String text)
+	{
+		String actual_attribute = WebDriverFactory.getDriver().findElement(by).getAttribute("value");
+		SoftAssert softassert=new SoftAssert();
+		softassert.assertTrue(actual_attribute.contains(text));
+		System.out.println(actual_attribute+" Error Massage is displaying hence verified");
 	}
 	
 	public void selectCity() throws InterruptedException
@@ -362,20 +442,34 @@ public class SeleniumWrapper {
 		WebDriverFactory.getDriver().findElement(locator).click();
 	}
 	
-	public void fileUpload(String file) throws AWTException
+	public void CheckImage(final By by) throws Exception
 	{
-		Robot rb=new Robot();
-		StringSelection str=new StringSelection(file);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
-		rb.keyPress(KeyEvent.VK_CONTROL);
-		rb.keyPress(KeyEvent.VK_V);
-		rb.keyRelease(KeyEvent.VK_CONTROL);
-		rb.keyRelease(KeyEvent.VK_V);
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.keyRelease(KeyEvent.VK_ENTER);
-    }
+	WebElement ImageFile = WebDriverFactory.getDriver().findElement(by);
+	        
+    Boolean ImagePresent = (Boolean) ((JavascriptExecutor)WebDriverFactory.getDriver()).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", ImageFile);
+	        if (!ImagePresent)
+	        {
+	             System.out.println("Image not displayed.");
+	        }
+	        else
+	        {
+	            System.out.println("Image displayed.");
+	        }
+		}
 	
-    
+	
+	public void elementToBeClickedThenSendData(final By by, String text)
+	{
+		 final WebDriver webDriver = WebDriverFactory.getDriver();
+	   new WebDriverWait(webDriver, 20).until(ExpectedConditions.elementToBeClickable(findElement(by))).sendKeys(text);
+	}
+	
+	public void moveToElementAndEnter(final By by)
+	{
+		Actions action=new Actions(WebDriverFactory.getDriver());
+		action.moveToElement(findElement(by)).click(findElement(by)).perform();
+	}
+
 /*    public void cusAssertEquals(String actual, String expected) {
     	Assert.assertEquals(actual, expected);
     	public String TEXTFOUND = actual + "found";
