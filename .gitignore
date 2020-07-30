@@ -1,4 +1,4 @@
-allure-results
-TestOutput
-test-output
-target
+allure-results/
+TestOutput/
+test-output/
+target/
