@@ -1,8 +1,9 @@
-package com.droom.automation.credit;
+package com.droom.automation.droomcredit;
 
 import com.droom.automation.lib.AbstractBaseTest;
-import com.droom.automation.page.credit.ApplyLoanPage;
-import com.droom.automation.page.credit.HomePage;
+import com.droom.automation.page.droomcredit.ApplyLoanPage;
+import com.droom.automation.page.droomcredit.HomePage;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

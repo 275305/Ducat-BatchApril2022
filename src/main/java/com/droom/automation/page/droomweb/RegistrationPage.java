@@ -1,5 +1,4 @@
-package com.droom.automation.page;
-
+package com.droom.automation.page.droomweb;
 import org.openqa.selenium.By;
 
 import com.droom.automation.lib.DataBaseDemo;

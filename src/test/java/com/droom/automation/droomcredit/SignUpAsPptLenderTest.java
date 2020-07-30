@@ -1,24 +1,12 @@
-package com.droom.automation.credit;
-
+package com.droom.automation.droomcredit;
 import com.droom.automation.lib.AbstractBaseTest;
-import com.droom.automation.lib.SeleniumWrapper;
-import com.droom.automation.lib.WebDriverFactory;
-import com.droom.automation.page.credit.LendersPage;
-import com.droom.automation.page.credit.LenderSignUpPage;
-import com.droom.automation.page.credit.HomePage;
-import com.droom.automation.page.credit.TermsAndConditionsPage;
-import com.google.common.base.Verify;
+import com.droom.automation.page.droomcredit.HomePage;
+import com.droom.automation.page.droomcredit.LenderSignUpPage;
+import com.droom.automation.page.droomcredit.LendersPage;
+import com.droom.automation.page.droomcredit.TermsAndConditionsPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.awt.print.Printable;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Window;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

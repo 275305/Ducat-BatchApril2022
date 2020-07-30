@@ -1,9 +1,9 @@
-package com.droom.automation;
-
+package com.droom.automation.droomweb;
 import org.testng.annotations.Test;
 
 import com.droom.automation.germshield.page.GermShieldAntimicrobialCoatingPage;
 import com.droom.automation.germshield.page.GermShieldForAutomobile;
+import com.droom.automation.germshield.page.GermShieldForHome;
 import com.droom.automation.lib.AbstractBaseTest;
 import com.droom.automation.lib.ExcelUtilities;
 
@@ -14,6 +14,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 	ExcelUtilities eu;
 	GermShieldAntimicrobialCoatingPage germshield;
 	GermShieldForAutomobile automobilegermshield;
+	GermShieldForHome homegermshield;
 	
 	public BuyGermShieldServiceTest()
 	{
@@ -21,6 +22,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		this.eu=new ExcelUtilities(filepath);
 		germshield=new GermShieldAntimicrobialCoatingPage();
 		automobilegermshield=new GermShieldForAutomobile();
+		homegermshield=new GermShieldForHome();
 	}
 	
 	
@@ -47,36 +49,80 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 //		germshield.germShieldForOtherFacility(username, password);
 //	}
 	
-	@Test(priority = 4)
-	public void buyGermShieldForAutomobileAsHatchback()
-	{
-		String username = eu.readData("GermShieldSheet", 1, 1);
-		String password = eu.readData("GermShieldSheet", 1, 2);
-		automobilegermshield.germShieldValidationForCarAsHatchback(username, password);
-	}
+//	@Test(priority = 4)
+//	public void buyGermShieldForAutomobileAsHatchback()
+//	{
+//		String username = eu.readData("GermShieldSheet", 1, 1);
+//		String password = eu.readData("GermShieldSheet", 1, 2);
+//		automobilegermshield.germShieldValidationForCarAsHatchback(username, password);
+//	}
+//	
+//	@Test(priority = 5)
+//	public void buyGermShieldForAutomobileAsSedan()
+//	{
+//		String username = eu.readData("GermShieldSheet", 1, 1);
+//		String password = eu.readData("GermShieldSheet", 1, 2);
+//		automobilegermshield.germShieldValidationForCarAsSedan(username, password);
+//	}
+//	
+//	@Test(priority = 6)
+//	public void buyGermShieldForAutomobileAsBike()
+//	{
+//		String username = eu.readData("GermShieldSheet", 1, 1);
+//		String password = eu.readData("GermShieldSheet", 1, 2);
+//		automobilegermshield.germShieldValidationForBike(username, password);
+//	}
+//	
+//	@Test(priority = 7)
+//	public void buyGermShieldForAutomobileAsScooter()
+//	{
+//		String username = eu.readData("GermShieldSheet", 1, 1);
+//		String password = eu.readData("GermShieldSheet", 1, 2);
+//		automobilegermshield.germShieldValidationForScooter(username, password);
+//	}
 	
-	@Test(priority = 5)
-	public void buyGermShieldForAutomobileAsSedan()
+	@Test(priority = 7)
+	public void buyGermShieldForHomeAsIndependent()
 	{
-		String username = eu.readData("GermShieldSheet", 1, 1);
-		String password = eu.readData("GermShieldSheet", 1, 2);
-		automobilegermshield.germShieldValidationForCarAsSedan(username, password);
-	}
-	
-	@Test(priority = 6)
-	public void buyGermShieldForAutomobileAsBike()
-	{
-		String username = eu.readData("GermShieldSheet", 1, 1);
-		String password = eu.readData("GermShieldSheet", 1, 2);
-		automobilegermshield.germShieldValidationForBike(username, password);
+		String username = eu.readData("GermShieldForHome", 1, 1);
+		String password = eu.readData("GermShieldForHome", 1, 2);
+		String area = eu.readData("GermShieldForHome", 1, 3);
+		String address = eu.readData("GermShieldForHome", 1, 4);
+		String pincode = eu.readData("GermShieldForHome", 1, 5);
+		homegermshield.germShieldValidationForHomeAsIndependent(username, password, area, address, pincode);
 	}
 	
 	@Test(priority = 7)
-	public void buyGermShieldForAutomobileAsScooter()
+	public void buyGermShieldForHomeAsBungalow()
 	{
-		String username = eu.readData("GermShieldSheet", 1, 1);
-		String password = eu.readData("GermShieldSheet", 1, 2);
-		automobilegermshield.germShieldValidationForScooter(username, password);
+		String username = eu.readData("GermShieldForHome", 1, 1);
+		String password = eu.readData("GermShieldForHome", 1, 2);
+		String area = eu.readData("GermShieldForHome", 1, 3);
+		String address = eu.readData("GermShieldForHome", 1, 4);
+		String pincode = eu.readData("GermShieldForHome", 1, 5);
+		homegermshield.germShieldValidationForHomeAsBungalow(username, password, area, address, pincode);
+	}
+	
+	@Test(priority = 7)
+	public void buyGermShieldForHomeAsFlat()
+	{
+		String username = eu.readData("GermShieldForHome", 1, 1);
+		String password = eu.readData("GermShieldForHome", 1, 2);
+		String area = eu.readData("GermShieldForHome", 1, 3);
+		String address = eu.readData("GermShieldForHome", 1, 4);
+		String pincode = eu.readData("GermShieldForHome", 1, 5);
+		homegermshield.germShieldValidationForHomeAsFlat(username, password, area, address, pincode);
+	}
+	
+	@Test(priority = 7)
+	public void buyGermShieldForHomeAsVilla()
+	{
+		String username = eu.readData("GermShieldForHome", 1, 1);
+		String password = eu.readData("GermShieldForHome", 1, 2);
+		String area = eu.readData("GermShieldForHome", 1, 3);
+		String address = eu.readData("GermShieldForHome", 1, 4);
+		String pincode = eu.readData("GermShieldForHome", 1, 5);
+		homegermshield.germShieldValidationForHomeAsVilla(username, password, area, address, pincode);
 	}
 	
 }

@@ -1,5 +1,4 @@
-package com.droom.automation.page;
-
+package com.droom.automation.page.droomweb;
 import java.awt.AWTException;
 
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package com.droom.automation;
+package com.droom.automation.droomweb;
 
 import org.testng.annotations.Test;
 

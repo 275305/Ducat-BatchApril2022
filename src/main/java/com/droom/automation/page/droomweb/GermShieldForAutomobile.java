@@ -1,4 +1,4 @@
-package com.droom.automation.germshield.page;
+package com.droom.automation.page.droomweb;
 
 import org.openqa.selenium.By;
 

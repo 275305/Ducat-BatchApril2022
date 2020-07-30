@@ -1,4 +1,4 @@
-package com.droom.automation.page.credit;
+package com.droom.automation.page.droomcredit;
 
 import com.droom.automation.lib.SeleniumWrapper;
 

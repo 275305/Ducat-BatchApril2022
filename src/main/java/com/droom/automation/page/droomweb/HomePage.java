@@ -1,5 +1,4 @@
-package com.droom.automation.page;
-
+package com.droom.automation.page.droomweb;
 import com.droom.automation.lib.SeleniumWrapper;
 import com.droom.automation.lib.WebDriverFactory;
 
