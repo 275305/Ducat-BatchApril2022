@@ -4,10 +4,10 @@ import org.testng.annotations.Test;
 import com.droom.automation.lib.AbstractBaseTest;
 import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.page.droomweb.GermShieldAntimicrobialCoatingPage;
-import com.droom.automation.page.droomweb.GermShieldForAutomobile;
-import com.droom.automation.page.droomweb.GermShieldForHeavyTransport;
-import com.droom.automation.page.droomweb.GermShieldForHome;
-import com.droom.automation.page.droomweb.GermShieldForOffice;
+import com.droom.automation.page.droomweb.GermShieldForAutomobilePage;
+import com.droom.automation.page.droomweb.GermShieldForHeavyTransportPage;
+import com.droom.automation.page.droomweb.GermShieldForHomePage;
+import com.droom.automation.page.droomweb.GermShieldForOfficePage;
 
 public class BuyGermShieldServiceTest extends AbstractBaseTest
 {
@@ -15,20 +15,20 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 	String filepath;
 	ExcelUtilities eu;
 	GermShieldAntimicrobialCoatingPage germshield;
-	GermShieldForAutomobile automobilegermshield;
-	GermShieldForHome homegermshield;
-	GermShieldForOffice officegermshiled;
-	GermShieldForHeavyTransport transportgermshield;
+	GermShieldForAutomobilePage automobilegermshield;
+	GermShieldForHomePage homegermshield;
+	GermShieldForOfficePage officegermshiled;
+	GermShieldForHeavyTransportPage transportgermshield;
 	
 	public BuyGermShieldServiceTest()
 	{
 		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 		germshield=new GermShieldAntimicrobialCoatingPage();
-		automobilegermshield=new GermShieldForAutomobile();
-		homegermshield=new GermShieldForHome();
-		officegermshiled=new GermShieldForOffice();
-		transportgermshield=new GermShieldForHeavyTransport();
+		automobilegermshield=new GermShieldForAutomobilePage();
+		homegermshield=new GermShieldForHomePage();
+		officegermshiled=new GermShieldForOfficePage();
+		transportgermshield=new GermShieldForHeavyTransportPage();
 	}
 	
 	
@@ -149,27 +149,27 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 //		homegermshield.germShieldValidationForHomeAsVilla(username, password, area, address, pincode);
 //	}
 	
-	@Test(priority = 7)
-	public void buyGermShieldForHomeAsPenthouse()
-	{
-		String username = eu.readData("GermShieldForHome", 1, 1);
-		String password = eu.readData("GermShieldForHome", 1, 2);
-		String area = eu.readData("GermShieldForHome", 1, 3);
-		String address = eu.readData("GermShieldForHome", 1, 4);
-		String pincode = eu.readData("GermShieldForHome", 1, 5);
-		homegermshield.germShieldValidationForHomeAsPenthouse(username, password, area, address, pincode);
-	}
-	
 //	@Test(priority = 7)
-//	public void buyGermShieldForHomeAsFarmhouse()
+//	public void buyGermShieldForHomeAsPenthouse()
 //	{
 //		String username = eu.readData("GermShieldForHome", 1, 1);
 //		String password = eu.readData("GermShieldForHome", 1, 2);
 //		String area = eu.readData("GermShieldForHome", 1, 3);
 //		String address = eu.readData("GermShieldForHome", 1, 4);
 //		String pincode = eu.readData("GermShieldForHome", 1, 5);
-//		homegermshield.germShieldValidationForHomeAsFarmhouse(username, password, area, address, pincode);
+//		homegermshield.germShieldValidationForHomeAsPenthouse(username, password, area, address, pincode);
 //	}
+	
+	@Test(priority = 7)
+	public void buyGermShieldForHomeAsFarmhouse()
+	{
+		String username = eu.readData("GermShieldForHome", 1, 1);
+		String password = eu.readData("GermShieldForHome", 1, 2);
+		String area = eu.readData("GermShieldForHome", 1, 3);
+		String address = eu.readData("GermShieldForHome", 1, 4);
+		String pincode = eu.readData("GermShieldForHome", 1, 5);
+		homegermshield.germShieldValidationForHomeAsFarmhouse(username, password, area, address, pincode);
+	}
 	
 	                         // TEST RUN FOR OFFICE
 //	

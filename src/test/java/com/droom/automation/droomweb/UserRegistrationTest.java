@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 
 import com.droom.automation.lib.AbstractBaseTest;
 import com.droom.automation.lib.ExcelUtilities;
-import com.droom.automation.page.droomweb.GermShieldForOffice;
+import com.droom.automation.page.droomweb.GermShieldForOfficePage;
 import com.droom.automation.page.droomweb.RegistrationPage;
 
 public class UserRegistrationTest extends AbstractBaseTest

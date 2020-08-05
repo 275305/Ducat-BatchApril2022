@@ -9,7 +9,7 @@ import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.lib.SeleniumWrapper;
 import com.droom.automation.lib.WebDriverFactory;
 
-public class GermShieldForHeavyTransport extends SeleniumWrapper
+public class GermShieldForHeavyTransportPage extends SeleniumWrapper
 {
 	private static final By Click_On_My_Account=By.xpath("(//a[text()='My Account'])[2]");
 	private static final By Page_Title=By.xpath("//li[contains(text(),'  Germ Shield')]");
@@ -43,15 +43,15 @@ public class GermShieldForHeavyTransport extends SeleniumWrapper
 	LoginPage loginpage;
 	HomePage homepage;
 	PaymentPage paymentpage;
-	GermShieldForHome homegermshield;
+	GermShieldForHomePage homegermshield;
 	
 	
-	public  GermShieldForHeavyTransport()
+	public  GermShieldForHeavyTransportPage()
 	{
 		loginpage=new LoginPage();
 		homepage=new HomePage();
 		paymentpage=new PaymentPage();
-		homegermshield=new GermShieldForHome();
+		homegermshield=new GermShieldForHomePage();
 	}
 	
 	public void germShieldValidationForHeavyTransportAsPlane(String username,String password,String area,String address,String pincode)

@@ -6,7 +6,7 @@ import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.lib.SeleniumWrapper;
 import com.droom.automation.lib.WebDriverFactory;
 
-public class GermShieldForHome extends SeleniumWrapper
+public class GermShieldForHomePage extends SeleniumWrapper
 {
 	
 	private static final By Click_On_My_Account=By.xpath("(//a[text()='My Account'])[2]");
@@ -62,7 +62,7 @@ public class GermShieldForHome extends SeleniumWrapper
 	ExcelUtilities eu;
 	
 	
-	public  GermShieldForHome()
+	public  GermShieldForHomePage()
 	{
 		loginpage=new LoginPage();
 		homepage=new HomePage();

@@ -17,11 +17,15 @@ public class HomePage extends SeleniumWrapper {
     private static final By Click_Create_Listion_Button=By.xpath("//a[text()='Create Listing']");
     private static final By Click_Sell_As_ProSeller_From_Home_Popup=By.xpath("//h2[text()='Sell as ProSeller']");
     private static final By Click_Search_Box=By.xpath("//input[@id='main_search']");
-//    private static final By =By.xpath("");
-//    private static final By =By.xpath("");
-//    private static final By =By.xpath("");
+    private static final By Click_To_Close_To_Do_PopUp=By.xpath("//div[@id='entryModal']//button");
+    private static final By Click_Droom_Franchise=By.xpath("//a[text()='Droom Franchise']");
+//  private static final By =By.xpath("");
+//  private static final By =By.xpath("");
+//  private static final By =By.xpath("");
+//  private static final By =By.xpath("");
+//  private static final By =By.xpath("");
     
-    public void enterSearch(String text) 
+    public void enterSearch(String text)
     {
         enterTextboxDetails(findElement(SEARCH), text);
         sleep(2000);
@@ -78,6 +82,14 @@ public class HomePage extends SeleniumWrapper {
     	enterKey(Click_Search_Box);
     }
     
-    
+    public void enterDroomFranchise()
+    {
+    	waitForPageLoad();
+    	sleep(2000);
+    	executeClickOnElement(Click_To_Close_To_Do_PopUp);
+    	executeScrollDownScript(2600);
+    	verifyByContains(Click_Droom_Franchise, "Droom Franchise");
+    	executeClickOnElement(Click_Droom_Franchise);
+    }
     
 }

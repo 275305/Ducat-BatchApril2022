@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.lib.SeleniumWrapper;
 
-public class GermShieldForOffice extends SeleniumWrapper
+public class GermShieldForOfficePage extends SeleniumWrapper
 {
 	private static final By Click_On_My_Account=By.xpath("(//a[text()='My Account'])[2]");
 	private static final By Page_Title=By.xpath("//li[contains(text(),'  Germ Shield')]");
@@ -42,15 +42,15 @@ public class GermShieldForOffice extends SeleniumWrapper
 	PaymentPage paymentpage;
 	String filepath;
 	ExcelUtilities eu;
-	GermShieldForHome homegermshield;
+	GermShieldForHomePage homegermshield;
 	
 	
-	public  GermShieldForOffice()
+	public  GermShieldForOfficePage()
 	{
 		loginpage=new LoginPage();
 		homepage=new HomePage();
 		paymentpage=new PaymentPage();
-		homegermshield=new GermShieldForHome();
+		homegermshield=new GermShieldForHomePage();
 		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 	}
