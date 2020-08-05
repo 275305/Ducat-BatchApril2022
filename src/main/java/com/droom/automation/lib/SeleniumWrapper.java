@@ -24,9 +24,14 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.Format;
 import java.text.MessageFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -469,11 +474,7 @@ public class SeleniumWrapper extends JavaLibrary
 		Actions action=new Actions(WebDriverFactory.getDriver());
 		action.moveToElement(findElement(by)).click(findElement(by)).perform();
 	}
-
-/*    public void cusAssertEquals(String actual, String expected) {
-    	Assert.assertEquals(actual, expected);
-    	public String TEXTFOUND = actual + "found";
-    	//return actual + "found";
-    }*/
+	
+	
 
 }

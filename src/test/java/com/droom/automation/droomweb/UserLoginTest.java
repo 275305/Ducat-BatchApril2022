@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 
 import com.droom.automation.lib.AbstractBaseTest;
 import com.droom.automation.lib.ExcelUtilities;
-import com.droom.automation.page.LoginPage;
+import com.droom.automation.page.droomweb.LoginPage;
 
 public class UserLoginTest extends AbstractBaseTest
 {

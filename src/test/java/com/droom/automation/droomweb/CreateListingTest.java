@@ -2,8 +2,8 @@ package com.droom.automation.droomweb;
 import org.testng.annotations.Test;
 
 import com.droom.automation.lib.AbstractBaseTest;
-import com.droom.automation.page.CreateListingPage;
-import com.droom.automation.page.PaymentPage;
+import com.droom.automation.page.droomweb.CreateListingPage;
+import com.droom.automation.page.droomweb.PaymentPage;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;

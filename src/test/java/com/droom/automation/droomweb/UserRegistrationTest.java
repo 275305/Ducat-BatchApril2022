@@ -3,7 +3,8 @@ import org.testng.annotations.Test;
 
 import com.droom.automation.lib.AbstractBaseTest;
 import com.droom.automation.lib.ExcelUtilities;
-import com.droom.automation.page.RegistrationPage;
+import com.droom.automation.page.droomweb.GermShieldForOffice;
+import com.droom.automation.page.droomweb.RegistrationPage;
 
 public class UserRegistrationTest extends AbstractBaseTest
 {
@@ -11,6 +12,7 @@ public class UserRegistrationTest extends AbstractBaseTest
 	String filepath;
 	ExcelUtilities eu;
 	RegistrationPage registrationpage;
+	
 	
 	public UserRegistrationTest()
 	{
@@ -120,6 +122,4 @@ public class UserRegistrationTest extends AbstractBaseTest
 		registrationpage.inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount(firstname, lastname, username, mobilenumber, otpValue, businessname, password);
 	}
 	
-	
-
 }

@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.text.DecimalFormat;
 import java.text.MessageFormat;
 import java.util.Arrays;
 import java.util.Random;
@@ -57,21 +58,20 @@ public class JavaLibrary
 		rb.keyRelease(KeyEvent.VK_ENTER);
     }
 	
-
-	public void splitOtp1(int opt)
-	
+	public String dynamicWebelement(String totalarea)
 	{
-	     
-		
-		String r1,r2,r3,r4;
-	
-		//r1=opt%10;opt=opt/10;
-		r1=Integer.toString(opt%10);opt=opt/10;
-		r2=Integer.toString(opt%10);opt=opt/10;
-		r3=Integer.toString(opt%10);opt=opt/10;
-		r4=Integer.toString(opt%10);opt=opt/10;
-		
-		String[] otpvalue= {r1,r2,r3,r4};
-		
+		int sqrArea = Integer.parseInt(totalarea);
+		int totalAmount = sqrArea*15;
+		String amtValue = Integer.toString(totalAmount);
+		return amtValue;
 	}
+	
+	public String addingCommaToInt(String amount)
+	{
+		int amtAsInt = Integer.parseInt(amount);
+		DecimalFormat IndianCurrencyFormat = new DecimalFormat("##,##,###");
+		String formattedAmount = IndianCurrencyFormat.format(amtAsInt);
+		return formattedAmount;
+	}
+	
 }

@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 
 import com.droom.automation.lib.AbstractBaseTest;
 import com.droom.automation.lib.ExcelUtilities;
-import com.droom.automation.page.SearchFeaturePage;
+import com.droom.automation.page.droomweb.SearchFeaturePage;
 
 public class SearchFeatureTest extends AbstractBaseTest
 {
@@ -11,12 +11,12 @@ public class SearchFeatureTest extends AbstractBaseTest
 	ExcelUtilities eu;
 	SearchFeaturePage searchpage;
 	
-	public SearchFeatureTest()
-	{
-		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
-		this.eu=new ExcelUtilities(filepath);
-		searchpage=new SearchFeaturePage();
-	}
+//	public SearchFeatureTest()
+//	{
+//		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
+//		this.eu=new ExcelUtilities(filepath);
+//		searchpage=new SearchFeaturePage();
+//	}
 	
 	
 	@Test(priority = 1)

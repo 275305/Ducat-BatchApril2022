@@ -8,11 +8,8 @@
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
-          <include name="buyGermShieldForHomeAsVilla"/>
-          <include name="buyGermShieldForHomeAsBungalow"/>
+          <include name="buyGermShieldForHomeAsPenthouse"/>
           <include name="init"/>
-          <include name="buyGermShieldForHomeAsFlat"/>
-          <include name="buyGermShieldForHomeAsIndependent"/>
         </methods>
       </class> <!-- com.droom.automation.droomweb.BuyGermShieldServiceTest -->
     </classes>

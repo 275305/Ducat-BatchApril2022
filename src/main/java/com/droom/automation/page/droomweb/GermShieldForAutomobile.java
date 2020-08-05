@@ -4,9 +4,7 @@ import org.openqa.selenium.By;
 
 import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.lib.SeleniumWrapper;
-import com.droom.automation.page.HomePage;
-import com.droom.automation.page.LoginPage;
-import com.droom.automation.page.PaymentPage;
+import com.droom.automation.lib.WebDriverFactory;
 
 public class GermShieldForAutomobile extends SeleniumWrapper
 {
@@ -18,6 +16,8 @@ public class GermShieldForAutomobile extends SeleniumWrapper
 	private static final By Click_For_Car=By.xpath("//label[text()='Car']");
 	private static final By Click_For_Bike=By.xpath("//label[text()='Bike']");
 	private static final By Click_For_Scooter=By.xpath("//label[text()='Scooter']");
+	private static final By Click_For_Premium_Bike=By.xpath("//label[text()='Premium Bike']");
+	private static final By Click_For_Bus=By.xpath("//label[text()='Bus/Ambulance']");
 	
 	//webelements for amount displayed
 	private static final By Amount_For_Hatchback=By.xpath("//label[text()='₹ 1179']");
@@ -25,6 +25,8 @@ public class GermShieldForAutomobile extends SeleniumWrapper
 	private static final By Amount_For_SUV_Luxury=By.xpath("//li[@id='carFirstListing']//label[text()='₹ 2123']");
 	private static final By Amount_For_Bike=By.xpath("//label[text()='₹ 589']");
 	private static final By Amount_For_Scooter=By.xpath("//label[text()='₹ 599']");
+	private static final By Amount_For_Premium_Bike=By.xpath("//label[text()='₹ 1099']");
+	private static final By Amount_For_Bus=By.xpath("//label[text()='₹ 6699']");
 	//private static final By =By.xpath("");
 	
 	//webelements for view details
@@ -33,7 +35,9 @@ public class GermShieldForAutomobile extends SeleniumWrapper
 	private static final By Click_On_Buy_Now_PopUp=By.xpath("//button[@id='listing-detail-buy-now']");
 	private static final By Click_View_Details_For_Bike=By.xpath("//div[@id='bikeType']//p[text()='Bike']/following-sibling::span[text()='View Details']");
 	private static final By Click_View_Details_For_Scooter=By.xpath("//div[@id='scooterType']//p[text()='Scooter']/following-sibling::span[text()='View Details']");
-	//private static final By =By.xpath("");
+	private static final By Click_View_Details_For_Premium_Bike=By.xpath("//div[@id='premiumBikeType']//p[text()='Super Bike']/following-sibling::span[text()='View Details']");
+	private static final By Click_View_Details_For_Bus=By.xpath("//div[@id='busAmbulaceType']//p[text()='Bus']/following-sibling::span[text()='View Details']");
+//	private static final By =By.xpath("");
 	
 	
 	private static final By Enter_Pincode= By.xpath("//input[@id='automobile-pincode']");
@@ -180,6 +184,62 @@ public class GermShieldForAutomobile extends SeleniumWrapper
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
 		verifyByContains(Verify_Amount_Added_For_Scooter_At_Checkout, "599");
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
+		executeClickOnElement(Click_Button_Not_Intrested);
+		
+	}
+	
+	public void germShieldValidationForPremiumBike(String username,String password)
+	{
+		getGermShieldPage(username, password);
+		verifyByContains(Click_For_Automobile, "Automobile");
+		executeClickOnElement(Click_For_Automobile);
+		verifyByContains(Click_For_Premium_Bike, "Premium Bike");
+		executeClickOnElement(Click_For_Premium_Bike);
+		verifyByContains(Amount_For_Premium_Bike, "₹ 1099");
+		verifyByContains(Click_View_Details_For_Premium_Bike, "View Details");
+		executeClickOnElement(Click_View_Details_For_Premium_Bike);
+		sleep(3000);
+		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
+		executeClickOnElement(Click_On_Buy_Now_PopUp);
+		enterTextboxDetails(findElement(Enter_Pincode), "110005");
+		By bikeAmount = By.xpath("//span[text()='₹1099']");
+		verifyByContains(bikeAmount, "₹1099");
+		executeClickOnElement(Click_On_Buy_Now_After_Pin);
+		sleep(2000);
+		executeClickOnElement(Click_On_Checkout_Popup);
+		waitForPageLoad();
+		By bikeAmount2 = By.xpath("//strong[text()='₹  1,099']");
+		verifyByContains(bikeAmount2, "1,099");
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
+		executeClickOnElement(Click_Button_Not_Intrested);
+		
+	}
+	
+	public void germShieldValidationForBus(String username,String password)
+	{
+		getGermShieldPage(username, password);
+		verifyByContains(Click_For_Automobile, "Automobile");
+		executeClickOnElement(Click_For_Automobile);
+		verifyByContains(Click_For_Bus, "Bus/Ambulance");
+		executeClickOnElement(Click_For_Bus);
+		verifyByContains(Amount_For_Bus, "₹ 6699");
+		verifyByContains(Click_View_Details_For_Bus, "View Details");
+		executeClickOnElement(Click_View_Details_For_Bus);
+		sleep(3000);
+		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
+		executeClickOnElement(Click_On_Buy_Now_PopUp);
+		enterTextboxDetails(findElement(Enter_Pincode), "110005");
+		By bikeAmount = By.xpath("//span[text()='₹6699']");
+		verifyByContains(bikeAmount, "₹6699");
+		executeClickOnElement(Click_On_Buy_Now_After_Pin);
+		sleep(2000);
+		executeClickOnElement(Click_On_Checkout_Popup);
+		waitForPageLoad();
+		By bikeAmount2 = By.xpath("//strong[text()='₹  6,699']");
+		verifyByContains(bikeAmount2, "6,699");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
 		executeClickOnElement(Click_Button_Not_Intrested);

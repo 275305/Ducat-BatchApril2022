@@ -8,9 +8,6 @@ import org.testng.Assert;
 import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.lib.SeleniumWrapper;
 import com.droom.automation.lib.WebDriverFactory;
-import com.droom.automation.page.HomePage;
-import com.droom.automation.page.LoginPage;
-import com.droom.automation.page.PaymentPage;
 
 public class GermShieldAntimicrobialCoatingPage extends SeleniumWrapper
 {

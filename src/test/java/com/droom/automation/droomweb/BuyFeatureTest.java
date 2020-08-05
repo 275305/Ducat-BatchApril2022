@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.droom.automation.lib.AbstractBaseTest;
 import com.droom.automation.lib.ExcelUtilities;
-import com.droom.automation.page.BuyPage;
+import com.droom.automation.page.droomweb.BuyPage;
 
 public class BuyFeatureTest extends AbstractBaseTest
 {

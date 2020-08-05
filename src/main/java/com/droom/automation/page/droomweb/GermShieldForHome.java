@@ -1,13 +1,10 @@
-package com.droom.automation.germshield.page;
+package com.droom.automation.page.droomweb;
 
 import org.openqa.selenium.By;
 
 import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.lib.SeleniumWrapper;
 import com.droom.automation.lib.WebDriverFactory;
-import com.droom.automation.page.HomePage;
-import com.droom.automation.page.LoginPage;
-import com.droom.automation.page.PaymentPage;
 
 public class GermShieldForHome extends SeleniumWrapper
 {
@@ -15,7 +12,6 @@ public class GermShieldForHome extends SeleniumWrapper
 	private static final By Click_On_My_Account=By.xpath("(//a[text()='My Account'])[2]");
 	private static final By Page_Title=By.xpath("//li[contains(text(),'  Germ Shield')]");
 	
-	private static final By Click_For_Automobile=By.xpath("//label[text()='Automobile']");
 	private static final By Click_For_Home=By.xpath("//label[text()='Home']");
 //	private static final By =By.xpath("");
 //	private static final By =By.xpath("");
@@ -25,6 +21,8 @@ public class GermShieldForHome extends SeleniumWrapper
 	private static final By Click_View_Details_For_Bungalow=By.xpath("//div[@id='home']//p[text()='Bungalow']/following-sibling::span[text()='View Details']");	
 	private static final By Click_View_Details_For_Flat=By.xpath("//div[@id='home']//p[text()='Flat']/following-sibling::span[text()='View Details']");
 	private static final By Click_View_Details_For_Villa=By.xpath("//div[@id='home']//p[text()='Villa']/following-sibling::span[text()='View Details']");
+	private static final By Click_View_Details_For_Penthouse=By.xpath("//div[@id='home']//p[text()='Penthouse']/following-sibling::span[text()='View Details']");
+	private static final By Click_View_Details_For_Farmhouse=By.xpath("//div[@id='home']//p[text()='Farmhouse']/following-sibling::span[text()='View Details']");
 	private static final By Click_On_Buy_Now_PopUp=By.xpath("//button[@id='listing-detail-buy-now']");
 	
 	//webelements to enter details
@@ -212,6 +210,81 @@ public class GermShieldForHome extends SeleniumWrapper
 //		paymentpage.proceedToCheckout();
 //		paymentpage.paymentViaNetBanking();
 //		executeClickOnElement(Click_Button_Not_Intrested);
+		
+	}
+	
+	public void germShieldValidationForHomeAsPenthouse(String username,String password,String area,String address,String pincode)
+	{
+		getGermShieldPage(username, password);
+		verifyByContains(Click_For_Home, "Home");
+		executeClickOnElement(Click_For_Home);
+		sleep(2000);
+		verifyByContains(Click_View_Details_For_Penthouse, "View Details");
+		executeClickOnElement(Click_View_Details_For_Penthouse);
+		sleep(3000);
+		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
+		executeClickOnElement(Click_On_Buy_Now_PopUp);
+		enterTextboxDetails(findElement(Enter_Area), area);
+		verifyByAttribute(Enter_Area,area );
+		// IMMEDIATE CHANGE IN AMOUNT AT SUBMIT BUTTON
+		sleep(2000);
+		String intamt = dynamicWebelement(area);
+		String actualAmt="₹"+intamt;
+		By Verify_Amount_Added_For_Penthouse = By.xpath("//span[text()='₹"+intamt+".00']");
+    	verifyByContains(Verify_Amount_Added_For_Penthouse, actualAmt);
+		enterTextboxDetails(findElement(Enter_Address), address);
+		verifyByAttribute(Enter_Address,address );
+		enterTextboxDetails(findElement(Enter_Pin), pincode);
+		verifyByAttribute(Enter_Pin,pincode );
+		executeClickOnElement(Enter_Date);
+		executeClickOnElement(Click_On_Buy_Now);
+		sleep(2000);
+		executeClickOnElement(Click_On_Checkout_Popup);
+		waitForPageLoad();
+		String finalAmount = addingCommaToInt(intamt);
+		System.out.println(finalAmount);
+		By verifyAmountAtCheckout = By.xpath("//strong[text()='₹  "+finalAmount+"']");
+		verifyByContains(verifyAmountAtCheckout, finalAmount);
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
+		executeClickOnElement(Click_Button_Not_Intrested);
+		
+	}
+	
+	public void germShieldValidationForHomeAsFarmhouse(String username,String password,String area,String address,String pincode)
+	{
+		getGermShieldPage(username, password);
+		verifyByContains(Click_For_Home, "Home");
+		executeClickOnElement(Click_For_Home);
+		sleep(2000);
+		verifyByContains(Click_View_Details_For_Farmhouse, "View Details");
+		executeClickOnElement(Click_View_Details_For_Farmhouse);
+		sleep(3000);
+		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
+		executeClickOnElement(Click_On_Buy_Now_PopUp);
+		enterTextboxDetails(findElement(Enter_Area), area);
+		verifyByAttribute(Enter_Area,area );
+		// IMMEDIATE CHANGE IN AMOUNT AT SUBMIT BUTTON
+		sleep(2000);
+		String intamt = dynamicWebelement(area);
+		String actualAmt="₹"+intamt;
+		By Verify_Amount_Added_For_Farmhouse = By.xpath("//span[text()='₹"+intamt+".00']");
+    	verifyByContains(Verify_Amount_Added_For_Farmhouse, actualAmt);
+		enterTextboxDetails(findElement(Enter_Address), address);
+		verifyByAttribute(Enter_Address,address );
+		enterTextboxDetails(findElement(Enter_Pin), pincode);
+		verifyByAttribute(Enter_Pin,pincode );
+		executeClickOnElement(Enter_Date);
+		executeClickOnElement(Click_On_Buy_Now);
+		sleep(2000);
+		executeClickOnElement(Click_On_Checkout_Popup);
+		waitForPageLoad();
+		String finalAmount = addingCommaToInt(intamt);
+		By verifyAmountAtCheckout = By.xpath("//strong[text()='₹  "+finalAmount+"']");
+		verifyByContains(verifyAmountAtCheckout, finalAmount);
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
+		executeClickOnElement(Click_Button_Not_Intrested);
 		
 	}
 }

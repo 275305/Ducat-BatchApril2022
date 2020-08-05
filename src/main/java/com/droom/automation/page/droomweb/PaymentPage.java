@@ -30,8 +30,8 @@ public class PaymentPage extends SeleniumWrapper
 		verifyByText(Continue_To_Address, "Continue To Addresses");
 		executeClickOnElement(Continue_To_Address);
 		sleep(3000);
-		verifyByText(Click_On_Use_This_Address, "Use This Address");
 		executeClickOnElement(Click_On_Use_This_Address);
+		sleep(4000);
 		verifyByAttribute(Continue_To_Payment, "Continue to Payment");
 		executeClickOnElement(Continue_To_Payment);
 	}
