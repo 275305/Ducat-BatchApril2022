@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [suite]" parallel="methods">
+  <test thread-count="5" name="DroomWebAutomationTest(failed)" parallel="methods">
     <classes>
-      <class name="com.droom.automation.droomweb.FranchiseTest">
+      <class name="com.droom.automation.droomweb.UserLoginTest">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
+          <include name="loginAsIndividualUserViaPassword"/>
           <include name="beforeSuite"/>
-          <include name="payAmountAsUpFrontPaymentAsFranchise"/>
           <include name="init"/>
         </methods>
-      </class> <!-- com.droom.automation.droomweb.FranchiseTest -->
+      </class> <!-- com.droom.automation.droomweb.UserLoginTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- DroomWebAutomationTest(failed) -->
+</suite> <!-- Failed suite [suite] -->

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="153514" started-at="2020-08-07T23:57:56 IST" finished-at="2020-08-08T00:00:29 IST">
+  <suite name="suite" duration-ms="26843" started-at="2020-08-08T01:17:32 IST" finished-at="2020-08-08T01:17:59 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="153514" started-at="2020-08-07T23:57:56 IST" finished-at="2020-08-08T00:00:29 IST">
-      <class name="com.droom.automation.droomweb.FranchiseTest">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@22a637e7]" name="beforeSuite" is-config="true" duration-ms="21" started-at="2020-08-07T23:57:56 IST" finished-at="2020-08-07T23:57:56 IST">
+    <test name="DroomWebAutomationTest" duration-ms="26843" started-at="2020-08-08T01:17:32 IST" finished-at="2020-08-08T01:17:59 IST">
+      <class name="com.droom.automation.droomweb.UserLoginTest">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3]" name="beforeSuite" is-config="true" duration-ms="21" started-at="2020-08-08T01:17:32 IST" finished-at="2020-08-08T01:17:32 IST">
           <params>
             <param index="0">
               <value>
@@ -18,30 +18,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@22a637e7]" name="beforeTest" is-config="true" duration-ms="11" started-at="2020-08-07T23:57:56 IST" finished-at="2020-08-07T23:57:56 IST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3]" name="beforeTest" is-config="true" duration-ms="12" started-at="2020-08-08T01:17:32 IST" finished-at="2020-08-08T01:17:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@22a637e7]" name="init" is-config="true" duration-ms="36952" started-at="2020-08-07T23:57:56 IST" finished-at="2020-08-07T23:58:33 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3]" name="init" is-config="true" duration-ms="15544" started-at="2020-08-08T01:17:32 IST" finished-at="2020-08-08T01:17:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="payAmountAsUpFrontPaymentAsFranchise()[pri:4, instance:com.droom.automation.droomweb.FranchiseTest@22a637e7]" name="payAmountAsUpFrontPaymentAsFranchise" duration-ms="116413" started-at="2020-08-07T23:58:33 IST" finished-at="2020-08-08T00:00:29 IST">
+        <test-method status="PASS" signature="loginAsIndividualUserViaPassword()[pri:1, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3]" name="loginAsIndividualUserViaPassword" duration-ms="11041" started-at="2020-08-08T01:17:48 IST" finished-at="2020-08-08T01:17:59 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- payAmountAsUpFrontPaymentAsFranchise -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@22a637e7]" name="afterMethod" is-config="true" duration-ms="2" started-at="2020-08-08T00:00:29 IST" finished-at="2020-08-08T00:00:29 IST">
+        </test-method> <!-- loginAsIndividualUserViaPassword -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3]" name="afterMethod" is-config="true" duration-ms="2" started-at="2020-08-08T01:17:59 IST" finished-at="2020-08-08T01:17:59 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=payAmountAsUpFrontPaymentAsFranchise status=SUCCESS method=FranchiseTest.payAmountAsUpFrontPaymentAsFranchise()[pri:4, instance:com.droom.automation.droomweb.FranchiseTest@22a637e7] output={null}]]]>
+                <![CDATA[[TestResult name=loginAsIndividualUserViaPassword status=SUCCESS method=UserLoginTest.loginAsIndividualUserViaPassword()[pri:1, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.droom.automation.droomweb.FranchiseTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.droom.automation.droomweb.UserLoginTest -->
+    </test> <!-- DroomWebAutomationTest -->
+  </suite> <!-- suite -->
 </testng-results>

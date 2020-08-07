@@ -1,45 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [suite]">
-  <test thread-count="5" name="DroomWebAutomationTest(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [suite]" parallel="methods">
+  <test thread-count="5" name="DroomWebAutomationTest(failed)" parallel="methods">
     <classes>
-      <class name="com.droom.automation.BuyGermShieldServiceTest">
+      <class name="com.droom.automation.droomweb.UserLoginTest">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="beforeSuite"/>
-          <include name="buyGermShieldServiceViaHomePageAsLoggedInUser"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.droom.automation.BuyGermShieldServiceTest -->
-      <class name="com.droom.automation.UserRegistrationTest">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="beforeSuite"/>
-          <include name="registerAsProSeller"/>
-          <include name="registerAsIndividualUser"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.droom.automation.UserRegistrationTest -->
-      <class name="com.droom.automation.BuyFeatureTest">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="buyCarAsLoggedInUser"/>
+          <include name="loginAsIndividualUserViaPassword"/>
           <include name="beforeSuite"/>
           <include name="init"/>
         </methods>
-      </class> <!-- com.droom.automation.BuyFeatureTest -->
-      <class name="com.droom.automation.CreateListingTest">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="beforeSuite"/>
-          <include name="createNormalListingAsLoggedInUser"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.droom.automation.CreateListingTest -->
+      </class> <!-- com.droom.automation.droomweb.UserLoginTest -->
     </classes>
   </test> <!-- DroomWebAutomationTest(failed) -->
 </suite> <!-- Failed suite [suite] -->
