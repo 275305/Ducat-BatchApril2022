@@ -342,7 +342,6 @@ public class SeleniumWrapper extends JavaLibrary
 		String expected_Text = text;
 		Assert.assertEquals(actual_text, expected_Text);
 		System.out.println(actual_text+" is displaying hence verified");
-		
 	}
 	
 	public void verifyByContains(final By by, String text)
@@ -469,10 +468,9 @@ public class SeleniumWrapper extends JavaLibrary
 	   new WebDriverWait(webDriver, 20).until(ExpectedConditions.elementToBeClickable(findElement(by))).sendKeys(text);
 	}
 	
-	public void moveToElementAndEnter(final By by)
+	public void moveToElementAndClick(final By by)
 	{
-		Actions action=new Actions(WebDriverFactory.getDriver());
-		action.moveToElement(findElement(by)).click(findElement(by)).perform();
+		new Actions(WebDriverFactory.getDriver()).moveToElement(findElement(by)).click(findElement(by)).perform();
 	}
 	
 	

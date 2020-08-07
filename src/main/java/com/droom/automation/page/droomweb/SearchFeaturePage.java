@@ -12,9 +12,9 @@ public class SearchFeaturePage extends SeleniumWrapper
 	private final static By Pay_Fully_Refundable_Token_Amount=By.xpath("//button[@id='cart_add']//span");
 	private final static By Click_Proceed=By.xpath("//button[@type='button'and@class='btn btn-success proceed']");
 	private final static By Proceed_To_Payment=By.xpath("//button[@id='add_listing_services_to_cart']");
-	private final static By Click_On_YamahaFZ=By.xpath("//img[@alt='Skoda Fabia ACTIVE 1.2 TDI 2011']");
-	private final static By Click_On_Scooty=By.xpath("//img[@alt='Hero Splendor Plus Self Alloy 100cc 2019']");
-	private final static By Click_On_Scooty_Via_Fb=By.xpath("//img[@alt='Honda CB Hornet 160R  ABS DLX 2020']");
+	private final static By Click_On_YamahaFZ=By.xpath("(//img[@alt='Honda Activa 110cc 2014'])[1]");
+	private final static By Click_On_Scooty=By.xpath("(//img[@alt='Hero Splendor Plus Self Alloy 100cc 2019'])[1]");
+	private final static By Click_On_Scooty_Via_Fb=By.xpath("(//img[@alt='Honda CB Hornet 160R  ABS DLX 2020'])[1]");
 	private final static By Get_Car_Amount=By.xpath("//span[contains(text(),' 9,310')]");
 	private final static By Get_Car_Amount_At_Checkout=By.xpath("//strong[contains(text(),'9,310')]");
 	private final static By Get_Bike_Amount=By.xpath("//span[contains(text(),' 5,985')]");
@@ -69,7 +69,7 @@ public class SearchFeaturePage extends SeleniumWrapper
 	
 	public void searchForBike(String username, String password)
 	{
-		homepage.enterSearchBox("Skoda Fabia ACTIVE 1.2 TDI 2011");
+		homepage.enterSearchBox("Honda Activa 110cc 2014");
 		waitForPageLoad();
 		executeClickOnElement(Click_On_YamahaFZ);
 		switchToWindow("New Tab");

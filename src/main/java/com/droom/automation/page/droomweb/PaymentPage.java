@@ -2,6 +2,7 @@ package com.droom.automation.page.droomweb;
 import org.openqa.selenium.By;
 
 import com.droom.automation.lib.SeleniumWrapper;
+import com.droom.automation.lib.WebDriverFactory;
 
 public class PaymentPage extends SeleniumWrapper
 {
@@ -17,16 +18,15 @@ public class PaymentPage extends SeleniumWrapper
 	
 	public void paymentViaNetBanking()
 	{
+		waitForPageLoad();
 		executeClickOnElement(Select_NetBanking_Option);
 		verifyByText(Verify_NetBanking, "Net Banking");
 		verifyByContains(Verify_Continue_To_Pay, "Continue to Pay");
 		executeClickOnElement(Continue_Pay_After_Mode_Selected);
-		
 	}
 	
 	public void continueToAddressToContinueToPayment()
 	{
-		
 		verifyByText(Continue_To_Address, "Continue To Addresses");
 		executeClickOnElement(Continue_To_Address);
 		sleep(3000);
@@ -51,6 +51,19 @@ public class PaymentPage extends SeleniumWrapper
 		verifyByAttributeByID(Click_Proceed_To_Continue, "proceed-to-checkout");
 		executeClickOnElement(Click_Proceed_To_Continue);
 		waitForPageLoad();
+	}
+	
+	public void paymendMethod()
+	{
+		waitForPageLoad();
+		WebDriverFactory.getDriver().switchTo().frame(0);
+		executeClickOnElement(By.xpath("//div[text()='ICICI']"));
+		sleep(2000);
+		executeClickOnElement(By.xpath("//span[@id='footer-cta']"));
+		waitForPageLoad();
+		executeClickOnElement(By.xpath("//button[text()='Success']"));
+		waitForPageLoad();
+		
 	}
 	
 }

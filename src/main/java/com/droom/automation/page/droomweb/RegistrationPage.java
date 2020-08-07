@@ -237,7 +237,7 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyByAttribute(Create_Pro_Seller_Account, "Create  Pro-Seller  Account");
 		executeClickOnElement(Create_Pro_Seller_Account);
 		waitForPageLoad();
-		sleep(3000);
+		sleep(5000);
 		verifyByText(Click_Proceed, "Proceed");
 		executeClickOnElement(Click_Proceed);
 		verifyByText(Verify_Text_As_Registered_As_ProSeller, "Register As a Pro-Seller");

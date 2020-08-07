@@ -20,49 +20,50 @@ public class CreateListingTest extends AbstractBaseTest
 	{
 		CreateListingPage createlistingpage=new CreateListingPage();
 		createlistingpage.createYourListing();
+		createlistingpage.normalListing();
 		createlistingpage.keyInformation();
 		createlistingpage.pricing();
 		createlistingpage.uploadPicture();
-		createlistingpage.normalListing();
+		createlistingpage.quickSell();
 		createlistingpage.certificationTool();
 		createlistingpage.activateListing();
 		
 	}
 	
-	@Test(priority = 2)
-	@Description("Validating Listing As Logged In User")
-	@Story("Customer LoggedIn And Can Create Listing")
-	@Severity(SeverityLevel.CRITICAL)
-	public void createPremiumListingAsLoggedInUser() throws Exception
-	{
-		CreateListingPage createlistingpage=new CreateListingPage();
-		createlistingpage.createYourListing();
-		createlistingpage.keyInformation();
-		createlistingpage.pricing();
-		createlistingpage.uploadPicture();
-		createlistingpage.premiumListing();
-		createlistingpage.certificationTool();
-		createlistingpage.activateListing();
-		PaymentPage paymentpage=new PaymentPage();
-		paymentpage.paymentViaNetBanking();
-	}
-	
-	@Test(priority = 3)
-	@Description("Validating Listing As Logged In User")
-	@Story("Customer LoggedIn And Can Create Listing")
-	@Severity(SeverityLevel.CRITICAL)
-	public void createConciergeListingAsLoggedInUser() throws Exception
-	{
-		CreateListingPage createlistingpage=new CreateListingPage();
-		createlistingpage.createYourListing();
-		createlistingpage.keyInformation();
-		createlistingpage.pricing();
-		createlistingpage.uploadPicture();
-		createlistingpage.conciergeListing();
-		createlistingpage.certificationTool();
-		createlistingpage.activateListing();
-		PaymentPage paymentpage=new PaymentPage();
-		paymentpage.paymentViaNetBanking();
-	}
+//	@Test(priority = 2)
+//	@Description("Validating Listing As Logged In User")
+//	@Story("Customer LoggedIn And Can Create Listing")
+//	@Severity(SeverityLevel.CRITICAL)
+//	public void createPremiumListingAsLoggedInUser() throws Exception
+//	{
+//		CreateListingPage createlistingpage=new CreateListingPage();
+//		createlistingpage.createYourListing();
+//		createlistingpage.premiumListing();
+//		createlistingpage.keyInformation();
+//		createlistingpage.pricing();
+//		createlistingpage.uploadPicture();
+//		createlistingpage.certificationTool();
+//		createlistingpage.activateListing();
+//		PaymentPage paymentpage=new PaymentPage();
+//		paymentpage.paymentViaNetBanking();
+//	}
+//	
+//	@Test(priority = 3)
+//	@Description("Validating Listing As Logged In User")
+//	@Story("Customer LoggedIn And Can Create Listing")
+//	@Severity(SeverityLevel.CRITICAL)
+//	public void createConciergeListingAsLoggedInUser() throws Exception
+//	{
+//		CreateListingPage createlistingpage=new CreateListingPage();
+//		createlistingpage.createYourListing();
+//		createlistingpage.conciergeListing();
+//		createlistingpage.keyInformation();
+//		createlistingpage.pricing();
+//		createlistingpage.uploadPicture();
+//		createlistingpage.certificationTool();
+//		createlistingpage.activateListing();
+//		PaymentPage paymentpage=new PaymentPage();
+//		paymentpage.paymentViaNetBanking();
+//	}
 
 }

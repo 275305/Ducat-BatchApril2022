@@ -7,7 +7,7 @@
     
     
         <classes>
-            <class name="com.droom.automation.droomweb.BuyGermShieldServiceTest" />
+            <class name="com.droom.automation.droomweb.UserLoginTest" />
              
         </classes>
         

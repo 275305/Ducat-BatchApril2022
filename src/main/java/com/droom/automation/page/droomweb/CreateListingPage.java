@@ -33,14 +33,14 @@ public class CreateListingPage extends SeleniumWrapper
 	private final static By Continue_After_Upload=By.xpath("//div[@id='photo']//input[@value='Save and Continue']");
 	private final static By Click_Get_Later=By.xpath("//button[text()='Maybe Later']");
 	private final static By Click_Save_And_Continue_After_Selecting_ListingType=By.xpath("//input[@id='original_submit-button']");
-	private final static By Click_For_Premium=By.xpath("//div[text()='₹499/-']");
-	private final static By Click_For_Normal=By.xpath("//div[text()='free']");
-	private final static By Click_For_Concierge=By.xpath("//div[text()='₹699/-']");
+	private final static By Click_For_Premium=By.xpath("//div[text()='Rs. 1099/-']");
+	private final static By Click_For_Normal=By.xpath("//div[text()='Free']");
+	private final static By Click_For_Concierge=By.xpath("//div[contains(text(),'Rs. 699/-')]");
 	private final static By Click_Activate_Listing_Button=By.xpath("//input[@id='activate']");
 	private final static By Click_Cirtification_Tool_Continue_Button=By.xpath("(//input[@value='Save and Continue'])[6]");
 	private final static By Verify_Catogory_Car=By.xpath("//select[@id='wizard_category_id']//option[text()='Car']");
 	private final static By Check_Image=By.xpath("//div[@id='photo']//img");
-	private final static By Verify_Listing_Save_And_Continue=By.xpath("(//input[@value='Save & Continue'])[1]");
+	private final static By Verify_Listing_Save_And_Continue=By.xpath("(//button[text()='Save & Continue'])[2]");
 
 	
 	
@@ -75,7 +75,7 @@ public class CreateListingPage extends SeleniumWrapper
 		executeClickOnElement(Click_Location);
 		selectCity();
 		scrolling("(//li[text()='Delhi'])[3]");
-		sleep(2000);
+		sleep(5000);
 		selectOptionByText(Select_Make,"Audi" );
 		verifyByContains(Select_Make, "Audi");
 		selectOptionByText(Select_Model,"Q3" );
@@ -94,10 +94,10 @@ public class CreateListingPage extends SeleniumWrapper
 	
 	public void keyInformation()
 	{
+		waitForPageLoad();
 		executeScrollDownScript(700);
 		driverClick(Select_Location);
 		enterTextboxDetails(findElement(Search_Location), "Allahabad");
-		//sleep(1000);
 		enterKey(Search_Location);
 		verifyByText(Select_Location, "Allahabad");
 		String registerNumber = generateRandomNumber();
@@ -143,9 +143,9 @@ public class CreateListingPage extends SeleniumWrapper
 	{
 		verifyByText(Click_For_Normal, "FREE");
 		executeClickOnElement(Click_For_Normal);
-		sleep(2000);
-		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
-		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
+		executeClickOnElement(By.xpath("(//a[text()='Proceed'])[1]"));
+		//verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
+		//executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
 		doPageRefresh();
 	}
 	
@@ -154,16 +154,18 @@ public class CreateListingPage extends SeleniumWrapper
 	{
 		verifyByText(Click_For_Premium, "₹499/-");
 		executeClickOnElement(Click_For_Premium);
-		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
-		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
+		executeClickOnElement(By.xpath("(//a[text()='Proceed'])[2]"));
+//		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
+//		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
     }
 	
 	public void conciergeListing()
 	{
 		verifyByText(Click_For_Concierge, "₹699/-");
 		executeClickOnElement(Click_For_Concierge);
-		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
-		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
+		executeClickOnElement(By.xpath("(//a[text()='Proceed'])[3]"));
+//		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
+//		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
 	}
 	
 	public void certificationTool()
@@ -179,6 +181,30 @@ public class CreateListingPage extends SeleniumWrapper
 		doPageRefresh();
 		executeClickOnElement(Click_Activate_Listing_Button);
 	    sleep(5000);
+	}
+	
+	public void quickSell()
+	{
+		waitForPageLoad();
+		executeClickOnElement(By.xpath("(//h2[text()='QuickSell'])[1]"));
+		verifyByContains(Verify_Listing_Save_And_Continue, "Save & Continue");
+		executeClickOnElement(Verify_Listing_Save_And_Continue);
+	}
+	
+	public void regularSell()
+	{
+		waitForPageLoad();
+		executeClickOnElement(By.xpath("(//h2[text()='QuickSell'])[1]"));
+		verifyByContains(Verify_Listing_Save_And_Continue, "Save & Continue");
+		executeClickOnElement(Verify_Listing_Save_And_Continue);
+	}
+	
+	public void distressSale()
+	{
+		waitForPageLoad();
+		executeClickOnElement(By.xpath("(//h2[text()='QuickSell'])[1]"));
+		verifyByContains(Verify_Listing_Save_And_Continue, "Save & Continue");
+		executeClickOnElement(Verify_Listing_Save_And_Continue);
 	}
 	
 }

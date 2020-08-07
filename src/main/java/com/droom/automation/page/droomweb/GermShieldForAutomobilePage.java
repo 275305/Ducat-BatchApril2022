@@ -23,7 +23,7 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 	private static final By Amount_For_Hatchback=By.xpath("//label[text()='₹ 1179']");
 	private static final By Amount_For_Sedan=By.xpath("//label[text()='₹ 1651']");
 	private static final By Amount_For_SUV_Luxury=By.xpath("//li[@id='carFirstListing']//label[text()='₹ 2123']");
-	private static final By Amount_For_Bike=By.xpath("//label[text()='₹ 589']");
+	private static final By Amount_For_Bike=By.xpath("//label[text()='₹ 599']");
 	private static final By Amount_For_Scooter=By.xpath("//label[text()='₹ 599']");
 	private static final By Amount_For_Premium_Bike=By.xpath("//label[text()='₹ 1099']");
 	private static final By Amount_For_Bus=By.xpath("//label[text()='₹ 6699']");
@@ -100,7 +100,8 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
 		executeClickOnElement(Click_On_Buy_Now_PopUp);
 		enterTextboxDetails(findElement(Enter_Pincode), "110005");
-		verifyByContains(Verify_Amount_Added_For_HatchBack, "(₹1179 Incl. GST)");
+		By bikeAmount = By.xpath("//span[text()='₹1179']");
+		verifyByContains(bikeAmount, "₹1179");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
@@ -108,7 +109,6 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		verifyByContains(Verify_Amount_Added_For_HatchBack_At_Checkout, "1,179");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		executeClickOnElement(Click_Button_Not_Intrested);
 		
 	}
 	
@@ -119,22 +119,22 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		executeClickOnElement(Click_For_Automobile);
 		verifyByContains(Click_For_Car, "Car");
 		executeClickOnElement(Click_For_Car);
-		verifyByContains(Amount_For_Sedan, "₹ 1651");
+		verifyByContains(Amount_For_Sedan, "₹ 1649");
 		verifyByContains(Click_View_Details_For_Sedan, "View Details");
 		executeClickOnElement(Click_View_Details_For_Sedan);
 		sleep(3000);
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
 		executeClickOnElement(Click_On_Buy_Now_PopUp);
 		enterTextboxDetails(findElement(Enter_Pincode), "110005");
-		verifyByContains(Verify_Amount_Added_For_Sedan, "(₹1651 Incl. GST)");
+		By bikeAmount = By.xpath("//span[text()='₹1649']");
+		verifyByContains(bikeAmount, "₹1649");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
-		verifyByContains(Verify_Amount_Added_For_Sedan_At_Checkout, "1,651");
+		verifyByContains(Verify_Amount_Added_For_Sedan_At_Checkout, "1,649");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		executeClickOnElement(Click_Button_Not_Intrested);
 		
 	}
 	
@@ -145,22 +145,22 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		executeClickOnElement(Click_For_Automobile);
 		verifyByContains(Click_For_Bike, "Bike");
 		executeClickOnElement(Click_For_Bike);
-		verifyByContains(Amount_For_Bike, "₹ 589");
+		verifyByContains(Amount_For_Bike, "₹ 599");
 		verifyByContains(Click_View_Details_For_Bike, "View Details");
 		executeClickOnElement(Click_View_Details_For_Bike);
 		sleep(3000);
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
 		executeClickOnElement(Click_On_Buy_Now_PopUp);
 		enterTextboxDetails(findElement(Enter_Pincode), "110005");
-		verifyByContains(Verify_Amount_Added_For_Bike, "(₹589 Incl. GST)");
+		By bikeAmount = By.xpath("//span[text()='₹599']");
+		verifyByContains(bikeAmount, "₹599");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
-		verifyByContains(Verify_Amount_Added_For_Bike_At_Checkout, "589");
+		verifyByContains(Verify_Amount_Added_For_Bike_At_Checkout, "599");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		executeClickOnElement(Click_Button_Not_Intrested);
 		
 	}
 	
@@ -169,8 +169,10 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		getGermShieldPage(username, password);
 		verifyByContains(Click_For_Automobile, "Automobile");
 		executeClickOnElement(Click_For_Automobile);
+		sleep(2000);
 		verifyByContains(Click_For_Scooter, "Scooter");
 		executeClickOnElement(Click_For_Scooter);
+		sleep(2000);
 		verifyByContains(Amount_For_Scooter, "₹ 599");
 		verifyByContains(Click_View_Details_For_Scooter, "View Details");
 		executeClickOnElement(Click_View_Details_For_Scooter);
@@ -178,7 +180,8 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
 		executeClickOnElement(Click_On_Buy_Now_PopUp);
 		enterTextboxDetails(findElement(Enter_Pincode), "110005");
-		verifyByContains(Verify_Amount_Added_For_Scooter, "(₹599 Incl. GST)");
+		By bikeAmount = By.xpath("//span[text()='₹599']");
+		verifyByContains(bikeAmount, "₹599");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
@@ -186,7 +189,6 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		verifyByContains(Verify_Amount_Added_For_Scooter_At_Checkout, "599");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		executeClickOnElement(Click_Button_Not_Intrested);
 		
 	}
 	
@@ -214,7 +216,6 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		verifyByContains(bikeAmount2, "1,099");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		executeClickOnElement(Click_Button_Not_Intrested);
 		
 	}
 	
@@ -223,6 +224,7 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		getGermShieldPage(username, password);
 		verifyByContains(Click_For_Automobile, "Automobile");
 		executeClickOnElement(Click_For_Automobile);
+		sleep(3000);
 		verifyByContains(Click_For_Bus, "Bus/Ambulance");
 		executeClickOnElement(Click_For_Bus);
 		verifyByContains(Amount_For_Bus, "₹ 6699");
@@ -242,7 +244,6 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		verifyByContains(bikeAmount2, "6,699");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		executeClickOnElement(Click_Button_Not_Intrested);
 		
 	}
 	
