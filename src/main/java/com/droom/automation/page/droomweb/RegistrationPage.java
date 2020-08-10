@@ -109,6 +109,7 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyByAttribute(Enter_Confirm_Casual_Password, password);
 		verifyByAttribute(Enter_Creat_Individual_Button, "Continue");
 		executeClickOnElement(Enter_Creat_Individual_Button);
+		DataBaseDemo.deleteMailID("DELETE FROM `cscart_new`.`users` where email = '"+username+"';");
 		
 //	    db.deleteDataFromDB("DELETE FROM `cscart_new`.`users` where email = 'honey.maurya@droom.in';");
 //	    db.deleteDataFromDB("DELETE FROM `cscart_new`.`otp_verification` where phone='6307641802' order by id desc limit 1;");
@@ -175,6 +176,8 @@ public class RegistrationPage extends SeleniumWrapper
 	public void emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount(String username,String mobilenumber) throws Exception
 	{
 		getRegistrationFormPage(username, mobilenumber);
+		waitForPageLoad();
+		sleep(2000);
 		verifyByAttribute(Enter_Creat_Individual_Button, "Continue");
 		executeClickOnElement(Enter_Creat_Individual_Button);
 		verifyErrorMsgByText(Verify_first_name_Error_Massage, "Please enter password");
@@ -199,15 +202,7 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyErrorMsgByText(Verify_re_enter_password_Not_Matching_Error_Massage, "Re-entered Password is not matching with Password.");
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	public void createProSellerAccount(String firstname,String lastname,String username,String mobilenumber,String businessname,String password) throws Exception
 	{
 		loginpage.enterIconPopup();
@@ -237,16 +232,10 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyByAttribute(Create_Pro_Seller_Account, "Create  Pro-Seller  Account");
 		executeClickOnElement(Create_Pro_Seller_Account);
 		waitForPageLoad();
-		sleep(5000);
+		sleep(8000);
 		verifyByText(Click_Proceed, "Proceed");
 		executeClickOnElement(Click_Proceed);
 		verifyByText(Verify_Text_As_Registered_As_ProSeller, "Register As a Pro-Seller");
-		
-		
-//		db.deleteDataFromDB("DELETE FROM `cscart_new`.`users` where email = 'superhoney1558maurya@gmail.com';");
-//		db.deleteDataFromDB("DELETE FROM `cscart_new`.`otp_verification` where phone='9599946816' order by id desc limit 1;");
-		
-		
 	}
 	
 	
@@ -337,19 +326,5 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyErrorMsgByText(Verify_MailId_Error_Massage_As_Invalid_Input_For_ProSeller, "Please enter valid Email Address");
 		verifyErrorMsgByText(Verify_MobileNumber_Error_Massage_As_Invalid_Input_For_ProSeller, "Please enter valid Mobile Number");
 		verifyErrorMsgByText(Verify_OTP_Error_Massage_As_Invalid_Input_For_ProSeller, "OTP must have 4 digits");
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

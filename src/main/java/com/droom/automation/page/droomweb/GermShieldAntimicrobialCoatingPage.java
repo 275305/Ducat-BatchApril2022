@@ -37,7 +37,7 @@ public class GermShieldAntimicrobialCoatingPage extends SeleniumWrapper
 	private static final By Final_Amount_To_Pay=By.xpath("(//b[text()=' 899'])[1]");
 	private static final By Enter_Area_In_SqrFeet=By.xpath("//input[@id='facilities-builtup']");
 	private static final By Amount_Added_For_Hospital=By.xpath("//span[contains(text(),'(₹1500 Incl. GST)')]");
-	private static final By Final_Amount_Added_For_Hospital=By.xpath("//b[text()=' 1,500']");
+	private static final By Final_Amount_Added_For_Hospital=By.xpath("//strong[text()='₹  1,500']");
 	private static final By Click_To_Remove_Discount=By.xpath("//a[text()='Remove Coupon']");
 	private static final By Click_To_Accept_Discount=By.xpath("//button[text()='OK']");
 //	private static final By =By.xpath("");
@@ -74,7 +74,7 @@ public class GermShieldAntimicrobialCoatingPage extends SeleniumWrapper
 		loginpage.goToHome();
 		homepage.enterGermShieldAntimicrobialCoating();                         //verify germ Shield Popup
 		waitForPageLoad();
-		verifyByContains(Page_Title, "Germ Shield");                            //verify Germ Shield Page
+		verifyByContains(Page_Title, "Germ Shield");                           //verify Germ Shield Page
 		executeScrollDownScript(500);
 		executeClickOnElement(Click_On_HatchBack_View_Details);
 		sleep(2000);
@@ -144,10 +144,10 @@ public class GermShieldAntimicrobialCoatingPage extends SeleniumWrapper
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
-		executeClickOnElement(Click_To_Remove_Discount);
-		sleep(2000);
-		executeClickOnElement(Click_To_Accept_Discount);
-		sleep(8000);
+//		executeClickOnElement(Click_To_Remove_Discount);
+//		sleep(2000);
+//		executeClickOnElement(Click_To_Accept_Discount);
+//		sleep(8000);
 		verifyByContains(Final_Amount_Added_For_Hospital, "1,500");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();

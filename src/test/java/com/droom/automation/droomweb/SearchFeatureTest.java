@@ -25,8 +25,6 @@ public class SearchFeatureTest extends AbstractBaseTest
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
 		String password = eu.readData("BuyFeatureSheet", 1, 2);
 		searchpage.searchForVehicle(username, password);
-		
-		
 	}
 	
 	
@@ -38,8 +36,6 @@ public class SearchFeatureTest extends AbstractBaseTest
 		searchpage.searchForBike(username, password);
 	}
 	
-	
-	
 	@Test(priority = 3)
 	public void serachForScooterValidationAsLoggedInUserAtCheckout()
 	{
@@ -48,15 +44,9 @@ public class SearchFeatureTest extends AbstractBaseTest
 		searchpage.searchForScooterAsLoggedInUser(username, password);
 	}
 	
-	@Test(priority = 4)
-	public void serachForVehicleValidation()
-	{
-		String username = eu.readData("BuyFeatureSheet", 1, 1);
-		String password = eu.readData("BuyFeatureSheet", 1, 2);
-		searchpage.searchForScooterAsFBLoggedInUser(username, password);
-	}
-	
-
-
-
+//	@Test(priority = 4)
+//	public void serachForVehicleValidation()
+//	{
+//		searchpage.searchForScooterAsFBLoggedInUser();
+//	}
 }

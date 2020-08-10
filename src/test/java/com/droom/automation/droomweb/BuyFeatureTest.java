@@ -30,32 +30,32 @@ public class BuyFeatureTest extends AbstractBaseTest
 //	}
 
 	
-//	@Test(priority = 1)
-//	public void buyRTOServiceAsLoggedInUser()
-//	{
-//		String username = eu.readData("BuyFeatureSheet", 1, 1);
-//		String password = eu.readData("BuyFeatureSheet", 1, 2);
-//		BuyPage buypage=new BuyPage();
-//		buypage.buyAutomobileServicesViaRTO(username, password);
-//	}
-//	
-//	@Test(priority = 2)
-//	public void buyJumpstartServiceAsLoggedInUser()
-//	{
-//		String username = eu.readData("BuyFeatureSheet", 1, 1);
-//		String password = eu.readData("BuyFeatureSheet", 1, 2);
-//		BuyPage buypage=new BuyPage();
-//		buypage.buyAutomobileServicesViaJumpstart(username, password);
-//	}
-//	
-//	@Test(priority = 3)
-//	public void buyCarCareAndDetailingAsLoggedInUser()
-//	{
-//		String username = eu.readData("BuyFeatureSheet", 1, 1);
-//		String password = eu.readData("BuyFeatureSheet", 1, 2);
-//		BuyPage buypage=new BuyPage();
-//		buypage.buyAutomobileServicesViaCarCareAndDetailing(username, password);
-//	}
+	@Test(priority = 1)
+	public void buyRTOServiceAsLoggedInUser()
+	{
+		String username = eu.readData("BuyFeatureSheet", 1, 1);
+		String password = eu.readData("BuyFeatureSheet", 1, 2);
+		BuyPage buypage=new BuyPage();
+		buypage.buyAutomobileServicesViaRTO(username, password);
+	}
+	
+	@Test(priority = 2)
+	public void buyJumpstartServiceAsLoggedInUser()
+	{
+		String username = eu.readData("BuyFeatureSheet", 1, 1);
+		String password = eu.readData("BuyFeatureSheet", 1, 2);
+		BuyPage buypage=new BuyPage();
+		buypage.buyAutomobileServicesViaJumpstart(username, password);
+	}
+	
+	@Test(priority = 3)
+	public void buyCarCareAndDetailingAsLoggedInUser()
+	{
+		String username = eu.readData("BuyFeatureSheet", 1, 1);
+		String password = eu.readData("BuyFeatureSheet", 1, 2);
+		BuyPage buypage=new BuyPage();
+		buypage.buyAutomobileServicesViaCarCareAndDetailing(username, password);
+	}
 	
 	
 	@Test(priority = 4)

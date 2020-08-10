@@ -18,43 +18,10 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 	private static final By Click_For_Scooter=By.xpath("//label[text()='Scooter']");
 	private static final By Click_For_Premium_Bike=By.xpath("//label[text()='Premium Bike']");
 	private static final By Click_For_Bus=By.xpath("//label[text()='Bus/Ambulance']");
-	
-	//webelements for amount displayed
-	private static final By Amount_For_Hatchback=By.xpath("//label[text()='₹ 1179']");
-	private static final By Amount_For_Sedan=By.xpath("//label[text()='₹ 1651']");
-	private static final By Amount_For_SUV_Luxury=By.xpath("//li[@id='carFirstListing']//label[text()='₹ 2123']");
-	private static final By Amount_For_Bike=By.xpath("//label[text()='₹ 599']");
-	private static final By Amount_For_Scooter=By.xpath("//label[text()='₹ 599']");
-	private static final By Amount_For_Premium_Bike=By.xpath("//label[text()='₹ 1099']");
-	private static final By Amount_For_Bus=By.xpath("//label[text()='₹ 6699']");
-	//private static final By =By.xpath("");
-	
-	//webelements for view details
-	private static final By Click_View_Details_For_Hatchback=By.xpath("//li[@id='carFirstListing']//p[text()='Hatchback']/following-sibling::span[text()='View Details']");
-	private static final By Click_View_Details_For_Sedan=By.xpath("//li[@id='carFirstListing']//p[text()='Sedan']/following-sibling::span[text()='View Details']");
 	private static final By Click_On_Buy_Now_PopUp=By.xpath("//button[@id='listing-detail-buy-now']");
-	private static final By Click_View_Details_For_Bike=By.xpath("//div[@id='bikeType']//p[text()='Bike']/following-sibling::span[text()='View Details']");
-	private static final By Click_View_Details_For_Scooter=By.xpath("//div[@id='scooterType']//p[text()='Scooter']/following-sibling::span[text()='View Details']");
-	private static final By Click_View_Details_For_Premium_Bike=By.xpath("//div[@id='premiumBikeType']//p[text()='Super Bike']/following-sibling::span[text()='View Details']");
-	private static final By Click_View_Details_For_Bus=By.xpath("//div[@id='busAmbulaceType']//p[text()='Bus']/following-sibling::span[text()='View Details']");
-//	private static final By =By.xpath("");
-	
-	
 	private static final By Enter_Pincode= By.xpath("//input[@id='automobile-pincode']");
 	private static final By Click_On_Buy_Now_After_Pin= By.xpath("//button[@id='auto-gs-submit']");
 	private static final By Click_On_Checkout_Popup= By.xpath("//a[text()='Checkout Now']");
-	private static final By Verify_Amount_Added_For_HatchBack=By.xpath("//span[contains(text(),'(₹1179 Incl. GST)')]");
-	private static final By Verify_Amount_Added_For_HatchBack_At_Checkout=By.xpath("//strong[text()='₹  1,179']");
-	private static final By Verify_Amount_Added_For_Sedan=By.xpath("//span[contains(text(),'(₹1651 Incl. GST)')]");
-	private static final By Verify_Amount_Added_For_Sedan_At_Checkout=By.xpath("//strong[text()='₹  1,651']");
-	private static final By Click_Button_Not_Intrested= By.xpath("//button[text()='I Am Not Interested']");
-	private static final By Verify_Amount_Added_For_Bike=By.xpath("//span[contains(text(),'(₹589 Incl. GST)')]");
-	private static final By Verify_Amount_Added_For_Scooter=By.xpath("//span[contains(text(),'(₹599 Incl. GST)')]");
-	private static final By Verify_Amount_Added_For_Bike_At_Checkout=By.xpath("//strong[text()='₹  589']");
-	private static final By Verify_Amount_Added_For_Scooter_At_Checkout=By.xpath("//strong[text()='₹  599']");
-//	private static final By =By.xpath("");
-//	private static final By =By.xpath("");
-	
 	
 	
 	LoginPage loginpage;
@@ -86,85 +53,82 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		executeScrollDownScript(500);
 	}
 	
-	public void germShieldValidationForCarAsHatchback(String username,String password)
+	public void germShieldValidationForCarAsHatchback(String username,String password,String amount,String pincode)
 	{
 		getGermShieldPage(username, password);
 		verifyByContains(Click_For_Automobile, "Automobile");
 		executeClickOnElement(Click_For_Automobile);
 		verifyByContains(Click_For_Car, "Car");
 		executeClickOnElement(Click_For_Car);
-		verifyByContains(Amount_For_Hatchback, "₹ 1179");
-		verifyByContains(Click_View_Details_For_Hatchback, "View Details");
-		executeClickOnElement(Click_View_Details_For_Hatchback);
+		verifyByContains(By.xpath("//label[text()='₹ "+amount+"']"), "₹ "+amount+"");
+		verifyByContains(By.xpath("//li[@id='carFirstListing']//p[text()='Hatchback']/following-sibling::span[text()='View Details']"), "View Details");
+		executeClickOnElement(By.xpath("//li[@id='carFirstListing']//p[text()='Hatchback']/following-sibling::span[text()='View Details']"));
 		sleep(3000);
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
 		executeClickOnElement(Click_On_Buy_Now_PopUp);
-		enterTextboxDetails(findElement(Enter_Pincode), "110005");
-		By bikeAmount = By.xpath("//span[text()='₹1179']");
-		verifyByContains(bikeAmount, "₹1179");
+		enterTextboxDetails(findElement(Enter_Pincode), pincode);
+		By bikeAmount = By.xpath("//div[@id='automobile-section']//span[text()='₹"+amount+"']");
+		verifyByContains(bikeAmount, "₹"+amount+"");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
-		verifyByContains(Verify_Amount_Added_For_HatchBack_At_Checkout, "1,179");
+		verifyByContains(By.xpath("//strong[text()='₹  "+addingCommaToInt(amount)+"']"), addingCommaToInt(amount));
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
 		
 	}
 	
-	public void germShieldValidationForCarAsSedan(String username,String password)
+	public void germShieldValidationForCarAsSedan(String username,String password,String amount,String pincode)
 	{
 		getGermShieldPage(username, password);
 		verifyByContains(Click_For_Automobile, "Automobile");
 		executeClickOnElement(Click_For_Automobile);
 		verifyByContains(Click_For_Car, "Car");
 		executeClickOnElement(Click_For_Car);
-		verifyByContains(Amount_For_Sedan, "₹ 1649");
-		verifyByContains(Click_View_Details_For_Sedan, "View Details");
-		executeClickOnElement(Click_View_Details_For_Sedan);
+		verifyByContains(By.xpath("//label[text()='₹ "+amount+"']"), "₹ "+amount+"");
+		verifyByContains(By.xpath("//li[@id='carFirstListing']//p[text()='Sedan']/following-sibling::span[text()='View Details']"), "View Details");
+		executeClickOnElement(By.xpath("//li[@id='carFirstListing']//p[text()='Sedan']/following-sibling::span[text()='View Details']"));
 		sleep(3000);
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
 		executeClickOnElement(Click_On_Buy_Now_PopUp);
-		enterTextboxDetails(findElement(Enter_Pincode), "110005");
-		By bikeAmount = By.xpath("//span[text()='₹1649']");
-		verifyByContains(bikeAmount, "₹1649");
+		enterTextboxDetails(findElement(Enter_Pincode), pincode);
+		verifyByContains(By.xpath("//span[text()='₹"+amount+"']"), "₹"+amount+"");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
-		verifyByContains(Verify_Amount_Added_For_Sedan_At_Checkout, "1,649");
+		verifyByContains(By.xpath("//strong[text()='₹  "+addingCommaToInt(amount)+"']"), addingCommaToInt(amount));
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		
 	}
 	
-	public void germShieldValidationForBike(String username,String password)
+	public void germShieldValidationForBike(String username,String password,String amount,String pincode)
 	{
 		getGermShieldPage(username, password);
 		verifyByContains(Click_For_Automobile, "Automobile");
 		executeClickOnElement(Click_For_Automobile);
 		verifyByContains(Click_For_Bike, "Bike");
 		executeClickOnElement(Click_For_Bike);
-		verifyByContains(Amount_For_Bike, "₹ 599");
-		verifyByContains(Click_View_Details_For_Bike, "View Details");
-		executeClickOnElement(Click_View_Details_For_Bike);
+		verifyByContains(By.xpath("//label[text()='₹ "+amount+"']"), "₹ "+amount+"");
+		verifyByContains(By.xpath("//div[@id='bikeType']//p[text()='Bike']/following-sibling::span[text()='View Details']"), "View Details");
+		executeClickOnElement(By.xpath("//div[@id='bikeType']//p[text()='Bike']/following-sibling::span[text()='View Details']"));
 		sleep(3000);
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
 		executeClickOnElement(Click_On_Buy_Now_PopUp);
-		enterTextboxDetails(findElement(Enter_Pincode), "110005");
-		By bikeAmount = By.xpath("//span[text()='₹599']");
-		verifyByContains(bikeAmount, "₹599");
+		enterTextboxDetails(findElement(Enter_Pincode), pincode);
+		verifyByContains(By.xpath("//span[text()='₹"+amount+"']"), "₹"+amount+"");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
-		verifyByContains(Verify_Amount_Added_For_Bike_At_Checkout, "599");
+		verifyByContains(By.xpath("//strong[text()='₹  "+addingCommaToInt(amount)+"']"), addingCommaToInt(amount));
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
 		
 	}
 	
-	public void germShieldValidationForScooter(String username,String password)
+	public void germShieldValidationForScooter(String username,String password,String amount,String pincode)
 	{
 		getGermShieldPage(username, password);
 		verifyByContains(Click_For_Automobile, "Automobile");
@@ -173,53 +137,50 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		verifyByContains(Click_For_Scooter, "Scooter");
 		executeClickOnElement(Click_For_Scooter);
 		sleep(2000);
-		verifyByContains(Amount_For_Scooter, "₹ 599");
-		verifyByContains(Click_View_Details_For_Scooter, "View Details");
-		executeClickOnElement(Click_View_Details_For_Scooter);
+		verifyByContains(By.xpath("//div[@id='scooterType']//label[text()='₹ "+amount+"']"), "₹ "+amount+"");
+		verifyByContains(By.xpath("//div[@id='scooterType']//p[text()='Scooter']/following-sibling::span[text()='View Details']"), "View Details");
+		executeClickOnElement(By.xpath("//div[@id='scooterType']//p[text()='Scooter']/following-sibling::span[text()='View Details']"));
 		sleep(3000);
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
 		executeClickOnElement(Click_On_Buy_Now_PopUp);
-		enterTextboxDetails(findElement(Enter_Pincode), "110005");
-		By bikeAmount = By.xpath("//span[text()='₹599']");
-		verifyByContains(bikeAmount, "₹599");
+		enterTextboxDetails(findElement(Enter_Pincode), pincode);
+		verifyByContains(By.xpath("//span[text()='₹"+amount+"']"), "₹"+amount+"");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
-		verifyByContains(Verify_Amount_Added_For_Scooter_At_Checkout, "599");
+		verifyByContains(By.xpath("//strong[text()='₹  "+addingCommaToInt(amount)+"']"), ""+addingCommaToInt(amount)+"");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
 		
 	}
 	
-	public void germShieldValidationForPremiumBike(String username,String password)
+	public void germShieldValidationForPremiumBike(String username,String password,String amount,String pincode)
 	{
 		getGermShieldPage(username, password);
 		verifyByContains(Click_For_Automobile, "Automobile");
 		executeClickOnElement(Click_For_Automobile);
+		sleep(2000);
 		verifyByContains(Click_For_Premium_Bike, "Premium Bike");
 		executeClickOnElement(Click_For_Premium_Bike);
-		verifyByContains(Amount_For_Premium_Bike, "₹ 1099");
-		verifyByContains(Click_View_Details_For_Premium_Bike, "View Details");
-		executeClickOnElement(Click_View_Details_For_Premium_Bike);
+		verifyByContains(By.xpath("//label[text()='₹ "+amount+"']"), "₹ "+amount+"");
+		verifyByContains(By.xpath("//div[@id='premiumBikeType']//p[text()='Super Bike']/following-sibling::span[text()='View Details']"), "View Details");
+		executeClickOnElement(By.xpath("//div[@id='premiumBikeType']//p[text()='Super Bike']/following-sibling::span[text()='View Details']"));
 		sleep(3000);
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
 		executeClickOnElement(Click_On_Buy_Now_PopUp);
-		enterTextboxDetails(findElement(Enter_Pincode), "110005");
-		By bikeAmount = By.xpath("//span[text()='₹1099']");
-		verifyByContains(bikeAmount, "₹1099");
+		enterTextboxDetails(findElement(Enter_Pincode), pincode);
+		verifyByContains(By.xpath("//span[text()='₹"+amount+"']"), "₹"+amount+"");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
-		By bikeAmount2 = By.xpath("//strong[text()='₹  1,099']");
-		verifyByContains(bikeAmount2, "1,099");
+		verifyByContains(By.xpath("//strong[text()='₹  "+addingCommaToInt(amount)+"']"), addingCommaToInt(amount));
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		
 	}
 	
-	public void germShieldValidationForBus(String username,String password)
+	public void germShieldValidationForBus(String username,String password,String amount,String pincode)
 	{
 		getGermShieldPage(username, password);
 		verifyByContains(Click_For_Automobile, "Automobile");
@@ -227,31 +188,20 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		sleep(3000);
 		verifyByContains(Click_For_Bus, "Bus/Ambulance");
 		executeClickOnElement(Click_For_Bus);
-		verifyByContains(Amount_For_Bus, "₹ 6699");
-		verifyByContains(Click_View_Details_For_Bus, "View Details");
-		executeClickOnElement(Click_View_Details_For_Bus);
+		verifyByContains(By.xpath("//label[text()='₹ "+amount+"']"), "₹ "+amount+"");
+		verifyByContains(By.xpath("//div[@id='busAmbulaceType']//p[text()='Bus']/following-sibling::span[text()='View Details']"), "View Details");
+		executeClickOnElement(By.xpath("//div[@id='busAmbulaceType']//p[text()='Bus']/following-sibling::span[text()='View Details']"));
 		sleep(3000);
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
 		executeClickOnElement(Click_On_Buy_Now_PopUp);
-		enterTextboxDetails(findElement(Enter_Pincode), "110005");
-		By bikeAmount = By.xpath("//span[text()='₹6699']");
-		verifyByContains(bikeAmount, "₹6699");
+		enterTextboxDetails(findElement(Enter_Pincode), pincode);
+		verifyByContains(By.xpath("//span[text()='₹"+amount+"']"), "₹"+amount+"");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
-		By bikeAmount2 = By.xpath("//strong[text()='₹  6,699']");
-		verifyByContains(bikeAmount2, "6,699");
+		verifyByContains(By.xpath("//strong[text()='₹  "+addingCommaToInt(amount)+"']"), addingCommaToInt(amount));
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 }

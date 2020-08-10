@@ -34,13 +34,13 @@ public class GermShieldForHomePage extends SeleniumWrapper
 	private static final By Click_On_Checkout_Popup= By.xpath("//a[text()='Checkout Now']");
 	
 	//webelements for verify amount
-	private static final By Verify_Amount_Added_For_Independent_Home=By.xpath("//span[text()='₹1500.00']");
+	private static final By Verify_Amount_Added_For_Independent_Home=By.xpath("//span[text()='₹1500']");
 	private static final By Verify_Amount_Added_For_Independent_Home_At_Checkout=By.xpath("//strong[text()='₹  1,500']");
-	private static final By Verify_Amount_Added_For_Bungalow=By.xpath("//span[text()='₹1500.00']");
+	private static final By Verify_Amount_Added_For_Bungalow=By.xpath("//span[text()='₹1500']");
 	private static final By Verify_Amount_Added_For_Bungalow_At_Checkout=By.xpath("//strong[text()='₹  1,500']");
-	private static final By Verify_Amount_Added_For_Flat=By.xpath("//span[text()='₹1500.00']");
+	private static final By Verify_Amount_Added_For_Flat=By.xpath("//span[text()='₹1500']");
 	private static final By Verify_Amount_Added_For_Flat_At_Checkout=By.xpath("//strong[text()='₹  1,500']");
-	private static final By Verify_Amount_Added_For_Villa=By.xpath("//span[text()='₹1500.00']");
+	private static final By Verify_Amount_Added_For_Villa=By.xpath("//span[text()='₹1500']");
 	private static final By Verify_Amount_Added_For_Villa_At_Checkout=By.xpath("//strong[text()='₹  1,500']");
 	
 	private static final By Click_Button_Not_Intrested= By.xpath("//button[text()='I Am Not Interested']");
@@ -100,7 +100,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		sleep(2000);
 		String a = WebDriverFactory.getDriver().findElement(Verify_Amount_Added_For_Independent_Home).getText();
 		System.out.println(a);
-    	verifyByContains(Verify_Amount_Added_For_Independent_Home, "₹1500.00");
+    	verifyByContains(Verify_Amount_Added_For_Independent_Home, "₹1500");
 		enterTextboxDetails(findElement(Enter_Address), address);
 		verifyByAttribute(Enter_Address,address );
 		enterTextboxDetails(findElement(Enter_Pin), pincode);
@@ -111,10 +111,8 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
 		verifyByContains(Verify_Amount_Added_For_Independent_Home_At_Checkout, "1,500");
-//		paymentpage.proceedToCheckout();
-//		paymentpage.paymentViaNetBanking();
-//		executeClickOnElement(Click_Button_Not_Intrested);
-		
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 	}
 	
 	public void germShieldValidationForHomeAsBungalow(String username,String password,String area,String address,String pincode)
@@ -132,7 +130,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		verifyByAttribute(Enter_Area,area );
 		// IMMEDIATE CHANGE IN AMOUNT AT SUBMIT BUTTON
 		sleep(2000);
-    	verifyByContains(Verify_Amount_Added_For_Bungalow, "₹1500.00");
+    	verifyByContains(Verify_Amount_Added_For_Bungalow, "₹1500");
 		enterTextboxDetails(findElement(Enter_Address), address);
 		verifyByAttribute(Enter_Address,address );
 		enterTextboxDetails(findElement(Enter_Pin), pincode);
@@ -143,10 +141,8 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
 		verifyByContains(Verify_Amount_Added_For_Bungalow_At_Checkout, "1,500");
-//		paymentpage.proceedToCheckout();
-//		paymentpage.paymentViaNetBanking();
-//		executeClickOnElement(Click_Button_Not_Intrested);
-		
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 	}
 
 	public void germShieldValidationForHomeAsFlat(String username,String password,String area,String address,String pincode)
@@ -164,7 +160,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		verifyByAttribute(Enter_Area,area );
 		// IMMEDIATE CHANGE IN AMOUNT AT SUBMIT BUTTON
 		sleep(2000);
-    	verifyByContains(Verify_Amount_Added_For_Flat, "₹1500.00");
+    	verifyByContains(Verify_Amount_Added_For_Flat, "₹1500");
 		enterTextboxDetails(findElement(Enter_Address), address);
 		verifyByAttribute(Enter_Address,address );
 		enterTextboxDetails(findElement(Enter_Pin), pincode);
@@ -175,10 +171,8 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
 		verifyByContains(Verify_Amount_Added_For_Flat_At_Checkout, "1,500");
-//		paymentpage.proceedToCheckout();
-//		paymentpage.paymentViaNetBanking();
-//		executeClickOnElement(Click_Button_Not_Intrested);
-		
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 	}
 	
 	public void germShieldValidationForHomeAsVilla(String username,String password,String area,String address,String pincode)
@@ -196,7 +190,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		verifyByAttribute(Enter_Area,area );
 		// IMMEDIATE CHANGE IN AMOUNT AT SUBMIT BUTTON
 		sleep(2000);
-    	verifyByContains(Verify_Amount_Added_For_Villa, "₹1500.00");
+    	verifyByContains(Verify_Amount_Added_For_Villa, "₹1500");
 		enterTextboxDetails(findElement(Enter_Address), address);
 		verifyByAttribute(Enter_Address,address );
 		enterTextboxDetails(findElement(Enter_Pin), pincode);
@@ -207,10 +201,8 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
 		verifyByContains(Verify_Amount_Added_For_Villa_At_Checkout, "1,500");
-//		paymentpage.proceedToCheckout();
-//		paymentpage.paymentViaNetBanking();
-//		executeClickOnElement(Click_Button_Not_Intrested);
-		
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 	}
 	
 	public void germShieldValidationForHomeAsPenthouse(String username,String password,String area,String address,String pincode)
@@ -230,7 +222,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		sleep(2000);
 		String intamt = dynamicWebelement(area);
 		String actualAmt="₹"+intamt;
-		By Verify_Amount_Added_For_Penthouse = By.xpath("//span[text()='₹"+intamt+".00']");
+		By Verify_Amount_Added_For_Penthouse = By.xpath("//span[text()='₹"+intamt+"']");
     	verifyByContains(Verify_Amount_Added_For_Penthouse, actualAmt);
 		enterTextboxDetails(findElement(Enter_Address), address);
 		verifyByAttribute(Enter_Address,address );
@@ -247,8 +239,6 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		verifyByContains(verifyAmountAtCheckout, finalAmount);
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		executeClickOnElement(Click_Button_Not_Intrested);
-		
 	}
 	
 	public void germShieldValidationForHomeAsFarmhouse(String username,String password,String area,String address,String pincode)
@@ -268,7 +258,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		sleep(2000);
 		String intamt = dynamicWebelement(area);
 		String actualAmt="₹"+intamt;
-		By Verify_Amount_Added_For_Farmhouse = By.xpath("//span[text()='₹"+intamt+".00']");
+		By Verify_Amount_Added_For_Farmhouse = By.xpath("//span[text()='₹"+intamt+"']");
     	verifyByContains(Verify_Amount_Added_For_Farmhouse, actualAmt);
 		enterTextboxDetails(findElement(Enter_Address), address);
 		verifyByAttribute(Enter_Address,address );
@@ -284,7 +274,5 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		verifyByContains(verifyAmountAtCheckout, finalAmount);
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		executeClickOnElement(Click_Button_Not_Intrested);
-		
 	}
 }

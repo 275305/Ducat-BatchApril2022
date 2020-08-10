@@ -2,46 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="suite" duration-ms="26843" started-at="2020-08-08T01:17:32 IST" finished-at="2020-08-08T01:17:59 IST">
+  <suite name="Default suite" duration-ms="6229" started-at="2020-08-10T21:48:24 IST" finished-at="2020-08-10T21:48:31 IST">
     <groups>
     </groups>
-    <test name="DroomWebAutomationTest" duration-ms="26843" started-at="2020-08-08T01:17:32 IST" finished-at="2020-08-08T01:17:59 IST">
-      <class name="com.droom.automation.droomweb.UserLoginTest">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3]" name="beforeSuite" is-config="true" duration-ms="21" started-at="2020-08-08T01:17:32 IST" finished-at="2020-08-08T01:17:32 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="6229" started-at="2020-08-10T21:48:24 IST" finished-at="2020-08-10T21:48:31 IST">
+      <class name="excelreport.TestReport">
+        <test-method status="PASS" signature="report()[pri:0, instance:excelreport.TestReport@59d016c9]" name="report" duration-ms="6131" started-at="2020-08-10T21:48:24 IST" finished-at="2020-08-10T21:48:31 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3]" name="beforeTest" is-config="true" duration-ms="12" started-at="2020-08-08T01:17:32 IST" finished-at="2020-08-08T01:17:32 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3]" name="init" is-config="true" duration-ms="15544" started-at="2020-08-08T01:17:32 IST" finished-at="2020-08-08T01:17:48 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="loginAsIndividualUserViaPassword()[pri:1, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3]" name="loginAsIndividualUserViaPassword" duration-ms="11041" started-at="2020-08-08T01:17:48 IST" finished-at="2020-08-08T01:17:59 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAsIndividualUserViaPassword -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3]" name="afterMethod" is-config="true" duration-ms="2" started-at="2020-08-08T01:17:59 IST" finished-at="2020-08-08T01:17:59 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginAsIndividualUserViaPassword status=SUCCESS method=UserLoginTest.loginAsIndividualUserViaPassword()[pri:1, instance:com.droom.automation.droomweb.UserLoginTest@78e117e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.droom.automation.droomweb.UserLoginTest -->
-    </test> <!-- DroomWebAutomationTest -->
-  </suite> <!-- suite -->
+        </test-method> <!-- report -->
+      </class> <!-- excelreport.TestReport -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

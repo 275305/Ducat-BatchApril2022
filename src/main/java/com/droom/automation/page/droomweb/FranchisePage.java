@@ -137,18 +137,83 @@ public class FranchisePage extends SeleniumWrapper
     	waitForPageLoad();
     	verifyByContains(By.xpath("//a[text()=' Continue ']"), "Continue");
     	executeClickOnElement(By.xpath("//a[text()=' Continue ']"));
+    }
+    
+    public void selectAsSiteFranchise()
+    {
     	sleep(3000);
     	verifyByContains(By.xpath("//button[contains(text(),' Select Now')]"), "Select Now");
     	executeClickOnElement(By.xpath("//button[contains(text(),' Select Now')]"));
+    }
+    
+    public void selectAsEnterpriseFranchise()
+    {
+    	sleep(3000);
+    	verifyByContains(By.xpath("//button[@id='enterprise-franchise-otp']"), "Select Now");
+    	executeClickOnElement(By.xpath("//button[@id='enterprise-franchise-otp']"));
+    }
+    
+    public void selectForOneMonths()
+    {
     	sleep(2000);
+    	verifyByAttribute(By.xpath("//input[@value='1'and@type='radio']"), "1");
+    	executeClickOnElement(By.xpath("//input[@value='1'and@type='radio']"));
+    	verifyByContains(By.xpath("//a[@id='next_one']"), "Next");
+    	executeClickOnElement(By.xpath("//a[@id='next_one']"));
+    	sleep(2000);
+    	verifyByContains(By.xpath("//a[@id='next_two']"), "Next");
+    	executeClickOnElement(By.xpath("//a[@id='next_two']"));
+    }
+    
+    public void selectForThreeMonths()
+    {
+    	sleep(2000);
+    	verifyByAttribute(By.xpath("//input[@value='3'and@type='radio']"), "3");
+    	executeClickOnElement(By.xpath("//input[@value='3'and@type='radio']"));
     	verifyByContains(By.xpath("//a[@id='next_one']"), "Next");
     	executeClickOnElement(By.xpath("//a[@id='next_one']"));
     	sleep(2000);
     	verifyByContains(By.xpath("//a[@id='next_two']"), "Next");
     	executeClickOnElement(By.xpath("//a[@id='next_two']"));
     	sleep(2000);
+    }
+    
+    public void selectForSixMonth()
+    {
+    	sleep(2000);
+    	verifyByAttribute(By.xpath("//input[@value='6'and@type='radio']"), "6");
+    	executeClickOnElement(By.xpath("//input[@value='6'and@type='radio']"));
+    	verifyByContains(By.xpath("//a[@id='next_one']"), "Next");
+    	executeClickOnElement(By.xpath("//a[@id='next_one']"));
+    	sleep(2000);
+    	verifyByContains(By.xpath("//a[@id='next_two']"), "Next");
+    	executeClickOnElement(By.xpath("//a[@id='next_two']"));
+    	sleep(2000);
+    }
+    
+    
+    public void selectForUpfrontPayment()
+    {
+    	sleep(2000);
+    	verifyByContains(By.xpath("//span[text()='Upfront Payment']"), "Upfront Payment");
+    	executeClickOnElement(By.xpath("//input[@checked='checked'and@name='cost_type']"));
     	verifyByContains(By.xpath("//a[@id='next_three']"), "Next");
     	executeClickOnElement(By.xpath("//a[@id='next_three']"));
+    }
+    
+    public void selectForEMIPayment()
+    {
+    	sleep(2000);
+    	verifyByContains(By.xpath("//span[text()='EMIs']"), "EMIs");
+    	executeClickOnElement(By.xpath("//input[@value='emi'and@name='cost_type']"));
+    	verifyRadioButton(By.xpath("//input[@value='emi'and@name='cost_type']"));
+    	verifyByContains(By.xpath("//a[@id='next_three']"), "Next");
+    	executeClickOnElement(By.xpath("//a[@id='next_three']"));
+    }
+    
+    
+    public void proceedWithUpfrontPaymentAfterProvidingDeatils()
+    {
     	sleep(2000);
     	verifyByContains(By.xpath("//a[@id='continue']"), "Continue");
     	executeClickOnElement(By.xpath("//a[@id='continue']"));
@@ -156,4 +221,16 @@ public class FranchisePage extends SeleniumWrapper
     	verifyByContains(By.xpath("(//button[contains(text(),'Proceed with Upfront Payment')])[3]"), "Proceed with Upfront Payment");
     	executeClickOnElement(By.xpath("(//button[contains(text(),'Proceed with Upfront Payment')])[3]"));
     }
+    
+    public void proceedWithRentalPlanAfterProvidingDeatils()
+    {
+    	sleep(2000);
+    	verifyByContains(By.xpath("//a[@id='continue']"), "Continue");
+    	executeClickOnElement(By.xpath("//a[@id='continue']"));
+    	sleep(3000);
+    	verifyByContains(By.xpath("(//button[contains(text(),'Proceed with Rental Plan')])[3]"), "Proceed with Rental Plan");
+    	executeClickOnElement(By.xpath("(//button[contains(text(),'Proceed with Rental Plan')])[3]"));
+    }
+    
+    
 }

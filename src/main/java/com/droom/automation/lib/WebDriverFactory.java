@@ -34,8 +34,8 @@ public final class WebDriverFactory {
         return DRIVER_THREAD_POOL.get();
     }
 
-    public static void initDriverConfig(final String baseUrl, final String browser, final String remoteMachineUrl) {
-
+    public static void initDriverConfig(final String baseUrl, final String browser, final String remoteMachineUrl)
+    {
         if (null == DRIVER_CONFIG_POOL.get()) {
             DRIVER_CONFIG_POOL.set(new DriverConfig(baseUrl, browser, remoteMachineUrl));
         }
@@ -212,7 +212,7 @@ public final class WebDriverFactory {
     public static void closeDriver(String browser) {
         try {
             LOG.info("Closing browser and application ...");
-      //      WebDriverFactory.DRIVER_THREAD_POOL.get().quit();
+            WebDriverFactory.DRIVER_THREAD_POOL.get().quit();
 
         } catch (final Exception ex) {
             LOG.warn("WARNING : Failed to close the browser ... \nException : " + ex.getMessage());

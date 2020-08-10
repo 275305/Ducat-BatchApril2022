@@ -3,14 +3,17 @@
 
 <suite name="suite" parallel="false" preserve-order="true">
 
+<listeners>
+             <listener class-name="com.droom.automation.lib.MyAnnotationTransformer"/>
+</listeners>
+
     <test name="DroomWebAutomationTest">
     
     
         <classes>
-            <class name="com.droom.automation.droomweb.UserLoginTest" />
-             
+            <class name="com.droom.automation.droomweb.BuyGermShieldServiceTest" />
         </classes>
         
         
     </test>
-</suite>     
+</suite>

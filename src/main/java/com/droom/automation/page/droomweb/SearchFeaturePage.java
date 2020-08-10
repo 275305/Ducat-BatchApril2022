@@ -8,17 +8,17 @@ import com.droom.automation.lib.WebDriverFactory;
 public class SearchFeaturePage extends SeleniumWrapper
 {
 	
-	private final static By Click_On_Maruti_Vitara=By.xpath("//img[@alt='Maruti Suzuki Wagon R VXi 2016']");
+	private final static By Click_On_Maruti_Vitara=By.xpath("//img[@alt='Hero Pleasure 100cc 2008']");
 	private final static By Pay_Fully_Refundable_Token_Amount=By.xpath("//button[@id='cart_add']//span");
 	private final static By Click_Proceed=By.xpath("//button[@type='button'and@class='btn btn-success proceed']");
 	private final static By Proceed_To_Payment=By.xpath("//button[@id='add_listing_services_to_cart']");
 	private final static By Click_On_YamahaFZ=By.xpath("(//img[@alt='Honda Activa 110cc 2014'])[1]");
 	private final static By Click_On_Scooty=By.xpath("(//img[@alt='Hero Splendor Plus Self Alloy 100cc 2019'])[1]");
 	private final static By Click_On_Scooty_Via_Fb=By.xpath("(//img[@alt='Honda CB Hornet 160R  ABS DLX 2020'])[1]");
-	private final static By Get_Car_Amount=By.xpath("//span[contains(text(),' 9,310')]");
-	private final static By Get_Car_Amount_At_Checkout=By.xpath("//strong[contains(text(),'9,310')]");
-	private final static By Get_Bike_Amount=By.xpath("//span[contains(text(),' 5,985')]");
-	private final static By Get_Bike_Amount_At_Checkout=By.xpath("//strong[contains(text(),'5,985')]");
+	private final static By Get_Car_Amount=By.xpath("//span[contains(text(),' ₹ 531')]");
+	private final static By Get_Car_Amount_At_Checkout=By.xpath("//strong[contains(text(),'₹  531')]");
+	private final static By Get_Bike_Amount=By.xpath("//span[contains(text(),' 1,274')]");
+	private final static By Get_Bike_Amount_At_Checkout=By.xpath("//strong[contains(text(),'1,274')]");
 	
 	private final static By Get_Scooty_Amount=By.xpath("//span[contains(text(),' 1,873')]");
 	private final static By Get_Scooty_Amount_At_Checkout=By.xpath("//strong[contains(text(),'1,873')]");
@@ -49,7 +49,7 @@ public class SearchFeaturePage extends SeleniumWrapper
 	{
 		loginpage.enterLoginPage();
 		loginpage.loginValidationForIndividualAccount(username, password);
-		homepage.enterSearchBox("Maruti Suzuki Wagon R VXi 2016");
+		homepage.enterSearchBox("1419104052");
 		waitForPageLoad();
 		executeClickOnElement(Click_On_Maruti_Vitara);
 		switchToWindow("New Tab");
@@ -60,6 +60,8 @@ public class SearchFeaturePage extends SeleniumWrapper
 		executeClickOnElement(Proceed_To_Payment);
 		waitForPageLoad();
 		String finalAmount = WebDriverFactory.getDriver().findElement(Get_Car_Amount_At_Checkout).getText();
+		System.out.println(initialAmount);
+		System.out.println(finalAmount);
 		Assert.assertTrue(initialAmount.contains(finalAmount));
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
@@ -105,10 +107,9 @@ public class SearchFeaturePage extends SeleniumWrapper
 		loginpage.loginAtCheckout(username, password);
 		paymentpage.continueToAddressToContinueToPayment();
 		paymentpage.paymentViaNetBanking();
-		
 	}
 	
-	public void searchForScooterAsFBLoggedInUser(String username, String password)
+	public void searchForScooterAsFBLoggedInUser()
 	{
 		homepage.enterSearchBox("Honda CB Hornet 160R  ABS DLX 2020");
 		waitForPageLoad();
@@ -127,7 +128,6 @@ public class SearchFeaturePage extends SeleniumWrapper
 		sleep(8000);
 		paymentpage.continueToAddressToContinueToPayment();
 		paymentpage.paymentViaNetBanking();
-		
 	}
 
 }
