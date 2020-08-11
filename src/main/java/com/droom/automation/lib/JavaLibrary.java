@@ -10,6 +10,8 @@ import java.text.MessageFormat;
 import java.util.Arrays;
 import java.util.Random;
 
+import org.testng.annotations.Test;
+
 public class JavaLibrary 
 {
 	public int selectIndexForMake()
@@ -34,7 +36,7 @@ public class JavaLibrary
 	return trim;
 	}
 	
-	public String generateRandomNumber()
+	public String vehiclesRegistartionRandomNumber()
     {
     	Random random=new Random();
     	int randomNumber = random.nextInt(999);
@@ -58,7 +60,7 @@ public class JavaLibrary
 		rb.keyRelease(KeyEvent.VK_ENTER);
     }
 	
-	public String dynamicWebelement(String totalarea)
+	public String calculatedAmountForGermShield(String totalarea)
 	{
 		int sqrArea = Integer.parseInt(totalarea);
 		int totalAmount = sqrArea*15;
@@ -74,4 +76,14 @@ public class JavaLibrary
 		return formattedAmount;
 	}
 	
+	public static String dynamicUsername()
+	{
+		Random random=new Random();
+		int number = random.nextInt(999);
+		String dynamicUsername = "honey{0}.maurya@gmail.com";
+		Object[] obj= {number};
+		String MyUsername = MessageFormat.format(dynamicUsername, obj);
+		return MyUsername;
+		
+	}
 }

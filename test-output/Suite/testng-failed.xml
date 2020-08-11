@@ -8,13 +8,27 @@
     <classes>
       <class name="com.droom.automation.droomweb.BuyGermShieldServiceTest">
         <methods>
-          <include name="buyGermShieldForAutomobileAsPremiumBike"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
+          <include name="buyGermShieldForAutomobileAsBus"/>
           <include name="init"/>
+          <include name="buyGermShieldForAutomobileAsBike"/>
         </methods>
       </class> <!-- com.droom.automation.droomweb.BuyGermShieldServiceTest -->
+      <class name="com.droom.automation.droomweb.UserRegistrationTest">
+        <methods>
+          <include name="allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount"/>
+          <include name="registerAsIndividualUser"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="registerAsProSeller"/>
+          <include name="errorMsgVerificationForPasswordWhileRegisterAsIndividualAccount"/>
+          <include name="init"/>
+          <include name="emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount"/>
+        </methods>
+      </class> <!-- com.droom.automation.droomweb.UserRegistrationTest -->
     </classes>
   </test> <!-- DroomWebAutomationTest(failed) -->
 </suite> <!-- Failed suite [suite] -->

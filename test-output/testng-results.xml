@@ -1,17 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6229" started-at="2020-08-10T21:48:24 IST" finished-at="2020-08-10T21:48:31 IST">
+  <suite name="Default suite" duration-ms="835124" started-at="2020-08-11T20:37:36 IST" finished-at="2020-08-11T20:51:31 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6229" started-at="2020-08-10T21:48:24 IST" finished-at="2020-08-10T21:48:31 IST">
-      <class name="excelreport.TestReport">
-        <test-method status="PASS" signature="report()[pri:0, instance:excelreport.TestReport@59d016c9]" name="report" duration-ms="6131" started-at="2020-08-10T21:48:24 IST" finished-at="2020-08-10T21:48:31 IST">
+    <test name="Default test" duration-ms="835124" started-at="2020-08-11T20:37:36 IST" finished-at="2020-08-11T20:51:31 IST">
+      <class name="com.droom.automation.droomweb.FranchiseTest">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="beforeSuite" is-config="true" duration-ms="48" started-at="2020-08-11T20:37:36 IST" finished-at="2020-08-11T20:37:36 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- report -->
-      </class> <!-- excelreport.TestReport -->
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="beforeTest" is-config="true" duration-ms="27" started-at="2020-08-11T20:37:36 IST" finished-at="2020-08-11T20:37:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="init" is-config="true" duration-ms="14202" started-at="2020-08-11T20:37:36 IST" finished-at="2020-08-11T20:37:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getSiteFranchiseAsEMIForOneMonth()[pri:7, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="getSiteFranchiseAsEMIForOneMonth" duration-ms="120304" started-at="2020-08-11T20:37:51 IST" finished-at="2020-08-11T20:39:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSiteFranchiseAsEMIForOneMonth -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="9" started-at="2020-08-11T20:39:51 IST" finished-at="2020-08-11T20:39:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getSiteFranchiseAsEMIForOneMonth status=SUCCESS method=FranchiseTest.getSiteFranchiseAsEMIForOneMonth()[pri:7, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="init" is-config="true" duration-ms="23922" started-at="2020-08-11T20:39:51 IST" finished-at="2020-08-11T20:40:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getSiteFranchiseAsEMIForThreeMonth()[pri:8, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="getSiteFranchiseAsEMIForThreeMonth" duration-ms="128976" started-at="2020-08-11T20:40:15 IST" finished-at="2020-08-11T20:42:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSiteFranchiseAsEMIForThreeMonth -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="3" started-at="2020-08-11T20:42:24 IST" finished-at="2020-08-11T20:42:24 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getSiteFranchiseAsEMIForThreeMonth status=SUCCESS method=FranchiseTest.getSiteFranchiseAsEMIForThreeMonth()[pri:8, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="init" is-config="true" duration-ms="12992" started-at="2020-08-11T20:42:24 IST" finished-at="2020-08-11T20:42:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getSiteFranchiseAsEMIForSixMonth()[pri:9, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="getSiteFranchiseAsEMIForSixMonth" duration-ms="121697" started-at="2020-08-11T20:42:37 IST" finished-at="2020-08-11T20:44:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSiteFranchiseAsEMIForSixMonth -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="2" started-at="2020-08-11T20:44:39 IST" finished-at="2020-08-11T20:44:39 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getSiteFranchiseAsEMIForSixMonth status=SUCCESS method=FranchiseTest.getSiteFranchiseAsEMIForSixMonth()[pri:9, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="init" is-config="true" duration-ms="15582" started-at="2020-08-11T20:44:39 IST" finished-at="2020-08-11T20:44:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getEnterpriseFranchiseAsUpFrontPaymentForOneMonth()[pri:10, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="getEnterpriseFranchiseAsUpFrontPaymentForOneMonth" duration-ms="124214" started-at="2020-08-11T20:44:54 IST" finished-at="2020-08-11T20:46:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEnterpriseFranchiseAsUpFrontPaymentForOneMonth -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="5" started-at="2020-08-11T20:46:58 IST" finished-at="2020-08-11T20:46:58 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getEnterpriseFranchiseAsUpFrontPaymentForOneMonth status=SUCCESS method=FranchiseTest.getEnterpriseFranchiseAsUpFrontPaymentForOneMonth()[pri:10, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="init" is-config="true" duration-ms="14273" started-at="2020-08-11T20:46:58 IST" finished-at="2020-08-11T20:47:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth()[pri:11, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth" duration-ms="122803" started-at="2020-08-11T20:47:13 IST" finished-at="2020-08-11T20:49:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="4" started-at="2020-08-11T20:49:15 IST" finished-at="2020-08-11T20:49:15 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth status=SUCCESS method=FranchiseTest.getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth()[pri:11, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="init" is-config="true" duration-ms="11875" started-at="2020-08-11T20:49:15 IST" finished-at="2020-08-11T20:49:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getEnterpriseFranchiseAsUpFrontPaymentForSixMonth()[pri:12, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="getEnterpriseFranchiseAsUpFrontPaymentForSixMonth" duration-ms="123834" started-at="2020-08-11T20:49:27 IST" finished-at="2020-08-11T20:51:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEnterpriseFranchiseAsUpFrontPaymentForSixMonth -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="4" started-at="2020-08-11T20:51:31 IST" finished-at="2020-08-11T20:51:31 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getEnterpriseFranchiseAsUpFrontPaymentForSixMonth status=SUCCESS method=FranchiseTest.getEnterpriseFranchiseAsUpFrontPaymentForSixMonth()[pri:12, instance:com.droom.automation.droomweb.FranchiseTest@5ae50ce6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.droom.automation.droomweb.FranchiseTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

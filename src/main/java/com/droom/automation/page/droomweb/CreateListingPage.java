@@ -100,7 +100,7 @@ public class CreateListingPage extends SeleniumWrapper
 		enterTextboxDetails(findElement(Search_Location), "Allahabad");
 		enterKey(Search_Location);
 		verifyByText(Select_Location, "Allahabad");
-		String registerNumber = generateRandomNumber();
+		String registerNumber = vehiclesRegistartionRandomNumber();
 		enterTextboxDetails(findElement(Select_Registration_Number),registerNumber );
 		verifyByAttribute(Select_Registration_Number, registerNumber);
 		driverClick(Select_Registration_State);

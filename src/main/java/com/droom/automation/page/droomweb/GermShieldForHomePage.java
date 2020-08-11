@@ -220,7 +220,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		verifyByAttribute(Enter_Area,area );
 		// IMMEDIATE CHANGE IN AMOUNT AT SUBMIT BUTTON
 		sleep(2000);
-		String intamt = dynamicWebelement(area);
+		String intamt = calculatedAmountForGermShield(area);
 		String actualAmt="₹"+intamt;
 		By Verify_Amount_Added_For_Penthouse = By.xpath("//span[text()='₹"+intamt+"']");
     	verifyByContains(Verify_Amount_Added_For_Penthouse, actualAmt);
@@ -256,7 +256,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		verifyByAttribute(Enter_Area,area );
 		// IMMEDIATE CHANGE IN AMOUNT AT SUBMIT BUTTON
 		sleep(2000);
-		String intamt = dynamicWebelement(area);
+		String intamt = calculatedAmountForGermShield(area);
 		String actualAmt="₹"+intamt;
 		By Verify_Amount_Added_For_Farmhouse = By.xpath("//span[text()='₹"+intamt+"']");
     	verifyByContains(Verify_Amount_Added_For_Farmhouse, actualAmt);

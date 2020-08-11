@@ -3,11 +3,14 @@ package com.droom.automation.page.droomweb;
 import java.awt.AWTException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import com.droom.automation.lib.SeleniumWrapper;
 import com.droom.automation.lib.WebDriverFactory;
+
+import net.bytebuddy.asm.Advice.Enter;
 
 public class FranchisePage extends SeleniumWrapper
 {
@@ -221,16 +224,48 @@ public class FranchisePage extends SeleniumWrapper
     	verifyByContains(By.xpath("(//button[contains(text(),'Proceed with Upfront Payment')])[3]"), "Proceed with Upfront Payment");
     	executeClickOnElement(By.xpath("(//button[contains(text(),'Proceed with Upfront Payment')])[3]"));
     }
-    
+   
     public void proceedWithRentalPlanAfterProvidingDeatils()
     {
     	sleep(2000);
     	verifyByContains(By.xpath("//a[@id='continue']"), "Continue");
     	executeClickOnElement(By.xpath("//a[@id='continue']"));
     	sleep(3000);
-    	verifyByContains(By.xpath("(//button[contains(text(),'Proceed with Rental Plan')])[3]"), "Proceed with Rental Plan");
+    	String ab = WebDriverFactory.getDriver().findElement(By.xpath("(//button[contains(text(),'Proceed with Rental Plan')])[3]")).getText();
+    	System.out.println(ab);
+    	verifyByContains(By.xpath("(//button[contains(text(),'Proceed with Rental Plan')])[3]"), "");
     	executeClickOnElement(By.xpath("(//button[contains(text(),'Proceed with Rental Plan')])[3]"));
     }
     
+    public void enterNumberOfSitesPopup(String enterNumberOfSites)
+    {
+    	sleep(3000);
+    	WebDriverFactory.getDriver().findElement(By.xpath("//input[@id='ep_sites']")).clear();
+    	WebDriverFactory.getDriver().findElement(By.xpath("//input[@id='ep_sites']")).sendKeys(enterNumberOfSites);
+    	verifyByContains(By.xpath("//a[@id='next_sites']"), "Next");
+    	executeClickOnElement(By.xpath("//a[@id='next_sites']"));
+    }
+    
+    public void enterNumberOfSitesUsingPlusIconPopup(int numberOfClick)
+    {
+    	sleep(3000);
+    	for (int i = 0; i <=numberOfClick; i++)
+    	{
+			executeClickOnElement(By.xpath("//i[@id='ep_sites_plus']"));
+		}
+    	verifyByContains(By.xpath("//a[@id='next_sites']"), "Next");
+    	executeClickOnElement(By.xpath("//a[@id='next_sites']"));
+    }
+    
+    public void enterNumberOfSitesUsingMinusIconPopup(int numberOfClick)
+    {
+    	sleep(3000);
+    	for (int i = 0; i <=numberOfClick; i++)
+    	{
+			executeClickOnElement(By.xpath("//i[@id='ep_sites_minus']"));
+		}
+    	verifyByContains(By.xpath("//a[@id='next_sites']"), "Next");
+    	executeClickOnElement(By.xpath("//a[@id='next_sites']"));
+    }
     
 }
