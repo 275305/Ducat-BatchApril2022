@@ -69,7 +69,7 @@ public class GermShieldForHeavyTransportPage extends SeleniumWrapper
 		verifyByAttribute(Enter_Area,area );
 		// IMMEDIATE CHANGE IN AMOUNT AT SUBMIT BUTTON
 		sleep(2000);
-		String intamt = calculatedAmountForGermShield(area);
+		String intamt = calculatedAmountAsPerArea(area);
 		String actualAmt="₹"+intamt;
 		By Verify_Amount_Added_For_Plane = By.xpath("//span[text()='₹"+intamt+"']");
     	verifyByContains(Verify_Amount_Added_For_Plane, actualAmt);
@@ -103,7 +103,7 @@ public class GermShieldForHeavyTransportPage extends SeleniumWrapper
 		verifyByAttribute(Enter_Area,area );
 		// IMMEDIATE CHANGE IN AMOUNT AT SUBMIT BUTTON
 		sleep(2000);
-		String intamt = calculatedAmountForGermShield(area);
+		String intamt = calculatedAmountAsPerArea(area);
 		String actualAmt="₹"+intamt;
 		By Verify_Amount_Added_For_Helicopter = By.xpath("//span[text()='₹"+intamt+"']");
     	verifyByContains(Verify_Amount_Added_For_Helicopter, actualAmt);
@@ -137,7 +137,7 @@ public class GermShieldForHeavyTransportPage extends SeleniumWrapper
 		verifyByAttribute(Enter_Area,area );
 		// IMMEDIATE CHANGE IN AMOUNT AT SUBMIT BUTTON
 		sleep(2000);
-		String intamt = calculatedAmountForGermShield(area);
+		String intamt = calculatedAmountAsPerArea(area);
 		String actualAmt="₹"+intamt;
 		By Verify_Amount_Added_For_Train = By.xpath("//span[text()='₹"+intamt+"']");
     	verifyByContains(Verify_Amount_Added_For_Train, actualAmt);

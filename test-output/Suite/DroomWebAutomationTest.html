@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>DroomWebAutomationTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>53/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 12 21:45:34 IST 2020</td>
+<td>Started on:</td><td>Thu Aug 13 11:53:31 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>151 seconds (151147 ms)</td>
+<tr><td>Total time:</td><td>4712 seconds (4712741 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,468 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.ValidatingFranchiseMyOrders()'><b>ValidatingFranchiseMyOrders</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@id=&apos;mobile_no&apos;] (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.droom.automation.lib.SeleniumWrapper.findElement(SeleniumWrapper.java:88)
+	at com.droom.automation.page.droomweb.FranchisePage.franchiseMyOrders(FranchisePage.java:283)
+	at com.droom.automation.droomweb.FranchiseTest.ValidatingFranchiseMyOrders(FranchiseTest.java:433)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;mobile_no&apos;]&quot;}
+  (Session info: chrome=84.0.4147.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;172.17.17.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54282}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: f5d0eec5da0147babf16fe7d6171fe3d
+*** Element info: {Using=xpath, value=//input[@id=&apos;mobile_no&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 31 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1313816722", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1313816722'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@id=&apos;mobile_no&apos;] (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.droom.automation.lib.SeleniumWrapper.findElement(SeleniumWrapper.java:88)
+	at com.droom.automation.page.droomweb.FranchisePage.franchiseMyOrders(FranchisePage.java:283)
+	at com.droom.automation.droomweb.FranchiseTest.ValidatingFranchiseMyOrders(FranchiseTest.java:433)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;mobile_no&apos;]&quot;}
+  (Session info: chrome=84.0.4147.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;172.17.17.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54282}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: f5d0eec5da0147babf16fe7d6171fe3d
+*** Element info: {Using=xpath, value=//input[@id=&apos;mobile_no&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 31 more
+</pre></div></td>
+<td>78</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsPlane()'><b>buyGermShieldForHeavyTransportAsPlane</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=84.0.4147.125)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;172.17.17.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50724}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 111ca3f75a2b11d425ac0dbf9cec5041
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
+	at com.droom.automation.lib.SeleniumWrapper.enterTextboxDetails(SeleniumWrapper.java:178)
+	at com.droom.automation.page.droomweb.LoginPage.loginValidationForIndividualAccount(LoginPage.java:75)
+	at com.droom.automation.page.droomweb.GermShieldForHomePage.getGermShieldPage(GermShieldForHomePage.java:77)
+	at com.droom.automation.page.droomweb.GermShieldForHeavyTransportPage.germShieldValidationForHeavyTransportAsPlane(GermShieldForHeavyTransportPage.java:59)
+	at com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsPlane(BuyGermShieldServiceTest.java:232)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1048871897", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1048871897'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=84.0.4147.125)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;172.17.17.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50724}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 111ca3f75a2b11d425ac0dbf9cec5041
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
+	at com.droom.automation.lib.SeleniumWrapper.enterTextboxDetails(SeleniumWrapper.java:178)
+	at com.droom.automation.page.droomweb.LoginPage.loginValidationForIndividualAccount(LoginPage.java:75)
+	at com.droom.automation.page.droomweb.GermShieldForHomePage.getGermShieldPage(GermShieldForHomePage.java:77)
+	at com.droom.automation.page.droomweb.GermShieldForHeavyTransportPage.germShieldValidationForHeavyTransportAsPlane(GermShieldForHeavyTransportPage.java:59)
+	at com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsPlane(BuyGermShieldServiceTest.java:232)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>41</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHomeAsVilla()'><b>buyGermShieldForHomeAsVilla</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=84.0.4147.125)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;172.17.17.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64858}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 65a4445607ec464294ca4f32dbb2d479
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
+	at com.droom.automation.lib.SeleniumWrapper.enterTextboxDetails(SeleniumWrapper.java:178)
+	at com.droom.automation.page.droomweb.LoginPage.loginValidationForIndividualAccount(LoginPage.java:75)
+	at com.droom.automation.page.droomweb.GermShieldForHomePage.getGermShieldPage(GermShieldForHomePage.java:77)
+	at com.droom.automation.page.droomweb.GermShieldForHomePage.germShieldValidationForHomeAsVilla(GermShieldForHomePage.java:180)
+	at com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHomeAsVilla(BuyGermShieldServiceTest.java:162)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace149861385", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace149861385'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=84.0.4147.125)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;172.17.17.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64858}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 65a4445607ec464294ca4f32dbb2d479
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
+	at com.droom.automation.lib.SeleniumWrapper.enterTextboxDetails(SeleniumWrapper.java:178)
+	at com.droom.automation.page.droomweb.LoginPage.loginValidationForIndividualAccount(LoginPage.java:75)
+	at com.droom.automation.page.droomweb.GermShieldForHomePage.getGermShieldPage(GermShieldForHomePage.java:77)
+	at com.droom.automation.page.droomweb.GermShieldForHomePage.germShieldValidationForHomeAsVilla(GermShieldForHomePage.java:180)
+	at com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHomeAsVilla(BuyGermShieldServiceTest.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>38</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserRegistrationTest.errorMsgVerificationForPasswordWhileRegisterAsIndividualAccount()'><b>errorMsgVerificationForPasswordWhileRegisterAsIndividualAccount</b><br>Test class: com.droom.automation.droomweb.UserRegistrationTest</td>
+<td><div><pre>java.sql.SQLException: Illegal operation on empty result set.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.checkRowPos(ResultSetImpl.java:492)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:845)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:863)
+	at com.droom.automation.lib.DataBaseDemo.getotp(DataBaseDemo.java:27)
+	at com.droom.automation.page.droomweb.RegistrationPage.getRegistrationFormPage(RegistrationPage.java:135)
+	at com.droom.automation.page.droomweb.RegistrationPage.errorMsgVerificationForPasswordWhileFillingFormAsIndividualAccount(RegistrationPage.java:192)
+	at com.droom.automation.droomweb.UserRegistrationTest.errorMsgVerificationForPasswordWhileRegisterAsIndividualAccount(UserRegistrationTest.java:85)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace957563019", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace957563019'><pre>java.sql.SQLException: Illegal operation on empty result set.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.checkRowPos(ResultSetImpl.java:492)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:845)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:863)
+	at com.droom.automation.lib.DataBaseDemo.getotp(DataBaseDemo.java:27)
+	at com.droom.automation.page.droomweb.RegistrationPage.getRegistrationFormPage(RegistrationPage.java:135)
+	at com.droom.automation.page.droomweb.RegistrationPage.errorMsgVerificationForPasswordWhileFillingFormAsIndividualAccount(RegistrationPage.java:192)
+	at com.droom.automation.droomweb.UserRegistrationTest.errorMsgVerificationForPasswordWhileRegisterAsIndividualAccount(UserRegistrationTest.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>8</td>
+<td>com.droom.automation.droomweb.UserRegistrationTest@3c419631</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.getSiteFranchiseAsUpFrontPaymentForSixMonth()'><b>getSiteFranchiseAsUpFrontPaymentForSixMonth</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//label[text()=&apos;Net Banking&apos;])[1]&quot;}
+  (Session info: chrome=84.0.4147.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;172.17.17.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56850}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4f53e1bdcf1bb27e8456459a72388c10
+*** Element info: {Using=xpath, value=(//label[text()=&apos;Net Banking&apos;])[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByText(SeleniumWrapper.java:341)
+	at com.droom.automation.page.droomweb.PaymentPage.paymentViaNetBanking(PaymentPage.java:22)
+	at com.droom.automation.droomweb.FranchiseTest.getSiteFranchiseAsUpFrontPaymentForSixMonth(FranchiseTest.java:199)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace373415859", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace373415859'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//label[text()=&apos;Net Banking&apos;])[1]&quot;}
+  (Session info: chrome=84.0.4147.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;172.17.17.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56850}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4f53e1bdcf1bb27e8456459a72388c10
+*** Element info: {Using=xpath, value=(//label[text()=&apos;Net Banking&apos;])[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByText(SeleniumWrapper.java:341)
+	at com.droom.automation.page.droomweb.PaymentPage.paymentViaNetBanking(PaymentPage.java:22)
+	at com.droom.automation.droomweb.FranchiseTest.getSiteFranchiseAsUpFrontPaymentForSixMonth(FranchiseTest.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>140</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserRegistrationTest.registerAsIndividualUser()'><b>registerAsIndividualUser</b><br>Test class: com.droom.automation.droomweb.UserRegistrationTest</td>
+<td><div><pre>java.sql.SQLException: Illegal operation on empty result set.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.checkRowPos(ResultSetImpl.java:492)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:845)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:863)
+	at com.droom.automation.lib.DataBaseDemo.getotp(DataBaseDemo.java:27)
+	at com.droom.automation.page.droomweb.RegistrationPage.creatIndividualAccount(RegistrationPage.java:96)
+	at com.droom.automation.droomweb.UserRegistrationTest.registerAsIndividualUser(UserRegistrationTest.java:34)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1853284640", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1853284640'><pre>java.sql.SQLException: Illegal operation on empty result set.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.checkRowPos(ResultSetImpl.java:492)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:845)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:863)
+	at com.droom.automation.lib.DataBaseDemo.getotp(DataBaseDemo.java:27)
+	at com.droom.automation.page.droomweb.RegistrationPage.creatIndividualAccount(RegistrationPage.java:96)
+	at com.droom.automation.droomweb.UserRegistrationTest.registerAsIndividualUser(UserRegistrationTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>7</td>
+<td>com.droom.automation.droomweb.UserRegistrationTest@3c419631</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,18 +539,268 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.droom.automation.droomweb.FranchiseTest.ValidatingFranchiseDashboard()'><b>ValidatingFranchiseDashboard</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
 <td></td>
-<td>21</td>
-<td>com.droom.automation.droomweb.FranchiseTest@4c9f8c13</td></tr>
+<td>12</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
 <tr>
-<td title='com.droom.automation.droomweb.FranchiseTest.ValidatingFranchiseMyOrders()'><b>ValidatingFranchiseMyOrders</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td title='com.droom.automation.droomweb.UserRegistrationTest.allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount()'><b>allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount</b><br>Test class: com.droom.automation.droomweb.UserRegistrationTest</td>
 <td></td>
-<td>34</td>
-<td>com.droom.automation.droomweb.FranchiseTest@4c9f8c13</td></tr>
+<td>14</td>
+<td>com.droom.automation.droomweb.UserRegistrationTest@3c419631</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyFeatureTest.buyCarCareAndDetailingAsLoggedInUser()'><b>buyCarCareAndDetailingAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.BuyFeatureTest</td>
+<td></td>
+<td>48</td>
+<td>com.droom.automation.droomweb.BuyFeatureTest@4a22f9e2</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldElevatorService()'><b>buyGermShieldElevatorService</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>63</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsBike()'><b>buyGermShieldForAutomobileAsBike</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>65</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsBus()'><b>buyGermShieldForAutomobileAsBus</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>71</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsHatchback()'><b>buyGermShieldForAutomobileAsHatchback</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>68</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsPremiumBike()'><b>buyGermShieldForAutomobileAsPremiumBike</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>73</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsScooter()'><b>buyGermShieldForAutomobileAsScooter</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>77</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsSedan()'><b>buyGermShieldForAutomobileAsSedan</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>67</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsHelicopter()'><b>buyGermShieldForHeavyTransportAsHelicopter</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>141</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsTrain()'><b>buyGermShieldForHeavyTransportAsTrain</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>72</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHomeAsBungalow()'><b>buyGermShieldForHomeAsBungalow</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>70</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHomeAsFarmhouse()'><b>buyGermShieldForHomeAsFarmhouse</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>66</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHomeAsFlat()'><b>buyGermShieldForHomeAsFlat</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>77</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHomeAsIndependent()'><b>buyGermShieldForHomeAsIndependent</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>73</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForHomeAsPenthouse()'><b>buyGermShieldForHomeAsPenthouse</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>71</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForOfficeAsCoWorkingSpace()'><b>buyGermShieldForOfficeAsCoWorkingSpace</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>122</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForOfficeAsHighRiseBuilding()'><b>buyGermShieldForOfficeAsHighRiseBuilding</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>80</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForOfficeAsIndependentBuilding()'><b>buyGermShieldForOfficeAsIndependentBuilding</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>67</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldForOtherFacility()'><b>buyGermShieldForOtherFacility</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>83</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyGermShieldServiceTest.buyGermShieldServiceViaHomePageAsLoggedInUser()'><b>buyGermShieldServiceViaHomePageAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.BuyGermShieldServiceTest</td>
+<td></td>
+<td>66</td>
+<td>com.droom.automation.droomweb.BuyGermShieldServiceTest@4b5d6a01</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyFeatureTest.buyJumpstartServiceAsLoggedInUser()'><b>buyJumpstartServiceAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.BuyFeatureTest</td>
+<td></td>
+<td>53</td>
+<td>com.droom.automation.droomweb.BuyFeatureTest@4a22f9e2</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyFeatureTest.buyRTOServiceAsLoggedInLater()'><b>buyRTOServiceAsLoggedInLater</b><br>Test class: com.droom.automation.droomweb.BuyFeatureTest</td>
+<td></td>
+<td>53</td>
+<td>com.droom.automation.droomweb.BuyFeatureTest@4a22f9e2</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.BuyFeatureTest.buyRTOServiceAsLoggedInUser()'><b>buyRTOServiceAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.BuyFeatureTest</td>
+<td></td>
+<td>56</td>
+<td>com.droom.automation.droomweb.BuyFeatureTest@4a22f9e2</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserRegistrationTest.emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount()'><b>emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount</b><br>Test class: com.droom.automation.droomweb.UserRegistrationTest</td>
+<td></td>
+<td>15</td>
+<td>com.droom.automation.droomweb.UserRegistrationTest@3c419631</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserRegistrationTest.emptyErrorMsgVerificationWhileRegisterAsIndividualAccount()'><b>emptyErrorMsgVerificationWhileRegisterAsIndividualAccount</b><br>Test class: com.droom.automation.droomweb.UserRegistrationTest</td>
+<td></td>
+<td>12</td>
+<td>com.droom.automation.droomweb.UserRegistrationTest@3c419631</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserRegistrationTest.emptyErrorMsgVerificationWhileRegisterAsProSellerAccount()'><b>emptyErrorMsgVerificationWhileRegisterAsProSellerAccount</b><br>Test class: com.droom.automation.droomweb.UserRegistrationTest</td>
+<td></td>
+<td>8</td>
+<td>com.droom.automation.droomweb.UserRegistrationTest@3c419631</td></tr>
 <tr>
 <td title='com.droom.automation.droomweb.UserLoginTest.franchiseLoginValidation()'><b>franchiseLoginValidation</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
 <td></td>
+<td>13</td>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.getEnterpriseFranchiseAsUpFrontPaymentForOneMonth()'><b>getEnterpriseFranchiseAsUpFrontPaymentForOneMonth</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>115</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.getEnterpriseFranchiseAsUpFrontPaymentForSixMonth()'><b>getEnterpriseFranchiseAsUpFrontPaymentForSixMonth</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>125</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth()'><b>getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>129</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.getSiteFranchiseAsEMIForOneMonth()'><b>getSiteFranchiseAsEMIForOneMonth</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>122</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.getSiteFranchiseAsEMIForSixMonth()'><b>getSiteFranchiseAsEMIForSixMonth</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>136</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.getSiteFranchiseAsEMIForThreeMonth()'><b>getSiteFranchiseAsEMIForThreeMonth</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>120</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.getSiteFranchiseAsUpFrontPaymentForOneMonth()'><b>getSiteFranchiseAsUpFrontPaymentForOneMonth</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>120</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.getSiteFranchiseAsUpFrontPaymentForThreeMonth()'><b>getSiteFranchiseAsUpFrontPaymentForThreeMonth</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>135</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserLoginTest.inValidIDloginAsIndividualUserViaPassword()'><b>inValidIDloginAsIndividualUserViaPassword</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
+<td></td>
+<td>7</td>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserRegistrationTest.inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount()'><b>inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount</b><br>Test class: com.droom.automation.droomweb.UserRegistrationTest</td>
+<td></td>
+<td>9</td>
+<td>com.droom.automation.droomweb.UserRegistrationTest@3c419631</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserLoginTest.inValidLoginIDAsProSellerViaPassword()'><b>inValidLoginIDAsProSellerViaPassword</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
+<td></td>
+<td>13</td>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserLoginTest.inValidLoginPasswordAsProSellerViaPassword()'><b>inValidLoginPasswordAsProSellerViaPassword</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
+<td></td>
+<td>11</td>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserLoginTest.inValidOTPloginAsIndividualUserViaOTP()'><b>inValidOTPloginAsIndividualUserViaOTP</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
+<td></td>
+<td>19</td>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserLoginTest.inValidOTPloginAsProSellerViaOTP()'><b>inValidOTPloginAsProSellerViaOTP</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
+<td></td>
+<td>15</td>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserLoginTest.inValidPasswordloginAsIndividualUserViaPassword()'><b>inValidPasswordloginAsIndividualUserViaPassword</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
+<td></td>
+<td>6</td>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserRegistrationTest.invalidInputErrorMsgVerificationWhileCreatingIndividualAccount()'><b>invalidInputErrorMsgVerificationWhileCreatingIndividualAccount</b><br>Test class: com.droom.automation.droomweb.UserRegistrationTest</td>
+<td></td>
+<td>5</td>
+<td>com.droom.automation.droomweb.UserRegistrationTest@3c419631</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserLoginTest.loginAsIndividualUserViaOTP()'><b>loginAsIndividualUserViaOTP</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
+<td></td>
 <td>25</td>
-<td>com.droom.automation.droomweb.UserLoginTest@769f71a9</td></tr>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserLoginTest.loginAsIndividualUserViaPassword()'><b>loginAsIndividualUserViaPassword</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
+<td></td>
+<td>11</td>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserLoginTest.loginAsProSellerViaOTP()'><b>loginAsProSellerViaOTP</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
+<td></td>
+<td>19</td>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserLoginTest.loginAsProSellerViaPassword()'><b>loginAsProSellerViaPassword</b><br>Test class: com.droom.automation.droomweb.UserLoginTest</td>
+<td></td>
+<td>18</td>
+<td>com.droom.automation.droomweb.UserLoginTest@48e4374</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.paymentAmountForBookingCityAsFranchise()'><b>paymentAmountForBookingCityAsFranchise</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>98</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.paymentAmountForSignUpAsFranchise()'><b>paymentAmountForSignUpAsFranchise</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>54</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.UserRegistrationTest.registerAsProSeller()'><b>registerAsProSeller</b><br>Test class: com.droom.automation.droomweb.UserRegistrationTest</td>
+<td></td>
+<td>21</td>
+<td>com.droom.automation.droomweb.UserRegistrationTest@3c419631</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.FranchiseTest.registerForFranchise()'><b>registerForFranchise</b><br>Test class: com.droom.automation.droomweb.FranchiseTest</td>
+<td></td>
+<td>22</td>
+<td>com.droom.automation.droomweb.FranchiseTest@3d680b5a</td></tr>
 </table><p>
 </body>
 </html>

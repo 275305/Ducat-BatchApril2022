@@ -217,7 +217,7 @@ public class SeleniumWrapper extends JavaLibrary
         return optionsText;
     }
 
-    public String getDefaultSelectedOption(final By by) 
+    public String getDefaultSelectedOption(final By by)
     {
         Select select = new Select(WebDriverFactory.getDriver().findElement(by));
         String text = select.getFirstSelectedOption().getText();

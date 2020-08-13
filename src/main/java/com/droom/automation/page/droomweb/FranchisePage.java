@@ -10,11 +10,10 @@ public class FranchisePage extends SeleniumWrapper
 	private final static By Enter_Contact_Number=By.xpath("//input[@id='phone']");
 	private final static By Enter_Email_ID=By.xpath("//input[@id='email']");
 	private final static By Click_SignUp_Now_Button=By.xpath("//a[@id='signUpFranchise']");
-//	  private static final By =By.xpath("");
-//    private static final By =By.xpath("");
-//    private static final By =By.xpath("");
-//    private static final By =By.xpath("");
-//    private static final By =By.xpath("");
+	private static final By Click_My_Order=By.xpath("//a[text()='  My Orders']");
+    private static final By Click_Buy_Now=By.xpath("//button[@id='facilities-gs-book']");
+    private static final By Click_On_Next_After_Cart=By.xpath("(//button[@id='movetostep3'])[1]");
+    private static final By Click_Submit_After_Selecting_Mode=By.xpath("//button[@id='place_order']");
 //    private static final By =By.xpath("");
 //    private static final By =By.xpath("");
 //    private static final By =By.xpath("");
@@ -262,7 +261,7 @@ public class FranchisePage extends SeleniumWrapper
     	executeClickOnElement(By.xpath("//a[@id='next_sites']"));
     }
     
-     // LOGIN SCRIPT
+                                // LOGIN SCRIPT
     
     public void franchiseDashboard(String username, String password)
     {
@@ -272,12 +271,14 @@ public class FranchisePage extends SeleniumWrapper
     	verifyByContains(By.xpath("//label[text()='Order Value']"), "ORDER VALUE");
     	System.out.println("MY TOTAL ORDERS ARE "+WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Order Value']/parent::div//strong")).getText());
     }
+                          
+                           //Script for dashborad and placing orders
     
-    public void franchiseMyOrders(String username, String password)
+    public void selectYourProductViaRegisteredNumber(String username, String password)
     {
     	loginpage.franchiseLoginValidation(username, password);
-    	verifyByContains(By.xpath("//a[text()='  My Orders']"), "My Orders");
-    	executeClickOnElement(By.xpath("//a[text()='  My Orders']"));
+    	verifyByContains(Click_My_Order, "My Orders");
+    	executeClickOnElement(Click_My_Order);
     	verifyByContains(By.xpath("//div[@id='orders']//div[@class='row']//div[@class='row actions']//button[@id='singlePlaceOrder']"), "Place An Order");
     	executeClickOnElement(By.xpath("//div[@id='orders']//div[@class='row']//div[@class='row actions']//button[@id='singlePlaceOrder']"));
     	enterTextboxDetails(findElement(By.xpath("//input[@id='mobile_no']")), "9599946816");
@@ -290,6 +291,11 @@ public class FranchisePage extends SeleniumWrapper
     	System.out.println("The Buyer Email: "+WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Buyer Email:']/parent::div//span")).getText());
     	verifyByContains(By.xpath("//button[@id='movetostep2']"), "Next");
     	executeClickOnElement(By.xpath("//button[@id='movetostep2']"));
+    }
+    
+    public void franchiseMyOrdersAsAutomobileGermShield(String username, String password)
+    {
+    	selectYourProductViaRegisteredNumber(username, password);
     	enterTextboxDetails(findElement(By.xpath("//input[@id='automobile-pincode']")), "110001");
     	verifyByAttribute(By.xpath("//input[@id='automobile-pincode']"), "110001");
     	verifyByContains(By.xpath("//button[@id='auto-gs-submit']"), "Buy Now");
@@ -300,6 +306,110 @@ public class FranchisePage extends SeleniumWrapper
         sleep(5000);
         verifyByContains(By.xpath("//button[@id='place_order']"), "Submit");
         executeClickOnElement(By.xpath("//button[@id='place_order']"));
-    	
+    }
+    
+    public void franchiseMyOrdersAsFacilityGermShield(String username, String password,String enterCatogory,String enterArea,String enterAddress,String enterPincode)
+    {
+    	selectYourProductViaRegisteredNumber(username, password);
+    	sleep(2000);
+    	verifyByContains(By.xpath("//label[text()='Facility']"), "Facility");
+    	executeClickOnElement(By.xpath("//label[text()='Facility']"));
+    	sleep(2000);
+    	selectOptionByText(By.xpath("//select[@id='facilities-category']"), enterCatogory);
+    	verifyByContains(By.xpath("//select[@id='facilities-category']"), enterCatogory);
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='facilities-builtup']")), enterArea);
+    	verifyByAttribute(By.xpath("//input[@id='facilities-builtup']"), enterArea);
+    	verifyByContains(By.xpath("//span[text()='(₹"+calculatedAmountAsPerArea(enterArea)+" Incl. GST)']"), "(₹"+calculatedAmountAsPerArea(enterArea)+" Incl. GST)");
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='facilities-address']")), enterAddress);
+    	verifyByAttribute(By.xpath("//input[@id='facilities-address']"), enterAddress);
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='facilities-pincode']")), enterPincode);
+    	verifyByAttribute(By.xpath("//input[@id='facilities-pincode']"), enterPincode);
+    	executeClickOnElement(By.xpath("//input[@id='facilities-date']"));
+    	verifyByContains(By.xpath("//button[@id='facilities-gs-submit']"), "Buy Now");
+    	executeClickOnElement(By.xpath("//button[@id='facilities-gs-submit']"));
+    	verifyByContains(Click_Buy_Now, "Buy Now");
+    	executeClickOnElement(Click_Buy_Now);
+    	sleep(2000);
+    	verifyByContains(By.xpath("(//td[text()='"+addingCommaToInt(calculatedAmountAsPerArea(enterArea))+"'and@class='strong'])[1]"), addingCommaToInt(calculatedAmountAsPerArea(enterArea)));
+    	verifyByContains(Click_On_Next_After_Cart, "Next");
+    	executeClickOnElement(Click_On_Next_After_Cart);
+    	waitForPageLoad();
+    	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+    	executeClickOnElement(Click_Submit_After_Selecting_Mode);
+    }
+    
+    public void franchiseMyOrdersAsElevatorGermShield(String username, String password,String enterCatogory,String packageType,String enterAddress,String enterPincode)
+    {
+    	selectYourProductViaRegisteredNumber(username, password);
+    	sleep(2000);
+    	verifyByContains(By.xpath("//label[text()='Elevator']"), "Elevator");
+    	executeClickOnElement(By.xpath("//label[text()='Elevator']"));
+    	selectOptionByText(By.xpath("//select[@id='elevator-category']"), enterCatogory);
+    	verifyByContains(By.xpath("//select[@id='elevator-category']"), enterCatogory);
+    	selectOptionByText(By.xpath("//select[@id='elevator-package-type']"), packageType);
+    	verifyByContains(By.xpath("//select[@id='elevator-package-type']"), packageType);
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='elevator-address']")), enterAddress);
+    	verifyByAttribute(By.xpath("//input[@id='elevator-address']"), enterAddress);
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='elevator-pincode']")), enterPincode);
+    	verifyByAttribute(By.xpath("//input[@id='elevator-pincode']"), enterPincode);
+    	executeClickOnElement(By.xpath("//input[@id='elevator-date']"));
+    	verifyByContains(By.xpath("//button[@id='elevator-gs-submit']"), "Buy Now");
+    	executeClickOnElement(By.xpath("//button[@id='elevator-gs-submit']"));
+    	sleep(2000);
+    	verifyByContains(Click_On_Next_After_Cart, "Next");
+    	executeClickOnElement(Click_On_Next_After_Cart);
+    	waitForPageLoad();
+    	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+    	executeClickOnElement(Click_Submit_After_Selecting_Mode);
+    }
+    
+    public void franchiseMyOrdersAsJumpstartService(String username, String password,String enterCatogory,String enterAddress,String enterPincode)
+    {
+    	selectYourProductViaRegisteredNumber(username, password);
+    	sleep(2000);
+    	verifyByContains(By.xpath("//label[text()='Jumpstart']"), "Jumpstart");
+    	executeClickOnElement(By.xpath("//label[text()='Jumpstart']"));
+    	selectOptionByText(By.xpath("//select[@id='jumpstart-category']"), enterCatogory);
+    	verifyByContains(By.xpath("//select[@id='jumpstart-category']"), enterCatogory);
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='jumpstart-address']")), enterAddress);
+    	verifyByAttribute(By.xpath("//input[@id='jumpstart-address']"), enterAddress);
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='jumpstart-pincode']")), enterPincode);
+    	verifyByAttribute(By.xpath("//input[@id='jumpstart-pincode']"), enterPincode);
+    	executeClickOnElement(By.xpath("//input[@id='jumpstart-date']"));
+    	verifyByContains(By.xpath("//button[@id='jumpstart_book_now']"), "Buy Now");
+    	executeClickOnElement(By.xpath("//button[@id='jumpstart_book_now']"));
+    	sleep(2000);
+    	verifyByContains(Click_On_Next_After_Cart, "Next");
+    	executeClickOnElement(Click_On_Next_After_Cart);
+    	waitForPageLoad();
+    	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+    	executeClickOnElement(Click_Submit_After_Selecting_Mode);
+    }
+    
+    public void franchiseMyOrdersAsBigTransport(String username, String password,String enterCatogory,String enterArea,String enterAddress,String enterPincode)
+    {
+    	selectYourProductViaRegisteredNumber(username, password);
+    	sleep(2000);
+    	verifyByContains(By.xpath("//label[text()='Big Transport']"), "Big Transport");
+    	executeClickOnElement(By.xpath("//label[text()='Big Transport']"));
+    	selectOptionByText(By.xpath("//select[@id='big-transport-category']"), enterCatogory);
+    	verifyByContains(By.xpath("//select[@id='big-transport-category']"), enterCatogory);
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='big-transport-builtup']")), enterArea);
+    	verifyByAttribute(By.xpath("//input[@id='big-transport-builtup']"), enterArea);
+    	verifyByContains(By.xpath("//span[text()='(₹"+calculatedAmountAsPerArea(enterArea)+" Incl. GST)']"), "(₹"+calculatedAmountAsPerArea(enterArea)+" Incl. GST)");
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='big-transport-address']")), enterAddress);
+    	verifyByAttribute(By.xpath("//input[@id='big-transport-address']"), enterAddress);
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='big-transport-pincode']")), enterPincode);
+    	verifyByAttribute(By.xpath("//input[@id='big-transport-pincode']"), enterPincode);
+    	executeClickOnElement(By.xpath("//input[@id='big-transport-date']"));
+    	verifyByContains(By.xpath("//button[@id='big-transport-gs-submit']"), "Buy Now");
+    	executeClickOnElement(By.xpath("//button[@id='big-transport-gs-submit']"));
+    	sleep(2000);
+    	verifyByContains(By.xpath("(//td[text()='"+addingCommaToInt(calculatedAmountAsPerArea(enterArea))+"'and@class='strong'])[1]"), addingCommaToInt(calculatedAmountAsPerArea(enterArea)));
+    	verifyByContains(Click_On_Next_After_Cart, "Next");
+    	executeClickOnElement(Click_On_Next_After_Cart);
+    	waitForPageLoad();
+    	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+    	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
 }

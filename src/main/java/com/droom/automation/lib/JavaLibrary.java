@@ -60,7 +60,7 @@ public class JavaLibrary
 		rb.keyRelease(KeyEvent.VK_ENTER);
     }
 	
-	public String calculatedAmountForGermShield(String totalarea)
+	public String calculatedAmountAsPerArea(String totalarea)
 	{
 		int sqrArea = Integer.parseInt(totalarea);
 		int totalAmount = sqrArea*15;
