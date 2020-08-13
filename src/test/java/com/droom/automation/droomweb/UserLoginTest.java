@@ -10,11 +10,13 @@ public class UserLoginTest extends AbstractBaseTest
 	
 	String filepath;
 	ExcelUtilities eu;
+	LoginPage loginpage;
 	
 	public UserLoginTest()
 	{
 		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
 		this.eu=new ExcelUtilities(filepath);
+		loginpage = new LoginPage();
 	}
 	
 	
@@ -23,7 +25,6 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("Sheet1", 1, 1);
 		String password = eu.readData("Sheet1", 1, 2);
-		LoginPage loginpage = new LoginPage();
 		loginpage.enterLoginPage();
 		loginpage.loginValidationForIndividualAccount(username,password);
 	}
@@ -33,7 +34,6 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("Sheet1", 2, 1);
 		String password = eu.readData("Sheet1", 2, 2);
-		LoginPage loginpage = new LoginPage();
 		loginpage.enterLoginPage();
 		loginpage.invalidLoginValidation(username,password);
 	}
@@ -43,7 +43,6 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("Sheet1", 3, 1);
 		String password = eu.readData("Sheet1", 3, 2);
-		LoginPage loginpage = new LoginPage();
 		loginpage.enterLoginPage();
 		loginpage.invalidLoginValidation(username,password);
 	}
@@ -52,7 +51,6 @@ public class UserLoginTest extends AbstractBaseTest
 	public void loginAsIndividualUserViaOTP() throws Exception
 	{
 		String username = eu.readData("Sheet1", 4, 1);
-		LoginPage loginpage = new LoginPage();
 		loginpage.enterLoginPage();
 		loginpage.loginValidationByOTPForIndividualAccount(username);
 	}
@@ -62,7 +60,6 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("Sheet1", 5, 1);
 		String otp = eu.readData("Sheet1", 5, 3);
-		LoginPage loginpage = new LoginPage();
 		loginpage.enterLoginPage();
 		loginpage.invalidOTPloginValidation(username, otp);
 	}
@@ -73,7 +70,6 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("Sheet1", 8, 1);
 		String password = eu.readData("Sheet1", 8, 2);
-		LoginPage loginpage = new LoginPage();
 		loginpage.enterLoginPage();
 		loginpage.loginValidationForProSellerAccount(username,password);
 	}
@@ -84,7 +80,6 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("Sheet1", 9, 1);
 		String password = eu.readData("Sheet1", 9, 2);
-		LoginPage loginpage = new LoginPage();
 		loginpage.enterLoginPage();
 		loginpage.invalidLoginValidation(username,password);
 	}
@@ -94,7 +89,6 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("Sheet1", 10, 1);
 		String password = eu.readData("Sheet1", 10, 2);
-		LoginPage loginpage = new LoginPage();
 		loginpage.enterLoginPage();
 		loginpage.invalidLoginValidation(username,password);
 	}
@@ -105,7 +99,6 @@ public class UserLoginTest extends AbstractBaseTest
 	public void loginAsProSellerViaOTP() throws Exception
 	{
 		String username = eu.readData("Sheet1", 11, 1);
-		LoginPage loginpage = new LoginPage();
 		loginpage.enterLoginPage();
 		loginpage.loginValidationForProSellerByOTP(username);
 	}
@@ -115,11 +108,15 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("Sheet1", 12, 1);
 		String otp = eu.readData("Sheet1", 12, 3);
-		LoginPage loginpage = new LoginPage();
 		loginpage.enterLoginPage();
 		loginpage.invalidOTPloginValidation(username,otp);
 	}
-	
 
-
+	@Test(priority = 11)
+	public void franchiseLoginValidation()
+	{
+		String username = eu.readData("FranchiseSheet", 11, 3);
+		String password = eu.readData("FranchiseSheet", 11, 5);
+		loginpage.franchiseLoginValidation(username,password);
+	}
 }

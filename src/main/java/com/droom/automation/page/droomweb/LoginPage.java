@@ -56,6 +56,8 @@ public class LoginPage extends SeleniumWrapper
 	
 	public void goToHome()
 	{
+		verifyByText(Click_On_My_Account, "My Account");
+		sleep(2000);
 		executeClickOnElement(Go_To_Home);
 	}
 	
@@ -73,8 +75,6 @@ public class LoginPage extends SeleniumWrapper
 		enterTextboxDetails(findElement(Enter_Password), password);
 		sleep(1000);
 		executeClickOnElement(Login_Button_To_Home);
-		sleep(3000);
-		verifyByText(Click_On_My_Account, "My Account");
 	}
 	
 	public void invalidLoginValidation(String username, String password)
@@ -192,5 +192,12 @@ public class LoginPage extends SeleniumWrapper
 		sleep(3000);
 		WebDriverFactory.getDriver().switchTo().window(parent);
 	}
-	
+
+	 public void franchiseLoginValidation(String username, String password)
+	    {
+	    	enterLoginPage();
+	    	loginValidationForIndividualAccount(username, password);
+	    	waitForPageLoad();
+	    	verifyByContains(By.xpath("//li[@class='main-heading']"), "My Franchise");
+	    }
 }

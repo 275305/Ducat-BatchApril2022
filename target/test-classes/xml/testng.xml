@@ -9,9 +9,9 @@
 
     <test name="DroomWebAutomationTest">
         <classes>
-            <class name="com.droom.automation.droomweb.BuyGermShieldServiceTest" />
              <class name="com.droom.automation.droomweb.UserLoginTest" />
               <class name="com.droom.automation.droomweb.FranchiseTest" />
+              <class name="com.droom.automation.droomweb.BuyGermShieldServiceTest" />
                <class name="com.droom.automation.droomweb.BuyFeatureTest" />
                <class name="com.droom.automation.droomweb.UserRegistrationTest" />
         </classes>

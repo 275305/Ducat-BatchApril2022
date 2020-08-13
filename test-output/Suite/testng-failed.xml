@@ -8,22 +8,29 @@
     <classes>
       <class name="com.droom.automation.droomweb.BuyGermShieldServiceTest">
         <methods>
+          <include name="buyGermShieldForAutomobileAsHatchback"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
+          <include name="buyGermShieldServiceViaHomePageAsLoggedInUser"/>
           <include name="beforeSuite"/>
-          <include name="buyGermShieldForAutomobileAsBus"/>
           <include name="init"/>
-          <include name="buyGermShieldForAutomobileAsBike"/>
+          <include name="buyGermShieldForHomeAsIndependent"/>
         </methods>
       </class> <!-- com.droom.automation.droomweb.BuyGermShieldServiceTest -->
-      <class name="com.droom.automation.droomweb.UserRegistrationTest">
+      <class name="com.droom.automation.droomweb.FranchiseTest">
         <methods>
-          <include name="allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount"/>
-          <include name="registerAsIndividualUser"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
-          <include name="registerAsProSeller"/>
+          <include name="getSiteFranchiseAsEMIForThreeMonth"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.droom.automation.droomweb.FranchiseTest -->
+      <class name="com.droom.automation.droomweb.UserRegistrationTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
           <include name="errorMsgVerificationForPasswordWhileRegisterAsIndividualAccount"/>
           <include name="init"/>
           <include name="emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount"/>

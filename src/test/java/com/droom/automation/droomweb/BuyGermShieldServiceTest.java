@@ -66,7 +66,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		automobilegermshield.germShieldValidationForCarAsHatchback(username, password, amount, pincode);
 	}
 	
-	@Test(priority = 5)
+	@Test(retryAnalyzer = com.droom.automation.lib.RetryAnalyzer.class)
 	public void buyGermShieldForAutomobileAsSedan()
 	{
 		String username = eu.readData("GermShieldSheet", 2, 1);
@@ -76,7 +76,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		automobilegermshield.germShieldValidationForCarAsSedan(username, password, amount, pincode);
 	}
 	
-	@Test(priority = 6)
+	@Test(retryAnalyzer = com.droom.automation.lib.RetryAnalyzer.class)
 	public void buyGermShieldForAutomobileAsBike()
 	{
 		String username = eu.readData("GermShieldSheet", 3, 1);
@@ -96,7 +96,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		automobilegermshield.germShieldValidationForScooter(username, password, amount, pincode);
 	}
 	
-	@Test(priority = 8)
+	@Test(retryAnalyzer = com.droom.automation.lib.RetryAnalyzer.class)
 	public void buyGermShieldForAutomobileAsPremiumBike()
 	{
 		String username = eu.readData("GermShieldSheet", 5, 1);
@@ -106,7 +106,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		automobilegermshield.germShieldValidationForPremiumBike(username, password, amount, pincode);
 	}
 	
-	@Test(priority = 9)
+	@Test(retryAnalyzer = com.droom.automation.lib.RetryAnalyzer.class)
 	public void buyGermShieldForAutomobileAsBus()
 	{
 		String username = eu.readData("GermShieldSheet", 6, 1);

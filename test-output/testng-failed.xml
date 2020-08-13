@@ -7,8 +7,8 @@
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth"/>
           <include name="beforeSuite"/>
+          <include name="ValidatingFranchiseMyOrders"/>
           <include name="init"/>
         </methods>
       </class> <!-- com.droom.automation.droomweb.FranchiseTest -->

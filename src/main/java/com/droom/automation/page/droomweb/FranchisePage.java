@@ -1,16 +1,8 @@
 package com.droom.automation.page.droomweb;
 
-import java.awt.AWTException;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-
 import com.droom.automation.lib.SeleniumWrapper;
 import com.droom.automation.lib.WebDriverFactory;
-
-import net.bytebuddy.asm.Advice.Enter;
 
 public class FranchisePage extends SeleniumWrapper
 {
@@ -30,10 +22,12 @@ public class FranchisePage extends SeleniumWrapper
     
 	
 	HomePage homepage;
+	LoginPage loginpage;
     
     public FranchisePage()
     {
     	homepage=new HomePage();
+    	loginpage=new LoginPage();
     }
     
     
@@ -268,4 +262,44 @@ public class FranchisePage extends SeleniumWrapper
     	executeClickOnElement(By.xpath("//a[@id='next_sites']"));
     }
     
+     // LOGIN SCRIPT
+    
+    public void franchiseDashboard(String username, String password)
+    {
+    	loginpage.franchiseLoginValidation(username, password);
+    	verifyByContains(By.xpath("//label[text()='Orders']"), "ORDERS");
+    	System.out.println("MY TOTAL ORDERS ARE "+WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Orders']/parent::div//strong")).getText());
+    	verifyByContains(By.xpath("//label[text()='Order Value']"), "ORDER VALUE");
+    	System.out.println("MY TOTAL ORDERS ARE "+WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Order Value']/parent::div//strong")).getText());
+    }
+    
+    public void franchiseMyOrders(String username, String password)
+    {
+    	loginpage.franchiseLoginValidation(username, password);
+    	verifyByContains(By.xpath("//a[text()='  My Orders']"), "My Orders");
+    	executeClickOnElement(By.xpath("//a[text()='  My Orders']"));
+    	verifyByContains(By.xpath("//div[@id='orders']//div[@class='row']//div[@class='row actions']//button[@id='singlePlaceOrder']"), "Place An Order");
+    	executeClickOnElement(By.xpath("//div[@id='orders']//div[@class='row']//div[@class='row actions']//button[@id='singlePlaceOrder']"));
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='mobile_no']")), "9599946816");
+    	verifyByContains(By.xpath("//button[@id='search_users']"), "Search");
+    	executeClickOnElement(By.xpath("//button[@id='search_users']"));
+    	sleep(2000);
+    	verifyByContains(By.xpath("//div[@id='buyer-found']"), "Buyer details found successfully");
+    	System.out.println("The Buyer Name: "+WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Buyer Name:']/parent::div//span")).getText());
+    	System.out.println("The Buyer Phone: "+WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Buyer Phone:']/parent::div//span")).getText());
+    	System.out.println("The Buyer Email: "+WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Buyer Email:']/parent::div//span")).getText());
+    	verifyByContains(By.xpath("//button[@id='movetostep2']"), "Next");
+    	executeClickOnElement(By.xpath("//button[@id='movetostep2']"));
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='automobile-pincode']")), "110001");
+    	verifyByAttribute(By.xpath("//input[@id='automobile-pincode']"), "110001");
+    	verifyByContains(By.xpath("//button[@id='auto-gs-submit']"), "Buy Now");
+    	executeClickOnElement(By.xpath("//button[@id='auto-gs-submit']"));
+    	sleep(2000);
+        verifyByContains(By.xpath("//div[@id='cart_details']//button[@id='movetostep3']"), "Next");
+        executeClickOnElement(By.xpath("//div[@id='cart_details']//button[@id='movetostep3']"));
+        sleep(5000);
+        verifyByContains(By.xpath("//button[@id='place_order']"), "Submit");
+        executeClickOnElement(By.xpath("//button[@id='place_order']"));
+    	
+    }
 }

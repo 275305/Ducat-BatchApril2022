@@ -1,6 +1,7 @@
 com\droom\automation\page\droomweb\RegistrationPage.class
 com\droom\automation\constants\UIConstants$NumericValues.class
 com\droom\automation\constants\UIConstants$BROWSERS.class
+com\droom\automation\lib\RetryAnalyzer.class
 com\droom\automation\page\droomweb\GermShieldForHeavyTransportPage.class
 com\droom\automation\page\droomweb\HomePage.class
 com\droom\automation\page\droomweb\GermShieldAntimicrobialCoatingPage.class
@@ -30,7 +31,7 @@ com\droom\automation\page\droomweb\PaymentPage.class
 com\droom\automation\lib\JavaLibrary.class
 com\droom\automation\page\droomcredit\ApplyLoanPage.class
 com\droom\automation\page\droomcredit\TermsAndConditionsPage.class
-com\droom\automation\page\droomweb\FranchiseRegistrationPage.class
+com\droom\automation\lib\MyAnnotationTransformer.class
 com\droom\automation\page\droomweb\GermShieldForHomePage.class
 com\droom\automation\page\droomweb\BuyPage.class
 com\droom\automation\lib\ExcelUtilities.class

@@ -6,6 +6,7 @@ C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\a
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\constants\UIConstants.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\AbstractBaseTest.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\ExcelUtilities.java
+C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\RetryAnalyzer.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\SeleniumWrapper.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\HomePage.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\SearchFeaturePage.java
@@ -14,7 +15,6 @@ C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\a
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\BuyPage.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\SeleniumDataBaseTest.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\PageModelFactory.java
-C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\FranchiseRegistrationPage.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\LoginPage.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\DataBaseDemo.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\GermShieldForAutomobilePage.java
@@ -26,5 +26,6 @@ C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\a
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomcredit\LendersPage.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomcredit\TermsAndConditionsPage.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\JavaLibrary.java
+C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\MyAnnotationTransformer.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\HomePageTopPanelPage.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\RegistrationPage.java
