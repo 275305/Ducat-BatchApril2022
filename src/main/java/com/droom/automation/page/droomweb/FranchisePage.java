@@ -272,15 +272,18 @@ public class FranchisePage extends SeleniumWrapper
     	System.out.println("MY TOTAL ORDERS ARE "+WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Order Value']/parent::div//strong")).getText());
     }
                           
-                           //Script for dashborad and placing orders
+                           //Script for dashborad and placing orders with already registered number
     
-    public void selectYourProductViaRegisteredNumber(String username, String password)
+    public void enterPlaceAnOrder(String username, String password)
     {
     	loginpage.franchiseLoginValidation(username, password);
     	verifyByContains(Click_My_Order, "My Orders");
     	executeClickOnElement(Click_My_Order);
     	verifyByContains(By.xpath("//div[@id='orders']//div[@class='row']//div[@class='row actions']//button[@id='singlePlaceOrder']"), "Place An Order");
     	executeClickOnElement(By.xpath("//div[@id='orders']//div[@class='row']//div[@class='row actions']//button[@id='singlePlaceOrder']"));
+    }
+    public void selectYourProductViaRegisteredNumber()
+    {
     	enterTextboxDetails(findElement(By.xpath("//input[@id='mobile_no']")), "9599946816");
     	verifyByContains(By.xpath("//button[@id='search_users']"), "Search");
     	executeClickOnElement(By.xpath("//button[@id='search_users']"));
@@ -293,9 +296,8 @@ public class FranchisePage extends SeleniumWrapper
     	executeClickOnElement(By.xpath("//button[@id='movetostep2']"));
     }
     
-    public void franchiseMyOrdersAsAutomobileGermShield(String username, String password)
+    public void franchiseMyOrdersAsAutomobileGermShield()
     {
-    	selectYourProductViaRegisteredNumber(username, password);
     	enterTextboxDetails(findElement(By.xpath("//input[@id='automobile-pincode']")), "110001");
     	verifyByAttribute(By.xpath("//input[@id='automobile-pincode']"), "110001");
     	verifyByContains(By.xpath("//button[@id='auto-gs-submit']"), "Buy Now");
@@ -308,9 +310,8 @@ public class FranchisePage extends SeleniumWrapper
         executeClickOnElement(By.xpath("//button[@id='place_order']"));
     }
     
-    public void franchiseMyOrdersAsFacilityGermShield(String username, String password,String enterCatogory,String enterArea,String enterAddress,String enterPincode)
+    public void franchiseMyOrdersAsFacilityGermShield(String enterCatogory,String enterArea,String enterAddress,String enterPincode)
     {
-    	selectYourProductViaRegisteredNumber(username, password);
     	sleep(2000);
     	verifyByContains(By.xpath("//label[text()='Facility']"), "Facility");
     	executeClickOnElement(By.xpath("//label[text()='Facility']"));
@@ -338,9 +339,8 @@ public class FranchisePage extends SeleniumWrapper
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
     
-    public void franchiseMyOrdersAsElevatorGermShield(String username, String password,String enterCatogory,String packageType,String enterAddress,String enterPincode)
+    public void franchiseMyOrdersAsElevatorGermShield(String enterCatogory,String packageType,String enterAddress,String enterPincode)
     {
-    	selectYourProductViaRegisteredNumber(username, password);
     	sleep(2000);
     	verifyByContains(By.xpath("//label[text()='Elevator']"), "Elevator");
     	executeClickOnElement(By.xpath("//label[text()='Elevator']"));
@@ -363,9 +363,8 @@ public class FranchisePage extends SeleniumWrapper
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
     
-    public void franchiseMyOrdersAsJumpstartService(String username, String password,String enterCatogory,String enterAddress,String enterPincode)
+    public void franchiseMyOrdersAsJumpstartService(String enterCatogory,String enterAddress,String enterPincode)
     {
-    	selectYourProductViaRegisteredNumber(username, password);
     	sleep(2000);
     	verifyByContains(By.xpath("//label[text()='Jumpstart']"), "Jumpstart");
     	executeClickOnElement(By.xpath("//label[text()='Jumpstart']"));
@@ -386,14 +385,14 @@ public class FranchisePage extends SeleniumWrapper
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
     
-    public void franchiseMyOrdersAsBigTransport(String username, String password,String enterCatogory,String enterArea,String enterAddress,String enterPincode)
+    public void franchiseMyOrdersAsBigTransport(String enterCatogory,String enterArea,String enterAddress,String enterPincode)
     {
-    	selectYourProductViaRegisteredNumber(username, password);
     	sleep(2000);
     	verifyByContains(By.xpath("//label[text()='Big Transport']"), "Big Transport");
     	executeClickOnElement(By.xpath("//label[text()='Big Transport']"));
-    	selectOptionByText(By.xpath("//select[@id='big-transport-category']"), enterCatogory);
-    	verifyByContains(By.xpath("//select[@id='big-transport-category']"), enterCatogory);
+    	sleep(2000);
+//    	selectOptionByText(By.xpath("//select[@id='big-transport-category']"), enterCatogory);
+//    	verifyByContains(By.xpath("//select[@id='big-transport-category']"), enterCatogory);
     	enterTextboxDetails(findElement(By.xpath("//input[@id='big-transport-builtup']")), enterArea);
     	verifyByAttribute(By.xpath("//input[@id='big-transport-builtup']"), enterArea);
     	verifyByContains(By.xpath("//span[text()='(₹"+calculatedAmountAsPerArea(enterArea)+" Incl. GST)']"), "(₹"+calculatedAmountAsPerArea(enterArea)+" Incl. GST)");
@@ -411,5 +410,29 @@ public class FranchisePage extends SeleniumWrapper
     	waitForPageLoad();
     	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
+    }
+    
+    public void selectYourProductWithRegisteringNewNumber(String firstName, String lastName,String mailID, String GSTIN,String enterCity,String buyersNumber)
+    {
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='mobile_no']")), buyersNumber);
+    	verifyByContains(By.xpath("//button[@id='search_users']"), "Search");
+    	executeClickOnElement(By.xpath("//button[@id='search_users']"));
+    	sleep(2000);
+    	verifyByContains(By.xpath("//div[@id='buyer-missing']"), "Buyer information is not available with us. Please provide additional information");
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='user_first_name']")),firstName );
+    	verifyByAttribute(By.xpath("//input[@id='user_first_name']"),firstName );
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='user_last_name']")), lastName);
+    	verifyByAttribute(By.xpath("//input[@id='user_last_name']"), lastName);
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='user_email']")), mailID);
+    	verifyByAttribute(By.xpath("//input[@id='user_email']"), mailID);
+    	selectOptionByText(By.xpath("//select[@id='city']"), enterCity);
+    	verifyByContains(By.xpath("//select[@id='city']"), enterCity);
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='user_gstin']")), GSTIN);
+    	verifyByAttribute(By.xpath("//input[@id='user_gstin']"), GSTIN);
+    	verifyByContains(By.xpath("//button[@id='registerUser']"), "Register");
+    	executeClickOnElement(By.xpath("//button[@id='registerUser']"));
+    	sleep(2000);
+    	verifyByContains(By.xpath("//button[@id='movetostep2']"), "Next");
+    	executeClickOnElement(By.xpath("//button[@id='movetostep2']"));
     }
 }

@@ -20,10 +20,10 @@ public class CreateListingTest extends AbstractBaseTest
 	{
 		CreateListingPage createlistingpage=new CreateListingPage();
 		createlistingpage.createYourListing();
-		createlistingpage.normalListing();
-		createlistingpage.keyInformation();
 		createlistingpage.pricing();
 		createlistingpage.uploadPicture();
+		createlistingpage.normalListing();
+		createlistingpage.keyInformation();
 		createlistingpage.quickSell();
 		createlistingpage.certificationTool();
 		createlistingpage.activateListing();

@@ -1,13 +1,7 @@
 package com.droom.automation.page.droomweb;
 
-import java.text.MessageFormat;
-
 import org.openqa.selenium.By;
-import org.testng.Assert;
-
-import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.lib.SeleniumWrapper;
-import com.droom.automation.lib.WebDriverFactory;
 
 public class GermShieldForHeavyTransportPage extends SeleniumWrapper
 {
@@ -17,9 +11,9 @@ public class GermShieldForHeavyTransportPage extends SeleniumWrapper
 	private static final By Click_For_Heavy_Transport=By.xpath("//label[text()='Heavy Transport']");
 	
 	//webelements for view details
-	private static final By Click_View_Details_For_Plane=By.xpath("//div[@id='heavyTransportFacility']//p[text()='Germ Shield For Plane']/following-sibling::span[text()='View Details']");
-	private static final By Click_View_Details_For_Helicopter=By.xpath("//div[@id='heavyTransportFacility']//p[text()='Germ Shield For Helicopter']/following-sibling::span[text()='View Details']");	
-	private static final By Click_View_Details_For_Train=By.xpath("//div[@id='heavyTransportFacility']//p[text()='Germ Shield For Train']/following-sibling::span[text()='View Details']");
+	private static final By Click_View_Details_For_Plane=By.xpath("//div[@id='heavyTransportFacility']//p[text()='Plane']/following-sibling::span[text()='View Details']");
+	private static final By Click_View_Details_For_Helicopter=By.xpath("//div[@id='heavyTransportFacility']//p[text()='Helicopter']/following-sibling::span[text()='View Details']");	
+	private static final By Click_View_Details_For_Train=By.xpath("//div[@id='heavyTransportFacility']//p[text()='Train']/following-sibling::span[text()='View Details']");
 	private static final By Click_On_Buy_Now_PopUp=By.xpath("//button[@id='listing-detail-buy-now']");
 	
 	//webelements to enter details

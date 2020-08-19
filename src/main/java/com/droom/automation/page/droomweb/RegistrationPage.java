@@ -162,8 +162,8 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyByContains(Create_Individual_Account, "Create an Individual Account");
 		executeClickOnElement(Create_Individual_Account);
 		waitForPageLoad();
-		enterTextboxDetails(findElement(Enter_Email_Address), "");
-		enterTextboxDetails(findElement(Enter_Mobile_No), "");
+//		enterTextboxDetails(findElement(Enter_Email_Address), "");
+//		enterTextboxDetails(findElement(Enter_Mobile_No), "");
 		verifyByAttributeByID(Create_Account_SendOTP, "createAccountAndSendOtp");
 		executeClickOnElement(Create_Account_SendOTP);
 		verifyRadioButton(Radio_Button);

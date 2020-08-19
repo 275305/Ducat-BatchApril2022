@@ -20,7 +20,7 @@ public class UserLoginTest extends AbstractBaseTest
 	}
 	
 	
-	@Test(retryAnalyzer = com.droom.automation.lib.RetryAnalyzer.class)
+	@Test(priority=1)
 	public void loginAsIndividualUserViaPassword()
 	{
 		String username = eu.readData("Sheet1", 1, 1);

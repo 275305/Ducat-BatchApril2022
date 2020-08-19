@@ -1,11 +1,8 @@
 package com.droom.automation.page.droomweb;
-import java.awt.AWTException;
-
 import org.openqa.selenium.By;
 
 import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.lib.SeleniumWrapper;
-import com.droom.automation.lib.WebDriverFactory;
 
 public class CreateListingPage extends SeleniumWrapper
 {
@@ -32,7 +29,7 @@ public class CreateListingPage extends SeleniumWrapper
 	private final static By Click_To_Upload=By.xpath("//div[@class='dz-default dz-message']");
 	private final static By Continue_After_Upload=By.xpath("//div[@id='photo']//input[@value='Save and Continue']");
 	private final static By Click_Get_Later=By.xpath("//button[text()='Maybe Later']");
-	private final static By Click_Save_And_Continue_After_Selecting_ListingType=By.xpath("//input[@id='original_submit-button']");
+	private final static By Click_Save_And_Continue_After_Selecting_ListingType=By.xpath("(//input[@value='Save & Continue'])[1]");
 	private final static By Click_For_Premium=By.xpath("//div[text()='Rs. 1099/-']");
 	private final static By Click_For_Normal=By.xpath("//div[text()='Free']");
 	private final static By Click_For_Concierge=By.xpath("//div[contains(text(),'Rs. 699/-')]");
@@ -47,11 +44,15 @@ public class CreateListingPage extends SeleniumWrapper
 	
 	String filepath;
 	ExcelUtilities eu;
+	LoginPage lp;
+	HomePage hp;
 	
 	public CreateListingPage()
 	{
 		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
 		this.eu=new ExcelUtilities(filepath);
+		lp=new LoginPage();
+		hp=new HomePage();
 	}
 	
 	
@@ -59,14 +60,10 @@ public class CreateListingPage extends SeleniumWrapper
 	{
 		String username = eu.readData("CreateListingSheet", 1, 1);
 		String password = eu.readData("CreateListingSheet", 1, 2);
-		System.out.println(username);
-		System.out.println(password);
-		LoginPage lp=new LoginPage();
 		lp.enterLoginPage();
 		lp.loginValidationForIndividualAccount(username, password);
 		executeClickOnElement(Go_To_Home);
 		sleep(3000);
-		HomePage hp=new HomePage();
 		hp.enterSellByTopPanel();
 		selectOptionByText( Select_Catogory, "Car");
 		sleep(2000);
@@ -75,15 +72,16 @@ public class CreateListingPage extends SeleniumWrapper
 		executeClickOnElement(Click_Location);
 		selectCity();
 		scrolling("(//li[text()='Delhi'])[3]");
-		sleep(5000);
-		selectOptionByText(Select_Make,"Audi" );
-		verifyByContains(Select_Make, "Audi");
-		selectOptionByText(Select_Model,"Q3" );
-		verifyByContains(Select_Model, "Q3");
+		sleep(2000);
+		executeClickOnElement(By.xpath("//span[text()='Select From']"));
+		selectOptionByText(Select_Make,"Bajaj" );
+		verifyByContains(Select_Make, "Bajaj");
+		selectOptionByText(Select_Model,"Qute RE60" );
+		verifyByContains(Select_Model, "Qute RE60");
 		selectOptionByText(Select_Year, "2020");
 		verifyByContains(Select_Year, "2020");
-		selectOptionByText(Select_Trim, "30 TFSI PREMIUM");
-		verifyByContains(Select_Trim, "30 TFSI PREMIUM");
+		selectOptionByText(Select_Trim, "PETROL");
+		verifyByContains(Select_Trim, "PETROL");
 		executeClickOnElement(Click_Create_Listing_Now);
 		sleep(5000);
 		verifyByContains(Login_To_Continue, "Create Listing");
@@ -143,10 +141,9 @@ public class CreateListingPage extends SeleniumWrapper
 	{
 		verifyByText(Click_For_Normal, "FREE");
 		executeClickOnElement(Click_For_Normal);
-		executeClickOnElement(By.xpath("(//a[text()='Proceed'])[1]"));
-		//verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
-		//executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
-		doPageRefresh();
+	//	executeClickOnElement(By.xpath("(//a[text()='Proceed'])[1]"));
+		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
+		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
 	}
 	
 	

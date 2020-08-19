@@ -84,6 +84,5 @@ public class JavaLibrary
 		Object[] obj= {number};
 		String MyUsername = MessageFormat.format(dynamicUsername, obj);
 		return MyUsername;
-		
 	}
 }

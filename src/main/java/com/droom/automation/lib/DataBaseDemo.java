@@ -42,4 +42,21 @@ public class DataBaseDemo
 		 statement.close();
 			connection.close();
 	}
+	
+	public static  char[] otpAsString(String qry) throws Exception
+	{
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection connection = DriverManager.getConnection(url, user, password);
+		Statement statement = connection.createStatement();
+		System.out.println("connected");
+		ResultSet rs = statement.executeQuery(qry);
+		rs.next();
+		String otp = rs.getString("code");
+		System.out.println(otp);
+		char[] crArr = otp.toCharArray();
+//		statement.close();
+//		connection.close();
+        return crArr;
+        
+	}
 }

@@ -9,15 +9,13 @@ public class RetryAnalyzer implements IRetryAnalyzer
 	int retryLimit=3;
 
 	@Override
-	public boolean retry(ITestResult result) 
+	public boolean retry(ITestResult result)
 	{
-		if (counter<retryLimit) 
+		if (counter<retryLimit)
 		{
 			counter++;
 			return true;
 		}
 		return false;
 	}
-	
-
 }

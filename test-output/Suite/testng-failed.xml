@@ -8,11 +8,21 @@
     <classes>
       <class name="com.droom.automation.droomweb.BuyGermShieldServiceTest">
         <methods>
+          <include name="buyGermShieldForAutomobileAsPremiumBike"/>
+          <include name="buyGermShieldForAutomobileAsHatchback"/>
           <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="beforeSuite"/>
-          <include name="buyGermShieldForHomeAsVilla"/>
           <include name="buyGermShieldForHeavyTransportAsPlane"/>
+          <include name="buyGermShieldForOfficeAsIndependentBuilding"/>
+          <include name="buyGermShieldForAutomobileAsScooter"/>
+          <include name="afterMethod"/>
+          <include name="buyGermShieldForOfficeAsCoWorkingSpace"/>
+          <include name="beforeSuite"/>
+          <include name="buyGermShieldForAutomobileAsSedan"/>
+          <include name="buyGermShieldForHeavyTransportAsHelicopter"/>
+          <include name="buyGermShieldElevatorService"/>
+          <include name="buyGermShieldForHeavyTransportAsTrain"/>
+          <include name="buyGermShieldForAutomobileAsBus"/>
+          <include name="buyGermShieldForOfficeAsHighRiseBuilding"/>
           <include name="init"/>
         </methods>
       </class> <!-- com.droom.automation.droomweb.BuyGermShieldServiceTest -->
@@ -20,20 +30,22 @@
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
+          <include name="RegisteringBuyerAsAutomobileGermShield"/>
           <include name="beforeSuite"/>
-          <include name="getSiteFranchiseAsUpFrontPaymentForSixMonth"/>
-          <include name="ValidatingFranchiseMyOrders"/>
+          <include name="RegisteringBuyerAsElevatorGermShield"/>
           <include name="init"/>
         </methods>
       </class> <!-- com.droom.automation.droomweb.FranchiseTest -->
       <class name="com.droom.automation.droomweb.UserRegistrationTest">
         <methods>
-          <include name="registerAsIndividualUser"/>
+          <include name="allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
+          <include name="registerAsProSeller"/>
           <include name="errorMsgVerificationForPasswordWhileRegisterAsIndividualAccount"/>
           <include name="init"/>
+          <include name="emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount"/>
         </methods>
       </class> <!-- com.droom.automation.droomweb.UserRegistrationTest -->
     </classes>

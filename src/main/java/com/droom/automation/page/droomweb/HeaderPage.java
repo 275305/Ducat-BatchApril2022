@@ -3,11 +3,11 @@ import org.openqa.selenium.By;
 
 import com.droom.automation.lib.SeleniumWrapper;
 
-public class HomePageTopPanelPage extends SeleniumWrapper
+public class HeaderPage extends SeleniumWrapper
 {
 	private static final By Enter_Germ_Shield_Via_Top_Pannel= By.xpath("//span[text()='Germ Shield']");
 	private static final By Enter_Germ_Shield_PopUp= By.xpath("//a[text()='Buy Germ Shield']");
-	//private static final By = By.xpath("");
+	private static final By Click_Close_Popup= By.xpath("//div[@id='entryModal']//button");
 	
 	public void enterGermShieldViaTopPannel()
 	{
@@ -17,6 +17,14 @@ public class HomePageTopPanelPage extends SeleniumWrapper
 	public void enterBuyGermShieldPopUp()
 	{
 		executeClickOnElement(Enter_Germ_Shield_PopUp);
+	}
+	
+	public void clickSubmitRequirement()
+	{
+		waitForElementTobePresent(Click_Close_Popup);
+		executeClickOnElement(Click_Close_Popup);
+		verifyByContains(By.xpath("//span[text()='Submit ']"), "Submit");
+		executeClickOnElement(By.xpath("//span[text()='Submit ']"));
 	}
 
 }

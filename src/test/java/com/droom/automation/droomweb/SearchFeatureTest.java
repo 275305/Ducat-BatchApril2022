@@ -24,26 +24,26 @@ public class SearchFeatureTest extends AbstractBaseTest
 	{
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
 		String password = eu.readData("BuyFeatureSheet", 1, 2);
-		searchpage.searchForVehicle(username, password);
+//		searchpage.searchForVehicle(username, password);
 	}
 	
 	
-	@Test(priority = 2)
-	public void serachForBikeValidationAsLoggedInUser()
-	{
-		String username = eu.readData("BuyFeatureSheet", 1, 1);
-		String password = eu.readData("BuyFeatureSheet", 1, 2);
-		searchpage.searchForBike(username, password);
-	}
-	
-	@Test(priority = 3)
-	public void serachForScooterValidationAsLoggedInUserAtCheckout()
-	{
-		String username = eu.readData("BuyFeatureSheet", 1, 1);
-		String password = eu.readData("BuyFeatureSheet", 1, 2);
-		searchpage.searchForScooterAsLoggedInUser(username, password);
-	}
-	
+//	@Test(priority = 2)
+//	public void serachForBikeValidationAsLoggedInUser()
+//	{
+//		String username = eu.readData("BuyFeatureSheet", 1, 1);
+//		String password = eu.readData("BuyFeatureSheet", 1, 2);
+//		searchpage.searchForBike(username, password);
+//	}
+//	
+//	@Test(priority = 3)
+//	public void serachForScooterValidationAsLoggedInUserAtCheckout()
+//	{
+//		String username = eu.readData("BuyFeatureSheet", 1, 1);
+//		String password = eu.readData("BuyFeatureSheet", 1, 2);
+//		searchpage.searchForScooterAsLoggedInUser(username, password);
+//	}
+//	
 //	@Test(priority = 4)
 //	public void serachForVehicleValidation()
 //	{
