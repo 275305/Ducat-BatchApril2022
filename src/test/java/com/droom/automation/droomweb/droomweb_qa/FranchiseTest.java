@@ -1,4 +1,4 @@
-package com.droom.automation.droomweb;
+package com.droom.automation.droomweb.droomweb_qa;
 
 import org.testng.annotations.Test;
 
@@ -505,7 +505,8 @@ public class FranchiseTest extends AbstractBaseTest
 		String mailId = JavaLibrary.dynamicUsername();
 		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
 		String enterCity = eu.readData("FranchiseSheet", 11, 22);
-		String buyersNumber = eu.readData("FranchiseSheet", 11, 24);
+		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
+		//String buyersNumber = eu.readData("FranchiseSheet", 11, 24);
 		franchisepage.enterPlaceAnOrder(username, password);
 		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
 		franchisepage.franchiseMyOrdersAsAutomobileGermShield();
@@ -526,7 +527,8 @@ public class FranchiseTest extends AbstractBaseTest
 		String mailId = JavaLibrary.dynamicUsername();
 		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
 		String enterCity = eu.readData("FranchiseSheet", 11, 22);
-		String buyersNumber = eu.readData("FranchiseSheet", 11, 23);
+		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
+//		String buyersNumber = eu.readData("FranchiseSheet", 11, 23);
 		franchisepage.enterPlaceAnOrder(username, password);
 		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
 		franchisepage.franchiseMyOrdersAsFacilityGermShield(enterCatogory, enterArea, enterAddress, enterPincode);
@@ -547,7 +549,8 @@ public class FranchiseTest extends AbstractBaseTest
 		String mailId = JavaLibrary.dynamicUsername();
 		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
 		String enterCity = eu.readData("FranchiseSheet", 12, 22);
-		String buyersNumber = eu.readData("FranchiseSheet", 12, 23);
+		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
+//		String buyersNumber = eu.readData("FranchiseSheet", 12, 23);
 		franchisepage.enterPlaceAnOrder(username, password);
 		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
 		franchisepage.franchiseMyOrdersAsElevatorGermShield(enterCatogory, packageType, enterAddress, enterPincode);
@@ -567,7 +570,8 @@ public class FranchiseTest extends AbstractBaseTest
 		String mailId = JavaLibrary.dynamicUsername();
 		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
 		String enterCity = eu.readData("FranchiseSheet", 13,22);
-		String buyersNumber = eu.readData("FranchiseSheet", 13, 23);
+		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
+//		String buyersNumber = eu.readData("FranchiseSheet", 13, 23);
 		franchisepage.enterPlaceAnOrder(username, password);
 		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
 		franchisepage.franchiseMyOrdersAsJumpstartService(enterCatogory, enterAddress, enterPincode);
@@ -588,7 +592,8 @@ public class FranchiseTest extends AbstractBaseTest
 		String mailId = JavaLibrary.dynamicUsername();
 		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
 		String enterCity = eu.readData("FranchiseSheet", 14, 22);
-		String buyersNumber = eu.readData("FranchiseSheet", 14, 23);
+		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
+//		String buyersNumber = eu.readData("FranchiseSheet", 14, 23);
 		franchisepage.enterPlaceAnOrder(username, password);
 		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
 		franchisepage.franchiseMyOrdersAsBigTransport(enterCatogory, enterArea, enterAddress, enterPincode);

@@ -3,3 +3,6 @@
 [0731/224822.485:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
 [0810/163416.601:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
 [0814/112703.455:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0822/104034.285:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0822/135323.736:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0822/191657.398:ERROR:file_io_win.cc(161)] CreateFile C:\Users\Honey\AppData\Local\Temp\scoped_dir15888_2040511764\Crashpad\settings.dat: The system cannot find the file specified. (0x2)

@@ -93,6 +93,7 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyRadioButton(Radio_Button);
 		verifyByAttributeByID(Create_Account_SendOTP, "createAccountAndSendOtp");
 		executeClickOnElement(Create_Account_SendOTP);
+		sleep(5000);
 		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='"+mobilenumber+"' order by id desc limit 1;");
 		String otpValue = Integer.toString(otp);
 		enterTextboxDetails(findElement(Enter_OTP), otpValue);
@@ -110,14 +111,8 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyByAttribute(Enter_Creat_Individual_Button, "Continue");
 		executeClickOnElement(Enter_Creat_Individual_Button);
 		DataBaseDemo.deleteMailID("DELETE FROM `cscart_new`.`users` where email = '"+username+"';");
-		
-//	    db.deleteDataFromDB("DELETE FROM `cscart_new`.`users` where email = 'honey.maurya@droom.in';");
-//	    db.deleteDataFromDB("DELETE FROM `cscart_new`.`otp_verification` where phone='6307641802' order by id desc limit 1;");
-		
-		
-	}
+}
 	
-
 	public void getRegistrationFormPage(String username,String mobilenumber) throws Exception
 	{
 		loginpage.enterIconPopup();
@@ -132,6 +127,7 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyRadioButton(Radio_Button);
 		verifyByAttributeByID(Create_Account_SendOTP, "createAccountAndSendOtp");
 		executeClickOnElement(Create_Account_SendOTP);
+		sleep(5000);
 		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='"+mobilenumber+"' order by id desc limit 1;");
 		String otpValue = Integer.toString(otp);
 		enterTextboxDetails(findElement(Enter_OTP), otpValue);
@@ -162,8 +158,6 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyByContains(Create_Individual_Account, "Create an Individual Account");
 		executeClickOnElement(Create_Individual_Account);
 		waitForPageLoad();
-//		enterTextboxDetails(findElement(Enter_Email_Address), "");
-//		enterTextboxDetails(findElement(Enter_Mobile_No), "");
 		verifyByAttributeByID(Create_Account_SendOTP, "createAccountAndSendOtp");
 		executeClickOnElement(Create_Account_SendOTP);
 		verifyRadioButton(Radio_Button);
@@ -171,7 +165,6 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyErrorMsgByText(Verify_Declaration_Error_Massage_As_Empty_Fill, "The mobile number field is required");
 		verifyErrorMsgByText(Verify_Declaration_Error_Massage, "Please accept Terms & Conditions");
 	}
-	
 	
 	public void emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount(String username,String mobilenumber) throws Exception
 	{
@@ -219,6 +212,7 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyByAttribute(Enter_ProMobile_No, mobilenumber);
 		verifyByAttributeByID(Click_SendOTP, "validateEmailAndPhone");
 		executeClickOnElement(Click_SendOTP);
+		sleep(5000);
 		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='"+mobilenumber+"' order by id desc limit 1;");
 		String otpValue = Integer.toString(otp);
 		enterTextboxDetails(findElement(Enter_ProOTP), otpValue);
@@ -274,6 +268,7 @@ public class RegistrationPage extends SeleniumWrapper
 		verifyByAttribute(Enter_ProMobile_No, mobilenumber);
 		verifyByAttributeByID(Click_SendOTP, "validateEmailAndPhone");
 		executeClickOnElement(Click_SendOTP);
+		sleep(5000);
 		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='"+mobilenumber+"' order by id desc limit 1;");
 		String otpValue = Integer.toString(otp);
 		enterTextboxDetails(findElement(Enter_ProOTP), otpValue);

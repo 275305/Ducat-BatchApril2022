@@ -75,14 +75,32 @@ public class JavaLibrary
 		String formattedAmount = IndianCurrencyFormat.format(amtAsInt);
 		return formattedAmount;
 	}
-	
 	public static String dynamicUsername()
 	{
 		Random random=new Random();
-		int number = random.nextInt(999);
-		String dynamicUsername = "honey{0}.maurya@gmail.com";
-		Object[] obj= {number};
+		int number1 = random.nextInt(999);
+		int number2 = random.nextInt(999);
+		String dynamicUsername = "honey{0}.maurya{1}@gmail.com";
+		Object[] obj= {number1,number2};
 		String MyUsername = MessageFormat.format(dynamicUsername, obj);
 		return MyUsername;
 	}
+	
+	public static String dynamicPhoneNumber()
+	{
+		Random random=new Random();
+		String firstNumber="9{0}";
+		Object[] obj= {Integer.toString(random.nextInt(999999999)).replaceAll(",", "")};
+		String phoneNumber = MessageFormat.format(firstNumber, obj);
+		return phoneNumber;
+	}
+	
+	public String FirstLetterUpperCase(String value)
+	{
+		String st=value;
+		String output = st.substring(0, 1).toUpperCase() + st.substring(1);
+		return output;
+	}
+	
+	
 }

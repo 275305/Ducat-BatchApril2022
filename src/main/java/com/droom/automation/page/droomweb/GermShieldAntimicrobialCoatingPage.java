@@ -59,15 +59,11 @@ public class GermShieldAntimicrobialCoatingPage extends SeleniumWrapper
 		loginpage=new LoginPage();
 		homepage=new HomePage();
 		paymentpage=new PaymentPage();
-		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
-		this.eu=new ExcelUtilities(filepath);
 	}
 	
 	
-	public void germShieldAntimicrobialCoatingValidation()
+	public void germShieldAntimicrobialCoatingValidation(String username,String password)
 	{
-		String username = eu.readData("GermShieldSheet", 1, 1);
-		String password = eu.readData("GermShieldSheet", 1, 2);
 		loginpage.enterLoginPage();
 		loginpage.loginValidationForIndividualAccount(username,password);
 		verifyByText(Click_On_My_Account, "My Account");                        //verify Home Page

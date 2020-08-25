@@ -212,7 +212,7 @@ public final class WebDriverFactory {
     public static void closeDriver(String browser) {
         try {
             LOG.info("Closing browser and application ...");
-     //      WebDriverFactory.DRIVER_THREAD_POOL.get().quit();
+            WebDriverFactory.DRIVER_THREAD_POOL.get().quit();
 
         } catch (final Exception ex) {
             LOG.warn("WARNING : Failed to close the browser ... \nException : " + ex.getMessage());

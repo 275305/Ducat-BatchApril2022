@@ -224,7 +224,7 @@ public class SeleniumWrapper extends JavaLibrary
         return text;
     }
 
-    public boolean isComboOptionVisible(final By by, final String visibleValue) 
+    public boolean isComboOptionVisible(final By by, final String visibleValue)
     {
         Select selectPolicy = new Select(findVisibleElement(by));
         return selectPolicy.getFirstSelectedOption().getText().matches(visibleValue);

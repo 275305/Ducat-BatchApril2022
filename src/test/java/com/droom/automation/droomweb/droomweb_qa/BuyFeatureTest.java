@@ -1,4 +1,4 @@
-package com.droom.automation.droomweb;
+package com.droom.automation.droomweb.droomweb_qa;
 
 import org.testng.annotations.Test;
 
@@ -14,7 +14,7 @@ public class BuyFeatureTest extends AbstractBaseTest
 	
 	public BuyFeatureTest()
 	{
-		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
+		this.filepath="C:/Users/Honey/Desktop/QA Automation TestData.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 	}
 	

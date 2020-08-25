@@ -1,8 +1,9 @@
-package com.droom.automation.droomweb;
+package com.droom.automation.droomweb.droomweb_qa;
 import org.testng.annotations.Test;
 
 import com.droom.automation.lib.AbstractBaseTest;
 import com.droom.automation.lib.ExcelUtilities;
+import com.droom.automation.lib.JavaLibrary;
 import com.droom.automation.page.droomweb.GermShieldForOfficePage;
 import com.droom.automation.page.droomweb.RegistrationPage;
 
@@ -26,8 +27,10 @@ public class UserRegistrationTest extends AbstractBaseTest
 	@Test(priority=1)
 	public void registerAsIndividualUser() throws Exception
 	{
-		String username = eu.readData("RegistrationSheet", 1, 1);
-		String mobilenumber = eu.readData("RegistrationSheet", 1, 2);
+//		String username = eu.readData("RegistrationSheet", 1, 1);
+//		String mobilenumber = eu.readData("RegistrationSheet", 1, 2);
+		String username=JavaLibrary.dynamicUsername();
+		String mobilenumber =JavaLibrary.dynamicPhoneNumber();
 		String firstname = eu.readData("RegistrationSheet", 1, 3);
 		String lastname = eu.readData("RegistrationSheet", 1, 4);
 		String password = eu.readData("RegistrationSheet", 1, 5);
@@ -67,8 +70,10 @@ public class UserRegistrationTest extends AbstractBaseTest
 	@Test(priority=5)
 	public void emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount() throws Exception
 	{
-		String username = eu.readData("ErrorMsgForRegistrationSheet", 3, 1);
-		String mobilenumber = eu.readData("ErrorMsgForRegistrationSheet", 3, 2);
+//		String username = eu.readData("ErrorMsgForRegistrationSheet", 3, 1);
+//		String mobilenumber = eu.readData("ErrorMsgForRegistrationSheet", 3, 2);
+		String username=JavaLibrary.dynamicUsername();
+		String mobilenumber =JavaLibrary.dynamicPhoneNumber();
 		registrationpage.emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount(username, mobilenumber);
 	}
 	
@@ -76,8 +81,10 @@ public class UserRegistrationTest extends AbstractBaseTest
 	@Test(priority=6)
 	public void errorMsgVerificationForPasswordWhileRegisterAsIndividualAccount() throws Exception
 	{
-		String username = eu.readData("ErrorMsgForRegistrationSheet", 4, 1);
-		String mobilenumber = eu.readData("ErrorMsgForRegistrationSheet", 4, 2);
+//		String username = eu.readData("ErrorMsgForRegistrationSheet", 4, 1);
+//		String mobilenumber = eu.readData("ErrorMsgForRegistrationSheet", 4, 2);
+		String username=JavaLibrary.dynamicUsername();
+		String mobilenumber =JavaLibrary.dynamicPhoneNumber();
 		String firstname = eu.readData("ErrorMsgForRegistrationSheet", 4, 3);
 		String lastname = eu.readData("ErrorMsgForRegistrationSheet", 4, 4);
 		String password1 = eu.readData("ErrorMsgForRegistrationSheet", 4, 5);

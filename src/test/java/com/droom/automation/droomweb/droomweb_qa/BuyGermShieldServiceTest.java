@@ -1,4 +1,4 @@
-package com.droom.automation.droomweb;
+package com.droom.automation.droomweb.droomweb_qa;
 import org.testng.annotations.Test;
 
 import com.droom.automation.lib.AbstractBaseTest;
@@ -34,7 +34,9 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 	@Test(priority=1)
 	public void buyGermShieldServiceViaHomePageAsLoggedInUser()
 	{
-		germshield.germShieldAntimicrobialCoatingValidation();
+		String username = eu.readData("GermShieldSheet", 1, 1);
+		String password = eu.readData("GermShieldSheet", 1, 2);
+		germshield.germShieldAntimicrobialCoatingValidation(username,password);
 	}
 
 	
