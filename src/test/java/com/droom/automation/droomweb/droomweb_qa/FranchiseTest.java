@@ -20,7 +20,7 @@ public class FranchiseTest extends AbstractBaseTest
 	
 	public FranchiseTest()
 	{
-		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
+		this.filepath="C:/Users/Honey/Desktop/QA Automation TestData.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 		franchisepage=new FranchisePage();
 		paymentpage=new PaymentPage();

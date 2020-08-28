@@ -15,9 +15,6 @@ public class DataBaseDemo
 
 	public static int getotp(String qry) throws Exception
 		{
-		
-	//	String qry="";
-		
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection connection = DriverManager.getConnection(url, user, password);
 		Statement statement = connection.createStatement();

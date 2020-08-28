@@ -298,6 +298,9 @@ public class FranchisePage extends SeleniumWrapper
     
     public void franchiseMyOrdersAsAutomobileGermShield()
     {
+    	waitForPageLoad();
+    	enterTextboxDetails(findElement(By.xpath("//input[@id='automobile-address']")), "Gurgaon");
+    	verifyByAttribute(By.xpath("//input[@id='automobile-address']"), "Gurgaon");
     	enterTextboxDetails(findElement(By.xpath("//input[@id='automobile-pincode']")), "110001");
     	verifyByAttribute(By.xpath("//input[@id='automobile-pincode']"), "110001");
     	verifyByContains(By.xpath("//button[@id='auto-gs-submit']"), "Buy Now");

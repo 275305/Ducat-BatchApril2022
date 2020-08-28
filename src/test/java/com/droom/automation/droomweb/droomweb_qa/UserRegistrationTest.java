@@ -17,7 +17,7 @@ public class UserRegistrationTest extends AbstractBaseTest
 	
 	public UserRegistrationTest()
 	{
-		filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
+		filepath="C:/Users/Honey/Desktop/QA Automation TestData.xlsx";
 		eu=new ExcelUtilities(filepath);
 		registrationpage=new RegistrationPage();
 	}

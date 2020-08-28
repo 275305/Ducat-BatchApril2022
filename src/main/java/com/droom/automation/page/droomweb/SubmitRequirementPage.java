@@ -4,8 +4,9 @@ import org.openqa.selenium.By;
 
 import com.droom.automation.lib.DataBaseDemo;
 import com.droom.automation.lib.SeleniumWrapper;
+import com.droom.automation.lib.WebDriverFactory;
 
-public class SubmitRequirement extends SeleniumWrapper
+public class SubmitRequirementPage extends SeleniumWrapper
 {
 	private final static By Click_Select_From_Dropdown=By.xpath("//span[text()='Select From']");
 	private final static By Click_Continue_After_Selecting_Model=By.xpath("(//a[contains(text(),'Continue')])[1]");
@@ -40,7 +41,7 @@ public class SubmitRequirement extends SeleniumWrapper
 	
 	HeaderPage headerpage;
 	
-	public SubmitRequirement()
+	public SubmitRequirementPage()
 	{
 		headerpage=new	HeaderPage();
 	}
@@ -52,10 +53,10 @@ public class SubmitRequirement extends SeleniumWrapper
 	    verifyByContains(By.xpath("//div[text()='Buy']"), "Buy");
 	    executeClickOnElement(By.xpath("//div[text()='Buy']"));
 	}
-	public void selectForVehicles()
+	public void selectWhatAreYouSearchingFor(String searchingFor)
 	{
-	    selectOptionByText(By.xpath("//select[@name='tab']"), "Vehicles");
-	    verifyByContains(By.xpath("//select[@name='tab']"), "Vehicles");
+	    selectOptionByText(By.xpath("//select[@name='tab']"), searchingFor);
+	    verifyByContains(By.xpath("//select[@name='tab']"), searchingFor);
 	}
 	
 	public void selectCategory(String selectCatogery)
@@ -63,6 +64,13 @@ public class SubmitRequirement extends SeleniumWrapper
 		selectOptionByText(Select_Category_After_Vehicle_Selection, selectCatogery);
 		verifyByContains(Select_Category_After_Vehicle_Selection, selectCatogery);
 	}
+	
+	public void selectServiceAfterAutomobileService(String selectCatogeryUnderAutoService)
+	{
+		selectOptionByText(By.xpath("//label[text()='Please select a Service']/parent::div//select"), selectCatogeryUnderAutoService);
+		verifyByContains(By.xpath("//label[text()='Please select a Service']/parent::div//select"), selectCatogeryUnderAutoService);
+	}
+	
 	public void selectConditionAsNew()
 	{
 		executeClickOnElement(By.xpath("//input[@id='req_new']"));
@@ -96,6 +104,23 @@ public class SubmitRequirement extends SeleniumWrapper
 		selectOptionByText(By.xpath("//select[@name='tab']"), "Automobile Services");
 	    verifyByContains(By.xpath("//select[@name='tab']"), "Automobile Services");
 	}
+	
+	public void selectCategoryAfterLoanAndInsurance(String selectCategory)
+	{
+		selectOptionByText(By.xpath("//div[@class='sub-section req_main_loan_insurance']//div//select[@name='sub_category']"), selectCategory);
+		verifyByContains(By.xpath("//div[@class='sub-section req_main_loan_insurance']//div//select[@name='sub_category']"), selectCategory);
+	}
+	public void selectCategoryAfterCertificationServices(String selectCategory)
+	{
+		selectOptionByText(By.xpath("//div[@class='sub-section req_main_certification_services']//div//select[@name='selection']"), selectCategory);
+		verifyByContains(By.xpath("//div[@class='sub-section req_main_certification_services']//div//select[@name='selection']"), selectCategory);
+	}
+	public void selectCategoryAfterAutomobileServices(String selectCategory)
+	{
+		selectOptionByText(By.xpath("//div[@class='form-group floating-group select-form-group active']//select[@name='sub_category']"), selectCategory);
+		verifyByContains(By.xpath("//div[@class='form-group floating-group select-form-group active']//select[@name='sub_category']"), selectCategory);
+	}
+	
 	
 	public void selectServiceUnderLoanAndInsuranceAsAutoloan()
 	{
@@ -248,16 +273,10 @@ public class SubmitRequirement extends SeleniumWrapper
 	    executeClickOnElement(Click_Continue_Three);
 	    howQuicklyPopup();
 	}
-	
-	public void selectCategoryAfterLoanAndInsurance(String selectCategory)
+	public void msgAsThankYou()
 	{
-		selectOptionByText(By.xpath("//div[@class='sub-section req_main_loan_insurance']//div//select[@name='sub_category']"), selectCategory);
-	    verifyByContains(By.xpath("//div[@class='sub-section req_main_loan_insurance']//div//select[@name='sub_category']"), selectCategory);
+		sleep(5000);
+		verifyByContains(By.xpath("//strong[text()='Thank You']"), "Thank You");
 	}
 	
-	public void selectCategoryAfterCertificationServices(String selectCategory)
-	{
-		selectOptionByText(By.xpath("//div[@class='sub-section req_main_certification_services']//div//select[@name='selection']"), selectCategory);
-	    verifyByContains(By.xpath("//div[@class='sub-section req_main_certification_services']//div//select[@name='selection']"), selectCategory);
-	}
 }
