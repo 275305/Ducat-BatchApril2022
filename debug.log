@@ -12,3 +12,10 @@
 [0828/143212.060:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
 [0828/143902.792:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
 [0828/144034.057:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0831/133419.597:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0831/154652.466:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0901/130733.160:ERROR:prune_crash_reports.cc(36)] PruneCrashReportDatabase: Failed to get pending reports
+[0901/170851.256:ERROR:prune_crash_reports.cc(36)] PruneCrashReportDatabase: Failed to get pending reports
+[0901/184842.213:ERROR:file_io_win.cc(162)] CreateFile C:\Users\Honey\AppData\Local\Temp\scoped_dir19540_1147165210\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0901/184842.214:ERROR:file_io_win.cc(171)] CreateFile C:\Users\Honey\AppData\Local\Temp\scoped_dir19540_1147165210\Crashpad\reports\1f9ff0ad-d76f-4982-b0ca-a782aa1013b0.dmp: The system cannot find the path specified. (0x3)
+[0901/184842.215:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed

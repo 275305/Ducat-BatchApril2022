@@ -6,45 +6,87 @@
   </listeners>
   <test thread-count="5" name="DroomWebAutomationTest(failed)">
     <classes>
-      <class name="com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest">
+      <class name="com.droom.automation.droomweb.droomweb_qa.UserRegistrationTest">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="validatSubmitRequirementAsBuyWithVehicleAsUsedScooter"/>
-          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsRepairAndMaintenanceAsTaxi"/>
           <include name="beforeSuite"/>
+          <include name="registerAsProSeller"/>
+          <include name="allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount"/>
           <include name="init"/>
+          <include name="emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount"/>
+        </methods>
+      </class> <!-- com.droom.automation.droomweb.droomweb_qa.UserRegistrationTest -->
+      <class name="com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest">
+        <methods>
+          <include name="validatAlreadyRegisteredBuyerAsNewCar"/>
+          <include name="validatSubmitRequirementAsBuyWithCertificationServicesAsScooter"/>
+          <include name="validatAlreadyRegisteredBuyerAsUsedMotorCycleOrBike"/>
+          <include name="validatSubmitRequirementAsBuyWithCertificationServicesAsCar"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsDentingAndPaintingAsScooter"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsRepairAndMaintenanceAsScooter"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsRegistrationTransferServiceAsMotorCycleOrBike"/>
+          <include name="validatSubmitRequirementAsBuyWithLoanAndInsuranceWithAutoloanAsCar"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsCarCareAndDetailingAsCar"/>
+          <include name="afterMethod"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsRoadSideAssistanceAsMotorCycleOrBike"/>
+          <include name="beforeSuite"/>
+          <include name="validatAlreadyRegisteredBuyerAsUsedTaxi"/>
+          <include name="init"/>
+          <include name="validatSubmitRequirementAsBuyWithLoanAndInsuranceWithAutoloanAsMotorCycleOrBike"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsRoadSideAssistanceAsScooter"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsDentingAndPaintingAsTaxi"/>
+          <include name="beforeTest"/>
+          <include name="validatSubmitRequirementAsBuyWithCertificationServicesAsTaxi"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsCarCareAndDetailingAsMotorCycleOrBike"/>
+          <include name="validatSubmitRequirementAsBuyWithVehicleAsNewCar"/>
+          <include name="validatSubmitRequirementAsBuyWithVehicleAsUsedMotorCycleOrBike"/>
+          <include name="validatSubmitRequirementAsBuyWithVehicleAsUsedScooter"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsDentingAndPaintingAsCar"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsRoadSideAssistanceAsTaxi"/>
+          <include name="validatAlreadyRegisteredBuyerAsNewScooter"/>
+          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsWarrantyAsTaxi"/>
           <include name="validateSubmitRequirementWithBuyAutomobileServicesAsWarrantyAsScooter"/>
         </methods>
       </class> <!-- com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest -->
       <class name="com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest">
         <methods>
           <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="buyGermShieldForAutomobileAsHatchback"/>
-          <include name="beforeSuite"/>
+          <include name="buyGermShieldForAutomobileAsScooter"/>
+          <include name="buyGermShieldForOfficeAsCoWorkingSpace"/>
+          <include name="buyGermShieldForAutomobileAsBus"/>
+          <include name="buyGermShieldForHeavyTransportAsHelicopter"/>
           <include name="buyGermShieldElevatorService"/>
+          <include name="buyGermShieldForAutomobileAsSedan"/>
+          <include name="buyGermShieldForHeavyTransportAsTrain"/>
+          <include name="buyGermShieldForHomeAsFlat"/>
+          <include name="buyGermShieldForOfficeAsHighRiseBuilding"/>
+          <include name="afterMethod"/>
+          <include name="buyGermShieldForAutomobileAsPremiumBike"/>
+          <include name="buyGermShieldForAutomobileAsHatchback"/>
+          <include name="buyGermShieldForHomeAsVilla"/>
+          <include name="beforeSuite"/>
+          <include name="buyGermShieldForHomeAsBungalow"/>
+          <include name="buyGermShieldForHomeAsPenthouse"/>
+          <include name="buyGermShieldForOtherFacility"/>
+          <include name="buyGermShieldForHeavyTransportAsPlane"/>
+          <include name="buyGermShieldForHomeAsFarmhouse"/>
           <include name="init"/>
-          <include name="buyGermShieldForAutomobileAsBike"/>
+          <include name="buyGermShieldForHomeAsIndependent"/>
           <include name="buyGermShieldForOfficeAsIndependentBuilding"/>
         </methods>
       </class> <!-- com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest -->
       <class name="com.droom.automation.droomweb.droomweb_qa.FranchiseTest">
         <methods>
           <include name="getEnterpriseFranchiseAsUpFrontPaymentForOneMonth"/>
-          <include name="beforeTest"/>
-          <include name="ValidatingFranchiseMyOrdersAsFacilityGermShield"/>
-          <include name="ValidatingFranchiseMyOrdersAsAutomobileGermShield"/>
-          <include name="getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth"/>
-          <include name="getSiteFranchiseAsUpFrontPaymentForOneMonth"/>
-          <include name="paymentAmountForBookingCityAsFranchise"/>
           <include name="RegisteringBuyerAsAutomobileGermShield"/>
           <include name="getSiteFranchiseAsEMIForSixMonth"/>
+          <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="getEnterpriseFranchiseAsUpFrontPaymentForSixMonth"/>
           <include name="beforeSuite"/>
           <include name="getSiteFranchiseAsUpFrontPaymentForThreeMonth"/>
           <include name="init"/>
+          <include name="getSiteFranchiseAsEMIForOneMonth"/>
           <include name="getSiteFranchiseAsUpFrontPaymentForSixMonth"/>
         </methods>
       </class> <!-- com.droom.automation.droomweb.droomweb_qa.FranchiseTest -->

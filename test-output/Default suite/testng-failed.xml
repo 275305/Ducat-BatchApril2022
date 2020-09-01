@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest">
+      <class name="com.droom.automation.droomweb.droomweb_qa.FranchiseTest">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
+          <include name="ValidatingFranchiseMyOrdersAsAutomobileGermShield"/>
           <include name="beforeSuite"/>
-          <include name="validateSubmitRequirementWithBuyAutomobileServicesAsCarCareAndDetailingAsScooter"/>
           <include name="init"/>
         </methods>
-      </class> <!-- com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest -->
+      </class> <!-- com.droom.automation.droomweb.droomweb_qa.FranchiseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
