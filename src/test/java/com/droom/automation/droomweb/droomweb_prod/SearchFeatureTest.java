@@ -17,17 +17,13 @@ public class SearchFeatureTest extends AbstractBaseTest
 		this.eu=new ExcelUtilities(filepath);
 		searchpage=new SearchFeaturePage();
 	}
-	
-	
-	@Test(priority = 1)
-	public void serachForVehicleValidationAsLoggedInUser()
-	{
-		String username = eu.readData("BuyFeatureSheet", 1, 1);
-		String password = eu.readData("BuyFeatureSheet", 1, 2);
+//	@Test(priority = 1)
+//	public void serachForVehicleValidationAsLoggedInUser()
+//	{
+//		String username = eu.readData("BuyFeatureSheet", 1, 1);
+//		String password = eu.readData("BuyFeatureSheet", 1, 2);
 //		searchpage.searchForVehicle(username, password);
-	}
-	
-	
+//	}
 //	@Test(priority = 2)
 //	public void serachForBikeValidationAsLoggedInUser()
 //	{
@@ -35,7 +31,6 @@ public class SearchFeatureTest extends AbstractBaseTest
 //		String password = eu.readData("BuyFeatureSheet", 1, 2);
 //		searchpage.searchForBike(username, password);
 //	}
-//	
 //	@Test(priority = 3)
 //	public void serachForScooterValidationAsLoggedInUserAtCheckout()
 //	{
@@ -43,10 +38,9 @@ public class SearchFeatureTest extends AbstractBaseTest
 //		String password = eu.readData("BuyFeatureSheet", 1, 2);
 //		searchpage.searchForScooterAsLoggedInUser(username, password);
 //	}
-//	
-//	@Test(priority = 4)
-//	public void serachForVehicleValidation()
-//	{
-//		searchpage.searchForScooterAsFBLoggedInUser();
-//	}
+	@Test(priority = 4)
+	public void serachForVehicleValidation()
+	{
+		searchpage.searchForScooterAsFBLoggedInUser();
+	}
 }

@@ -19,3 +19,17 @@
 [0901/184842.213:ERROR:file_io_win.cc(162)] CreateFile C:\Users\Honey\AppData\Local\Temp\scoped_dir19540_1147165210\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
 [0901/184842.214:ERROR:file_io_win.cc(171)] CreateFile C:\Users\Honey\AppData\Local\Temp\scoped_dir19540_1147165210\Crashpad\reports\1f9ff0ad-d76f-4982-b0ca-a782aa1013b0.dmp: The system cannot find the path specified. (0x3)
 [0901/184842.215:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0902/124113.775:ERROR:prune_crash_reports.cc(36)] PruneCrashReportDatabase: Failed to get pending reports
+[0902/131514.921:ERROR:file_io_win.cc(162)] CreateFile C:\Users\Honey\AppData\Local\Temp\scoped_dir11920_1850954674\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0902/131514.923:ERROR:file_io_win.cc(171)] CreateFile C:\Users\Honey\AppData\Local\Temp\scoped_dir11920_1850954674\Crashpad\reports\7681bf7e-6471-4ac5-882d-dcaf19117536.dmp: The system cannot find the path specified. (0x3)
+[0902/131514.923:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/112912.180:ERROR:prune_crash_reports.cc(36)] PruneCrashReportDatabase: Failed to get pending reports
+[0903/145333.946:ERROR:prune_crash_reports.cc(36)] PruneCrashReportDatabase: Failed to get pending reports
+[0903/161910.379:ERROR:prune_crash_reports.cc(36)] PruneCrashReportDatabase: Failed to get pending reports
+[0903/195329.577:ERROR:process_info.cc(359)] UncheckedAllocate
+[0903/195716.805:ERROR:process_info.cc(359)] UncheckedAllocate
+[0903/200447.334:ERROR:process_info.cc(359)] UncheckedAllocate
+[0903/204231.822:ERROR:process_info.cc(359)] UncheckedAllocate
+[0907/163159.877:ERROR:prune_crash_reports.cc(36)] PruneCrashReportDatabase: Failed to get pending reports
+[0907/203027.229:ERROR:prune_crash_reports.cc(36)] PruneCrashReportDatabase: Failed to get pending reports
+[0910/012433.885:ERROR:http_transport_win.cc(363)] WinHttpReceiveResponse: The operation completed successfully. (0x0)

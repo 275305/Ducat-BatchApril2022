@@ -10,10 +10,10 @@ public class CreateListingPage extends SeleniumWrapper
 	private final static By Click_Location=By.xpath("//input[@id='location_plugin']");
 	private final static By Enter_City=By.xpath("//div[@id='main_header_location']//label/following-sibling::input");
 	private final static By Select_City_Name=By.xpath("//li[text()='Delhi'])[3]");
-	private final static By Select_Make=By.xpath("//select[@id='make']");
-	private final static By Select_Model=By.xpath("//select[@id='model']");
-	private final static By Select_Year=By.xpath("//select[@id='year']");
-	private final static By Select_Trim=By.xpath("//select[@id='trim']");
+	private final static By Select_Make=By.xpath("//select[@name='make'and@data-field='make']");
+	private final static By Select_Model=By.xpath("//select[@name='model'and@data-field='model']");
+	private final static By Select_Year=By.xpath("//select[@name='year'and@data-field='year']");
+	private final static By Select_Trim=By.xpath("//select[@name='trim'and@data-field='trim']");
 	private final static By Click_Create_Listing_Now=By.xpath("//button[@id='old_listing']");
 	private final static By Login_To_Continue=By.xpath("//a[text()='Create Listing']");
 	private final static By Go_To_Home=By.xpath("//a[text()='Home']");
@@ -30,14 +30,14 @@ public class CreateListingPage extends SeleniumWrapper
 	private final static By Continue_After_Upload=By.xpath("//div[@id='photo']//input[@value='Save and Continue']");
 	private final static By Click_Get_Later=By.xpath("//button[text()='Maybe Later']");
 	private final static By Click_Save_And_Continue_After_Selecting_ListingType=By.xpath("(//input[@value='Save & Continue'])[1]");
-	private final static By Click_For_Premium=By.xpath("//div[text()='Rs. 1099/-']");
-	private final static By Click_For_Normal=By.xpath("//div[text()='Free']");
-	private final static By Click_For_Concierge=By.xpath("//div[contains(text(),'Rs. 699/-')]");
+	private final static By Click_For_Premium=By.xpath("//div[text()='₹499/-']");
+	private final static By Click_For_Normal=By.xpath("//div[text()='free']");
+	private final static By Click_For_Concierge=By.xpath("//div[text()='₹699/-']");
 	private final static By Click_Activate_Listing_Button=By.xpath("//input[@id='activate']");
 	private final static By Click_Cirtification_Tool_Continue_Button=By.xpath("(//input[@value='Save and Continue'])[6]");
 	private final static By Verify_Catogory_Car=By.xpath("//select[@id='wizard_category_id']//option[text()='Car']");
 	private final static By Check_Image=By.xpath("//div[@id='photo']//img");
-	private final static By Verify_Listing_Save_And_Continue=By.xpath("(//button[text()='Save & Continue'])[2]");
+	private final static By Verify_Listing_Save_And_Continue=By.xpath("(//input[@id='regular_submit-button'])[1]");
 
 	
 	
@@ -49,7 +49,7 @@ public class CreateListingPage extends SeleniumWrapper
 	
 	public CreateListingPage()
 	{
-		this.filepath="C:/Users/Honey/Desktop/DroomAutomation TestData.xlsx";
+		this.filepath="C:/Users/Honey/Desktop/Prod Automation Test Data.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 		lp=new LoginPage();
 		hp=new HomePage();
@@ -93,15 +93,14 @@ public class CreateListingPage extends SeleniumWrapper
 	public void keyInformation()
 	{
 		waitForPageLoad();
-		executeScrollDownScript(700);
-		driverClick(Select_Location);
+		moveToElementAndClick(Select_Location);
 		enterTextboxDetails(findElement(Search_Location), "Allahabad");
 		enterKey(Search_Location);
 		verifyByText(Select_Location, "Allahabad");
 		String registerNumber = vehiclesRegistartionRandomNumber();
 		enterTextboxDetails(findElement(Select_Registration_Number),registerNumber );
 		verifyByAttribute(Select_Registration_Number, registerNumber);
-		driverClick(Select_Registration_State);
+		moveToElementAndClick(Select_Registration_State);
 		enterTextboxDetails(findElement(Select_Registartion_Search), "Delhi");
 		sleep(2000);
 		enterKey(Select_Registartion_Search);
@@ -141,7 +140,6 @@ public class CreateListingPage extends SeleniumWrapper
 	{
 		verifyByText(Click_For_Normal, "FREE");
 		executeClickOnElement(Click_For_Normal);
-	//	executeClickOnElement(By.xpath("(//a[text()='Proceed'])[1]"));
 		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
 		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
 	}
@@ -151,7 +149,7 @@ public class CreateListingPage extends SeleniumWrapper
 	{
 		verifyByText(Click_For_Premium, "₹499/-");
 		executeClickOnElement(Click_For_Premium);
-		executeClickOnElement(By.xpath("(//a[text()='Proceed'])[2]"));
+		executeClickOnElement(By.xpath("//input[@id='original_submit-button']"));
 //		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
 //		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
     }
@@ -160,7 +158,7 @@ public class CreateListingPage extends SeleniumWrapper
 	{
 		verifyByText(Click_For_Concierge, "₹699/-");
 		executeClickOnElement(Click_For_Concierge);
-		executeClickOnElement(By.xpath("(//a[text()='Proceed'])[3]"));
+		executeClickOnElement(By.xpath("//input[@id='original_submit-button']"));
 //		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
 //		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
 	}
@@ -184,8 +182,8 @@ public class CreateListingPage extends SeleniumWrapper
 	{
 		waitForPageLoad();
 		executeClickOnElement(By.xpath("(//h2[text()='QuickSell'])[1]"));
-		verifyByContains(Verify_Listing_Save_And_Continue, "Save & Continue");
-		executeClickOnElement(Verify_Listing_Save_And_Continue);
+		verifyByContains(By.xpath("(//input[@value='Save and Continue'])[6]"), "Save & Continue");
+		executeClickOnElement(By.xpath("(//input[@value='Save and Continue'])[6]"));
 	}
 	
 	public void regularSell()

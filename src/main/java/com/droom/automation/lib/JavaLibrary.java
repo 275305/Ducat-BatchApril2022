@@ -91,6 +91,11 @@ public class JavaLibrary
 		Random random=new Random();
 		String firstNumber="9{0}";
 		Object[] obj= {Integer.toString(random.nextInt(999999999)).replaceAll(",", "")};
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		String phoneNumber = MessageFormat.format(firstNumber, obj);
 		return phoneNumber;
 	}

@@ -86,6 +86,7 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		executeClickOnElement(Click_For_Automobile);
 		verifyByContains(Click_For_Car, "Car");
 		executeClickOnElement(Click_For_Car);
+		sleep(2000);
 		verifyByContains(By.xpath("//label[text()='₹ "+amount+"']"), "₹ "+amount+"");
 		verifyByContains(By.xpath("//li[@id='carFirstListing']//p[text()='Sedan']/following-sibling::span[text()='View Details']"), "View Details");
 		executeClickOnElement(By.xpath("//li[@id='carFirstListing']//p[text()='Sedan']/following-sibling::span[text()='View Details']"));
@@ -110,6 +111,7 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		executeClickOnElement(Click_For_Automobile);
 		verifyByContains(Click_For_Bike, "Bike");
 		executeClickOnElement(Click_For_Bike);
+		sleep(2000);
 		verifyByContains(By.xpath("//label[text()='₹ "+amount+"']"), "₹ "+amount+"");
 		verifyByContains(By.xpath("//div[@id='bikeType']//p[text()='Bike']/following-sibling::span[text()='View Details']"), "View Details");
 		executeClickOnElement(By.xpath("//div[@id='bikeType']//p[text()='Bike']/following-sibling::span[text()='View Details']"));
@@ -163,6 +165,7 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		sleep(2000);
 		verifyByContains(Click_For_Premium_Bike, "Premium Bike");
 		executeClickOnElement(Click_For_Premium_Bike);
+		sleep(2000);
 		verifyByContains(By.xpath("//label[text()='₹ "+amount+"']"), "₹ "+amount+"");
 		verifyByContains(By.xpath("//div[@id='premiumBikeType']//p[text()='Super Bike']/following-sibling::span[text()='View Details']"), "View Details");
 		executeClickOnElement(By.xpath("//div[@id='premiumBikeType']//p[text()='Super Bike']/following-sibling::span[text()='View Details']"));

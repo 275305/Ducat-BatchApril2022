@@ -43,6 +43,7 @@ public class LoginPage extends SeleniumWrapper
 	private final static By Enter_Fb_Username=By.xpath("//input[@id='email']");
 	private final static By Enter_Fb_Password=By.xpath("//input[@id='pass']");
 	private final static By Click_Fb_Continue_Button=By.xpath("//input[@value='Log In']");
+	private static final By Click_To_Close_To_Do_PopUp=By.xpath("//div[@id='entryModal']//button");
 	
 //	private final static By =By.xpath("");
 //	private final static By =By.xpath("");
@@ -59,6 +60,8 @@ public class LoginPage extends SeleniumWrapper
 		verifyByText(Click_On_My_Account, "My Account");
 		sleep(2000);
 		executeClickOnElement(Go_To_Home);
+		waitForPageLoad();
+		executeClickOnElement(Click_To_Close_To_Do_PopUp);
 	}
 	
 	public void enterLoginPage()
@@ -187,7 +190,7 @@ public class LoginPage extends SeleniumWrapper
 		switchToWindow("New Tab");
 		sleep(2000);
 		enterTextboxDetails(findElement(Enter_Fb_Username), "honey.maurya@droom.in");
-		enterTextboxDetails(findElement(Enter_Fb_Password), "India@123");
+		enterTextboxDetails(findElement(Enter_Fb_Password), "droom@123");
 		executeClickOnElement(Click_Fb_Continue_Button);
 		sleep(3000);
 		WebDriverFactory.getDriver().switchTo().window(parent);

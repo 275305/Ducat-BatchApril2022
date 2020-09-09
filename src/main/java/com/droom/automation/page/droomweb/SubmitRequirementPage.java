@@ -49,9 +49,24 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	public void selectForBuy()
 	{
 		headerpage.clickSubmitRequirement();
-	    sleep(2000);
+	    sleep(5000);
 	    verifyByContains(By.xpath("//div[text()='Buy']"), "Buy");
 	    executeClickOnElement(By.xpath("//div[text()='Buy']"));
+	}
+	public void selectForSell()
+	{
+		headerpage.clickSubmitRequirement();
+	    sleep(5000);
+	    executeClickOnElement(By.xpath("//div[text()='Sell']"));
+	}
+	public void selectCategoryAfterSell(String enterCategory)
+	{
+		sleep(2000);
+		verifyByContains(By.xpath("//label[text()='"+enterCategory+"']"), enterCategory);
+		executeClickOnElement(By.xpath("//label[text()='"+enterCategory+"']"));
+		verifyByContains(By.xpath("//a[contains(text(),'Proceed')]"), "");
+		executeClickOnElement(By.xpath("//a[contains(text(),'Proceed')]"));
+		switchToWindow("child");
 	}
 	public void selectWhatAreYouSearchingFor(String searchingFor)
 	{
@@ -136,13 +151,43 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	
 	 public void enterBuyerDetails(String firstName,String phoneNumber,String email)
 	 {
-		 sleep(2000);
+		sleep(2000);
 	    enterTextboxDetails(findElement(By.xpath("//input[@id='first_name']")), firstName);
 	    verifyByAttribute(By.xpath("//input[@id='first_name']"), firstName);
 	    enterTextboxDetails(findElement(By.xpath("//input[@id='phone']")), phoneNumber);
 	    verifyByAttribute(By.xpath("//input[@id='phone']"), phoneNumber);
 	    enterTextboxDetails(findElement(By.xpath("//input[@id='email']")), email);
 	    verifyByAttribute(By.xpath("//input[@id='email']"), email);
+	 }
+	 public void enterSellerDetails(String firstName,String lastName,String phoneNumber,String email,String enterSellCategory,String enterPincode,String enterKmDriver,String Make,String Model,String Trim,String Year)
+	 {
+		sleep(5000);
+	    enterTextboxDetails(findElement(By.xpath("//input[@id='first_name']")), firstName);
+	    verifyByAttribute(By.xpath("//input[@id='first_name']"), firstName);
+	    enterTextboxDetails(findElement(By.xpath("//input[@id='last_name']")), lastName);
+	    verifyByAttribute(By.xpath("//input[@id='last_name']"), lastName);
+	    enterTextboxDetails(findElement(By.xpath("//input[@id='email']")), email);
+	    verifyByAttribute(By.xpath("//input[@id='email']"), email);
+	    enterTextboxDetails(findElement(By.xpath("//input[@id='mobile_phone']")), phoneNumber);
+	    verifyByAttribute(By.xpath("//input[@id='mobile_phone']"), phoneNumber);
+	    selectOptionByText(By.xpath("//select[@id='category_id']"), enterSellCategory);
+	    executeClickOnElement(By.xpath("//span[text()='Select From']"));
+	    selectOptionByText(By.xpath("//label[text()='Select Make']/parent::div//select"), Make);
+	    verifyByContains(By.xpath("//label[text()='Select Make']/parent::div//select"), FirstLetterUpperCase(Make));
+	    selectOptionByText(By.xpath("//label[text()='Select Model']/parent::div//select"), Model);
+	    verifyByContains(By.xpath("//label[text()='Select Model']/parent::div//select"), FirstLetterUpperCase(Model));
+	    selectOptionByText(By.xpath("//label[text()='Select Year']/parent::div//select"), Year);
+	    verifyByContains(By.xpath("//label[text()='Select Year']/parent::div//select"), Year);
+	    selectOptionByText(By.xpath("//label[text()='Select Trim']/parent::div//select"), Trim);
+	    verifyByContains(By.xpath("//label[text()='Select Trim']/parent::div//select"), Trim);
+	    enterTextboxDetails(findElement(By.xpath("//input[@id='pincode']")), enterPincode);
+	    verifyByAttribute(By.xpath("//input[@id='pincode']"), enterPincode);
+	    enterTextboxDetails(findElement(By.xpath("//input[@id='kms_driven']")), enterKmDriver);
+	    verifyByAttribute(By.xpath("//input[@id='kms_driven']"), enterKmDriver);
+	    String registerNumber = vehiclesRegistartionRandomNumber();
+	    enterTextboxDetails(findElement(By.xpath("//input[@id='vehicle_registration_number']")),registerNumber );
+	    verifyByAttribute(By.xpath("//input[@id='vehicle_registration_number']"), registerNumber);
+	    executeClickOnElement(By.xpath("//button[text()='Create My Listing']"));
 	 }
 	 
 	 public void selectLocation()

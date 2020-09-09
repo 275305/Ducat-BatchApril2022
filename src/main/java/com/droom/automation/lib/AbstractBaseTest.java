@@ -20,9 +20,9 @@ public class AbstractBaseTest {
     }
 
     @BeforeTest(alwaysRun = true)
-    public final void beforeTest() throws Exception {
+    public final void beforeTest() throws Exception{
         LOG.info("IN BEFORE TEST ======>");
-        baseUrl = "https://qa1.droom.in/";
+        baseUrl = "https://qa9.droom.in/";
         LOG.info("-------------- Before Test -----------------");
         WebDriverFactory.initDriverConfig(baseUrl, browser, "localMachine");
         PageModelFactory.initPageConfig();
