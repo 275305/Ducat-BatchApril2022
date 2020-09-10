@@ -137,7 +137,6 @@ public class LoginPage extends SeleniumWrapper
 		verifyByText(Verify_Text_For_ProSeller_Registration, "Register As a Pro-Seller");
 	}
 	
-	
 	public void loginValidationForProSellerByOTP(String username) throws Exception
 	{
 		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
@@ -153,7 +152,6 @@ public class LoginPage extends SeleniumWrapper
 		executeClickOnElement(Click_Login_ViaOTP);
 		executeClickOnElement(Click_On_PopUp_For_Proseller);
 		verifyByText(Verify_Text_For_ProSeller_Registration, "Register As a Pro-Seller");
-		
 	}
 	
 	public void loginValidationByForgotYourPassword()

@@ -1009,11 +1009,134 @@ public class SubmitRequirementTest extends AbstractBaseTest
 //			submitreq.clickSubmitAfterBuyerDetails();
 //			submitreq.msgAsThankYou();
 //		}
+//		
+//		// --------------------FOR BUY FEATURE---------------->>>>>>>>>>>>>>>>>>>>>>
+//		
+//		@Test(priority = 53)
+//		public void validateSellWithVehiclesAsBus()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 1, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 1, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 1, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 1,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 1, 12);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//		@Test(priority = 54)
+//		public void validateSellWithVehiclesAsCar()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 2, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 2, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 2, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 2,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 2, 12);
+//			submitreq.selectForSell();
+//			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//		@Test(priority = 55)
+//		public void validateSellWithVehiclesAsMotorcycle_Bike()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 3, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 3, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 3, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 3,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 3, 12);
+//			submitreq.selectForSell();
+//			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//		@Test(priority = 56)
+//		public void validateSellWithVehiclesAsPremium_SuperCar()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 4, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 4, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 4, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 4,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 4, 12);
+//			submitreq.selectForSell();
+//			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//		@Test(priority = 57)
+//		public void validateSellWithVehiclesAsScooter()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 5, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 5, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 5, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 5,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 5, 12);
+//			submitreq.selectForSell();
+//			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//		@Test(priority = 58)
+//		public void validateSellWithVehiclesAsTaxi()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 6, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 6, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 6, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 6,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 6, 12);
+//			submitreq.selectForSell();
+//			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
 		
-		// --------------------FOR BUY FEATURE---------------->>>>>>>>>>>>>>>>>>>>>>
+		//----------------------FOR BUY FEATURE AS LOGGED IN USER---------------->>>>>>>>
 		
 		@Test(priority = 53)
-		public void validateSellWithVehiclesAsBus()
+		public void validateSellAsLoggedInUserWithVehiclesAsBus()
 		{
 			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
 			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
@@ -1027,13 +1150,16 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Model = eu.readData("Submit Requirements For Sell", 1, 10);
 			String Trim = eu.readData("Submit Requirements For Sell", 1,11);
 			String Year = eu.readData("Submit Requirements For Sell", 1, 12);
+			String username = eu.readData("Submit Requirements For Sell", 1,13);
+			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+			submitreq.submitReqAsIndividualLoggedInUser(username, password);
 			submitreq.selectForSell();
 			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email, enterSellCategory, enterPincode, enterKmDriver,Make, Model, Trim, Year);
+			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
 		
 		@Test(priority = 54)
-		public void validateSellWithVehiclesAsCar()
+		public void validateSellAsLoggedInUserWithVehiclesAsCar()
 		{
 			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
 			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
@@ -1047,13 +1173,16 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Model = eu.readData("Submit Requirements For Sell", 2, 10);
 			String Trim = eu.readData("Submit Requirements For Sell", 2,11);
 			String Year = eu.readData("Submit Requirements For Sell", 2, 12);
+			String username = eu.readData("Submit Requirements For Sell", 1,13);
+			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+			submitreq.submitReqAsIndividualLoggedInUser(username, password);
 			submitreq.selectForSell();
 			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email, enterSellCategory, enterPincode, enterKmDriver,Make, Model, Trim, Year);
+			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
 		
 		@Test(priority = 55)
-		public void validateSellWithVehiclesAsMotorcycle_Bike()
+		public void validateSellAsLoggedInUserWithVehiclesAsMotorcycle_Bike()
 		{
 			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
 			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
@@ -1067,13 +1196,16 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Model = eu.readData("Submit Requirements For Sell", 3, 10);
 			String Trim = eu.readData("Submit Requirements For Sell", 3,11);
 			String Year = eu.readData("Submit Requirements For Sell", 3, 12);
+			String username = eu.readData("Submit Requirements For Sell", 1,13);
+			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+			submitreq.submitReqAsIndividualLoggedInUser(username, password);
 			submitreq.selectForSell();
 			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email, enterSellCategory, enterPincode, enterKmDriver,Make, Model, Trim, Year);
+			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
 		
 		@Test(priority = 56)
-		public void validateSellWithVehiclesAsPremium_SuperCar()
+		public void validateSellAsLoggedInUserWithVehiclesAsPremium_SuperCar()
 		{
 			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
 			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
@@ -1087,13 +1219,16 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Model = eu.readData("Submit Requirements For Sell", 4, 10);
 			String Trim = eu.readData("Submit Requirements For Sell", 4,11);
 			String Year = eu.readData("Submit Requirements For Sell", 4, 12);
+			String username = eu.readData("Submit Requirements For Sell", 1,13);
+			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+			submitreq.submitReqAsIndividualLoggedInUser(username, password);
 			submitreq.selectForSell();
 			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email, enterSellCategory, enterPincode, enterKmDriver,Make, Model, Trim, Year);
+			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
 		
 		@Test(priority = 57)
-		public void validateSellWithVehiclesAsScooter()
+		public void validateSellAsLoggedInUserWithVehiclesAsScooter()
 		{
 			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
 			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
@@ -1107,13 +1242,16 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Model = eu.readData("Submit Requirements For Sell", 5, 10);
 			String Trim = eu.readData("Submit Requirements For Sell", 5,11);
 			String Year = eu.readData("Submit Requirements For Sell", 5, 12);
+			String username = eu.readData("Submit Requirements For Sell", 1,13);
+			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+			submitreq.submitReqAsIndividualLoggedInUser(username, password);
 			submitreq.selectForSell();
 			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email, enterSellCategory, enterPincode, enterKmDriver,Make, Model, Trim, Year);
+			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
 		
 		@Test(priority = 58)
-		public void validateSellWithVehiclesAsTaxi()
+		public void validateSellAsLoggedInUserWithVehiclesAsTaxi()
 		{
 			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
 			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
@@ -1127,8 +1265,55 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Model = eu.readData("Submit Requirements For Sell", 6, 10);
 			String Trim = eu.readData("Submit Requirements For Sell", 6,11);
 			String Year = eu.readData("Submit Requirements For Sell", 6, 12);
+			String username = eu.readData("Submit Requirements For Sell", 1,13);
+			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+			submitreq.submitReqAsIndividualLoggedInUser(username, password);
 			submitreq.selectForSell();
 			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email, enterSellCategory, enterPincode, enterKmDriver,Make, Model, Trim, Year);
+			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
+		
+	 //-------------------OTHER SERVICES------------>>>>>>>>>>>
+	
+		@Test(priority = 59)
+		public void validateLoanAndInsuranceAsLoggedInUser()
+		{
+			String enterCategory = eu.readData("Submit Requirements For Sell", 7, 1);
+			String username = eu.readData("Submit Requirements For Sell", 7,13);
+			String password = eu.readData("Submit Requirements For Sell", 7, 14);
+			submitreq.submitReqAsProSellerLoggedInUser(username, password);
+			submitreq.selectForSell();
+			submitreq.selectCategoryAfterSell(enterCategory);
+		}
+		@Test(priority = 60)
+		public void validateCertifactionServicesAsLoggedInUser()
+		{
+			String enterCategory = eu.readData("Submit Requirements For Sell", 8, 1);
+			String username = eu.readData("Submit Requirements For Sell", 7,13);
+			String password = eu.readData("Submit Requirements For Sell", 7, 14);
+			submitreq.submitReqAsProSellerLoggedInUser(username, password);
+			submitreq.selectForSell();
+			submitreq.selectCategoryAfterSell(enterCategory);
+		}
+		@Test(priority = 61)
+		public void validateAutomobileServicesAsLoggedInUser()
+		{
+			String enterCategory = eu.readData("Submit Requirements For Sell", 9, 1);
+			String username = eu.readData("Submit Requirements For Sell", 7,13);
+			String password = eu.readData("Submit Requirements For Sell", 7, 14);
+			submitreq.submitReqAsProSellerLoggedInUser(username, password);
+			submitreq.selectForSell();
+			submitreq.selectCategoryAfterSell(enterCategory);
+		}
+		@Test(priority = 62)
+		public void validateEverythingElseAsLoggedInUser()
+		{
+			String enterCategory = eu.readData("Submit Requirements For Sell", 10, 1);
+			String username = eu.readData("Submit Requirements For Sell", 7,13);
+			String password = eu.readData("Submit Requirements For Sell", 7, 14);
+			submitreq.submitReqAsProSellerLoggedInUser(username, password);
+			submitreq.selectForSell();
+			submitreq.selectCategoryAfterSell(enterCategory);
+		}
+		
 }

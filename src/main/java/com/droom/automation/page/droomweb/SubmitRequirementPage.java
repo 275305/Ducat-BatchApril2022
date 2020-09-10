@@ -40,12 +40,27 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	
 	
 	HeaderPage headerpage;
+	LoginPage loginpage;
 	
 	public SubmitRequirementPage()
 	{
 		headerpage=new	HeaderPage();
+		loginpage=new LoginPage();
 	}
-	
+	public void submitReqAsIndividualLoggedInUser(String username, String password)
+	{
+		loginpage.enterLoginPage();
+		loginpage.loginValidationForIndividualAccount(username, password);
+		loginpage.goToHome();
+	}
+	public void submitReqAsProSellerLoggedInUser(String username, String password)
+	{
+		loginpage.enterLoginPage();
+		loginpage.loginValidationForIndividualAccount(username, password);
+		sleep(2000);
+		executeClickOnElement(By.xpath("//div[@id='qs-journey-hiw']//span[text()='×']"));
+		executeClickOnElement(By.xpath("//span[text()='Home']"));
+	}
 	public void selectForBuy()
 	{
 		headerpage.clickSubmitRequirement();
@@ -159,7 +174,7 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	    enterTextboxDetails(findElement(By.xpath("//input[@id='email']")), email);
 	    verifyByAttribute(By.xpath("//input[@id='email']"), email);
 	 }
-	 public void enterSellerDetails(String firstName,String lastName,String phoneNumber,String email,String enterSellCategory,String enterPincode,String enterKmDriver,String Make,String Model,String Trim,String Year)
+	 public void enterSellerDetails(String firstName,String lastName,String phoneNumber,String email)
 	 {
 		sleep(5000);
 	    enterTextboxDetails(findElement(By.xpath("//input[@id='first_name']")), firstName);
@@ -170,6 +185,9 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	    verifyByAttribute(By.xpath("//input[@id='email']"), email);
 	    enterTextboxDetails(findElement(By.xpath("//input[@id='mobile_phone']")), phoneNumber);
 	    verifyByAttribute(By.xpath("//input[@id='mobile_phone']"), phoneNumber);
+	 }
+	 public void enterSellerDeatilsAfterNumber(String enterSellCategory,String enterPincode,String enterKmDriver,String Make,String Model,String Trim,String Year)
+	 {
 	    selectOptionByText(By.xpath("//select[@id='category_id']"), enterSellCategory);
 	    executeClickOnElement(By.xpath("//span[text()='Select From']"));
 	    selectOptionByText(By.xpath("//label[text()='Select Make']/parent::div//select"), Make);
