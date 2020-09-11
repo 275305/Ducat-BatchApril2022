@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="409097" started-at="2020-09-10T22:35:48 IST" finished-at="2020-09-10T22:42:37 IST">
+  <suite name="Default suite" duration-ms="311214" started-at="2020-09-12T02:44:51 IST" finished-at="2020-09-12T02:50:03 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="409097" started-at="2020-09-10T22:35:48 IST" finished-at="2020-09-10T22:42:37 IST">
+    <test name="Default test" duration-ms="311214" started-at="2020-09-12T02:44:51 IST" finished-at="2020-09-12T02:50:03 IST">
       <class name="com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="beforeSuite" is-config="true" duration-ms="43" started-at="2020-09-10T22:35:48 IST" finished-at="2020-09-10T22:35:48 IST">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="beforeSuite" is-config="true" duration-ms="40" started-at="2020-09-12T02:44:51 IST" finished-at="2020-09-12T02:44:51 IST">
           <params>
             <param index="0">
               <value>
@@ -18,118 +18,156 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="beforeTest" is-config="true" duration-ms="17" started-at="2020-09-10T22:35:48 IST" finished-at="2020-09-10T22:35:48 IST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="beforeTest" is-config="true" duration-ms="16" started-at="2020-09-12T02:44:51 IST" finished-at="2020-09-12T02:44:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="init" is-config="true" duration-ms="22729" started-at="2020-09-10T22:35:48 IST" finished-at="2020-09-10T22:36:11 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="init" is-config="true" duration-ms="13330" started-at="2020-09-12T02:44:51 IST" finished-at="2020-09-12T02:45:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="validateSellAsLoggedInUserWithVehiclesAsBus()[pri:53, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="validateSellAsLoggedInUserWithVehiclesAsBus" duration-ms="72657" started-at="2020-09-10T22:36:11 IST" finished-at="2020-09-10T22:37:23 IST">
+        <test-method status="PASS" signature="validateSubmitRequirementAsExchangeByRegisteringWithNewCar()[pri:71, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="validateSubmitRequirementAsExchangeByRegisteringWithNewCar" duration-ms="29642" started-at="2020-09-12T02:45:05 IST" finished-at="2020-09-12T02:45:35 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateSellAsLoggedInUserWithVehiclesAsBus -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="1226" started-at="2020-09-10T22:37:23 IST" finished-at="2020-09-10T22:37:25 IST">
+        </test-method> <!-- validateSubmitRequirementAsExchangeByRegisteringWithNewCar -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="afterMethod" is-config="true" duration-ms="848" started-at="2020-09-12T02:45:35 IST" finished-at="2020-09-12T02:45:35 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateSellAsLoggedInUserWithVehiclesAsBus status=SUCCESS method=SubmitRequirementTest.validateSellAsLoggedInUserWithVehiclesAsBus()[pri:53, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6] output={null}]]]>
+                <![CDATA[[TestResult name=validateSubmitRequirementAsExchangeByRegisteringWithNewCar status=SUCCESS method=SubmitRequirementTest.validateSubmitRequirementAsExchangeByRegisteringWithNewCar()[pri:71, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="init" is-config="true" duration-ms="19458" started-at="2020-09-10T22:37:25 IST" finished-at="2020-09-10T22:37:44 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="init" is-config="true" duration-ms="11183" started-at="2020-09-12T02:45:35 IST" finished-at="2020-09-12T02:45:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="validateSellAsLoggedInUserWithVehiclesAsCar()[pri:54, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="validateSellAsLoggedInUserWithVehiclesAsCar" duration-ms="43957" started-at="2020-09-10T22:37:44 IST" finished-at="2020-09-10T22:38:28 IST">
+        <test-method status="PASS" signature="validateSubmitRequirementAsExchangeByRegisteringWithNewMotercycle_Bike()[pri:72, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="validateSubmitRequirementAsExchangeByRegisteringWithNewMotercycle_Bike" duration-ms="28189" started-at="2020-09-12T02:45:47 IST" finished-at="2020-09-12T02:46:15 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateSellAsLoggedInUserWithVehiclesAsCar -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="1216" started-at="2020-09-10T22:38:28 IST" finished-at="2020-09-10T22:38:29 IST">
+        </test-method> <!-- validateSubmitRequirementAsExchangeByRegisteringWithNewMotercycle_Bike -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="afterMethod" is-config="true" duration-ms="835" started-at="2020-09-12T02:46:15 IST" finished-at="2020-09-12T02:46:16 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateSellAsLoggedInUserWithVehiclesAsCar status=SUCCESS method=SubmitRequirementTest.validateSellAsLoggedInUserWithVehiclesAsCar()[pri:54, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6] output={null}]]]>
+                <![CDATA[[TestResult name=validateSubmitRequirementAsExchangeByRegisteringWithNewMotercycle_Bike status=SUCCESS method=SubmitRequirementTest.validateSubmitRequirementAsExchangeByRegisteringWithNewMotercycle_Bike()[pri:72, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="init" is-config="true" duration-ms="27755" started-at="2020-09-10T22:38:29 IST" finished-at="2020-09-10T22:38:57 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="init" is-config="true" duration-ms="11993" started-at="2020-09-12T02:46:16 IST" finished-at="2020-09-12T02:46:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="validateSellAsLoggedInUserWithVehiclesAsMotorcycle_Bike()[pri:55, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="validateSellAsLoggedInUserWithVehiclesAsMotorcycle_Bike" duration-ms="42241" started-at="2020-09-10T22:38:57 IST" finished-at="2020-09-10T22:39:39 IST">
+        <test-method status="PASS" signature="validateSubmitRequirementAsExchangeByRegisteringWithNewScooter()[pri:73, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="validateSubmitRequirementAsExchangeByRegisteringWithNewScooter" duration-ms="23867" started-at="2020-09-12T02:46:28 IST" finished-at="2020-09-12T02:46:52 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateSellAsLoggedInUserWithVehiclesAsMotorcycle_Bike -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="1203" started-at="2020-09-10T22:39:39 IST" finished-at="2020-09-10T22:39:41 IST">
+        </test-method> <!-- validateSubmitRequirementAsExchangeByRegisteringWithNewScooter -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="afterMethod" is-config="true" duration-ms="840" started-at="2020-09-12T02:46:52 IST" finished-at="2020-09-12T02:46:52 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateSellAsLoggedInUserWithVehiclesAsMotorcycle_Bike status=SUCCESS method=SubmitRequirementTest.validateSellAsLoggedInUserWithVehiclesAsMotorcycle_Bike()[pri:55, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6] output={null}]]]>
+                <![CDATA[[TestResult name=validateSubmitRequirementAsExchangeByRegisteringWithNewScooter status=SUCCESS method=SubmitRequirementTest.validateSubmitRequirementAsExchangeByRegisteringWithNewScooter()[pri:73, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="init" is-config="true" duration-ms="21514" started-at="2020-09-10T22:39:41 IST" finished-at="2020-09-10T22:40:02 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="init" is-config="true" duration-ms="11718" started-at="2020-09-12T02:46:52 IST" finished-at="2020-09-12T02:47:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="validateSellAsLoggedInUserWithVehiclesAsPremium_SuperCar()[pri:56, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="validateSellAsLoggedInUserWithVehiclesAsPremium_SuperCar" duration-ms="37649" started-at="2020-09-10T22:40:02 IST" finished-at="2020-09-10T22:40:40 IST">
+        <test-method status="PASS" signature="validateSubmitRequirementAsExchangeByRegisteringWithNewTaxi()[pri:74, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="validateSubmitRequirementAsExchangeByRegisteringWithNewTaxi" duration-ms="28729" started-at="2020-09-12T02:47:04 IST" finished-at="2020-09-12T02:47:33 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateSellAsLoggedInUserWithVehiclesAsPremium_SuperCar -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="1211" started-at="2020-09-10T22:40:40 IST" finished-at="2020-09-10T22:40:41 IST">
+        </test-method> <!-- validateSubmitRequirementAsExchangeByRegisteringWithNewTaxi -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="afterMethod" is-config="true" duration-ms="837" started-at="2020-09-12T02:47:33 IST" finished-at="2020-09-12T02:47:34 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateSellAsLoggedInUserWithVehiclesAsPremium_SuperCar status=SUCCESS method=SubmitRequirementTest.validateSellAsLoggedInUserWithVehiclesAsPremium_SuperCar()[pri:56, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6] output={null}]]]>
+                <![CDATA[[TestResult name=validateSubmitRequirementAsExchangeByRegisteringWithNewTaxi status=SUCCESS method=SubmitRequirementTest.validateSubmitRequirementAsExchangeByRegisteringWithNewTaxi()[pri:74, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="init" is-config="true" duration-ms="15566" started-at="2020-09-10T22:40:41 IST" finished-at="2020-09-10T22:40:57 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="init" is-config="true" duration-ms="10504" started-at="2020-09-12T02:47:34 IST" finished-at="2020-09-12T02:47:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="validateSellAsLoggedInUserWithVehiclesAsScooter()[pri:57, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="validateSellAsLoggedInUserWithVehiclesAsScooter" duration-ms="38743" started-at="2020-09-10T22:40:57 IST" finished-at="2020-09-10T22:41:35 IST">
+        <test-method status="PASS" signature="validateSubmitRequirementAsExchangeByRegisteringWithUsedCar()[pri:75, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="validateSubmitRequirementAsExchangeByRegisteringWithUsedCar" duration-ms="27420" started-at="2020-09-12T02:47:44 IST" finished-at="2020-09-12T02:48:12 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateSellAsLoggedInUserWithVehiclesAsScooter -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="1184" started-at="2020-09-10T22:41:35 IST" finished-at="2020-09-10T22:41:36 IST">
+        </test-method> <!-- validateSubmitRequirementAsExchangeByRegisteringWithUsedCar -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="afterMethod" is-config="true" duration-ms="851" started-at="2020-09-12T02:48:12 IST" finished-at="2020-09-12T02:48:13 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateSellAsLoggedInUserWithVehiclesAsScooter status=SUCCESS method=SubmitRequirementTest.validateSellAsLoggedInUserWithVehiclesAsScooter()[pri:57, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6] output={null}]]]>
+                <![CDATA[[TestResult name=validateSubmitRequirementAsExchangeByRegisteringWithUsedCar status=SUCCESS method=SubmitRequirementTest.validateSubmitRequirementAsExchangeByRegisteringWithUsedCar()[pri:75, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="init" is-config="true" duration-ms="19040" started-at="2020-09-10T22:41:36 IST" finished-at="2020-09-10T22:41:55 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="init" is-config="true" duration-ms="9784" started-at="2020-09-12T02:48:13 IST" finished-at="2020-09-12T02:48:22 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="validateSellAsLoggedInUserWithVehiclesAsTaxi()[pri:58, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="validateSellAsLoggedInUserWithVehiclesAsTaxi" duration-ms="40092" started-at="2020-09-10T22:41:56 IST" finished-at="2020-09-10T22:42:36 IST">
+        <test-method status="PASS" signature="validateSubmitRequirementAsExchangeByRegisteringWithUsedMotercycle_Bike()[pri:76, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="validateSubmitRequirementAsExchangeByRegisteringWithUsedMotercycle_Bike" duration-ms="26356" started-at="2020-09-12T02:48:22 IST" finished-at="2020-09-12T02:48:49 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateSellAsLoggedInUserWithVehiclesAsTaxi -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6]" name="afterMethod" is-config="true" duration-ms="1256" started-at="2020-09-10T22:42:36 IST" finished-at="2020-09-10T22:42:37 IST">
+        </test-method> <!-- validateSubmitRequirementAsExchangeByRegisteringWithUsedMotercycle_Bike -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="afterMethod" is-config="true" duration-ms="766" started-at="2020-09-12T02:48:49 IST" finished-at="2020-09-12T02:48:49 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateSellAsLoggedInUserWithVehiclesAsTaxi status=SUCCESS method=SubmitRequirementTest.validateSellAsLoggedInUserWithVehiclesAsTaxi()[pri:58, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@5ae50ce6] output={null}]]]>
+                <![CDATA[[TestResult name=validateSubmitRequirementAsExchangeByRegisteringWithUsedMotercycle_Bike status=SUCCESS method=SubmitRequirementTest.validateSubmitRequirementAsExchangeByRegisteringWithUsedMotercycle_Bike()[pri:76, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="init" is-config="true" duration-ms="9923" started-at="2020-09-12T02:48:49 IST" finished-at="2020-09-12T02:48:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="validateSubmitRequirementAsExchangeByRegisteringWithUsedScooter()[pri:77, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="validateSubmitRequirementAsExchangeByRegisteringWithUsedScooter" duration-ms="26051" started-at="2020-09-12T02:48:59 IST" finished-at="2020-09-12T02:49:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSubmitRequirementAsExchangeByRegisteringWithUsedScooter -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="afterMethod" is-config="true" duration-ms="724" started-at="2020-09-12T02:49:25 IST" finished-at="2020-09-12T02:49:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateSubmitRequirementAsExchangeByRegisteringWithUsedScooter status=SUCCESS method=SubmitRequirementTest.validateSubmitRequirementAsExchangeByRegisteringWithUsedScooter()[pri:77, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="init" is-config="true" duration-ms="10371" started-at="2020-09-12T02:49:26 IST" finished-at="2020-09-12T02:49:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="validateSubmitRequirementAsExchangeByRegisteringWithUsedTaxi()[pri:78, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="validateSubmitRequirementAsExchangeByRegisteringWithUsedTaxi" duration-ms="25221" started-at="2020-09-12T02:49:37 IST" finished-at="2020-09-12T02:50:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSubmitRequirementAsExchangeByRegisteringWithUsedTaxi -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738]" name="afterMethod" is-config="true" duration-ms="771" started-at="2020-09-12T02:50:02 IST" finished-at="2020-09-12T02:50:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateSubmitRequirementAsExchangeByRegisteringWithUsedTaxi status=SUCCESS method=SubmitRequirementTest.validateSubmitRequirementAsExchangeByRegisteringWithUsedTaxi()[pri:78, instance:com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest@be64738] output={null}]]]>
               </value>
             </param>
           </params>

@@ -39,7 +39,8 @@ public class SubmitRequirementTest extends AbstractBaseTest
 //		String bodytype = eu.readData("Submit Requirements", 1, 9);
 //		String fueltype = eu.readData("Submit Requirements", 1, 10);
 //		String transmissiontype = eu.readData("Submit Requirements", 1, 11);
-//		submitreq.selectForBuy();
+//		String SelectRequirement = eu.readData("Submit Requirements", 1, 11);
+//	//	submitreq.selectRequirement(SelectRequirement);
 //		submitreq.selectWhatAreYouSearchingFor(searchingFor);
 //		submitreq.selectCategory(selectCatogery);
 //		submitreq.selectConditionAsNew();
@@ -615,10 +616,7 @@ public class SubmitRequirementTest extends AbstractBaseTest
 //	{
 //		String searchingFor = eu.readData("Submit Requirements", 17, 12);
 //		String selectCatogeryUnderAutoService = eu.readData("Submit Requirements", 17, 13);
-//		System.out.println(searchingFor);
-//		System.out.println(selectCatogeryUnderAutoService);
 //		String selectCategory = eu.readData("Submit Requirements", 17, 4);
-//		System.out.println(selectCategory);
 //		submitreq.selectForBuy();
 //		submitreq.selectWhatAreYouSearchingFor(searchingFor);
 //		submitreq.selectServiceAfterAutomobileService(selectCatogeryUnderAutoService);
@@ -1132,188 +1130,416 @@ public class SubmitRequirementTest extends AbstractBaseTest
 //			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
 //			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 //		}
+//		
+//		//----------------------FOR BUY FEATURE AS LOGGED IN USER---------------->>>>>>>>
+//		
+//		@Test(priority = 53)
+//		public void validateSellAsLoggedInUserWithVehiclesAsBus()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 1, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 1, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 1, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 1,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 1, 12);
+//			String username = eu.readData("Submit Requirements For Sell", 1,13);
+//			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+//			submitreq.submitReqAsIndividualLoggedInUser(username, password);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//		@Test(priority = 54)
+//		public void validateSellAsLoggedInUserWithVehiclesAsCar()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 2, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 2, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 2, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 2,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 2, 12);
+//			String username = eu.readData("Submit Requirements For Sell", 1,13);
+//			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+//			submitreq.submitReqAsIndividualLoggedInUser(username, password);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//		@Test(priority = 55)
+//		public void validateSellAsLoggedInUserWithVehiclesAsMotorcycle_Bike()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 3, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 3, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 3, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 3,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 3, 12);
+//			String username = eu.readData("Submit Requirements For Sell", 1,13);
+//			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+//			submitreq.submitReqAsIndividualLoggedInUser(username, password);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//		@Test(priority = 56)
+//		public void validateSellAsLoggedInUserWithVehiclesAsPremium_SuperCar()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 4, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 4, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 4, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 4,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 4, 12);
+//			String username = eu.readData("Submit Requirements For Sell", 1,13);
+//			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+//			submitreq.submitReqAsIndividualLoggedInUser(username, password);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//		@Test(priority = 57)
+//		public void validateSellAsLoggedInUserWithVehiclesAsScooter()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 5, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 5, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 5, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 5,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 5, 12);
+//			String username = eu.readData("Submit Requirements For Sell", 1,13);
+//			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+//			submitreq.submitReqAsIndividualLoggedInUser(username, password);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//		@Test(priority = 58)
+//		public void validateSellAsLoggedInUserWithVehiclesAsTaxi()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
+//			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
+//			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
+//			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
+//			String email = eu.readData("Submit Requirements For Sell", 1, 5);
+//			String enterSellCategory = eu.readData("Submit Requirements For Sell", 6, 6);
+//			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
+//			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
+//			String Make = eu.readData("Submit Requirements For Sell", 6, 9);
+//			String Model = eu.readData("Submit Requirements For Sell", 6, 10);
+//			String Trim = eu.readData("Submit Requirements For Sell", 6,11);
+//			String Year = eu.readData("Submit Requirements For Sell", 6, 12);
+//			String username = eu.readData("Submit Requirements For Sell", 1,13);
+//			String password = eu.readData("Submit Requirements For Sell", 1, 14);
+//			submitreq.submitReqAsIndividualLoggedInUser(username, password);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+//		}
+//		
+//	 //-------------------OTHER SERVICES------------>>>>>>>>>>>
+//	
+//		@Test(priority = 59)
+//		public void validateLoanAndInsuranceAsLoggedInUser()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 7, 1);
+//			String username = eu.readData("Submit Requirements For Sell", 7,13);
+//			String password = eu.readData("Submit Requirements For Sell", 7, 14);
+//			submitreq.submitReqAsProSellerLoggedInUser(username, password);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//		}
+//		@Test(priority = 60)
+//		public void validateCertifactionServicesAsLoggedInUser()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 8, 1);
+//			String username = eu.readData("Submit Requirements For Sell", 7,13);
+//			String password = eu.readData("Submit Requirements For Sell", 7, 14);
+//			submitreq.submitReqAsProSellerLoggedInUser(username, password);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//		}
+//		@Test(priority = 61)
+//		public void validateAutomobileServicesAsLoggedInUser()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 9, 1);
+//			String username = eu.readData("Submit Requirements For Sell", 7,13);
+//			String password = eu.readData("Submit Requirements For Sell", 7, 14);
+//			submitreq.submitReqAsProSellerLoggedInUser(username, password);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//		}
+//		@Test(priority = 62)
+//		public void validateEverythingElseAsLoggedInUser()
+//		{
+//			String enterCategory = eu.readData("Submit Requirements For Sell", 10, 1);
+//			String username = eu.readData("Submit Requirements For Sell", 7,13);
+//			String password = eu.readData("Submit Requirements For Sell", 7, 14);
+//			submitreq.submitReqAsProSellerLoggedInUser(username, password);
+//			submitreq.selectForSell();
+//			submitreq.selectCategoryAfterSell(enterCategory);
+//		}
+		//-----------------------EXCHANGE FEATURE AS ALREADY REGISTERED INDIVIDUAL---------------->>>>>>>>>>>>>>>>>>>>
 		
-		//----------------------FOR BUY FEATURE AS LOGGED IN USER---------------->>>>>>>>
+//		@Test(priority = 63)
+//		public void validateSubmitRequirementAsExchangeWithNewCar()
+//		{
+//		String selectCategory = eu.readData("Submit Requirements", 17, 4);
+//		submitreq.selectForExchange();
+//		submitreq.selectCategoryForExchange(selectCategory);
+//		submitreq.selectConditionAsNew();
+//		submitreq.selectLocation();
+//		submitreq.clickContinueAfterSelectingLocation();
+//		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+//		submitreq.clickSubmitAfterBuyerDetails();
+//		}
+//		@Test(priority = 64)
+//		public void validateSubmitRequirementAsExchangeWithNewMotercycle_Bike()
+//		{
+//		String selectCategory = eu.readData("Submit Requirements", 18, 4);
+//		submitreq.selectForExchange();
+//		submitreq.selectCategoryForExchange(selectCategory);
+//		submitreq.selectConditionAsNew();
+//		submitreq.selectLocation();
+//		submitreq.clickContinueAfterSelectingLocation();
+//		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+//		submitreq.clickSubmitAfterBuyerDetails();
+//		}
+//		@Test(priority = 65)
+//		public void validateSubmitRequirementAsExchangeWithNewScooter()
+//		{
+//		String selectCategory = eu.readData("Submit Requirements", 19, 4);
+//		submitreq.selectForExchange();
+//		submitreq.selectCategoryForExchange(selectCategory);
+//		submitreq.selectConditionAsNew();
+//		submitreq.selectLocation();
+//		submitreq.clickContinueAfterSelectingLocation();
+//		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+//		submitreq.clickSubmitAfterBuyerDetails();
+//		}
+//		@Test(priority = 66)
+//		public void validateSubmitRequirementAsExchangeWithNewTaxi()
+//		{
+//		String selectCategory = eu.readData("Submit Requirements", 20, 4);
+//		submitreq.selectForExchange();
+//		submitreq.selectCategoryForExchange(selectCategory);
+//		submitreq.selectConditionAsNew();
+//		submitreq.selectLocation();
+//		submitreq.clickContinueAfterSelectingLocation();
+//		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+//		submitreq.clickSubmitAfterBuyerDetails();
+//		}
+//		@Test(priority = 67)
+//		public void validateSubmitRequirementAsExchangeWithUsedCar()
+//		{
+//		String selectCategory = eu.readData("Submit Requirements", 17, 4);
+//		submitreq.selectForExchange();
+//		submitreq.selectCategoryForExchange(selectCategory);
+//		submitreq.selectConditionAsUsed();
+//		submitreq.selectLocation();
+//		submitreq.clickContinueAfterSelectingLocation();
+//		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+//		submitreq.clickSubmitAfterBuyerDetails();
+//		}
+//		@Test(priority = 68)
+//		public void validateSubmitRequirementAsExchangeWithUsedMotercycle_Bike()
+//		{
+//		String selectCategory = eu.readData("Submit Requirements", 18, 4);
+//		submitreq.selectForExchange();
+//		submitreq.selectCategoryForExchange(selectCategory);
+//		submitreq.selectConditionAsUsed();
+//		submitreq.selectLocation();
+//		submitreq.clickContinueAfterSelectingLocation();
+//		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+//		submitreq.clickSubmitAfterBuyerDetails();
+//		}
+//		@Test(priority = 69)
+//		public void validateSubmitRequirementAsExchangeWithUsedScooter()
+//		{
+//		String selectCategory = eu.readData("Submit Requirements", 19, 4);
+//		submitreq.selectForExchange();
+//		submitreq.selectCategoryForExchange(selectCategory);
+//		submitreq.selectConditionAsUsed();
+//		submitreq.selectLocation();
+//		submitreq.clickContinueAfterSelectingLocation();
+//		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+//		submitreq.clickSubmitAfterBuyerDetails();
+//		}
+//		@Test(priority = 70)
+//		public void validateSubmitRequirementAsExchangeWithUsedTaxi()
+//		{
+//		String selectCategory = eu.readData("Submit Requirements", 20, 4);
+//		submitreq.selectForExchange();
+//		submitreq.selectCategoryForExchange(selectCategory);
+//		submitreq.selectConditionAsUsed();
+//		submitreq.selectLocation();
+//		submitreq.clickContinueAfterSelectingLocation();
+//		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+//		submitreq.clickSubmitAfterBuyerDetails();
+//		}
 		
-		@Test(priority = 53)
-		public void validateSellAsLoggedInUserWithVehiclesAsBus()
-		{
-			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
-			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
-			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
-			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
-			String email = eu.readData("Submit Requirements For Sell", 1, 5);
-			String enterSellCategory = eu.readData("Submit Requirements For Sell", 1, 6);
-			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
-			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
-			String Make = eu.readData("Submit Requirements For Sell", 1, 9);
-			String Model = eu.readData("Submit Requirements For Sell", 1, 10);
-			String Trim = eu.readData("Submit Requirements For Sell", 1,11);
-			String Year = eu.readData("Submit Requirements For Sell", 1, 12);
-			String username = eu.readData("Submit Requirements For Sell", 1,13);
-			String password = eu.readData("Submit Requirements For Sell", 1, 14);
-			submitreq.submitReqAsIndividualLoggedInUser(username, password);
-			submitreq.selectForSell();
-			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
-		}
+		//-----------------------EXCHANGE FEATURE BY REGISTRING INDIVIDUAL---------------->>>>>>>>>>>>>>>>>>>>
 		
-		@Test(priority = 54)
-		public void validateSellAsLoggedInUserWithVehiclesAsCar()
+		@Test(priority = 71)
+		public void validateSubmitRequirementAsExchangeByRegisteringWithNewCar()
 		{
-			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
-			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
-			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
-			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
-			String email = eu.readData("Submit Requirements For Sell", 1, 5);
-			String enterSellCategory = eu.readData("Submit Requirements For Sell", 2, 6);
-			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
-			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
-			String Make = eu.readData("Submit Requirements For Sell", 2, 9);
-			String Model = eu.readData("Submit Requirements For Sell", 2, 10);
-			String Trim = eu.readData("Submit Requirements For Sell", 2,11);
-			String Year = eu.readData("Submit Requirements For Sell", 2, 12);
-			String username = eu.readData("Submit Requirements For Sell", 1,13);
-			String password = eu.readData("Submit Requirements For Sell", 1, 14);
-			submitreq.submitReqAsIndividualLoggedInUser(username, password);
-			submitreq.selectForSell();
-			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+		String firstName = eu.readData("Submit Requirements", 6, 1);
+		String phoneNumber = JavaLibrary.dynamicPhoneNumber();
+		String email = JavaLibrary.dynamicUsername();
+		String selectCategory = eu.readData("Submit Requirements", 17, 4);
+		submitreq.selectForExchange();
+		submitreq.selectCategoryForExchange(selectCategory);
+		submitreq.selectConditionAsNew();
+		submitreq.selectLocation();
+		submitreq.clickContinueAfterSelectingLocation();
+		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+		submitreq.clickSubmitAfterBuyerDetails();
+		submitreq.continueToOtpPopup(phoneNumber);
 		}
-		
-		@Test(priority = 55)
-		public void validateSellAsLoggedInUserWithVehiclesAsMotorcycle_Bike()
+		@Test(priority = 72)
+		public void validateSubmitRequirementAsExchangeByRegisteringWithNewMotercycle_Bike()
 		{
-			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
-			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
-			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
-			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
-			String email = eu.readData("Submit Requirements For Sell", 1, 5);
-			String enterSellCategory = eu.readData("Submit Requirements For Sell", 3, 6);
-			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
-			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
-			String Make = eu.readData("Submit Requirements For Sell", 3, 9);
-			String Model = eu.readData("Submit Requirements For Sell", 3, 10);
-			String Trim = eu.readData("Submit Requirements For Sell", 3,11);
-			String Year = eu.readData("Submit Requirements For Sell", 3, 12);
-			String username = eu.readData("Submit Requirements For Sell", 1,13);
-			String password = eu.readData("Submit Requirements For Sell", 1, 14);
-			submitreq.submitReqAsIndividualLoggedInUser(username, password);
-			submitreq.selectForSell();
-			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+		String firstName = eu.readData("Submit Requirements", 6, 1);
+		String phoneNumber = JavaLibrary.dynamicPhoneNumber();
+		String email = JavaLibrary.dynamicUsername();
+		String selectCategory = eu.readData("Submit Requirements", 18, 4);
+		submitreq.selectForExchange();
+		submitreq.selectCategoryForExchange(selectCategory);
+		submitreq.selectConditionAsNew();
+		submitreq.selectLocation();
+		submitreq.clickContinueAfterSelectingLocation();
+		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+		submitreq.clickSubmitAfterBuyerDetails();
+		submitreq.continueToOtpPopup(phoneNumber);
 		}
-		
-		@Test(priority = 56)
-		public void validateSellAsLoggedInUserWithVehiclesAsPremium_SuperCar()
+		@Test(priority = 73)
+		public void validateSubmitRequirementAsExchangeByRegisteringWithNewScooter()
 		{
-			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
-			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
-			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
-			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
-			String email = eu.readData("Submit Requirements For Sell", 1, 5);
-			String enterSellCategory = eu.readData("Submit Requirements For Sell", 4, 6);
-			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
-			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
-			String Make = eu.readData("Submit Requirements For Sell", 4, 9);
-			String Model = eu.readData("Submit Requirements For Sell", 4, 10);
-			String Trim = eu.readData("Submit Requirements For Sell", 4,11);
-			String Year = eu.readData("Submit Requirements For Sell", 4, 12);
-			String username = eu.readData("Submit Requirements For Sell", 1,13);
-			String password = eu.readData("Submit Requirements For Sell", 1, 14);
-			submitreq.submitReqAsIndividualLoggedInUser(username, password);
-			submitreq.selectForSell();
-			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+		String firstName = eu.readData("Submit Requirements", 6, 1);
+		String phoneNumber = JavaLibrary.dynamicPhoneNumber();
+		String email = JavaLibrary.dynamicUsername();
+		String selectCategory = eu.readData("Submit Requirements", 19, 4);
+		submitreq.selectForExchange();
+		submitreq.selectCategoryForExchange(selectCategory);
+		submitreq.selectConditionAsNew();
+		submitreq.selectLocation();
+		submitreq.clickContinueAfterSelectingLocation();
+		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+		submitreq.clickSubmitAfterBuyerDetails();
+		submitreq.continueToOtpPopup(phoneNumber);
 		}
-		
-		@Test(priority = 57)
-		public void validateSellAsLoggedInUserWithVehiclesAsScooter()
+		@Test(priority = 74)
+		public void validateSubmitRequirementAsExchangeByRegisteringWithNewTaxi()
 		{
-			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
-			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
-			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
-			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
-			String email = eu.readData("Submit Requirements For Sell", 1, 5);
-			String enterSellCategory = eu.readData("Submit Requirements For Sell", 5, 6);
-			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
-			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
-			String Make = eu.readData("Submit Requirements For Sell", 5, 9);
-			String Model = eu.readData("Submit Requirements For Sell", 5, 10);
-			String Trim = eu.readData("Submit Requirements For Sell", 5,11);
-			String Year = eu.readData("Submit Requirements For Sell", 5, 12);
-			String username = eu.readData("Submit Requirements For Sell", 1,13);
-			String password = eu.readData("Submit Requirements For Sell", 1, 14);
-			submitreq.submitReqAsIndividualLoggedInUser(username, password);
-			submitreq.selectForSell();
-			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+		String firstName = eu.readData("Submit Requirements", 6, 1);
+		String phoneNumber = JavaLibrary.dynamicPhoneNumber();
+		String email = JavaLibrary.dynamicUsername();
+		String selectCategory = eu.readData("Submit Requirements", 20, 4);
+		submitreq.selectForExchange();
+		submitreq.selectCategoryForExchange(selectCategory);
+		submitreq.selectConditionAsNew();
+		submitreq.selectLocation();
+		submitreq.clickContinueAfterSelectingLocation();
+		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+		submitreq.clickSubmitAfterBuyerDetails();
+		submitreq.continueToOtpPopup(phoneNumber);
 		}
-		
-		@Test(priority = 58)
-		public void validateSellAsLoggedInUserWithVehiclesAsTaxi()
+		@Test(priority = 75)
+		public void validateSubmitRequirementAsExchangeByRegisteringWithUsedCar()
 		{
-			String enterCategory = eu.readData("Submit Requirements For Sell", 1, 1);
-			String firstName = eu.readData("Submit Requirements For Sell", 1, 2);
-			String lastName = eu.readData("Submit Requirements For Sell", 1, 3);
-			String phoneNumber = eu.readData("Submit Requirements For Sell", 1, 4);
-			String email = eu.readData("Submit Requirements For Sell", 1, 5);
-			String enterSellCategory = eu.readData("Submit Requirements For Sell", 6, 6);
-			String enterPincode = eu.readData("Submit Requirements For Sell", 1, 7);
-			String enterKmDriver = eu.readData("Submit Requirements For Sell", 1, 8);
-			String Make = eu.readData("Submit Requirements For Sell", 6, 9);
-			String Model = eu.readData("Submit Requirements For Sell", 6, 10);
-			String Trim = eu.readData("Submit Requirements For Sell", 6,11);
-			String Year = eu.readData("Submit Requirements For Sell", 6, 12);
-			String username = eu.readData("Submit Requirements For Sell", 1,13);
-			String password = eu.readData("Submit Requirements For Sell", 1, 14);
-			submitreq.submitReqAsIndividualLoggedInUser(username, password);
-			submitreq.selectForSell();
-			submitreq.selectCategoryAfterSell(enterCategory);
-			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
+		String firstName = eu.readData("Submit Requirements", 6, 1);
+		String phoneNumber = JavaLibrary.dynamicPhoneNumber();
+		String email = JavaLibrary.dynamicUsername();
+		String selectCategory = eu.readData("Submit Requirements", 17, 4);
+		submitreq.selectForExchange();
+		submitreq.selectCategoryForExchange(selectCategory);
+		submitreq.selectConditionAsUsed();
+		submitreq.selectLocation();
+		submitreq.clickContinueAfterSelectingLocation();
+		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+		submitreq.clickSubmitAfterBuyerDetails();
+		submitreq.continueToOtpPopup(phoneNumber);
 		}
-		
-	 //-------------------OTHER SERVICES------------>>>>>>>>>>>
-	
-		@Test(priority = 59)
-		public void validateLoanAndInsuranceAsLoggedInUser()
+		@Test(priority = 76)
+		public void validateSubmitRequirementAsExchangeByRegisteringWithUsedMotercycle_Bike()
 		{
-			String enterCategory = eu.readData("Submit Requirements For Sell", 7, 1);
-			String username = eu.readData("Submit Requirements For Sell", 7,13);
-			String password = eu.readData("Submit Requirements For Sell", 7, 14);
-			submitreq.submitReqAsProSellerLoggedInUser(username, password);
-			submitreq.selectForSell();
-			submitreq.selectCategoryAfterSell(enterCategory);
+		String firstName = eu.readData("Submit Requirements", 6, 1);
+		String phoneNumber = JavaLibrary.dynamicPhoneNumber();
+		String email = JavaLibrary.dynamicUsername();
+		String selectCategory = eu.readData("Submit Requirements", 18, 4);
+		submitreq.selectForExchange();
+		submitreq.selectCategoryForExchange(selectCategory);
+		submitreq.selectConditionAsUsed();
+		submitreq.selectLocation();
+		submitreq.clickContinueAfterSelectingLocation();
+		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+		submitreq.clickSubmitAfterBuyerDetails();
+		submitreq.continueToOtpPopup(phoneNumber);
 		}
-		@Test(priority = 60)
-		public void validateCertifactionServicesAsLoggedInUser()
+		@Test(priority = 77)
+		public void validateSubmitRequirementAsExchangeByRegisteringWithUsedScooter()
 		{
-			String enterCategory = eu.readData("Submit Requirements For Sell", 8, 1);
-			String username = eu.readData("Submit Requirements For Sell", 7,13);
-			String password = eu.readData("Submit Requirements For Sell", 7, 14);
-			submitreq.submitReqAsProSellerLoggedInUser(username, password);
-			submitreq.selectForSell();
-			submitreq.selectCategoryAfterSell(enterCategory);
+		String firstName = eu.readData("Submit Requirements", 6, 1);
+		String phoneNumber = JavaLibrary.dynamicPhoneNumber();
+		String email = JavaLibrary.dynamicUsername();
+		String selectCategory = eu.readData("Submit Requirements", 19, 4);
+		submitreq.selectForExchange();
+		submitreq.selectCategoryForExchange(selectCategory);
+		submitreq.selectConditionAsUsed();
+		submitreq.selectLocation();
+		submitreq.clickContinueAfterSelectingLocation();
+		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+		submitreq.clickSubmitAfterBuyerDetails();
+		submitreq.continueToOtpPopup(phoneNumber);
 		}
-		@Test(priority = 61)
-		public void validateAutomobileServicesAsLoggedInUser()
+		@Test(priority = 78)
+		public void validateSubmitRequirementAsExchangeByRegisteringWithUsedTaxi()
 		{
-			String enterCategory = eu.readData("Submit Requirements For Sell", 9, 1);
-			String username = eu.readData("Submit Requirements For Sell", 7,13);
-			String password = eu.readData("Submit Requirements For Sell", 7, 14);
-			submitreq.submitReqAsProSellerLoggedInUser(username, password);
-			submitreq.selectForSell();
-			submitreq.selectCategoryAfterSell(enterCategory);
+		String firstName = eu.readData("Submit Requirements", 6, 1);
+		String phoneNumber = JavaLibrary.dynamicPhoneNumber();
+		String email = JavaLibrary.dynamicUsername();
+		String selectCategory = eu.readData("Submit Requirements", 20, 4);
+		submitreq.selectForExchange();
+		submitreq.selectCategoryForExchange(selectCategory);
+		submitreq.selectConditionAsUsed();
+		submitreq.selectLocation();
+		submitreq.clickContinueAfterSelectingLocation();
+		submitreq.enterBuyerDetails(firstName, phoneNumber, email);
+		submitreq.clickSubmitAfterBuyerDetails();
+		submitreq.continueToOtpPopup(phoneNumber);
 		}
-		@Test(priority = 62)
-		public void validateEverythingElseAsLoggedInUser()
-		{
-			String enterCategory = eu.readData("Submit Requirements For Sell", 10, 1);
-			String username = eu.readData("Submit Requirements For Sell", 7,13);
-			String password = eu.readData("Submit Requirements For Sell", 7, 14);
-			submitreq.submitReqAsProSellerLoggedInUser(username, password);
-			submitreq.selectForSell();
-			submitreq.selectCategoryAfterSell(enterCategory);
-		}
-		
 }

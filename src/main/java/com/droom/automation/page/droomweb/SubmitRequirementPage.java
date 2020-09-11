@@ -74,6 +74,20 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	    sleep(5000);
 	    executeClickOnElement(By.xpath("//div[text()='Sell']"));
 	}
+	public void selectForExchange()
+	{
+		headerpage.clickSubmitRequirement();
+	    sleep(5000);
+	    verifyByContains(By.xpath("//div[text()='Exchange']"), "Exchange");
+	    executeClickOnElement(By.xpath("//div[text()='Exchange']"));
+	} 
+	public void selectForRental()
+	{
+		headerpage.clickSubmitRequirement();
+	    sleep(5000);
+	    verifyByContains(By.xpath("//div[text()='Rental']"), "Rental");
+	    executeClickOnElement(By.xpath("//div[text()='Rental']"));
+	}
 	public void selectCategoryAfterSell(String enterCategory)
 	{
 		sleep(2000);
@@ -150,7 +164,11 @@ public class SubmitRequirementPage extends SeleniumWrapper
 		selectOptionByText(By.xpath("//div[@class='form-group floating-group select-form-group active']//select[@name='sub_category']"), selectCategory);
 		verifyByContains(By.xpath("//div[@class='form-group floating-group select-form-group active']//select[@name='sub_category']"), selectCategory);
 	}
-	
+	public void selectCategoryForExchange(String selectCategory)
+	{
+		selectOptionByText(By.xpath("//div[@class='form-group floating-group select-form-group active']//select[@name='category']"), selectCategory);
+		verifyByContains(By.xpath("//div[@class='form-group floating-group select-form-group active']//select[@name='category']"), selectCategory);
+	}
 	
 	public void selectServiceUnderLoanAndInsuranceAsAutoloan()
 	{
@@ -221,6 +239,11 @@ public class SubmitRequirementPage extends SeleniumWrapper
 		 verifyByContains(By.xpath("//div[@class='action text-center']//a[contains(text(),'Submit')]"), "Submit");
 		 executeClickOnElement(By.xpath("//div[@class='action text-center']//a[contains(text(),'Submit')]"));
 	 }
+	 public void clickContinueAfterSelectingLocation()
+	 {
+		 verifyByContains(By.xpath("//a[contains(text(),'Continue')]"), "Continue");
+		 executeClickOnElement(By.xpath("//a[contains(text(),'Continue')]"));
+	 }
 	 public void selectLocationForOtherPopup()
 	 {
 	    verifyByContains(By.xpath("//div[@id='display_location']"), "Select Location");
@@ -231,17 +254,24 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	    executeClickOnElement(Click_Continue_After_Selecting_Model);
 	 }
 	 
-	 public void continueToOtpPopup(String phoneNumber) throws Exception
+	 public void continueToOtpPopup(String phoneNumber)
 	 {
-	    sleep(8000);
-	    char[] otp = DataBaseDemo.otpAsString("SELECT * FROM cscart_new.otp_verification where phone='"+phoneNumber+"' order by id desc limit 1;");
-	    enterTextboxDetails(findElement(By.xpath("//input[@id='otp-input1']")), String.valueOf(otp[0]));
-	    enterTextboxDetails(findElement(By.xpath("//input[@id='otp-input2']")), String.valueOf(otp[1]));
-	    enterTextboxDetails(findElement(By.xpath("//input[@id='otp-input3']")), String.valueOf(otp[2]));
-	    enterTextboxDetails(findElement(By.xpath("//input[@id='otp-input4']")), String.valueOf(otp[3]));
-	    verifyByContains(By.xpath("(//a[contains(text(),'Done')])[1]"), "Done");
-	    executeClickOnElement(By.xpath("(//a[contains(text(),'Done')])[1]"));
-	    sleep(2000);
+	    try
+	    {
+	    	sleep(8000);
+		    char[] otp = DataBaseDemo.otpAsString("SELECT * FROM cscart_new.otp_verification where phone='"+phoneNumber+"' order by id desc limit 1;");
+		    enterTextboxDetails(findElement(By.xpath("//input[@id='otp-input1']")), String.valueOf(otp[0]));
+		    enterTextboxDetails(findElement(By.xpath("//input[@id='otp-input2']")), String.valueOf(otp[1]));
+		    enterTextboxDetails(findElement(By.xpath("//input[@id='otp-input3']")), String.valueOf(otp[2]));
+		    enterTextboxDetails(findElement(By.xpath("//input[@id='otp-input4']")), String.valueOf(otp[3]));
+		    verifyByContains(By.xpath("(//a[contains(text(),'Done')])[1]"), "Done");
+		    executeClickOnElement(By.xpath("(//a[contains(text(),'Done')])[1]"));
+		    sleep(2000);
+		} 
+	    catch (Exception e) 
+	    {
+	    	e.printStackTrace();
+		}
 	 }
 	 
 	   public void submitReq()
@@ -285,8 +315,8 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	   
 	   public void selectForBodyFuelTransmissionType(String bodytype,String fueltype,String transmissiontype)
 	   {
-		   selectOptionByText(By.xpath("//select[@name='body_type']"), bodytype);
-		   verifyByContains(By.xpath("//select[@name='body_type']"), FirstLetterUpperCase(bodytype));
+		    selectOptionByText(By.xpath("//select[@name='body_type']"), bodytype);
+		    verifyByContains(By.xpath("//select[@name='body_type']"), FirstLetterUpperCase(bodytype));
 		    selectOptionByText(By.xpath("//select[@name='fuel_type']"), fueltype);
 		    verifyByContains(By.xpath("//select[@name='fuel_type']"), FirstLetterUpperCase(fueltype));
 		    selectOptionByText(By.xpath("//select[@name='transmission_type']"), transmissiontype);

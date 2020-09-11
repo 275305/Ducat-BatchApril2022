@@ -4,9 +4,9 @@ package excelreport;
    import org.automationtesting.excelreport.Xl;
    import org.testng.annotations.Test;
    
-   public class TestReport {
+   public class TestReport{
    @Test
-   public void report() throws Exception {
+   public void report() throws Exception{
    try {
    File file = new File("./ExcelstatusReport.xlsx");
    if(file.exists()) {
