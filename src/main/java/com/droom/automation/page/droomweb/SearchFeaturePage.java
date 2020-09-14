@@ -13,7 +13,7 @@ public class SearchFeaturePage extends SeleniumWrapper
 	private final static By Proceed_To_Payment=By.xpath("//button[@id='add_listing_services_to_cart']");
 	
 	private final static By Get_Amount=By.xpath("//button[@id='cart_add']//span");
-	private final static By Get_Amount_At_Checkout=By.xpath("(//div[@class='payAmount']//strong)[2]");
+	private final static By Get_Amount_At_Checkout=By.xpath("//div[@class='payAmount']//strong");
 	
 	private final static By Click_On_Home_Delivery=By.xpath("//label[contains(text(),'Home Delivery')]");
 	private final static By Click_On_RSA=By.xpath("//label[contains(text(),'RSA')]");
@@ -42,9 +42,9 @@ public class SearchFeaturePage extends SeleniumWrapper
 		loginpage.loginValidationForIndividualAccount(username, password);
 		homepage.enterSearchBox("Car");
 		waitForPageLoad();
-	//	executeClickOnElement(Click_To_Deselect_Used);
+		executeClickOnElement(Click_To_Deselect_Used);
 		sleep(5000);
-		executeClickOnElement(By.xpath("//img[@alt='Maruti Suzuki Esteem VXI BS III 2006']"));
+		executeClickOnElement(By.xpath("(//img[@alt='Maruti Suzuki Vitara Brezza VDi AGS 2020'])[4]"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
 		String initialAmount = WebDriverFactory.getDriver().findElement(Get_Amount).getText();
@@ -68,7 +68,7 @@ public class SearchFeaturePage extends SeleniumWrapper
 		loginpage.loginValidationForIndividualAccount(username, password);
 		homepage.enterSearchBox("bike");
 		waitForPageLoad();
-		executeClickOnElement(By.xpath("//img[@alt='KTM Duke 390cc 2014']"));
+		executeClickOnElement(By.xpath("//img[@alt='Bajaj V15 150cc 2018']"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
 		String initialAmount = WebDriverFactory.getDriver().findElement(Get_Amount).getText();
@@ -76,7 +76,7 @@ public class SearchFeaturePage extends SeleniumWrapper
 		executeClickOnElement(Click_Proceed);
 		executeClickOnElement(Proceed_To_Payment);
 		waitForPageLoad();
-		String finalAmount = WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  3,000']")).getText();
+		String finalAmount = WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  1,950']")).getText();
 		System.out.println(initialAmount);
 		System.out.println(finalAmount);
 		Assert.assertTrue(initialAmount.contains(finalAmount));

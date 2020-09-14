@@ -169,6 +169,11 @@ public class SubmitRequirementPage extends SeleniumWrapper
 		selectOptionByText(By.xpath("//div[@class='form-group floating-group select-form-group active']//select[@name='category']"), selectCategory);
 		verifyByContains(By.xpath("//div[@class='form-group floating-group select-form-group active']//select[@name='category']"), selectCategory);
 	}
+	public void selectCategoryForRental(String selectCategory)
+	{
+		selectOptionByText(By.xpath("//div[@class='form-group floating-group select-form-group active']//select[@name='offering']"), selectCategory);
+		verifyByContains(By.xpath("//div[@class='form-group floating-group select-form-group active']//select[@name='offering']"), selectCategory);
+	}
 	
 	public void selectServiceUnderLoanAndInsuranceAsAutoloan()
 	{

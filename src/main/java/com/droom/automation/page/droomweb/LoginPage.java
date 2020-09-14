@@ -76,7 +76,7 @@ public class LoginPage extends SeleniumWrapper
 		executeClickOnElement(Login_Via_Password);
 		sleep(1000);
 		enterTextboxDetails(findElement(Enter_Password), password);
-		sleep(1000);
+		sleep(2000);
 		executeClickOnElement(Login_Button_To_Home);
 	}
 	
@@ -132,6 +132,7 @@ public class LoginPage extends SeleniumWrapper
 		executeClickOnElement(Login_Via_Password);
 		sleep(2000);
 		enterTextboxDetails(findElement(Enter_Password), password);
+		sleep(2000);
 		executeClickOnElement(Login_Button_To_Home);
 		executeClickOnElement(Click_On_PopUp_For_Proseller);
 		verifyByText(Verify_Text_For_ProSeller_Registration, "Register As a Pro-Seller");

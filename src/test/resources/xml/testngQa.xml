@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-
 <suite name="suite" parallel="false" preserve-order="true">
-
 <listeners>
              <listener class-name="com.droom.automation.lib.MyAnnotationTransformer"/>
 </listeners>
-
     <test name="DroomWebAutomationTest">
         <classes>
              <class name="com.droom.automation.droomweb.droomweb_qa.UserLoginTest" />
@@ -15,6 +12,7 @@
                 <class name="com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest" />
                  <class name="com.droom.automation.droomweb.droomweb_qa.FranchiseTest" />
                   <class name="com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest" />
+                  <class name="com.droom.automation.droomweb.droomweb_qa.CreateListingTest" />
         </classes>
     </test>
 </suite>

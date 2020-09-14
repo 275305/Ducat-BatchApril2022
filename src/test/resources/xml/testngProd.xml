@@ -5,7 +5,6 @@
     <classes>
       <class name="com.droom.automation.droomweb.droomweb_prod.UserLoginTest"/>
       <class name="com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest"/>
-      <class name="com.droom.automation.droomweb.droomweb_prod.SubmitRequirementTest"/>
       <class name="com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest"/>
       <class name="com.droom.automation.droomweb.droomweb_prod.FranchiseTest"/>
       <class name="com.droom.automation.droomweb.droomweb_prod.CreateListingTest"/>

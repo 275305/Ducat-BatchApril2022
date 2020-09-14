@@ -418,184 +418,184 @@ public class FranchiseTest extends AbstractBaseTest
 	
 	                  // VALIDATING FACILITY VIA REGISTERED MOBILE NUMBER
 	
-	@Test(priority = 13)
-	public void ValidatingFranchiseDashboard()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		franchisepage.franchiseDashboard(username, password);
-	}
-	
-	@Test(priority = 14)
-	public void ValidatingFranchiseMyOrdersAsAutomobileGermShield()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductViaRegisteredNumber();
-		franchisepage.franchiseMyOrdersAsAutomobileGermShield();
-	}
-	
-	@Test(priority = 15)
-	public void ValidatingFranchiseMyOrdersAsFacilityGermShield()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 11, 17);
-		String enterArea = eu.readData("FranchiseSheet", 11, 18);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductViaRegisteredNumber();
-		franchisepage.franchiseMyOrdersAsFacilityGermShield(enterCatogory, enterArea, enterAddress, enterPincode);
-	}
-	
-	@Test(priority = 16)
-	public void ValidatingFranchiseMyOrdersAsElevatorGermShield()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 12, 17);
-		String packageType = eu.readData("FranchiseSheet", 12, 19);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductViaRegisteredNumber();
-		franchisepage.franchiseMyOrdersAsElevatorGermShield(enterCatogory, packageType, enterAddress, enterPincode);
-	}
-	
-	@Test(priority = 17)
-	public void ValidatingFranchiseMyOrdersAsJumpstartService()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 13, 17);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductViaRegisteredNumber();
-		franchisepage.franchiseMyOrdersAsJumpstartService(enterCatogory, enterAddress, enterPincode);
-	}
-	
-	@Test(priority = 18)
-	public void ValidatingFranchiseMyOrdersAsBigTransport()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 14, 17);
-		String enterArea = eu.readData("FranchiseSheet", 11, 18);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductViaRegisteredNumber();
-		franchisepage.franchiseMyOrdersAsBigTransport(enterCatogory, enterArea, enterAddress, enterPincode);
-	}
-	
-	               // VALIDATING FACILITY VIA REGISTERED MOBILE NUMBER
-	
-	
-	@Test(priority = 19)
-	public void RegisteringBuyerAsAutomobileGermShield()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String firstName = eu.readData("FranchiseSheet", 11, 20);
-		String lastName = eu.readData("FranchiseSheet", 14, 21);
-//		String mailId = eu.readData("FranchiseSheet", 6, 3);
-		String mailId = JavaLibrary.dynamicUsername();
-		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
-		String enterCity = eu.readData("FranchiseSheet", 11, 22);
-		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
-		//String buyersNumber = eu.readData("FranchiseSheet", 11, 24);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
-		franchisepage.franchiseMyOrdersAsAutomobileGermShield();
-	}
-	
-	@Test(priority = 20)
-	public void RegisteringBuyerAsFacilityGermShield()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 11, 17);
-		String enterArea = eu.readData("FranchiseSheet", 11, 18);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		String firstName = eu.readData("FranchiseSheet", 11, 20);
-		String lastName = eu.readData("FranchiseSheet", 14, 21);
-//		String mailId = eu.readData("FranchiseSheet", 6, 3);
-		String mailId = JavaLibrary.dynamicUsername();
-		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
-		String enterCity = eu.readData("FranchiseSheet", 11, 22);
-		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
-//		String buyersNumber = eu.readData("FranchiseSheet", 11, 23);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
-		franchisepage.franchiseMyOrdersAsFacilityGermShield(enterCatogory, enterArea, enterAddress, enterPincode);
-	}
-	
-	@Test(priority = 21)
-	public void RegisteringBuyerAsElevatorGermShield()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 12, 17);
-		String packageType = eu.readData("FranchiseSheet", 12, 19);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		String firstName = eu.readData("FranchiseSheet", 12, 20);
-		String lastName = eu.readData("FranchiseSheet", 12, 21);
-//		String mailId = eu.readData("FranchiseSheet", 6, 3);
-		String mailId = JavaLibrary.dynamicUsername();
-		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
-		String enterCity = eu.readData("FranchiseSheet", 12, 22);
-		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
-//		String buyersNumber = eu.readData("FranchiseSheet", 12, 23);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
-		franchisepage.franchiseMyOrdersAsElevatorGermShield(enterCatogory, packageType, enterAddress, enterPincode);
-	}
-	
-	@Test(priority = 22)
-	public void RegisteringBuyerAsJumpstartService()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 13, 17);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		String firstName = eu.readData("FranchiseSheet", 13, 20);
-		String lastName = eu.readData("FranchiseSheet", 13, 21);
-//		String mailId = eu.readData("FranchiseSheet", 6, 3);
-		String mailId = JavaLibrary.dynamicUsername();
-		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
-		String enterCity = eu.readData("FranchiseSheet", 13,22);
-		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
-//		String buyersNumber = eu.readData("FranchiseSheet", 13, 23);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
-		franchisepage.franchiseMyOrdersAsJumpstartService(enterCatogory, enterAddress, enterPincode);
-	}
-	
-	@Test(priority = 23)
-	public void RegisteringBuyerAsBigTransport()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 14, 17);
-		String enterArea = eu.readData("FranchiseSheet", 11, 18);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		String firstName = eu.readData("FranchiseSheet", 14, 20);
-		String lastName = eu.readData("FranchiseSheet", 14, 21);
-//		String mailId = eu.readData("FranchiseSheet", 6, 3);
-		String mailId = JavaLibrary.dynamicUsername();
-		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
-		String enterCity = eu.readData("FranchiseSheet", 14, 22);
-		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
-//		String buyersNumber = eu.readData("FranchiseSheet", 14, 23);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
-		franchisepage.franchiseMyOrdersAsBigTransport(enterCatogory, enterArea, enterAddress, enterPincode);
-	}
+//	@Test(priority = 13)
+//	public void ValidatingFranchiseDashboard()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		franchisepage.franchiseDashboard(username, password);
+//	}
+//	
+//	@Test(priority = 14)
+//	public void ValidatingFranchiseMyOrdersAsAutomobileGermShield()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductViaRegisteredNumber();
+//		franchisepage.franchiseMyOrdersAsAutomobileGermShield();
+//	}
+//	
+//	@Test(priority = 15)
+//	public void ValidatingFranchiseMyOrdersAsFacilityGermShield()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 11, 17);
+//		String enterArea = eu.readData("FranchiseSheet", 11, 18);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductViaRegisteredNumber();
+//		franchisepage.franchiseMyOrdersAsFacilityGermShield(enterCatogory, enterArea, enterAddress, enterPincode);
+//	}
+//	
+//	@Test(priority = 16)
+//	public void ValidatingFranchiseMyOrdersAsElevatorGermShield()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 12, 17);
+//		String packageType = eu.readData("FranchiseSheet", 12, 19);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductViaRegisteredNumber();
+//		franchisepage.franchiseMyOrdersAsElevatorGermShield(enterCatogory, packageType, enterAddress, enterPincode);
+//	}
+//	
+//	@Test(priority = 17)
+//	public void ValidatingFranchiseMyOrdersAsJumpstartService()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 13, 17);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductViaRegisteredNumber();
+//		franchisepage.franchiseMyOrdersAsJumpstartService(enterCatogory, enterAddress, enterPincode);
+//	}
+//	
+//	@Test(priority = 18)
+//	public void ValidatingFranchiseMyOrdersAsBigTransport()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 14, 17);
+//		String enterArea = eu.readData("FranchiseSheet", 11, 18);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductViaRegisteredNumber();
+//		franchisepage.franchiseMyOrdersAsBigTransport(enterCatogory, enterArea, enterAddress, enterPincode);
+//	}
+//	
+//	               // VALIDATING FACILITY VIA REGISTERED MOBILE NUMBER
+//	
+//	
+//	@Test(priority = 19)
+//	public void RegisteringBuyerAsAutomobileGermShield()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String firstName = eu.readData("FranchiseSheet", 11, 20);
+//		String lastName = eu.readData("FranchiseSheet", 14, 21);
+////		String mailId = eu.readData("FranchiseSheet", 6, 3);
+//		String mailId = JavaLibrary.dynamicUsername();
+//		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
+//		String enterCity = eu.readData("FranchiseSheet", 11, 22);
+//		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
+//		//String buyersNumber = eu.readData("FranchiseSheet", 11, 24);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
+//		franchisepage.franchiseMyOrdersAsAutomobileGermShield();
+//	}
+//	
+//	@Test(priority = 20)
+//	public void RegisteringBuyerAsFacilityGermShield()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 11, 17);
+//		String enterArea = eu.readData("FranchiseSheet", 11, 18);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		String firstName = eu.readData("FranchiseSheet", 11, 20);
+//		String lastName = eu.readData("FranchiseSheet", 14, 21);
+////		String mailId = eu.readData("FranchiseSheet", 6, 3);
+//		String mailId = JavaLibrary.dynamicUsername();
+//		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
+//		String enterCity = eu.readData("FranchiseSheet", 11, 22);
+//		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
+////		String buyersNumber = eu.readData("FranchiseSheet", 11, 23);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
+//		franchisepage.franchiseMyOrdersAsFacilityGermShield(enterCatogory, enterArea, enterAddress, enterPincode);
+//	}
+//	
+//	@Test(priority = 21)
+//	public void RegisteringBuyerAsElevatorGermShield()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 12, 17);
+//		String packageType = eu.readData("FranchiseSheet", 12, 19);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		String firstName = eu.readData("FranchiseSheet", 12, 20);
+//		String lastName = eu.readData("FranchiseSheet", 12, 21);
+////		String mailId = eu.readData("FranchiseSheet", 6, 3);
+//		String mailId = JavaLibrary.dynamicUsername();
+//		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
+//		String enterCity = eu.readData("FranchiseSheet", 12, 22);
+//		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
+////		String buyersNumber = eu.readData("FranchiseSheet", 12, 23);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
+//		franchisepage.franchiseMyOrdersAsElevatorGermShield(enterCatogory, packageType, enterAddress, enterPincode);
+//	}
+//	
+//	@Test(priority = 22)
+//	public void RegisteringBuyerAsJumpstartService()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 13, 17);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		String firstName = eu.readData("FranchiseSheet", 13, 20);
+//		String lastName = eu.readData("FranchiseSheet", 13, 21);
+////		String mailId = eu.readData("FranchiseSheet", 6, 3);
+//		String mailId = JavaLibrary.dynamicUsername();
+//		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
+//		String enterCity = eu.readData("FranchiseSheet", 13,22);
+//		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
+////		String buyersNumber = eu.readData("FranchiseSheet", 13, 23);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
+//		franchisepage.franchiseMyOrdersAsJumpstartService(enterCatogory, enterAddress, enterPincode);
+//	}
+//	
+//	@Test(priority = 23)
+//	public void RegisteringBuyerAsBigTransport()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 14, 17);
+//		String enterArea = eu.readData("FranchiseSheet", 11, 18);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		String firstName = eu.readData("FranchiseSheet", 14, 20);
+//		String lastName = eu.readData("FranchiseSheet", 14, 21);
+////		String mailId = eu.readData("FranchiseSheet", 6, 3);
+//		String mailId = JavaLibrary.dynamicUsername();
+//		String GSTIN = eu.readData("FranchiseSheet", 6, 12);
+//		String enterCity = eu.readData("FranchiseSheet", 14, 22);
+//		String buyersNumber =JavaLibrary.dynamicPhoneNumber();
+////		String buyersNumber = eu.readData("FranchiseSheet", 14, 23);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductWithRegisteringNewNumber(firstName, lastName, mailId, GSTIN, enterCity,buyersNumber);
+//		franchisepage.franchiseMyOrdersAsBigTransport(enterCatogory, enterArea, enterAddress, enterPincode);
+//	}
 }
