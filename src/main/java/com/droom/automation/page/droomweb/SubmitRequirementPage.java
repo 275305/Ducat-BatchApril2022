@@ -65,7 +65,6 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	{
 		headerpage.clickSubmitRequirement();
 	    sleep(5000);
-	    verifyByContains(By.xpath("//div[text()='Buy']"), "Buy");
 	    executeClickOnElement(By.xpath("//div[text()='Buy']"));
 	}
 	public void selectForSell()

@@ -7,12 +7,13 @@
     <test name="DroomWebAutomationTest">
         <classes>
              <class name="com.droom.automation.droomweb.droomweb_qa.UserLoginTest" />
-              <class name="com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest" />
-               <class name="com.droom.automation.droomweb.droomweb_qa.UserRegistrationTest" />
-                <class name="com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest" />
-                 <class name="com.droom.automation.droomweb.droomweb_qa.FranchiseTest" />
-                  <class name="com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest" />
-                  <class name="com.droom.automation.droomweb.droomweb_qa.CreateListingTest" />
+             <class name="com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest" />
+             <class name="com.droom.automation.droomweb.droomweb_qa.UserRegistrationTest" />
+             <class name="com.droom.automation.droomweb.droomweb_qa.SubmitRequirementTest" />
+             <class name="com.droom.automation.droomweb.droomweb_qa.FranchiseTest" />
+             <class name="com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest" />
+             <class name="com.droom.automation.droomweb.droomweb_qa.CreateListingTest" />
+             <class name="com.droom.automation.droomweb.droomweb_qa.SearchFeatureTest" />
         </classes>
     </test>
 </suite>

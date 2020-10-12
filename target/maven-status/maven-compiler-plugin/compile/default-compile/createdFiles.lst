@@ -15,6 +15,7 @@ com\droom\automation\lib\SeleniumDataBaseTest.class
 com\droom\automation\lib\SeleniumWrapper$1.class
 com\droom\automation\page\droomcredit\LenderSignUpPage.class
 com\droom\automation\page\droomcredit\LendersPage.class
+com\droom\automation\page\droomweb\HeaderPage.class
 com\droom\automation\page\droomweb\CreateListingPage.class
 com\droom\automation\lib\WebDriverFactory$DriverConfig.class
 com\droom\automation\lib\SeleniumWrapper.class
@@ -24,7 +25,6 @@ com\droom\automation\page\droomweb\FranchisePage.class
 com\droom\automation\page\droomweb\SearchFeaturePage.class
 com\droom\automation\lib\DataBaseDemo.class
 com\droom\automation\lib\SeleniumWrapper$2.class
-com\droom\automation\page\droomweb\HomePageTopPanelPage.class
 com\droom\automation\page\droomcredit\HomePage.class
 com\droom\automation\lib\ExcelUtilities$1.class
 com\droom\automation\page\droomweb\PaymentPage.class
@@ -34,5 +34,6 @@ com\droom\automation\page\droomcredit\TermsAndConditionsPage.class
 com\droom\automation\lib\MyAnnotationTransformer.class
 com\droom\automation\page\droomweb\GermShieldForHomePage.class
 com\droom\automation\page\droomweb\BuyPage.class
+com\droom\automation\page\droomweb\SubmitRequirementPage.class
 com\droom\automation\lib\ExcelUtilities.class
 com\droom\automation\page\droomweb\LoginPage.class

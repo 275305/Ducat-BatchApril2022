@@ -19,18 +19,18 @@ public class BuyFeatureTest extends AbstractBaseTest
 	}
 	
 	
-//	@Test(priority = 1)
-//	public void buyCarAsLoggedInUser() throws InterruptedException
-//	{
-//		String username = eu.readData("BuyFeatureSheet", 1, 1);
-//		String password = eu.readData("BuyFeatureSheet", 1, 2);
-//		BuyPage buypage=new BuyPage();
-//		buypage.selectBuyCategory(username, password);
-//		
-//	}
+	@Test(priority = 1)
+	public void buyCarAsLoggedInUser() throws InterruptedException
+	{
+		String username = eu.readData("BuyFeatureSheet", 1, 1);
+		String password = eu.readData("BuyFeatureSheet", 1, 2);
+		String bodytype = eu.readData("BuyFeatureSheet", 1, 3);
+		BuyPage buypage=new BuyPage();
+		buypage.shoppingForVehiclesAsCoupeCars(username, password,bodytype);
+	}
 
 	
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void buyRTOServiceAsLoggedInUser()
 	{
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
@@ -39,7 +39,7 @@ public class BuyFeatureTest extends AbstractBaseTest
 		buypage.buyAutomobileServicesViaRTO(username, password);
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void buyJumpstartServiceAsLoggedInUser()
 	{
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
@@ -48,7 +48,7 @@ public class BuyFeatureTest extends AbstractBaseTest
 		buypage.buyAutomobileServicesViaJumpstart(username, password);
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void buyCarCareAndDetailingAsLoggedInUser()
 	{
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
@@ -58,7 +58,7 @@ public class BuyFeatureTest extends AbstractBaseTest
 	}
 	
 	
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void buyRTOServiceAsLoggedInLater()
 	{
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
@@ -66,9 +66,4 @@ public class BuyFeatureTest extends AbstractBaseTest
 		BuyPage buypage=new BuyPage();
 		buypage.buyAutomobileServicesViaRTO(username, password);
 	}
-	
-	
-	
-	
-	
 }

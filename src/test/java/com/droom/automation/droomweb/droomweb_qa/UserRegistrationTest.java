@@ -24,30 +24,30 @@ public class UserRegistrationTest extends AbstractBaseTest
 	
 	//REGISTRATION 
 	
-	@Test(priority=1)
-	public void registerAsIndividualUser() throws Exception
-	{
-//		String username = eu.readData("RegistrationSheet", 1, 1);
-//		String mobilenumber = eu.readData("RegistrationSheet", 1, 2);
-		String username=JavaLibrary.dynamicUsername();
-		String mobilenumber =JavaLibrary.dynamicPhoneNumber();
-		String firstname = eu.readData("RegistrationSheet", 1, 3);
-		String lastname = eu.readData("RegistrationSheet", 1, 4);
-		String password = eu.readData("RegistrationSheet", 1, 5);
-		registrationpage.creatIndividualAccount(username,mobilenumber,firstname,lastname,password);
-	}
-	
-	@Test(priority=2)
-	public void registerAsProSeller() throws Exception
-	{
-		String username = eu.readData("RegistrationSheet", 2, 1);
-		String mobilenumber = eu.readData("RegistrationSheet", 2, 2);
-		String firstname = eu.readData("RegistrationSheet", 2, 3);
-		String lastname = eu.readData("RegistrationSheet", 2, 4);
-		String businessname = eu.readData("RegistrationSheet", 2, 6);
-		String password = eu.readData("RegistrationSheet", 2, 5);
-		registrationpage.createProSellerAccount(firstname, lastname, username, mobilenumber, businessname, password);
-	}
+//	@Test(priority=1)
+//	public void registerAsIndividualUser() throws Exception
+//	{
+////		String username = eu.readData("RegistrationSheet", 1, 1);
+////		String mobilenumber = eu.readData("RegistrationSheet", 1, 2);
+//		String username=JavaLibrary.dynamicUsername();
+//		String mobilenumber =JavaLibrary.dynamicPhoneNumber();
+//		String firstname = eu.readData("RegistrationSheet", 1, 3);
+//		String lastname = eu.readData("RegistrationSheet", 1, 4);
+//		String password = eu.readData("RegistrationSheet", 1, 5);
+//		registrationpage.creatIndividualAccount(username,mobilenumber,firstname,lastname,password);
+//	}
+//	
+//	@Test(priority=2)
+//	public void registerAsProSeller() throws Exception
+//	{
+//		String username = eu.readData("RegistrationSheet", 2, 1);
+//		String mobilenumber = eu.readData("RegistrationSheet", 2, 2);
+//		String firstname = eu.readData("RegistrationSheet", 2, 3);
+//		String lastname = eu.readData("RegistrationSheet", 2, 4);
+//		String businessname = eu.readData("RegistrationSheet", 2, 6);
+//		String password = eu.readData("RegistrationSheet", 2, 5);
+//		registrationpage.createProSellerAccount(firstname, lastname, username, mobilenumber, businessname, password);
+//	}
 	
 	
 	//FUNCTIONAL TEST SCRIPT FOR INDIVIDUAL ACCOUNT
@@ -60,22 +60,22 @@ public class UserRegistrationTest extends AbstractBaseTest
 		registrationpage.invalidErrorMsgVerificationWhileCreatingIndividualAccount(username,mobilenumber);
 	}
 	
-	@Test(priority=4)
-	public void emptyErrorMsgVerificationWhileRegisterAsIndividualAccount() throws Exception
-	{
-		registrationpage.emptyErrorMsgVerificationWhileRegisterAsIndividualAccount();
-	}
-	
-	
-	@Test(priority=5)
-	public void emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount() throws Exception
-	{
-//		String username = eu.readData("ErrorMsgForRegistrationSheet", 3, 1);
-//		String mobilenumber = eu.readData("ErrorMsgForRegistrationSheet", 3, 2);
-		String username=JavaLibrary.dynamicUsername();
-		String mobilenumber =JavaLibrary.dynamicPhoneNumber();
-		registrationpage.emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount(username, mobilenumber);
-	}
+//	@Test(priority=4)
+//	public void emptyErrorMsgVerificationWhileRegisterAsIndividualAccount() throws Exception
+//	{
+//		registrationpage.emptyErrorMsgVerificationWhileRegisterAsIndividualAccount();
+//	}
+//	
+//	
+//	@Test(priority=5)
+//	public void emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount() throws Exception
+//	{
+////		String username = eu.readData("ErrorMsgForRegistrationSheet", 3, 1);
+////		String mobilenumber = eu.readData("ErrorMsgForRegistrationSheet", 3, 2);
+//		String username=JavaLibrary.dynamicUsername();
+//		String mobilenumber =JavaLibrary.dynamicPhoneNumber();
+//		registrationpage.emptyErrorMsgVerificationWhileFillingFormAsIndividualAccount(username, mobilenumber);
+//	}
 	
 	
 	@Test(priority=6)
@@ -104,17 +104,17 @@ public class UserRegistrationTest extends AbstractBaseTest
 	}
 	
 	
-	@Test(priority=8)
-	public void allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount() throws Exception
-	{
-		String username = eu.readData("RegistrationSheet", 2, 1);
-		String mobilenumber = eu.readData("RegistrationSheet", 2, 2);
-		String firstname = eu.readData("RegistrationSheet", 2, 3);
-		String lastname = eu.readData("RegistrationSheet", 2, 4);
-		String password = eu.readData("RegistrationSheet", 2, 5);
-		String businessname = eu.readData("RegistrationSheet", 2, 6);
-		registrationpage.allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount(firstname, lastname, username, mobilenumber, businessname, password);
-	}
+//	@Test(priority=8)
+//	public void allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount() throws Exception
+//	{
+//		String username = eu.readData("RegistrationSheet", 2, 1);
+//		String mobilenumber = eu.readData("RegistrationSheet", 2, 2);
+//		String firstname = eu.readData("RegistrationSheet", 2, 3);
+//		String lastname = eu.readData("RegistrationSheet", 2, 4);
+//		String password = eu.readData("RegistrationSheet", 2, 5);
+//		String businessname = eu.readData("RegistrationSheet", 2, 6);
+//		registrationpage.allReadyExistErrorMsgVerificationWhileRegisterAsProSellerAccount(firstname, lastname, username, mobilenumber, businessname, password);
+//	}
 	
 	@Test(priority=9)
 	public void inValidInputErrorMsgVerificationWhileRegisterAsProSellerAccount() throws Exception

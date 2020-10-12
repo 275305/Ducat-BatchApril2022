@@ -46,23 +46,15 @@ public class UserLoginTest extends AbstractBaseTest
 		loginpage.enterLoginPage();
 		loginpage.invalidLoginValidation(username,password);
 	}
-	
-//	@Test(priority=4)
-//	public void loginAsIndividualUserViaOTP() throws Exception
-//	{
-//		String username = eu.readData("LoginTest", 4, 1);
-//		loginpage.enterLoginPage();
-//		loginpage.loginValidationByOTPForIndividualAccount(username);
-//	}
-//	
-//	@Test(priority=5)
-//	public void inValidOTPloginAsIndividualUserViaOTP() throws Exception
-//	{
-//		String username = eu.readData("LoginTest", 5, 1);
-//		String otp = eu.readData("LoginTest", 5, 3);
-//		loginpage.enterLoginPage();
-//		loginpage.invalidOTPloginValidation(username, otp);
-//	}
+
+	@Test(priority=5)
+	public void inValidOTPloginAsIndividualUserViaOTP() throws Exception
+	{
+		String username = eu.readData("LoginTest", 5, 1);
+		String otp = eu.readData("LoginTest", 5, 3);
+		loginpage.enterLoginPage();
+		loginpage.invalidOTPloginValidation(username, otp);
+	}
 
 	
 	@Test(priority=6)
@@ -92,31 +84,21 @@ public class UserLoginTest extends AbstractBaseTest
 		loginpage.enterLoginPage();
 		loginpage.invalidLoginValidation(username,password);
 	}
-	
-	
-	
-//	@Test(priority=9)
-//	public void loginAsProSellerViaOTP() throws Exception
-//	{
-//		String username = eu.readData("LoginTest", 11, 1);
-//		loginpage.enterLoginPage();
-//		loginpage.loginValidationForProSellerByOTP(username);
-//	}
-//	
-//	@Test(priority=10)
-//	public void inValidOTPloginAsProSellerViaOTP() throws Exception
-//	{
-//		String username = eu.readData("LoginTest", 12, 1);
-//		String otp = eu.readData("LoginTest", 12, 3);
-//		loginpage.enterLoginPage();
-//		loginpage.invalidOTPloginValidation(username,otp);
-//	}
-//
-//	@Test(priority = 11)
-//	public void franchiseLoginValidation()
-//	{
-//		String username = eu.readData("FranchiseSheet", 11, 3);
-//		String password = eu.readData("FranchiseSheet", 11, 5);
-//		loginpage.franchiseLoginValidation(username,password);
-//	}
+
+	@Test(priority=10)
+	public void inValidOTPloginAsProSellerViaOTP() throws Exception
+	{
+		String username = eu.readData("LoginTest", 12, 1);
+		String otp = eu.readData("LoginTest", 12, 3);
+		loginpage.enterLoginPage();
+		loginpage.invalidOTPloginValidation(username,otp);
+	}
+
+	@Test(priority = 11)
+	public void franchiseLoginValidation()
+	{
+		String username = eu.readData("FranchiseSheet", 11, 3);
+		String password = eu.readData("FranchiseSheet", 11, 5);
+		loginpage.franchiseLoginValidation(username,password);
+	}
 }

@@ -40,7 +40,7 @@ public class GermShieldAntimicrobialCoatingPage extends SeleniumWrapper
 	private static final By Final_Amount_Added_For_Hospital=By.xpath("//strong[text()='₹  1,500']");
 	private static final By Click_To_Remove_Discount=By.xpath("//a[text()='Remove Coupon']");
 	private static final By Click_To_Accept_Discount=By.xpath("//button[text()='OK']");
-//	private static final By =By.xpath("");
+	private static final By Cart_Payble_Amount=By.xpath("//b[@id='cart_payable_amount']");
 //	private static final By =By.xpath("");
 //	private static final By =By.xpath("");
 //	private static final By =By.xpath("");
@@ -74,12 +74,13 @@ public class GermShieldAntimicrobialCoatingPage extends SeleniumWrapper
 		executeScrollDownScript(500);
 		executeClickOnElement(Click_On_HatchBack_View_Details);
 		sleep(2000);
-	//	executeClickOnElement(Click_On_Buy_Now);
-		enterTextboxDetails(findElement(Enter_Pincode), "110005");
+		executeClickOnElement(Click_On_Buy_Now_PopUp);
+		enterTextboxDetails(findElement(Enter_Pincode), "110092");
 		executeClickOnElement(Click_On_Buy_Now_After_Pin);
-		sleep(2000);
+		sleep(8000);
 		executeClickOnElement(Click_On_Checkout_Popup);
 		waitForPageLoad();
+		verifyByContains(Cart_Payble_Amount, "399");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
 	}

@@ -39,27 +39,17 @@ public class CreateListingPage extends SeleniumWrapper
 	private final static By Check_Image=By.xpath("//div[@id='photo']//img");
 	private final static By Verify_Listing_Save_And_Continue=By.xpath("(//input[@id='regular_submit-button'])[1]");
 
-	
-	
-	
-	String filepath;
-	ExcelUtilities eu;
 	LoginPage lp;
 	HomePage hp;
 	
 	public CreateListingPage()
 	{
-		this.filepath="C:/Users/Honey/Desktop/Prod Automation Test Data.xlsx";
-		this.eu=new ExcelUtilities(filepath);
 		lp=new LoginPage();
 		hp=new HomePage();
 	}
 	
-	
-	public void createYourListing() throws InterruptedException
+	public void createYourListing(String username,String password) throws InterruptedException
 	{
-		String username = eu.readData("CreateListingSheet", 1, 1);
-		String password = eu.readData("CreateListingSheet", 1, 2);
 		lp.enterLoginPage();
 		lp.loginValidationForIndividualAccount(username, password);
 		executeClickOnElement(Go_To_Home);

@@ -14,11 +14,21 @@ import io.qameta.allure.Story;
 
 public class CreateListingTest extends AbstractBaseTest
 {
+	String filepath;
+	ExcelUtilities eu;
+	
+	public CreateListingTest()
+	{
+		this.filepath="C:/Users/Honey/Desktop/Prod Automation Test Data.xlsx";
+		this.eu=new ExcelUtilities(filepath);
+	}
 	@Test(priority = 1)
 	public void createNormalListingAsLoggedInUser() throws Exception
 	{
+		String username = eu.readData("CreateListingSheet", 1, 1);
+		String password = eu.readData("CreateListingSheet", 1, 2);
 		CreateListingPage createlistingpage=new CreateListingPage();
-		createlistingpage.createYourListing();
+		createlistingpage.createYourListing(username, password);
 		createlistingpage.keyInformation();
 		createlistingpage.pricing();
 		createlistingpage.uploadPicture();
@@ -31,8 +41,10 @@ public class CreateListingTest extends AbstractBaseTest
 	@Test(priority = 2)
 	public void createPremiumListingAsLoggedInUser() throws Exception
 	{
+		String username = eu.readData("CreateListingSheet", 1, 1);
+		String password = eu.readData("CreateListingSheet", 1, 2);
 		CreateListingPage createlistingpage=new CreateListingPage();
-		createlistingpage.createYourListing();
+		createlistingpage.createYourListing(username, password);
 		createlistingpage.keyInformation();
 		createlistingpage.pricing();
 		createlistingpage.uploadPicture();
@@ -44,8 +56,10 @@ public class CreateListingTest extends AbstractBaseTest
 	@Test(priority = 3)
 	public void createConciergeListingAsLoggedInUser() throws Exception
 	{
+		String username = eu.readData("CreateListingSheet", 1, 1);
+		String password = eu.readData("CreateListingSheet", 1, 2);
 		CreateListingPage createlistingpage=new CreateListingPage();
-		createlistingpage.createYourListing();
+		createlistingpage.createYourListing(username, password);
 		createlistingpage.keyInformation();
 		createlistingpage.pricing();
 		createlistingpage.uploadPicture();

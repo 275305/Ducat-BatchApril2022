@@ -53,19 +53,19 @@ public class BuyPage extends SeleniumWrapper
 	
 	
 	LoginPage loginpage;
-	PaymentPage payemntpage;
+	PaymentPage paymentpage;
 	HomePage homepage;
 	
 	
 	public BuyPage()
 	{
 		loginpage=new LoginPage();
-		payemntpage=new PaymentPage();
+		paymentpage=new PaymentPage();
 		homepage=new HomePage();
 	}
 	
 	
-	public void selectBuyCategory(String username, String password) throws InterruptedException
+	public void shoppingForVehiclesAsCoupeCars(String username, String password, String bodytype) throws InterruptedException
 	{
 		loginpage.goToBuyViaMyAccount(username, password);
 		waitForPageLoad();
@@ -73,24 +73,24 @@ public class BuyPage extends SeleniumWrapper
 		sleep(3000);
 		executeClickOnElement(Select_City_Delhi);
 		sleep(3000);
-		executeClickOnElement(Select_Vehicle_As_Car);
+		selectVehicleCategoryAsAllCars();
 		sleep(3000);
-		executeClickOnElement(Select_Body_Type);
+		selectBodyType(bodytype);
 		sleep(3000);
-		executeClickOnElement(Select_Fuel_Type);
+		executeClickOnElement(By.xpath("//label[text()='Petrol']"));
 		sleep(3000);
-		executeClickOnElement(Select_Transmission_Type);
+		executeClickOnElement(By.xpath("//label[text()='Manual']"));
 		sleep(3000);
-		executeClickOnElement(Select_Make_And_Model);
-		sleep(2000);
-		enterTextboxDetails(findElement(Enter_For_Search_Model), "Hyundai");
-		sleep(2000);
-		executeClickOnElement(Select_Model_As_Hyundai);
-		sleep(2000);
-		executeClickOnElement(Click_On_Apply);
+//		executeClickOnElement(Select_Make_And_Model);
+//		sleep(2000);
+//		enterTextboxDetails(findElement(Enter_For_Search_Model), "Hyundai");
+//		sleep(2000);
+//		executeClickOnElement(Select_Model_As_Hyundai);
+//		sleep(2000);
+//		executeClickOnElement(Click_On_Apply);
 		executeClickOnElement(Click_On_View_Listing);
 		waitForPageLoad();
-		executeClickOnElement(Select_Car_Hyundai);
+		executeClickOnElement(By.xpath("//img[@alt='Maruti Suzuki Alto K10 VXi 2013']"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
 		//verifyByText(Verify_Token_Amount, "₹ 13,273");
@@ -99,14 +99,31 @@ public class BuyPage extends SeleniumWrapper
 		//verifyByText(Verify_Token_Amount_Popup, "₹13,273");
 		//verifyByWebElements(Verify_Token_Amount, Verify_Token_Amount_Popup);
 		executeClickOnElement(Proceed_To_Payment);
-//		PaymentPage paymentpage=new PaymentPage();
-//		paymentpage.proceedToCheckout();
-//		paymentpage.paymentViaNetBanking();
-		
-		
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 	}
 	
+	public void selectVehicleCategoryAsAllCars()
+	{
+		executeClickOnElement(By.xpath("//div[@class='item active']//label[contains(text(),'All')]"));
+	}
+	public void selectVehicleCategoryAsPremiumCars()
+	{
+		executeClickOnElement(By.xpath("//i[@class='icon icon-car-premium']"));
+	}
+	public void selectVehicleCategoryAsVintageCars()
+	{
+		executeClickOnElement(By.xpath("//i[@class='icon icon-car-vintage']"));
+	}
+	public void selectVehicleCategoryAsElectricCars()
+	{
+		executeClickOnElement(By.xpath("//i[@class='icon icon-car-electric']"));
+	}
 	
+	public void selectBodyType(String bodytype)
+	{
+		executeClickOnElement(By.xpath("//i[@class='icon icon-car-"+bodytype+"']"));
+	}
 	public void selectAutomobileServices()
 	{
 		executeClickOnElement(Click_For_Automobile_Services);
@@ -128,8 +145,8 @@ public class BuyPage extends SeleniumWrapper
 		executeClickOnElement(Click_Send_OTP);
 		sleep(2000);
 		executeClickOnElement(Click_Submit_Button);
-		payemntpage.proceedToCheckout();
-		payemntpage.paymentViaNetBanking();
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 		
 	}
 	
@@ -147,8 +164,8 @@ public class BuyPage extends SeleniumWrapper
 		sleep(2000);
 		executeClickOnElement(Click_Checkout_Now);
 		waitForPageLoad();
-		payemntpage.proceedToCheckout();
-		payemntpage.paymentViaNetBanking();
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 		
 		
 	}
@@ -167,8 +184,8 @@ public class BuyPage extends SeleniumWrapper
 		executeClickOnElement(Click_Send_OTP);
 		sleep(2000);
 		executeClickOnElement(Click_Submit_Button);
-		payemntpage.proceedToCheckout();
-		payemntpage.paymentViaNetBanking();
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 		
 	}
 

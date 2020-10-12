@@ -59,7 +59,8 @@ public class GermShieldForAutomobilePage extends SeleniumWrapper
 		verifyByContains(Click_For_Automobile, "Automobile");
 		executeClickOnElement(Click_For_Automobile);
 		verifyByContains(Click_For_Car, "Car");
-		executeClickOnElement(Click_For_Car);
+		waitForElementTobePresent(Click_For_Car);
+		moveToElementAndClick(Click_For_Car);
 		verifyByContains(By.xpath("//label[text()='₹ "+amount+"']"), "₹ "+amount+"");
 		verifyByContains(By.xpath("//li[@id='carFirstListing']//p[text()='Hatchback']/following-sibling::span[text()='View Details']"), "View Details");
 		executeClickOnElement(By.xpath("//li[@id='carFirstListing']//p[text()='Hatchback']/following-sibling::span[text()='View Details']"));

@@ -2,7 +2,13 @@ package com.droom.automation.droomweb.droomweb_qa;
 import org.testng.annotations.Test;
 
 import com.droom.automation.lib.AbstractBaseTest;
+import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.page.droomweb.CreateListingPage;
+import com.droom.automation.page.droomweb.GermShieldAntimicrobialCoatingPage;
+import com.droom.automation.page.droomweb.GermShieldForAutomobilePage;
+import com.droom.automation.page.droomweb.GermShieldForHeavyTransportPage;
+import com.droom.automation.page.droomweb.GermShieldForHomePage;
+import com.droom.automation.page.droomweb.GermShieldForOfficePage;
 import com.droom.automation.page.droomweb.PaymentPage;
 
 import io.qameta.allure.Description;
@@ -12,11 +18,21 @@ import io.qameta.allure.Story;
 
 public class CreateListingTest extends AbstractBaseTest
 {
+	String filepath;
+	ExcelUtilities eu;
+	
+	public CreateListingTest()
+	{
+		this.filepath="C:/Users/Honey/Desktop/QA Automation TestData.xlsx";
+		this.eu=new ExcelUtilities(filepath);
+	}
 	@Test(priority = 1)
 	public void createNormalListingAsLoggedInUser() throws Exception
 	{
+		String username = eu.readData("CreateListingSheet", 1, 1);
+		String password = eu.readData("CreateListingSheet", 1, 2);
 		CreateListingPage createlistingpage=new CreateListingPage();
-		createlistingpage.createYourListing();
+		createlistingpage.createYourListing(username, password);
 		createlistingpage.keyInformation();
 		createlistingpage.pricing();
 		createlistingpage.uploadPicture();
@@ -29,8 +45,10 @@ public class CreateListingTest extends AbstractBaseTest
 	@Test(priority = 2)
 	public void createPremiumListingAsLoggedInUser() throws Exception
 	{
+		String username = eu.readData("CreateListingSheet", 1, 1);
+		String password = eu.readData("CreateListingSheet", 1, 2);
 		CreateListingPage createlistingpage=new CreateListingPage();
-		createlistingpage.createYourListing();
+		createlistingpage.createYourListing(username, password);
 		createlistingpage.keyInformation();
 		createlistingpage.pricing();
 		createlistingpage.uploadPicture();
@@ -42,8 +60,10 @@ public class CreateListingTest extends AbstractBaseTest
 	@Test(priority = 3)
 	public void createConciergeListingAsLoggedInUser() throws Exception
 	{
+		String username = eu.readData("CreateListingSheet", 1, 1);
+		String password = eu.readData("CreateListingSheet", 1, 2);
 		CreateListingPage createlistingpage=new CreateListingPage();
-		createlistingpage.createYourListing();
+		createlistingpage.createYourListing(username, password);
 		createlistingpage.keyInformation();
 		createlistingpage.pricing();
 		createlistingpage.uploadPicture();

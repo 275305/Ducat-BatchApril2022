@@ -28,7 +28,6 @@ public class SubmitRequirementTest extends AbstractBaseTest
 	{
 		String firstName = eu.readData("Submit Requirements", 1, 1);
 		String phoneNumber = JavaLibrary.dynamicPhoneNumber();
-		System.out.println(phoneNumber);
 		String email = JavaLibrary.dynamicUsername();
 		String searchingFor = eu.readData("Submit Requirements", 1, 12);
 		String selectCatogery = eu.readData("Submit Requirements", 1, 4);
@@ -39,8 +38,7 @@ public class SubmitRequirementTest extends AbstractBaseTest
 		String bodytype = eu.readData("Submit Requirements", 1, 9);
 		String fueltype = eu.readData("Submit Requirements", 1, 10);
 		String transmissiontype = eu.readData("Submit Requirements", 1, 11);
-		String SelectRequirement = eu.readData("Submit Requirements", 1, 11);
-	//	submitreq.selectRequirement(SelectRequirement);
+		submitreq.selectForBuy();
 		submitreq.selectWhatAreYouSearchingFor(searchingFor);
 		submitreq.selectCategory(selectCatogery);
 		submitreq.selectConditionAsNew();
@@ -1047,6 +1045,7 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Trim = eu.readData("Submit Requirements For Sell", 2,11);
 			String Year = eu.readData("Submit Requirements For Sell", 2, 12);
 			submitreq.selectForSell();
+			submitreq.selectCategoryAfterSell(enterCategory);
 			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
 			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
@@ -1067,6 +1066,7 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Trim = eu.readData("Submit Requirements For Sell", 3,11);
 			String Year = eu.readData("Submit Requirements For Sell", 3, 12);
 			submitreq.selectForSell();
+			submitreq.selectCategoryAfterSell(enterCategory);
 			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
 			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
@@ -1087,6 +1087,7 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Trim = eu.readData("Submit Requirements For Sell", 4,11);
 			String Year = eu.readData("Submit Requirements For Sell", 4, 12);
 			submitreq.selectForSell();
+			submitreq.selectCategoryAfterSell(enterCategory);
 			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
 			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
@@ -1107,6 +1108,7 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Trim = eu.readData("Submit Requirements For Sell", 5,11);
 			String Year = eu.readData("Submit Requirements For Sell", 5, 12);
 			submitreq.selectForSell();
+			submitreq.selectCategoryAfterSell(enterCategory);
 			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
 			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
@@ -1127,6 +1129,7 @@ public class SubmitRequirementTest extends AbstractBaseTest
 			String Trim = eu.readData("Submit Requirements For Sell", 6,11);
 			String Year = eu.readData("Submit Requirements For Sell", 6, 12);
 			submitreq.selectForSell();
+			submitreq.selectCategoryAfterSell(enterCategory);
 			submitreq.enterSellerDetails(firstName, lastName, phoneNumber, email);
 			submitreq.enterSellerDeatilsAfterNumber(enterSellCategory, enterPincode, enterKmDriver, Make, Model, Trim, Year);
 		}
