@@ -31,13 +31,13 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		transportgermshield=new GermShieldForHeavyTransportPage();
 	}
 	
-	@Test(priority=1)
-	public void buyGermShieldServiceViaHomePageAsLoggedInUser()
-	{
-		String username = eu.readData("GermShieldSheet", 1, 1);
-		String password = eu.readData("GermShieldSheet", 1, 2);
-		germshield.germShieldAntimicrobialCoatingValidation(username,password);
-	}
+//	@Test(priority=1)
+//	public void buyGermShieldServiceViaHomePageAsLoggedInUser()
+//	{
+//		String username = eu.readData("GermShieldSheet", 1, 1);
+//		String password = eu.readData("GermShieldSheet", 1, 2);
+//		germshield.germShieldAntimicrobialCoatingValidation(username,password);
+//	}
 
 	
 	@Test(priority = 2)

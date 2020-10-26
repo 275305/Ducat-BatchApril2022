@@ -30,7 +30,7 @@ public class UserLoginTest extends AbstractBaseTest
 	}
 	
 	@Test(priority=2)
-	public void inValidIDloginAsIndividualUserViaPassword()
+	public void inValidloginIDAsIndividualUserViaPassword()
 	{
 		String username = eu.readData("LoginTest", 2, 1);
 		String password = eu.readData("LoginTest", 2, 2);

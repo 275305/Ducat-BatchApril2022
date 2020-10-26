@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="18" total="20" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="124055" started-at="2020-10-12T15:00:06 IST" finished-at="2020-10-12T15:02:10 IST">
+  <suite name="Failed suite [Failed suite [Default suite]]" duration-ms="187438" started-at="2020-10-26T16:21:00 IST" finished-at="2020-10-26T16:24:08 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="124055" started-at="2020-10-12T15:00:06 IST" finished-at="2020-10-12T15:02:10 IST">
-      <class name="com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest@47d90b9e]" name="beforeSuite" is-config="true" duration-ms="35" started-at="2020-10-12T15:00:06 IST" finished-at="2020-10-12T15:00:06 IST">
+    <test name="Default test(failed)(failed)" duration-ms="187438" started-at="2020-10-26T16:21:00 IST" finished-at="2020-10-26T16:24:08 IST">
+      <class name="com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest@49d904ec]" name="beforeSuite" is-config="true" duration-ms="21" started-at="2020-10-26T16:21:00 IST" finished-at="2020-10-26T16:21:00 IST">
           <params>
             <param index="0">
               <value>
@@ -18,30 +18,49 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest@47d90b9e]" name="beforeTest" is-config="true" duration-ms="15" started-at="2020-10-12T15:00:06 IST" finished-at="2020-10-12T15:00:06 IST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest@49d904ec]" name="beforeTest" is-config="true" duration-ms="9" started-at="2020-10-26T16:21:00 IST" finished-at="2020-10-26T16:21:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest@47d90b9e]" name="init" is-config="true" duration-ms="12257" started-at="2020-10-12T15:00:06 IST" finished-at="2020-10-12T15:00:19 IST">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest@49d904ec]" name="init" is-config="true" duration-ms="30366" started-at="2020-10-26T16:21:00 IST" finished-at="2020-10-26T16:21:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="buyCarAsLoggedInUser()[pri:1, instance:com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest@47d90b9e]" name="buyCarAsLoggedInUser" duration-ms="111504" started-at="2020-10-12T15:00:19 IST" finished-at="2020-10-12T15:02:10 IST">
+        <test-method status="PASS" signature="buyGermShieldForHeavyTransportAsHelicopter()[pri:20, instance:com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest@49d904ec]" name="buyGermShieldForHeavyTransportAsHelicopter" duration-ms="83389" started-at="2020-10-26T16:21:31 IST" finished-at="2020-10-26T16:22:54 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- buyCarAsLoggedInUser -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest@47d90b9e]" name="afterMethod" is-config="true" duration-ms="5" started-at="2020-10-12T15:02:10 IST" finished-at="2020-10-12T15:02:10 IST">
+        </test-method> <!-- buyGermShieldForHeavyTransportAsHelicopter -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest@49d904ec]" name="afterMethod" is-config="true" duration-ms="781" started-at="2020-10-26T16:22:54 IST" finished-at="2020-10-26T16:22:55 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=buyCarAsLoggedInUser status=SUCCESS method=BuyFeatureTest.buyCarAsLoggedInUser()[pri:1, instance:com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest@47d90b9e] output={null}]]]>
+                <![CDATA[[TestResult name=buyGermShieldForHeavyTransportAsHelicopter status=SUCCESS method=BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsHelicopter()[pri:20, instance:com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest@49d904ec] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.droom.automation.droomweb.droomweb_qa.BuyFeatureTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest@49d904ec]" name="init" is-config="true" duration-ms="9653" started-at="2020-10-26T16:22:55 IST" finished-at="2020-10-26T16:23:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="buyGermShieldForHeavyTransportAsTrain()[pri:21, instance:com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest@49d904ec]" name="buyGermShieldForHeavyTransportAsTrain" duration-ms="62289" started-at="2020-10-26T16:23:05 IST" finished-at="2020-10-26T16:24:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buyGermShieldForHeavyTransportAsTrain -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest@49d904ec]" name="afterMethod" is-config="true" duration-ms="768" started-at="2020-10-26T16:24:07 IST" finished-at="2020-10-26T16:24:08 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=buyGermShieldForHeavyTransportAsTrain status=SUCCESS method=BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsTrain()[pri:21, instance:com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest@49d904ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest -->
+    </test> <!-- Default test(failed)(failed) -->
+  </suite> <!-- Failed suite [Failed suite [Default suite]] -->
 </testng-results>

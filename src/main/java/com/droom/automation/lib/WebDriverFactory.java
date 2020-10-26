@@ -197,7 +197,7 @@ public final class WebDriverFactory {
         options.addArguments("--disable-dev-shm-usage");
         options.setExperimentalOption("prefs", preferences);
         options.setCapability("minidumpPath","/tmp/");
-    //    options.addArguments("--incognito");                                   
+  //      options.addArguments("--incognito");                                   
 
         LOG.info("Instantiating a Driver to Chrome");
         //git Runtime.getRuntime().exec("pkill chrome");

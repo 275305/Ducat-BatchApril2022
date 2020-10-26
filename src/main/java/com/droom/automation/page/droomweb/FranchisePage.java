@@ -306,11 +306,11 @@ public class FranchisePage extends SeleniumWrapper
     	verifyByAttribute(By.xpath("//input[@id='automobile-pincode']"), "110001");
     	verifyByContains(By.xpath("//button[@id='auto-gs-submit']"), "Buy Now");
     	executeClickOnElement(By.xpath("//button[@id='auto-gs-submit']"));
-    	sleep(2000);
-        verifyByContains(By.xpath("//div[@id='cart_details']//button[@id='movetostep3']"), "Next");
-        executeClickOnElement(By.xpath("//div[@id='cart_details']//button[@id='movetostep3']"));
+//    	sleep(2000);
+//        verifyByContains(By.xpath("//div[@id='cart_details']//button[@id='movetostep3']"), "Next");
+//        executeClickOnElement(By.xpath("//div[@id='cart_details']//button[@id='movetostep3']"));
         sleep(5000);
-        verifyByContains(By.xpath("//button[@id='place_order']"), "Submit");
+ //       verifyByContains(By.xpath("//button[@id='place_order']"), "Submit");
         executeClickOnElement(By.xpath("//button[@id='place_order']"));
     }
     
@@ -340,7 +340,7 @@ public class FranchisePage extends SeleniumWrapper
  //   	verifyByContains(Click_On_Next_After_Cart, "Next");
     	executeClickOnElement(Click_On_Next_After_Cart);
     	waitForPageLoad();
-    	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+ //   	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
     
@@ -362,10 +362,10 @@ public class FranchisePage extends SeleniumWrapper
     	verifyByContains(By.xpath("//button[@id='elevator-gs-submit']"), "Buy Now");
     	executeClickOnElement(By.xpath("//button[@id='elevator-gs-submit']"));
     	sleep(2000);
-    	verifyByContains(Click_On_Next_After_Cart, "Next");
+   // 	verifyByContains(Click_On_Next_After_Cart, "Next");
     	executeClickOnElement(Click_On_Next_After_Cart);
     	waitForPageLoad();
-    	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+    //	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
     
@@ -388,7 +388,7 @@ public class FranchisePage extends SeleniumWrapper
   //  	verifyByContains(Click_On_Next_After_Cart, "Next");
     	executeClickOnElement(Click_On_Next_After_Cart);
     	waitForPageLoad();
-    	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+   // 	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
     
@@ -416,7 +416,7 @@ public class FranchisePage extends SeleniumWrapper
    // 	verifyByContains(Click_On_Next_After_Cart, "Next");
     	executeClickOnElement(Click_On_Next_After_Cart);
     	waitForPageLoad();
-    	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+   // 	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
     

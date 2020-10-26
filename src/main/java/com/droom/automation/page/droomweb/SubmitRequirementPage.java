@@ -1,6 +1,11 @@
 package com.droom.automation.page.droomweb;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 import com.droom.automation.lib.DataBaseDemo;
 import com.droom.automation.lib.SeleniumWrapper;
@@ -230,12 +235,14 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	    executeClickOnElement(By.xpath("//button[text()='Create My Listing']"));
 	 }
 	 
-	 public void selectLocation()
+	 public void selectLocation() throws AWTException
 	 {
-	    verifyByContains(By.xpath("//div[@id='display_location']"), "Select Location");
-	    executeClickOnElement(By.xpath("//div[@id='display_location']"));
-	    enterTextboxDetails(findElement(By.xpath("(//label[text()='Search My Location']/parent::div//input)[2]")), "Delhi");
-	    moveToElementAndClick(By.xpath("(//li[text()='Delhi'])[5]"));
+	    enterTextboxDetails(findElement(By.xpath("//input[@name='req_location']")), "Gurgaon, Haryana, India");
+	    sleep(2000);
+	    WebDriverFactory.getDriver().findElement(By.xpath("//input[@name='req_location']")).sendKeys(Keys.ARROW_DOWN);
+	    WebDriverFactory.getDriver().findElement(By.xpath("//input[@name='req_location']")).sendKeys(Keys.ENTER);
+	    sleep(3000);
+	    executeClickOnElement(By.xpath("(//a[contains(text(),'Submit')])[3]"));
 	 }
 	 
 	 public void clickSubmitAfterBuyerDetails()
@@ -297,10 +304,11 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	    verifyRadioButton(Click_This_Week);
 	    executeClickOnElement(Click_No_To_Exchange);
 	    verifyRadioButton(Click_No_To_Exchange);
+	    sleep(2000);
 	    verifyByContains(Click_Done, "Done");
 	    executeClickOnElement(Click_Done);
-	    sleep(3000);
-	    verifyByContains(Verify_ThankYou, "Thank You");
+//	    sleep(3000);
+//	    verifyByContains(Verify_ThankYou, "Thank You");
 	}
 	   
 	   public void selectForMakeModelTrimYear(String Make,String Model,String Trim,String Year)

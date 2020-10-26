@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 
 import com.droom.automation.lib.DataBaseDemo;
 import com.droom.automation.lib.SeleniumWrapper;
+import com.droom.automation.lib.WebDriverFactory;
 
 public class BuyPage extends SeleniumWrapper
 {
@@ -39,7 +40,7 @@ public class BuyPage extends SeleniumWrapper
 	private final static By Select_Model_As_Hyundai=By.xpath("//label[text()='Hyundai']");
 	private final static By Select_Car_Hyundai=By.xpath("//img[@alt='Mahindra Scorpio SLE 7S BSIV 2011']");
 	private final static By Verify_Token_Amount=By.xpath("//button[@id='cart_add']//span");
-	private final static By Verify_Token_Amount_Popup=By.xpath("//span[text()='₹25,669']");
+	private final static By Verify_Token_Amount_Popup=By.xpath("//span[text()='₹20,892']");
 	private final static By Select_Car_As_Vehicle_Catogory=By.xpath("//label[text()='Car']");
 	private final static By Select_Motorcycle_Bike_As_Vehicle_Catogory=By.xpath("//label[text()='Motorcycle/bike']");
 	
@@ -90,15 +91,17 @@ public class BuyPage extends SeleniumWrapper
 //		executeClickOnElement(Click_On_Apply);
 		executeClickOnElement(Click_On_View_Listing);
 		waitForPageLoad();
-		executeClickOnElement(By.xpath("//img[@alt='Maruti Suzuki Alto K10 VXi 2013']"));
+		executeClickOnElement(By.xpath("//img[@alt='Hyundai Creta 1.6 E Petrol 2019']"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
-		//verifyByText(Verify_Token_Amount, "₹ 13,273");
+		verifyByText(Verify_Token_Amount, "Pay Fully Refundable Token Amount - ₹ 20,892");
 		executeClickOnElement(Pay_Fully_Refundable_Token_Amount);
 		executeClickOnElement(Click_Proceed);
-		//verifyByText(Verify_Token_Amount_Popup, "₹13,273");
+		//verifyByText(Verify_Token_Amount_Popup, "₹20,892");
 		//verifyByWebElements(Verify_Token_Amount, Verify_Token_Amount_Popup);
 		executeClickOnElement(Proceed_To_Payment);
+		System.out.println(WebDriverFactory.getDriver().findElement(By.xpath("//strong[text()='₹  20,892']")).getText());
+		verifyByText(By.xpath("//strong[text()='₹  20,892']"), "₹ 20,892");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
 	}

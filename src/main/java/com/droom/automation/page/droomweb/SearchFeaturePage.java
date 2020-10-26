@@ -44,7 +44,7 @@ public class SearchFeaturePage extends SeleniumWrapper
 		waitForPageLoad();
 		executeClickOnElement(Click_To_Deselect_Used);
 		sleep(5000);
-		executeClickOnElement(By.xpath("//img[@alt='Ford EcoSport Titanium+ 1.5L TDCi 2017']"));
+		executeClickOnElement(By.xpath("(//img[@alt='Ford Figo Trend 1.5L TDCi 2019'])[1]"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
 		String initialAmount = WebDriverFactory.getDriver().findElement(Get_Amount).getText();
@@ -52,9 +52,7 @@ public class SearchFeaturePage extends SeleniumWrapper
 		executeClickOnElement(Click_Proceed);
 		executeClickOnElement(Proceed_To_Payment);
 		waitForPageLoad();
-		String finalAmount = WebDriverFactory.getDriver().findElement(Get_Amount_At_Checkout).getText();
-		System.out.println(initialAmount);
-		System.out.println(finalAmount);
+		String finalAmount = WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  15,696']")).getText();
 		Assert.assertTrue(initialAmount.contains(finalAmount));
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
@@ -68,7 +66,7 @@ public class SearchFeaturePage extends SeleniumWrapper
 		loginpage.loginValidationForIndividualAccount(username, password);
 		homepage.enterSearchBox("bike");
 		waitForPageLoad();
-		executeClickOnElement(By.xpath("//img[@alt='Bajaj Pulsar 180cc 2019']"));
+		executeClickOnElement(By.xpath("(//img[@alt='Hero HF Deluxe Eco 100cc 2019'])[1]"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
 		String initialAmount = WebDriverFactory.getDriver().findElement(Get_Amount).getText();
@@ -76,7 +74,7 @@ public class SearchFeaturePage extends SeleniumWrapper
 		executeClickOnElement(Click_Proceed);
 		executeClickOnElement(Proceed_To_Payment);
 		waitForPageLoad();
-		String finalAmount = WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  2,953']")).getText();
+		String finalAmount = WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  1,665']")).getText();
 		System.out.println(initialAmount);
 		System.out.println(finalAmount);
 		Assert.assertTrue(initialAmount.contains(finalAmount));

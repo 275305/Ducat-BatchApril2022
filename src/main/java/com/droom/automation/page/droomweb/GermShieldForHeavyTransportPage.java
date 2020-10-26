@@ -1,7 +1,10 @@
 package com.droom.automation.page.droomweb;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
+
 import com.droom.automation.lib.SeleniumWrapper;
+import com.droom.automation.lib.WebDriverFactory;
 
 public class GermShieldForHeavyTransportPage extends SeleniumWrapper
 {
@@ -72,6 +75,7 @@ public class GermShieldForHeavyTransportPage extends SeleniumWrapper
 		enterTextboxDetails(findElement(Enter_Pin), pincode);
 		verifyByAttribute(Enter_Pin,pincode );
 		executeClickOnElement(Enter_Date);
+	//	executeClickOnElement(By.xpath("(//ul[@class='list-unstyled']//li//div[@class='datepicker-days'and@style='display: block;'])[5]//table//tbody//tr[4]//td[text()='20']"));
 		executeClickOnElement(Click_On_Buy_Now);
 		sleep(2000);
 		executeClickOnElement(Click_On_Checkout_Popup);
