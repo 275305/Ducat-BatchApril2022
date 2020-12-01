@@ -31,16 +31,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		transportgermshield=new GermShieldForHeavyTransportPage();
 	}
 	
-//	@Test(priority=1)
-//	public void buyGermShieldServiceViaHomePageAsLoggedInUser()
-//	{
-//		String username = eu.readData("GermShieldSheet", 1, 1);
-//		String password = eu.readData("GermShieldSheet", 1, 2);
-//		germshield.germShieldAntimicrobialCoatingValidation(username,password);
-//	}
-
-	
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void buyGermShieldElevatorService()
 	{
 		String username = eu.readData("GermShieldSheet", 1, 1);
@@ -48,7 +39,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		germshield.germShieldForElevator(username, password);
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void buyGermShieldForOtherFacility()
 	{
 		String username = eu.readData("GermShieldSheet", 1, 1);
@@ -58,8 +49,8 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 	
 	                    // TEST RUN FOR Automobile
 	
-	@Test(priority = 4)
-	public void buyGermShieldForAutomobileAsHatchback()
+	@Test(priority = 3)
+	public void buyGemShieldForAutomobileAsHatchback()
 	{
 		String username = eu.readData("GermShieldSheet", 1, 1);
 		String password = eu.readData("GermShieldSheet", 1, 2);
@@ -68,7 +59,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		automobilegermshield.germShieldValidationForCarAsHatchback(username, password, amount, pincode);
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void buyGermShieldForAutomobileAsSedan()
 	{
 		String username = eu.readData("GermShieldSheet", 2, 1);
@@ -78,7 +69,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		automobilegermshield.germShieldValidationForCarAsSedan(username, password, amount, pincode);
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 5)
 	public void buyGermShieldForAutomobileAsBike()
 	{
 		String username = eu.readData("GermShieldSheet", 3, 1);
@@ -88,7 +79,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		automobilegermshield.germShieldValidationForBike(username, password, amount, pincode);
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 6)
 	public void buyGermShieldForAutomobileAsScooter()
 	{
 		String username = eu.readData("GermShieldSheet", 4, 1);
@@ -98,7 +89,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		automobilegermshield.germShieldValidationForScooter(username, password, amount, pincode);
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 7)
 	public void buyGermShieldForAutomobileAsPremiumBike()
 	{
 		String username = eu.readData("GermShieldSheet", 5, 1);
@@ -108,7 +99,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		automobilegermshield.germShieldValidationForPremiumBike(username, password, amount, pincode);
 	}
 	
-	@Test(priority = 9)
+	@Test(priority = 8)
 	public void buyGermShieldForAutomobileAsBus()
 	{
 		String username = eu.readData("GermShieldSheet", 6, 1);
@@ -120,7 +111,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 	
 	                                // TEST RUN FOR HOME
 	
-	@Test(priority = 10)
+	@Test(priority = 9)
 	public void buyGermShieldForHomeAsIndependent()
 	{
 		String username = eu.readData("GermShieldForHome", 1, 1);
@@ -131,7 +122,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		homegermshield.germShieldValidationForHomeAsIndependent(username, password, area, address, pincode);
 	}
 	
-	@Test(priority = 11)
+	@Test(priority = 10)
 	public void buyGermShieldForHomeAsBungalow()
 	{
 		String username = eu.readData("GermShieldForHome", 1, 1);
@@ -142,7 +133,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		homegermshield.germShieldValidationForHomeAsBungalow(username, password, area, address, pincode);
 	}
 	
-	@Test(priority = 12)
+	@Test(priority = 11)
 	public void buyGermShieldForHomeAsFlat()
 	{
 		String username = eu.readData("GermShieldForHome", 1, 1);
@@ -153,7 +144,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		homegermshield.germShieldValidationForHomeAsFlat(username, password, area, address, pincode);
 	}
 	
-	@Test(priority = 13)
+	@Test(priority = 12)
 	public void buyGermShieldForHomeAsVilla()
 	{
 		String username = eu.readData("GermShieldForHome", 1, 1);
@@ -164,7 +155,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		homegermshield.germShieldValidationForHomeAsVilla(username, password, area, address, pincode);
 	}
 	
-	@Test(priority = 14)
+	@Test(priority = 13)
 	public void buyGermShieldForHomeAsPenthouse()
 	{
 		String username = eu.readData("GermShieldForHome", 1, 1);
@@ -175,7 +166,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		homegermshield.germShieldValidationForHomeAsPenthouse(username, password, area, address, pincode);
 	}
 	
-	@Test(priority = 15)
+	@Test(priority = 14)
 	public void buyGermShieldForHomeAsFarmhouse()
 	{
 		String username = eu.readData("GermShieldForHome", 1, 1);
@@ -188,7 +179,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 	
 	                         // TEST RUN FOR OFFICE
 	
-	@Test(priority = 16)
+	@Test(priority = 15)
 	public void buyGermShieldForOfficeAsIndependentBuilding()
 	{
 		String username = eu.readData("GermShieldForHome", 4, 1);
@@ -199,7 +190,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		officegermshiled.germShieldValidationForHomeAsIndependentBuilding(username, password, area, address, pincode);
 	}
 	
-	@Test(priority = 17)
+	@Test(priority = 16)
 	public void buyGermShieldForOfficeAsHighRiseBuilding()
 	{
 		String username = eu.readData("GermShieldForHome", 4, 1);
@@ -210,7 +201,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		officegermshiled.germShieldValidationForHomeAsHighRiseBuilding(username, password, area, address, pincode);
 	}
 	
-	@Test(priority = 18)
+	@Test(priority = 17)
 	public void buyGermShieldForOfficeAsCoWorkingSpace()
 	{
 		String username = eu.readData("GermShieldForHome", 4, 1);
@@ -223,7 +214,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 	
 	             // TEST RUN FOR HEAVY TRANSPORT
 	
-	@Test(priority = 19)
+	@Test(priority = 18)
 	public void buyGermShieldForHeavyTransportAsPlane()
 	{
 		String username = eu.readData("GermShieldForHome", 8, 1);
@@ -234,7 +225,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		transportgermshield.germShieldValidationForHeavyTransportAsPlane(username, password, area, address, pincode);
 	}
 	
-	@Test(priority = 20)
+	@Test(priority = 21)
 	public void buyGermShieldForHeavyTransportAsHelicopter()
 	{
 		String username = eu.readData("GermShieldForHome", 8, 1);
@@ -245,7 +236,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		transportgermshield.germShieldValidationForHeavyTransportAsHelicopter(username, password, area, address, pincode);
 	}
 	
-	@Test(priority = 21)
+	@Test(priority = 22)
 	public void buyGermShieldForHeavyTransportAsTrain()
 	{
 		String username = eu.readData("GermShieldForHome", 8, 1);

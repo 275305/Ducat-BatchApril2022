@@ -3,13 +3,8 @@
 <suite name="Suite" parallel="tests" thread-count="6" >
    <test name="Test1">
     <classes>
-      <class name="com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest"/>
+      <class name="com.droom.automation.droomweb.BuyGermShieldServiceTest"/>
     </classes>
-  </test>
-  
-   <test name="Test2">
-    <classes>
-      <class name="com.droom.automation.droomweb.droomweb_prod.CreateListingTest"/>
-    </classes>
+ 
   </test>
 </suite>

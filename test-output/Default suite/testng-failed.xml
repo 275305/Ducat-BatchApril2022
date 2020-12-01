@@ -3,27 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest">
-=======
-      <class name="com.droom.automation.droomweb.droomweb_prod.FranchiseTest">
->>>>>>> 01.12.20
+      <class name="com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
-<<<<<<< HEAD
-          <include name="buyGermShieldForHeavyTransportAsHelicopter"/>
-          <include name="buyGermShieldForHeavyTransportAsTrain"/>
+          <include name="buyGermShieldForHomeAsFlat"/>
+          <include name="buyGermShieldForHomeAsIndependent"/>
+          <include name="buyGermShieldForHomeAsBungalow"/>
+          <include name="buyGermShieldForOtherFacility"/>
           <include name="init"/>
+          <include name="buyGermShieldElevatorService"/>
+          <include name="buyGermShieldForAutomobileAsSedan"/>
         </methods>
-      </class> <!-- com.droom.automation.droomweb.droomweb_qa.BuyGermShieldServiceTest -->
-=======
-          <include name="RegisteringBuyerAsFacilityGermShield"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.droom.automation.droomweb.droomweb_prod.FranchiseTest -->
->>>>>>> 01.12.20
+      </class> <!-- com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -23,8 +23,9 @@ public class BuyFeatureTest extends AbstractBaseTest
 	{
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
 		String password = eu.readData("BuyFeatureSheet", 1, 2);
+		String bodytype = eu.readData("BuyFeatureSheet", 1, 3);
 		BuyPage buypage=new BuyPage();
-	//	buypage.selectBuyCategory(username, password);
+		buypage.shoppingForVehiclesAsCoupeCars(username, password, bodytype);
 	}
 	
 	@Test(priority = 2)
