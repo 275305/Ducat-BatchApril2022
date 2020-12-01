@@ -287,7 +287,7 @@ public class FranchisePage extends SeleniumWrapper
     	enterTextboxDetails(findElement(By.xpath("//input[@id='mobile_no']")), "9599946816");
     	verifyByContains(By.xpath("//button[@id='search_users']"), "Search");
     	executeClickOnElement(By.xpath("//button[@id='search_users']"));
-    	sleep(2000);
+    	sleep(5000);
     	verifyByContains(By.xpath("//div[@id='buyer-found']"), "Buyer details found successfully");
     	System.out.println("The Buyer Name: "+WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Buyer Name:']/parent::div//span")).getText());
     	System.out.println("The Buyer Phone: "+WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Buyer Phone:']/parent::div//span")).getText());
@@ -298,6 +298,8 @@ public class FranchisePage extends SeleniumWrapper
     
     public void franchiseMyOrdersAsAutomobileGermShield()
     {
+    	sleep(2000);
+    	executeClickOnElement(By.xpath("//button[@id='movetostep3']"));
     	waitForPageLoad();
     	executeClickOnElement(By.xpath("//button[@id='movetostep3']"));
     	enterTextboxDetails(findElement(By.xpath("//input[@id='automobile-address']")), "Gurgaon");
@@ -311,6 +313,11 @@ public class FranchisePage extends SeleniumWrapper
 //        executeClickOnElement(By.xpath("//div[@id='cart_details']//button[@id='movetostep3']"));
         sleep(5000);
  //       verifyByContains(By.xpath("//button[@id='place_order']"), "Submit");
+    //	sleep(2000);
+     //   verifyByContains(By.xpath("//div[@id='cart_details']//button[@id='movetostep3']"), "Next");
+    //    executeClickOnElement(By.xpath("//div[@id='cart_details']//button[@id='movetostep3']"));
+        sleep(5000);
+    //    verifyByContains(By.xpath("//button[@id='place_order']"), "Submit");
         executeClickOnElement(By.xpath("//button[@id='place_order']"));
     }
     
@@ -331,8 +338,8 @@ public class FranchisePage extends SeleniumWrapper
     	enterTextboxDetails(findElement(By.xpath("//input[@id='facilities-pincode']")), enterPincode);
     	verifyByAttribute(By.xpath("//input[@id='facilities-pincode']"), enterPincode);
     	executeClickOnElement(By.xpath("//input[@id='facilities-date']"));
-    	verifyByContains(By.xpath("//button[@id='facilities-gs-submit']"), "Buy Now");
-    	executeClickOnElement(By.xpath("//button[@id='facilities-gs-submit']"));
+//    	verifyByContains(By.xpath("//button[@id='facilities-gs-submit']"), "Buy Now");
+//    	executeClickOnElement(By.xpath("//button[@id='facilities-gs-submit']"));
     	verifyByContains(Click_Buy_Now, "Buy Now");
     	executeClickOnElement(Click_Buy_Now);
     	sleep(2000);
@@ -341,6 +348,10 @@ public class FranchisePage extends SeleniumWrapper
     	executeClickOnElement(Click_On_Next_After_Cart);
     	waitForPageLoad();
  //   	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+   // 	verifyByContains(Click_On_Next_After_Cart, "Next");
+    	executeClickOnElement(Click_On_Next_After_Cart);
+    	waitForPageLoad();
+   // 	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
     
@@ -359,10 +370,11 @@ public class FranchisePage extends SeleniumWrapper
     	enterTextboxDetails(findElement(By.xpath("//input[@id='elevator-pincode']")), enterPincode);
     	verifyByAttribute(By.xpath("//input[@id='elevator-pincode']"), enterPincode);
     	executeClickOnElement(By.xpath("//input[@id='elevator-date']"));
-    	verifyByContains(By.xpath("//button[@id='elevator-gs-submit']"), "Buy Now");
+  //  	verifyByContains(By.xpath("//button[@id='elevator-gs-submit']"), "Buy Now");
     	executeClickOnElement(By.xpath("//button[@id='elevator-gs-submit']"));
     	sleep(2000);
    // 	verifyByContains(Click_On_Next_After_Cart, "Next");
+    //	verifyByContains(Click_On_Next_After_Cart, "Next");
     	executeClickOnElement(Click_On_Next_After_Cart);
     	waitForPageLoad();
     //	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
@@ -389,12 +401,17 @@ public class FranchisePage extends SeleniumWrapper
     	executeClickOnElement(Click_On_Next_After_Cart);
     	waitForPageLoad();
    // 	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+    //	verifyByContains(Click_On_Next_After_Cart, "Next");
+    	executeClickOnElement(Click_On_Next_After_Cart);
+    	waitForPageLoad();
+    //	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
     
     public void franchiseMyOrdersAsBigTransport(String enterCatogory,String enterArea,String enterAddress,String enterPincode)
     {
     	sleep(2000);
+    	sleep(3000);
     	executeClickOnElement(By.xpath("//button[@id='movetostep3']"));
     	verifyByContains(By.xpath("//label[text()='Big Transport']"), "Big Transport");
     	executeClickOnElement(By.xpath("//label[text()='Big Transport']"));
@@ -417,6 +434,9 @@ public class FranchisePage extends SeleniumWrapper
     	executeClickOnElement(Click_On_Next_After_Cart);
     	waitForPageLoad();
    // 	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
+    	executeClickOnElement(Click_On_Next_After_Cart);
+    	waitForPageLoad();
+  //  	verifyByContains(Click_Submit_After_Selecting_Mode, "Submit");
     	executeClickOnElement(Click_Submit_After_Selecting_Mode);
     }
     

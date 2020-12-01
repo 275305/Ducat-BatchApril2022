@@ -11,7 +11,7 @@ public class HomePage extends SeleniumWrapper {
     private final static By Select_Sell=By.xpath("//span[text()='Sell']");
     private final static By Select_Buy=By.xpath("//i[@class='buy home-icon-checkout-cart d-bg-blue']");
     private static final By Select_Start_Shopping = By.xpath("//a[text()='Start Shopping']");
-    private static final By Click_Germ_Shield_Antimicrobial_Coating= By.xpath("//p[contains(text(),'Germ Shield Antimicrobial Coating')]");
+    private static final By Click_Germ_Shield_Antimicrobial_Coating= By.xpath("//p[contains(text(),'Get 99.9% Protection With')]");
     private static final By Click_Buy_Germ_Shield=By.xpath("(//a[text()='Buy Germ Shield'])[1]");
     private static final By Click_Sell_From_Home_Popup=By.xpath("//h2[text()='Sell from Home']");
     private static final By Click_Create_Listion_Button=By.xpath("//a[text()='Create Listing']");
@@ -62,9 +62,7 @@ public class HomePage extends SeleniumWrapper {
     public void enterGermShieldAntimicrobialCoating()
     {
     	executeClickOnElement(Click_Germ_Shield_Antimicrobial_Coating);
-    	sleep(4000);
-    	//verifyByText(Click_Buy_Germ_Shield, "Buy Germ Shield");
-    	executeClickOnElement(Click_Buy_Germ_Shield);
+    	switchToWindow("child");
     }
     public void enterSearchBox(String searchvalue)
     {

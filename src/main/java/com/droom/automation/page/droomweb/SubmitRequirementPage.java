@@ -235,14 +235,20 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	    executeClickOnElement(By.xpath("//button[text()='Create My Listing']"));
 	 }
 	 
-	 public void selectLocation() throws AWTException
+	 public void selectLocation()
 	 {
-	    enterTextboxDetails(findElement(By.xpath("//input[@name='req_location']")), "Gurgaon, Haryana, India");
-	    sleep(2000);
-	    WebDriverFactory.getDriver().findElement(By.xpath("//input[@name='req_location']")).sendKeys(Keys.ARROW_DOWN);
-	    WebDriverFactory.getDriver().findElement(By.xpath("//input[@name='req_location']")).sendKeys(Keys.ENTER);
-	    sleep(3000);
-	    executeClickOnElement(By.xpath("(//a[contains(text(),'Submit')])[3]"));
+	    try {
+	    	enterTextboxDetails(findElement(By.xpath("//input[@name='req_location']")), "Gurgaon, Haryana, India");
+		    sleep(2000);
+		    WebDriverFactory.getDriver().findElement(By.xpath("//input[@name='req_location']")).sendKeys(Keys.ARROW_DOWN);
+		    WebDriverFactory.getDriver().findElement(By.xpath("//input[@name='req_location']")).sendKeys(Keys.ENTER);
+		    sleep(3000);
+		    executeClickOnElement(By.xpath("(//a[contains(text(),'Submit')])[3]"));
+			
+		} catch (Exception e) 
+	    {
+			e.printStackTrace();
+		}
 	 }
 	 
 	 public void clickSubmitAfterBuyerDetails()
@@ -307,6 +313,8 @@ public class SubmitRequirementPage extends SeleniumWrapper
 	    sleep(2000);
 	    verifyByContains(Click_Done, "Done");
 	    executeClickOnElement(Click_Done);
+//	    verifyByContains(Click_Done, "Done");
+//	    executeClickOnElement(Click_Done);
 //	    sleep(3000);
 //	    verifyByContains(Verify_ThankYou, "Thank You");
 	}

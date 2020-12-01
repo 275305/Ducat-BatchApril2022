@@ -4,17 +4,6 @@ import org.testng.annotations.Test;
 import com.droom.automation.lib.AbstractBaseTest;
 import com.droom.automation.lib.ExcelUtilities;
 import com.droom.automation.page.droomweb.CreateListingPage;
-import com.droom.automation.page.droomweb.GermShieldAntimicrobialCoatingPage;
-import com.droom.automation.page.droomweb.GermShieldForAutomobilePage;
-import com.droom.automation.page.droomweb.GermShieldForHeavyTransportPage;
-import com.droom.automation.page.droomweb.GermShieldForHomePage;
-import com.droom.automation.page.droomweb.GermShieldForOfficePage;
-import com.droom.automation.page.droomweb.PaymentPage;
-
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
 
 public class CreateListingTest extends AbstractBaseTest
 {

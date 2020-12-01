@@ -13,7 +13,7 @@ public class SearchFeatureTest extends AbstractBaseTest
 	
 	public SearchFeatureTest()
 	{
-		this.filepath="C:/Users/Honey/Desktop/Prod Automation Test Data.xlsx";
+		this.filepath="C:/Users/Honey Maurya/Desktop/Prod Automation Test Data.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 		searchpage=new SearchFeaturePage();
 	}
@@ -39,7 +39,7 @@ public class SearchFeatureTest extends AbstractBaseTest
 		searchpage.searchForScooterAsLoggedInUser(username, password);
 	}
 	@Test(priority = 4)
-	public void serachForVehicleValidation()
+	public void serachForVehicleValidationViaFacebookLogin()
 	{
 		searchpage.searchForScooterAsFBLoggedInUser();
 	}

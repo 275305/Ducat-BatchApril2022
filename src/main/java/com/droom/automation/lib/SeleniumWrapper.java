@@ -1,8 +1,6 @@
 package com.droom.automation.lib;
 
 import com.droom.automation.constants.UIConstants;
-import com.google.common.base.Verify;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;

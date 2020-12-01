@@ -22,6 +22,7 @@
     </properties>
 
     <dependencies>
+
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>  
@@ -29,8 +30,6 @@
     <version>7.1.0</version>
     <scope>compile</scope>
 </dependency>
-
- 
 
  <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 <dependency>
@@ -96,14 +95,6 @@
     	<version>1.7.25</version>
 </dependency>
 
- <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
-<dependency>
-    <groupId>io.qameta.allure</groupId>
-    <artifactId>allure-testng</artifactId>
-    <version>2.13.3</version>
-    
-</dependency>
-
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>
     <groupId>mysql</groupId>
@@ -146,7 +137,7 @@
                         <testFailureIgnore>true</testFailureIgnore>
                         <reportsDirectory>${logsdir}</reportsDirectory>
                         <suiteXmlFiles>
-                            <suiteXmlFiles>${file}</suiteXmlFiles>
+                            <suiteXmlFiles>testngProd.xml</suiteXmlFiles>
                         </suiteXmlFiles>
                         <argLine>-Xmx1024m -XX:PermSize=512m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError</argLine>
                     </configuration>

@@ -64,14 +64,14 @@ public class CreateListingPage extends SeleniumWrapper
 		scrolling("(//li[text()='Delhi'])[3]");
 		sleep(2000);
 		executeClickOnElement(By.xpath("//span[text()='Select From']"));
-		selectOptionByText(Select_Make,"Bajaj" );
-		verifyByContains(Select_Make, "Bajaj");
-		selectOptionByText(Select_Model,"Qute RE60" );
-		verifyByContains(Select_Model, "Qute RE60");
-		selectOptionByText(Select_Year, "2020");
-		verifyByContains(Select_Year, "2020");
-		selectOptionByText(Select_Trim, "PETROL");
-		verifyByContains(Select_Trim, "PETROL");
+		selectOptionByText(Select_Make,"Ashok Leyland" );
+		verifyByContains(Select_Make, "Ashok Leyland");
+		selectOptionByText(Select_Model,"Stile" );
+		verifyByContains(Select_Model, "Stile");
+		selectOptionByText(Select_Year, "2014");
+		verifyByContains(Select_Year, "2014");
+		selectOptionByText(Select_Trim, "LE 7 SEATER");
+		verifyByContains(Select_Trim, "LE 7 SEATER");
 		executeClickOnElement(Click_Create_Listing_Now);
 		sleep(5000);
 		verifyByContains(Login_To_Continue, "Create Listing");
@@ -115,7 +115,7 @@ public class CreateListingPage extends SeleniumWrapper
 	{
 		executeClickOnElement(Click_To_Upload);
 		sleep(2000);
-		fileUpload("C:\\Users\\Honey\\Desktop\\cycle.png");
+		fileUpload("C:\\Users\\Honey Maurya\\Desktop\\cycle.png");
 		sleep(12000);
 		CheckImage(Check_Image);
 		executeClickOnElement(Continue_After_Upload);

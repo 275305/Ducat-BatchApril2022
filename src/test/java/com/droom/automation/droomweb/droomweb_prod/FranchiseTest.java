@@ -20,7 +20,7 @@ public class FranchiseTest extends AbstractBaseTest
 	
 	public FranchiseTest()
 	{
-		this.filepath="C:/Users/Honey/Desktop/Prod Automation Test Data.xlsx";
+		this.filepath="C:/Users/Honey Maurya/Desktop/Prod Automation Test Data.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 		franchisepage=new FranchisePage();
 		paymentpage=new PaymentPage();
@@ -32,7 +32,6 @@ public class FranchiseTest extends AbstractBaseTest
 	{
 		String fullName = eu.readData("FranchiseSheet", 1, 1);
 		String contactNumber = eu.readData("FranchiseSheet", 1, 2);
-	//	String mailId = eu.readData("FranchiseSheet", 1, 3);
 		String mailId = JavaLibrary.dynamicUsername();
 		String franchiseName = eu.readData("FranchiseSheet", 1, 4);
 		String password = eu.readData("FranchiseSheet", 1, 5);
@@ -74,12 +73,6 @@ public class FranchiseTest extends AbstractBaseTest
 		String year = eu.readData("FranchiseSheet", 3, 8);
 		String empCount = eu.readData("FranchiseSheet", 3, 9);
 		String index = eu.readData("FranchiseSheet", 3, 10);
-		String businessName = eu.readData("FranchiseSheet", 3, 11);
-		String gstNumber = eu.readData("FranchiseSheet", 3, 12);
-		String businessPan = eu.readData("FranchiseSheet", 3, 13);
-		String businessAddress = eu.readData("FranchiseSheet", 3, 14);
-		String fileUploadPath = eu.readData("FranchiseSheet", 3, 15);
-		String fileName = eu.readData("FranchiseSheet", 3, 16);
 		franchisepage.registerAsFranchise(fullName, contactNumber, mailId, franchiseName, password, franchiseAddress, zipCode);
 		franchisepage.signUp(year, empCount, index);
 		paymentpage.paymentViaNetBanking();
@@ -99,12 +92,6 @@ public class FranchiseTest extends AbstractBaseTest
 		String year = eu.readData("FranchiseSheet", 5, 8);
 		String empCount = eu.readData("FranchiseSheet", 5, 9);
 		String index = eu.readData("FranchiseSheet", 5, 10);
-		String businessName = eu.readData("FranchiseSheet", 5, 11);
-		String gstNumber = eu.readData("FranchiseSheet", 5, 12);
-		String businessPan = eu.readData("FranchiseSheet", 5, 13);
-		String businessAddress = eu.readData("FranchiseSheet", 5, 14);
-		String fileUploadPath = eu.readData("FranchiseSheet", 5, 15);
-		String fileName = eu.readData("FranchiseSheet", 5, 16);
 		franchisepage.registerAsFranchise(fullName, contactNumber, mailId, franchiseName, password, franchiseAddress, zipCode);
 		franchisepage.signUp(year, empCount, index);
 		paymentpage.paymentViaNetBanking();
@@ -124,12 +111,6 @@ public class FranchiseTest extends AbstractBaseTest
 		String year = eu.readData("FranchiseSheet", 6, 8);
 		String empCount = eu.readData("FranchiseSheet", 6, 9);
 		String index = eu.readData("FranchiseSheet", 6, 10);
-		String businessName = eu.readData("FranchiseSheet", 6, 11);
-		String gstNumber = eu.readData("FranchiseSheet", 6, 12);
-		String businessPan = eu.readData("FranchiseSheet", 6, 13);
-		String businessAddress = eu.readData("FranchiseSheet", 6, 14);
-		String fileUploadPath = eu.readData("FranchiseSheet", 6, 15);
-		String fileName = eu.readData("FranchiseSheet", 6, 16);
 		franchisepage.registerAsFranchise(fullName, contactNumber, mailId, franchiseName, password, franchiseAddress, zipCode);
 		franchisepage.signUp(year, empCount, index);
 		paymentpage.paymentViaNetBanking();
@@ -149,12 +130,6 @@ public class FranchiseTest extends AbstractBaseTest
 		String year = eu.readData("FranchiseSheet", 7, 8);
 		String empCount = eu.readData("FranchiseSheet", 7, 9);
 		String index = eu.readData("FranchiseSheet", 7, 10);
-		String businessName = eu.readData("FranchiseSheet", 7, 11);
-		String gstNumber = eu.readData("FranchiseSheet", 7, 12);
-		String businessPan = eu.readData("FranchiseSheet", 7, 13);
-		String businessAddress = eu.readData("FranchiseSheet", 7, 14);
-		String fileUploadPath = eu.readData("FranchiseSheet", 7, 15);
-		String fileName = eu.readData("FranchiseSheet", 7, 16);
 		franchisepage.registerAsFranchise(fullName, contactNumber, mailId, franchiseName, password, franchiseAddress, zipCode);
 		franchisepage.signUp(year, empCount, index);
 		paymentpage.paymentViaNetBanking();
@@ -174,12 +149,6 @@ public class FranchiseTest extends AbstractBaseTest
 		String year = eu.readData("FranchiseSheet", 8, 8);
 		String empCount = eu.readData("FranchiseSheet", 8, 9);
 		String index = eu.readData("FranchiseSheet", 8, 10);
-		String businessName = eu.readData("FranchiseSheet", 8, 11);
-		String gstNumber = eu.readData("FranchiseSheet", 8, 12);
-		String businessPan = eu.readData("FranchiseSheet", 8, 13);
-		String businessAddress = eu.readData("FranchiseSheet", 8, 14);
-		String fileUploadPath = eu.readData("FranchiseSheet", 8, 15);
-		String fileName = eu.readData("FranchiseSheet", 8, 16);
 		franchisepage.registerAsFranchise(fullName, contactNumber, mailId, franchiseName, password, franchiseAddress, zipCode);
 		franchisepage.signUp(year, empCount, index);
 		paymentpage.paymentViaNetBanking();
@@ -199,12 +168,6 @@ public class FranchiseTest extends AbstractBaseTest
 		String year = eu.readData("FranchiseSheet", 9, 8);
 		String empCount = eu.readData("FranchiseSheet", 9, 9);
 		String index = eu.readData("FranchiseSheet", 9, 10);
-		String businessName = eu.readData("FranchiseSheet", 9, 11);
-		String gstNumber = eu.readData("FranchiseSheet", 9, 12);
-		String businessPan = eu.readData("FranchiseSheet", 9, 13);
-		String businessAddress = eu.readData("FranchiseSheet", 9, 14);
-		String fileUploadPath = eu.readData("FranchiseSheet", 9, 15);
-		String fileName = eu.readData("FranchiseSheet", 9, 16);
 		franchisepage.registerAsFranchise(fullName, contactNumber, mailId, franchiseName, password, franchiseAddress, zipCode);
 		franchisepage.signUp(year, empCount, index);
 		paymentpage.paymentViaNetBanking();
@@ -224,12 +187,6 @@ public class FranchiseTest extends AbstractBaseTest
 		String year = eu.readData("FranchiseSheet", 10, 8);
 		String empCount = eu.readData("FranchiseSheet", 10, 9);
 		String index = eu.readData("FranchiseSheet", 10, 10);
-		String businessName = eu.readData("FranchiseSheet", 10, 11);
-		String gstNumber = eu.readData("FranchiseSheet", 10, 12);
-		String businessPan = eu.readData("FranchiseSheet", 10, 13);
-		String businessAddress = eu.readData("FranchiseSheet", 10, 14);
-		String fileUploadPath = eu.readData("FranchiseSheet", 10, 15);
-		String fileName = eu.readData("FranchiseSheet", 10, 16);
 		franchisepage.registerAsFranchise(fullName, contactNumber, mailId, franchiseName, password, franchiseAddress, zipCode);
 		franchisepage.signUp(year, empCount, index);
 		paymentpage.paymentViaNetBanking();
@@ -249,12 +206,6 @@ public class FranchiseTest extends AbstractBaseTest
 		String year = eu.readData("FranchiseSheet", 5, 8);
 		String empCount = eu.readData("FranchiseSheet", 5, 9);
 		String index = eu.readData("FranchiseSheet", 5, 10);
-		String businessName = eu.readData("FranchiseSheet", 5, 11);
-		String gstNumber = eu.readData("FranchiseSheet", 5, 12);
-		String businessPan = eu.readData("FranchiseSheet", 5, 13);
-		String businessAddress = eu.readData("FranchiseSheet", 5, 14);
-		String fileUploadPath = eu.readData("FranchiseSheet", 5, 15);
-		String fileName = eu.readData("FranchiseSheet", 5, 16);
 		franchisepage.registerAsFranchise(fullName, contactNumber, mailId, franchiseName, password, franchiseAddress, zipCode);
 		franchisepage.signUp(year, empCount, index);
 		paymentpage.paymentViaNetBanking();
@@ -274,12 +225,6 @@ public class FranchiseTest extends AbstractBaseTest
 		String year = eu.readData("FranchiseSheet", 6, 8);
 		String empCount = eu.readData("FranchiseSheet", 6, 9);
 		String index = eu.readData("FranchiseSheet", 6, 10);
-		String businessName = eu.readData("FranchiseSheet", 6, 11);
-		String gstNumber = eu.readData("FranchiseSheet", 6, 12);
-		String businessPan = eu.readData("FranchiseSheet", 6, 13);
-		String businessAddress = eu.readData("FranchiseSheet", 6, 14);
-		String fileUploadPath = eu.readData("FranchiseSheet", 6, 15);
-		String fileName = eu.readData("FranchiseSheet", 6, 16);
 		franchisepage.registerAsFranchise(fullName, contactNumber, mailId, franchiseName, password, franchiseAddress, zipCode);
 		franchisepage.signUp(year, empCount, index);
 		paymentpage.paymentViaNetBanking();
@@ -299,12 +244,6 @@ public class FranchiseTest extends AbstractBaseTest
 		String year = eu.readData("FranchiseSheet", 7, 8);
 		String empCount = eu.readData("FranchiseSheet", 7, 9);
 		String index = eu.readData("FranchiseSheet", 7, 10);
-		String businessName = eu.readData("FranchiseSheet", 7, 11);
-		String gstNumber = eu.readData("FranchiseSheet", 7, 12);
-		String businessPan = eu.readData("FranchiseSheet", 7, 13);
-		String businessAddress = eu.readData("FranchiseSheet", 7, 14);
-		String fileUploadPath = eu.readData("FranchiseSheet", 7, 15);
-		String fileName = eu.readData("FranchiseSheet", 7, 16);
 		franchisepage.registerAsFranchise(fullName, contactNumber, mailId, franchiseName, password, franchiseAddress, zipCode);
 		franchisepage.signUp(year, empCount, index);
 		paymentpage.paymentViaNetBanking();
@@ -330,60 +269,60 @@ public class FranchiseTest extends AbstractBaseTest
 		franchisepage.franchiseMyOrdersAsAutomobileGermShield();
 	}
 	
-	@Test(priority = 15)
-	public void ValidatingFranchiseMyOrdersAsFacilityGermShield()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 11, 17);
-		String enterArea = eu.readData("FranchiseSheet", 11, 18);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductViaRegisteredNumber();
-		franchisepage.franchiseMyOrdersAsFacilityGermShield(enterCatogory, enterArea, enterAddress, enterPincode);
-	}
+//	@Test(priority = 15)
+//	public void ValidatingFranchiseMyOrdersAsFacilityGermShield()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 11, 17);
+//		String enterArea = eu.readData("FranchiseSheet", 11, 18);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductViaRegisteredNumber();
+//		franchisepage.franchiseMyOrdersAsFacilityGermShield(enterCatogory, enterArea, enterAddress, enterPincode);
+//	}
 	
-	@Test(priority = 16)
-	public void ValidatingFranchiseMyOrdersAsElevatorGermShield()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 12, 17);
-		String packageType = eu.readData("FranchiseSheet", 12, 19);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductViaRegisteredNumber();
-		franchisepage.franchiseMyOrdersAsElevatorGermShield(enterCatogory, packageType, enterAddress, enterPincode);
-	}
-	
-	@Test(priority = 17)
-	public void ValidatingFranchiseMyOrdersAsJumpstartService()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 13, 17);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductViaRegisteredNumber();
-		franchisepage.franchiseMyOrdersAsJumpstartService(enterCatogory, enterAddress, enterPincode);
-	}
-	
-	@Test(priority = 18)
-	public void ValidatingFranchiseMyOrdersAsBigTransport()
-	{
-		String username = eu.readData("FranchiseSheet", 11, 3);
-		String password = eu.readData("FranchiseSheet", 11, 5);
-		String enterCatogory = eu.readData("FranchiseSheet", 14, 17);
-		String enterArea = eu.readData("FranchiseSheet", 11, 18);
-		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-		franchisepage.enterPlaceAnOrder(username, password);
-		franchisepage.selectYourProductViaRegisteredNumber();
-		franchisepage.franchiseMyOrdersAsBigTransport(enterCatogory, enterArea, enterAddress, enterPincode);
-	}
+//	@Test(priority = 16)
+//	public void ValidatingFranchiseMyOrdersAsElevatorGermShield()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 12, 17);
+//		String packageType = eu.readData("FranchiseSheet", 12, 19);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductViaRegisteredNumber();
+//		franchisepage.franchiseMyOrdersAsElevatorGermShield(enterCatogory, packageType, enterAddress, enterPincode);
+//	}
+//	
+//	@Test(priority = 17)
+//	public void ValidatingFranchiseMyOrdersAsJumpstartService()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 13, 17);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductViaRegisteredNumber();
+//		franchisepage.franchiseMyOrdersAsJumpstartService(enterCatogory, enterAddress, enterPincode);
+//	}
+//	
+//	@Test(priority = 18)
+//	public void ValidatingFranchiseMyOrdersAsBigTransport()
+//	{
+//		String username = eu.readData("FranchiseSheet", 11, 3);
+//		String password = eu.readData("FranchiseSheet", 11, 5);
+//		String enterCatogory = eu.readData("FranchiseSheet", 14, 17);
+//		String enterArea = eu.readData("FranchiseSheet", 11, 18);
+//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+//		franchisepage.enterPlaceAnOrder(username, password);
+//		franchisepage.selectYourProductViaRegisteredNumber();
+//		franchisepage.franchiseMyOrdersAsBigTransport(enterCatogory, enterArea, enterAddress, enterPincode);
+//	}
 	
 	               // VALIDATING FACILITY VIA REGISTERED MOBILE NUMBER
 	

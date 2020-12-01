@@ -14,11 +14,10 @@ public class UserLoginTest extends AbstractBaseTest
 	
 	public UserLoginTest()
 	{
-		this.filepath="C:/Users/Honey/Desktop/Prod Automation Test Data.xlsx";
+		this.filepath="C:/Users/Honey Maurya/Desktop/Prod Automation Test Data.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 		loginpage = new LoginPage();
 	}
-	
 	
 	@Test(priority=1)
 	public void loginAsIndividualUserViaPassword()
@@ -47,7 +46,8 @@ public class UserLoginTest extends AbstractBaseTest
 		loginpage.invalidLoginValidation(username,password);
 	}
 
-	@Test(priority=5)
+	
+	@Test(priority=4)
 	public void inValidOTPloginAsIndividualUserViaOTP() throws Exception
 	{
 		String username = eu.readData("LoginTest", 5, 1);
@@ -57,7 +57,7 @@ public class UserLoginTest extends AbstractBaseTest
 	}
 
 	
-	@Test(priority=6)
+	@Test(priority=5)
 	public void loginAsProSellerViaPassword()
 	{
 		String username = eu.readData("LoginTest", 8, 1);
@@ -67,7 +67,7 @@ public class UserLoginTest extends AbstractBaseTest
 	}
 	
 	
-	@Test(priority=7)
+	@Test(priority=6)
 	public void inValidLoginIDAsProSellerViaPassword()
 	{
 		String username = eu.readData("LoginTest", 9, 1);
@@ -76,7 +76,7 @@ public class UserLoginTest extends AbstractBaseTest
 		loginpage.invalidLoginValidation(username,password);
 	}
 	
-	@Test(priority=8)
+	@Test(priority=7)
 	public void inValidLoginPasswordAsProSellerViaPassword()
 	{
 		String username = eu.readData("LoginTest", 10, 1);
@@ -85,7 +85,8 @@ public class UserLoginTest extends AbstractBaseTest
 		loginpage.invalidLoginValidation(username,password);
 	}
 
-	@Test(priority=10)
+	
+	@Test(priority=8)
 	public void inValidOTPloginAsProSellerViaOTP() throws Exception
 	{
 		String username = eu.readData("LoginTest", 12, 1);
@@ -94,7 +95,7 @@ public class UserLoginTest extends AbstractBaseTest
 		loginpage.invalidOTPloginValidation(username,otp);
 	}
 
-	@Test(priority = 11)
+	@Test(priority = 9)
 	public void franchiseLoginValidation()
 	{
 		String username = eu.readData("FranchiseSheet", 11, 3);

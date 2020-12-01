@@ -101,7 +101,7 @@ public class LoginPage extends SeleniumWrapper
 		executeClickOnElement(Click_Via_MobileOTP_Radio_Button);
 		executeClickOnElement(Click_SendOTP_Button);
 		sleep(3000);
-		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='6307641802' order by id desc limit 1;");
+		int otp = DataBaseDemo.getotpOnProd("SELECT * FROM cscart.otp_verification where phone='9599946816' order by id desc limit 1;");
 		String otpValue = Integer.toString(otp);
 		enterTextboxDetails(findElement(Enter_OTP), otpValue);
 		executeClickOnElement(Click_Login_ViaOTP);

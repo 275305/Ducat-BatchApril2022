@@ -18,7 +18,7 @@ public class BuyPage extends SeleniumWrapper
 	private final static By Click_On_Apply=By.xpath("//button[@id='apply_make']");
 	private final static By Click_On_View_Listing=By.xpath("//a[@id='vehicles_btn']");
 	private final static By Select_Car=By.xpath("//img[@alt='Mahindra Bolero SLX BS IV 2018']");
-	private final static By Pay_Fully_Refundable_Token_Amount=By.xpath("//button[@id='cart_add']//span");
+	private final static By Pay_Fully_Refundable_Token_Amount=By.xpath("//button[text()='Pay Now Refundable Token Amount']");
 	private final static By Click_Proceed=By.xpath("//button[@type='button'and@class='btn btn-success proceed']");
 	private final static By Proceed_To_Payment=By.xpath("//button[@id='add_listing_services_to_cart']");
 	
@@ -34,11 +34,11 @@ public class BuyPage extends SeleniumWrapper
 	private final static By Click_Get_JumpStart_Service=By.xpath("(//a[text()='Get Jumpstart Service'])[1]");
 	private final static By Enter_JS_Address=By.xpath("//input[@id='js_address']");
 	private final static By Enter_JS_Pincode=By.xpath("//input[@id='js_pincode']");
-	private final static By Click_Book_Now=By.xpath("//button[@class='jumpstart_book_now btn btn-jumpstart btn-block']");
+	private final static By Click_Book_Now=By.xpath("//button[@class='jumpstart_book_now btn btn-jumpstart btn-block btn-primary']");
 	private final static By Click_Checkout_Now=By.xpath("//a[text()='Checkout Now']");
 	private final static By Enter_For_Search_Model=By.xpath("//input[@id='search_make_model']");
 	private final static By Select_Model_As_Hyundai=By.xpath("//label[text()='Hyundai']");
-	private final static By Select_Car_Hyundai=By.xpath("//img[@alt='Mahindra Scorpio SLE 7S BSIV 2011']");
+	private final static By Select_Vehicle_New_Tab=By.xpath("(//div[@id='search_results']//img)[1]");
 	private final static By Verify_Token_Amount=By.xpath("//button[@id='cart_add']//span");
 	private final static By Verify_Token_Amount_Popup=By.xpath("//span[text()='₹20,892']");
 	private final static By Select_Car_As_Vehicle_Catogory=By.xpath("//label[text()='Car']");
@@ -104,6 +104,17 @@ public class BuyPage extends SeleniumWrapper
 		verifyByText(By.xpath("//strong[text()='₹  20,892']"), "₹ 20,892");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
+		executeClickOnElement(Select_Vehicle_New_Tab);
+		switchToWindow("New Tab");
+		waitForPageLoad();
+		verifyByText(By.xpath("//div[text()='₹28020']"), "₹28020");
+		executeClickOnElement(Pay_Fully_Refundable_Token_Amount);
+		executeClickOnElement(Click_Proceed);
+		executeClickOnElement(Proceed_To_Payment);
+		verifyByText(By.xpath("//strong[text()='₹  28,020']"), "₹ 28,020");
+		PaymentPage paymentpage=new PaymentPage();
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 	}
 	
 	public void selectVehicleCategoryAsAllCars()
@@ -141,6 +152,8 @@ public class BuyPage extends SeleniumWrapper
 		selectAutomobileServices();
 		executeClickOnElement(Click_For_RTO_Service);
 		sleep(3000);
+		executeClickOnElement(Select_City_Delhi);
+		sleep(3000);
 		executeClickOnElement(Click_On_Get_Assistance);
 		sleep(3000);
 		executeClickOnElement(Click_Buy_Now);
@@ -148,6 +161,10 @@ public class BuyPage extends SeleniumWrapper
 		executeClickOnElement(Click_Send_OTP);
 		sleep(2000);
 		executeClickOnElement(Click_Submit_Button);
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
+		waitForPageLoad();
+		verifyByContains(By.xpath("//strong[text()='₹  999']"), "₹ 999");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
 		
@@ -164,13 +181,14 @@ public class BuyPage extends SeleniumWrapper
 		enterTextboxDetails(findElement(Enter_JS_Address), "gurgaon");
 		enterTextboxDetails(findElement(Enter_JS_Pincode), "122015");
 		executeClickOnElement(Click_Book_Now);
-		sleep(2000);
+		sleep(3000);
 		executeClickOnElement(Click_Checkout_Now);
 		waitForPageLoad();
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		
-		
+		verifyByContains(By.xpath("//strong[text()='₹  999']"), "₹ 999");
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 	}
 	
 	public void buyAutomobileServicesViaCarCareAndDetailing(String username, String password)
@@ -189,40 +207,34 @@ public class BuyPage extends SeleniumWrapper
 		executeClickOnElement(Click_Submit_Button);
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		
+		waitForPageLoad();
+		verifyByContains(By.xpath("//strong[text()='₹  999']"), "₹ 999");
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 	}
 
-	
-	
-	
-	public void buyAutomobileServicesViaRTOAsLoggedInLater(String username, String fullname,String mobilenumber) throws Exception
+	public void buyAutomobileServicesViaRTOAsLoggedInLater(String username, String password) throws Exception
 	{
-		homepage.enterBuy();
-		homepage.selectStartShopping();
+		loginpage.goToBuyViaMyAccount(username, password);
 		waitForPageLoad();
 		selectAutomobileServices();
-		executeClickOnElement(Click_For_RTO_Service);
-		sleep(3000);
-		executeClickOnElement(Click_On_Get_Assistance);
+		executeClickOnElement(By.xpath("//label[text()='Road Side Assistance']"));
 		sleep(3000);
 		executeClickOnElement(Select_City_Delhi);
 		sleep(3000);
-//		executeClickOnElement(Select_Car_As_Vehicle_Catogory);
-//		sleep(3000);
+		executeClickOnElement(By.xpath("//label[text()='Car']"));
+		sleep(3000);
+		executeClickOnElement(Click_On_Get_Assistance);
+		sleep(3000);
 		executeClickOnElement(Click_Buy_Now);
 		sleep(3000);
-		enterTextboxDetails(findElement(Enter_Full_Name), fullname);
-		enterTextboxDetails(findElement(Enter_Mail_Id), username);
-		enterTextboxDetails(findElement(Enter_Mobile_Number), mobilenumber);
 		executeClickOnElement(Click_Send_OTP);
-		int otp = DataBaseDemo.getotp("SELECT * FROM cscart_new.otp_verification where phone='"+mobilenumber+"' order by id desc limit 1;");
-		String otpValue = Integer.toString(otp);
-		//enterTextboxDetails(findElement(Enter_OTP), otpValue);
 		sleep(2000);
 		executeClickOnElement(Click_Submit_Button);
-		//payemntpage.proceedToCheckout();
-		//payemntpage.paymentViaNetBanking();
-		
+		waitForPageLoad();
+		verifyByContains(By.xpath("//strong[text()='₹  999']"), "₹ 999");
+		paymentpage.proceedToCheckout();
+		paymentpage.paymentViaNetBanking();
 	}
 	
 	

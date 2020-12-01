@@ -14,7 +14,7 @@ public class UserLoginTest extends AbstractBaseTest
 	
 	public UserLoginTest()
 	{
-		this.filepath="C:/Users/Honey/Desktop/QA Automation TestData.xlsx";
+		this.filepath="C:/Users/Honey Maurya/Desktop/QA Automation TestData.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 		loginpage = new LoginPage();
 	}
@@ -51,6 +51,7 @@ public class UserLoginTest extends AbstractBaseTest
 	public void loginAsIndividualUserViaOTP() throws Exception
 	{
 		String username = eu.readData("LoginTest", 4, 1);
+		System.out.println(username);
 		loginpage.enterLoginPage();
 		loginpage.loginValidationByOTPForIndividualAccount(username);
 	}

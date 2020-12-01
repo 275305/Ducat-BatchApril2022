@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomcredit\ApplyLoanPage.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\GermShieldForHomePage.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\HeaderPage.java
@@ -30,3 +31,37 @@ C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\a
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\JavaLibrary.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\MyAnnotationTransformer.java
 C:\Users\Honey\Desktop\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\RegistrationPage.java
+=======
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\constants\UIConstants.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\LoginPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\HomePage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\SubmitRequirementPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\HeaderPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\PaymentPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomcredit\LenderSignUpPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomcredit\ApplyLoanPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\PageModelFactory.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\RegistrationPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomcredit\TermsAndConditionsPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\GermShieldAntimicrobialCoatingPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\ExcelUtilities.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\SearchFeaturePage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomcredit\HomePage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\RetryAnalyzer.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\CreateListingPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\AbstractBaseTest.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\GermShieldForHomePage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\JavaLibrary.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\GermShieldForAutomobilePage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\BuyPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomcredit\LendersPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\GermShieldForHeavyTransportPage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\MyAnnotationTransformer.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\GermShieldForOfficePage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\WebDriverFactory.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\SeleniumDataBaseTest.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\SeleniumWrapper.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomweb\FranchisePage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\page\droomcredit\LenderStagePage.java
+E:\my project\droomWorkspace\droom-automation\src\main\java\com\droom\automation\lib\DataBaseDemo.java
+>>>>>>> 01.12.20

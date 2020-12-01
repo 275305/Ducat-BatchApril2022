@@ -22,7 +22,7 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 	
 	public BuyGermShieldServiceTest()
 	{
-		this.filepath="C:/Users/Honey/Desktop/Prod Automation Test Data.xlsx";
+		this.filepath="C:/Users/Honey Maurya/Desktop/Prod Automation Test Data.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 		germshield=new GermShieldAntimicrobialCoatingPage();
 		automobilegermshield=new GermShieldForAutomobilePage();
@@ -31,13 +31,13 @@ public class BuyGermShieldServiceTest extends AbstractBaseTest
 		transportgermshield=new GermShieldForHeavyTransportPage();
 	}
 	
-	@Test(priority=1)
-	public void buyGermShieldServiceViaHomePageAsLoggedInUser()
-	{
-		String username = eu.readData("GermShieldSheet", 1, 1);
-		String password = eu.readData("GermShieldSheet", 1, 2);
-		germshield.germShieldAntimicrobialCoatingValidation(username,password);
-	}
+//	@Test(priority=1)
+//	public void buyGermShieldServiceViaHomePageAsLoggedInUser()
+//	{
+//		String username = eu.readData("GermShieldSheet", 1, 1);
+//		String password = eu.readData("GermShieldSheet", 1, 2);
+//		germshield.germShieldAntimicrobialCoatingValidation(username,password);
+//	}
 
 	
 	@Test(priority = 2)

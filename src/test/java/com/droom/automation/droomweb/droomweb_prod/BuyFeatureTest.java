@@ -14,11 +14,20 @@ public class BuyFeatureTest extends AbstractBaseTest
 	
 	public BuyFeatureTest()
 	{
-		this.filepath="C:/Users/Honey/Desktop/Prod Automation Test Data.xlsx";
+		this.filepath="C:/Users/Honey Maurya/Desktop/Prod Automation Test Data.xlsx";
 		this.eu=new ExcelUtilities(filepath);
 	}
 
 	@Test(priority = 1)
+	public void buyVehicleAsLoggedInUser() throws InterruptedException
+	{
+		String username = eu.readData("BuyFeatureSheet", 1, 1);
+		String password = eu.readData("BuyFeatureSheet", 1, 2);
+		BuyPage buypage=new BuyPage();
+	//	buypage.selectBuyCategory(username, password);
+	}
+	
+	@Test(priority = 2)
 	public void buyRTOServiceAsLoggedInUser()
 	{
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
@@ -27,7 +36,7 @@ public class BuyFeatureTest extends AbstractBaseTest
 		buypage.buyAutomobileServicesViaRTO(username, password);
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void buyJumpstartServiceAsLoggedInUser()
 	{
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
@@ -36,7 +45,7 @@ public class BuyFeatureTest extends AbstractBaseTest
 		buypage.buyAutomobileServicesViaJumpstart(username, password);
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void buyCarCareAndDetailingAsLoggedInUser()
 	{
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
@@ -46,12 +55,12 @@ public class BuyFeatureTest extends AbstractBaseTest
 	}
 	
 	
-	@Test(priority = 4)
-	public void buyRTOServiceAsLoggedInLater()
+	@Test(priority = 5)
+	public void buyRoadSideAssistanceServiceAsLogged() throws Exception
 	{
 		String username = eu.readData("BuyFeatureSheet", 1, 1);
 		String password = eu.readData("BuyFeatureSheet", 1, 2);
 		BuyPage buypage=new BuyPage();
-		buypage.buyAutomobileServicesViaRTO(username, password);
+		buypage.buyAutomobileServicesViaRTOAsLoggedInLater(username, password);
 	}
 }

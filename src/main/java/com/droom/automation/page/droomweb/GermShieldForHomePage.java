@@ -17,7 +17,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 //	private static final By =By.xpath("");
 	
 	//webelements for view details
-	private static final By Click_View_Details_For_Independent_Home=By.xpath("//div[@id='home']//p[text()='Independent Home']/following-sibling::span[text()='View Details']");
+	private static final By Click_View_Details_For_Independent_Home=By.xpath("//div[@id='home']//p[text()='Home']/following-sibling::span[text()='View Details']");
 	private static final By Click_View_Details_For_Bungalow=By.xpath("//div[@id='home']//p[text()='Bungalow']/following-sibling::span[text()='View Details']");	
 	private static final By Click_View_Details_For_Flat=By.xpath("//div[@id='home']//p[text()='Flat']/following-sibling::span[text()='View Details']");
 	private static final By Click_View_Details_For_Villa=By.xpath("//div[@id='home']//p[text()='Villa']/following-sibling::span[text()='View Details']");
@@ -89,7 +89,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		verifyByContains(Click_For_Home, "Home");
 		executeClickOnElement(Click_For_Home);
 		sleep(2000);
-		verifyByContains(Click_View_Details_For_Independent_Home, "View Details");
+	//	verifyByContains(Click_View_Details_For_Independent_Home, "View Details");
 		executeClickOnElement(Click_View_Details_For_Independent_Home);
 		sleep(3000);
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");
@@ -211,7 +211,7 @@ public class GermShieldForHomePage extends SeleniumWrapper
 		verifyByContains(Click_For_Home, "Home");
 		executeClickOnElement(Click_For_Home);
 		sleep(2000);
-		verifyByContains(Click_View_Details_For_Penthouse, "View Details");
+	//	verifyByContains(Click_View_Details_For_Penthouse, "View Details");
 		executeClickOnElement(Click_View_Details_For_Penthouse);
 		sleep(3000);
 		verifyByContains(Click_On_Buy_Now_PopUp, "Buy Now");

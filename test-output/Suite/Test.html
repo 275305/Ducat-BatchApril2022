@@ -55,11 +55,19 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
+<<<<<<< HEAD
 <td>Tests passed/Failed/Skipped:</td><td>48/13/0</td>
 </tr><tr>
 <td>Started on:</td><td>Tue Sep 22 17:17:35 IST 2020</td>
 </tr>
 <tr><td>Total time:</td><td>4139 seconds (4139544 ms)</td>
+=======
+<td>Tests passed/Failed/Skipped:</td><td>45/15/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Oct 30 18:08:55 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>4237 seconds (4237784 ms)</td>
+>>>>>>> 01.12.20
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,6 +83,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsElevatorGermShield()'><b>RegisteringBuyerAsElevatorGermShield</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;main-heading&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
@@ -135,28 +144,53 @@ Session ID: e1240c52b10dea3af87f600ed914224e
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsAutomobileGermShield()'><b>RegisteringBuyerAsAutomobileGermShield</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:348)
+	at com.droom.automation.page.droomweb.FranchisePage.selectYourProductWithRegisteringNewNumber(FranchisePage.java:429)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsAutomobileGermShield(FranchiseTest.java:344)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace976618084", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace976618084'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:348)
+	at com.droom.automation.page.droomweb.FranchisePage.selectYourProductWithRegisteringNewNumber(FranchisePage.java:429)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsAutomobileGermShield(FranchiseTest.java:344)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>42</td>
 <td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@418e7838</td></tr>
 <tr>
@@ -220,28 +254,56 @@ Session ID: c4a7514ea02c37c6272addfd9b77d86f
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+<td>36</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsBigTransport()'><b>RegisteringBuyerAsBigTransport</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:348)
+	at com.droom.automation.page.droomweb.FranchisePage.selectYourProductWithRegisteringNewNumber(FranchisePage.java:429)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsBigTransport(FranchiseTest.java:431)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace763029735", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace763029735'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:348)
+	at com.droom.automation.page.droomweb.FranchisePage.selectYourProductWithRegisteringNewNumber(FranchisePage.java:429)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsBigTransport(FranchiseTest.java:431)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>38</td>
 <td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@418e7838</td></tr>
 <tr>
@@ -301,28 +363,56 @@ Session ID: 422931f345b8801b425e2c3313b89e87
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+<td>37</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsElevatorGermShield()'><b>RegisteringBuyerAsElevatorGermShield</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:348)
+	at com.droom.automation.page.droomweb.FranchisePage.selectYourProductWithRegisteringNewNumber(FranchisePage.java:429)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsElevatorGermShield(FranchiseTest.java:388)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1625985323", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1625985323'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:348)
+	at com.droom.automation.page.droomweb.FranchisePage.selectYourProductWithRegisteringNewNumber(FranchisePage.java:429)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsElevatorGermShield(FranchiseTest.java:388)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>75</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
 <tr>
@@ -384,28 +474,56 @@ Session ID: f82b9911e226d7aa602ac4e078f30ac0
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+<td>44</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsFacilityGermShield()'><b>RegisteringBuyerAsFacilityGermShield</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:348)
+	at com.droom.automation.page.droomweb.FranchisePage.selectYourProductWithRegisteringNewNumber(FranchisePage.java:429)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsFacilityGermShield(FranchiseTest.java:366)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1459227748", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1459227748'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:348)
+	at com.droom.automation.page.droomweb.FranchisePage.selectYourProductWithRegisteringNewNumber(FranchisePage.java:429)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsFacilityGermShield(FranchiseTest.java:366)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>78</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
 <tr>
@@ -467,41 +585,83 @@ Session ID: ec8db4f9f8b242380d87bb899e56f1de
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+<td>71</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsJumpstartService()'><b>RegisteringBuyerAsJumpstartService</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:348)
+	at com.droom.automation.page.droomweb.FranchisePage.selectYourProductWithRegisteringNewNumber(FranchisePage.java:429)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsJumpstartService(FranchiseTest.java:409)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1325837495", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1325837495'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:348)
+	at com.droom.automation.page.droomweb.FranchisePage.selectYourProductWithRegisteringNewNumber(FranchisePage.java:429)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.RegisteringBuyerAsJumpstartService(FranchiseTest.java:409)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>102</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
 <tr>
 <td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsSedan()'><b>buyGermShieldForAutomobileAsSedan</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;?  1,649&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+<td>32</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.ValidatingFranchiseDashboard()'><b>ValidatingFranchiseDashboard</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;main-heading&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53547}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: 0bd42050b8973ebab58674b1409c62f2
 *** Element info: {Using=xpath, value=//strong[text()=&apos;?  1,649&apos;]}
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63504}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c804e3f1c04a58be8196634b11887823
+*** Element info: {Using=xpath, value=//li[@class=&apos;main-heading&apos;]}
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -512,6 +672,7 @@ Session ID: 0bd42050b8973ebab58674b1409c62f2
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:349)
 	at com.droom.automation.page.droomweb.GermShieldForAutomobilePage.germShieldValidationForCarAsSedan(GermShieldForAutomobilePage.java:102)
 	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsSedan(BuyGermShieldServiceTest.java:78)
@@ -519,10 +680,21 @@ Session ID: 0bd42050b8973ebab58674b1409c62f2
 ... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1901712897", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
 <div class='stack-trace' id='stack-trace1901712897'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;?  1,649&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:347)
+	at com.droom.automation.page.droomweb.LoginPage.franchiseLoginValidation(LoginPage.java:203)
+	at com.droom.automation.page.droomweb.FranchisePage.franchiseDashboard(FranchisePage.java:268)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.ValidatingFranchiseDashboard(FranchiseTest.java:259)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1582626783", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1582626783'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;main-heading&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53547}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: 0bd42050b8973ebab58674b1409c62f2
 *** Element info: {Using=xpath, value=//strong[text()=&apos;?  1,649&apos;]}
@@ -530,6 +702,16 @@ Session ID: 0bd42050b8973ebab58674b1409c62f2
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63504}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c804e3f1c04a58be8196634b11887823
+*** Element info: {Using=xpath, value=//li[@class=&apos;main-heading&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -540,6 +722,7 @@ Session ID: 0bd42050b8973ebab58674b1409c62f2
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:349)
 	at com.droom.automation.page.droomweb.GermShieldForAutomobilePage.germShieldValidationForCarAsSedan(GermShieldForAutomobilePage.java:102)
 	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsSedan(BuyGermShieldServiceTest.java:78)
@@ -550,41 +733,69 @@ Session ID: 0bd42050b8973ebab58674b1409c62f2
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:347)
+	at com.droom.automation.page.droomweb.LoginPage.franchiseLoginValidation(LoginPage.java:203)
+	at com.droom.automation.page.droomweb.FranchisePage.franchiseDashboard(FranchisePage.java:268)
+	at com.droom.automation.droomweb.droomweb_prod.FranchiseTest.ValidatingFranchiseDashboard(FranchiseTest.java:259)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>83</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
 <tr>
 <td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsPlane()'><b>buyGermShieldForHeavyTransportAsPlane</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;?  4,500&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+<td>42</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsHatchback()'><b>buyGermShieldForAutomobileAsHatchback</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;?  1,179&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55499}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: 54ac3b621e0324c0d2f24c93659c63ef
 *** Element info: {Using=xpath, value=//strong[text()=&apos;?  4,500&apos;]}
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59564}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 896d9f422572052d7e936e8125fb0ac9
+*** Element info: {Using=xpath, value=//strong[text()=&apos;?  1,179&apos;]}
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -595,6 +806,7 @@ Session ID: 54ac3b621e0324c0d2f24c93659c63ef
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:349)
 	at com.droom.automation.page.droomweb.GermShieldForHeavyTransportPage.germShieldValidationForHeavyTransportAsPlane(GermShieldForHeavyTransportPage.java:79)
 	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsPlane(BuyGermShieldServiceTest.java:234)
@@ -602,10 +814,20 @@ Session ID: 54ac3b621e0324c0d2f24c93659c63ef
 ... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace582839050", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
 <div class='stack-trace' id='stack-trace582839050'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;?  4,500&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:347)
+	at com.droom.automation.page.droomweb.GermShieldForAutomobilePage.germShieldValidationForCarAsHatchback(GermShieldForAutomobilePage.java:76)
+	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsHatchback(BuyGermShieldServiceTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1175395547", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1175395547'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;?  1,179&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55499}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: 54ac3b621e0324c0d2f24c93659c63ef
 *** Element info: {Using=xpath, value=//strong[text()=&apos;?  4,500&apos;]}
@@ -613,6 +835,16 @@ Session ID: 54ac3b621e0324c0d2f24c93659c63ef
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59564}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 896d9f422572052d7e936e8125fb0ac9
+*** Element info: {Using=xpath, value=//strong[text()=&apos;?  1,179&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -623,6 +855,7 @@ Session ID: 54ac3b621e0324c0d2f24c93659c63ef
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:349)
 	at com.droom.automation.page.droomweb.GermShieldForHeavyTransportPage.germShieldValidationForHeavyTransportAsPlane(GermShieldForHeavyTransportPage.java:79)
 	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsPlane(BuyGermShieldServiceTest.java:234)
@@ -633,41 +866,68 @@ Session ID: 54ac3b621e0324c0d2f24c93659c63ef
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:347)
+	at com.droom.automation.page.droomweb.GermShieldForAutomobilePage.germShieldValidationForCarAsHatchback(GermShieldForAutomobilePage.java:76)
+	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsHatchback(BuyGermShieldServiceTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>82</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
 <tr>
 <td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsFlat()'><b>buyGermShieldForHomeAsFlat</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;?1500&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+<td>88</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForOfficeAsHighRiseBuilding()'><b>buyGermShieldForOfficeAsHighRiseBuilding</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[text()=&apos;My Account&apos;])[2]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54485}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: cfac8070ccb41d6b65e8c5719e6f9df1
 *** Element info: {Using=xpath, value=//span[text()=&apos;?1500&apos;]}
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61504}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 1326bd77a7d64ac9ad20ead8b6cc1168
+*** Element info: {Using=xpath, value=(//a[text()=&apos;My Account&apos;])[2]}
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -678,6 +938,7 @@ Session ID: cfac8070ccb41d6b65e8c5719e6f9df1
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:349)
 	at com.droom.automation.page.droomweb.GermShieldForHomePage.germShieldValidationForHomeAsFlat(GermShieldForHomePage.java:163)
 	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsFlat(BuyGermShieldServiceTest.java:153)
@@ -685,10 +946,21 @@ Session ID: cfac8070ccb41d6b65e8c5719e6f9df1
 ... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1533295982", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
 <div class='stack-trace' id='stack-trace1533295982'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;?1500&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByText(SeleniumWrapper.java:339)
+	at com.droom.automation.page.droomweb.GermShieldForHomePage.getGermShieldPage(GermShieldForHomePage.java:78)
+	at com.droom.automation.page.droomweb.GermShieldForOfficePage.germShieldValidationForHomeAsHighRiseBuilding(GermShieldForOfficePage.java:94)
+	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForOfficeAsHighRiseBuilding(BuyGermShieldServiceTest.java:210)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace413097688", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace413097688'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[text()=&apos;My Account&apos;])[2]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54485}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: cfac8070ccb41d6b65e8c5719e6f9df1
 *** Element info: {Using=xpath, value=//span[text()=&apos;?1500&apos;]}
@@ -696,6 +968,16 @@ Session ID: cfac8070ccb41d6b65e8c5719e6f9df1
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61504}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 1326bd77a7d64ac9ad20ead8b6cc1168
+*** Element info: {Using=xpath, value=(//a[text()=&apos;My Account&apos;])[2]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -706,6 +988,7 @@ Session ID: cfac8070ccb41d6b65e8c5719e6f9df1
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:349)
 	at com.droom.automation.page.droomweb.GermShieldForHomePage.germShieldValidationForHomeAsFlat(GermShieldForHomePage.java:163)
 	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsFlat(BuyGermShieldServiceTest.java:153)
@@ -716,41 +999,69 @@ Session ID: cfac8070ccb41d6b65e8c5719e6f9df1
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByText(SeleniumWrapper.java:339)
+	at com.droom.automation.page.droomweb.GermShieldForHomePage.getGermShieldPage(GermShieldForHomePage.java:78)
+	at com.droom.automation.page.droomweb.GermShieldForOfficePage.germShieldValidationForHomeAsHighRiseBuilding(GermShieldForOfficePage.java:94)
+	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForOfficeAsHighRiseBuilding(BuyGermShieldServiceTest.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>155</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
 <tr>
 <td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsIndependent()'><b>buyGermShieldForHomeAsIndependent</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;?  1,500&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+<td>39</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForOfficeAsIndependentBuilding()'><b>buyGermShieldForOfficeAsIndependentBuilding</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;?  3,000&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54231}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: 9a137298c2b6e5c6c3a9d8339a20afb5
 *** Element info: {Using=xpath, value=//strong[text()=&apos;?  1,500&apos;]}
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61370}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a45d3b916479ba6325f4c95abc9ddef5
+*** Element info: {Using=xpath, value=//strong[text()=&apos;?  3,000&apos;]}
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -761,6 +1072,7 @@ Session ID: 9a137298c2b6e5c6c3a9d8339a20afb5
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:349)
 	at com.droom.automation.page.droomweb.GermShieldForHomePage.germShieldValidationForHomeAsIndependent(GermShieldForHomePage.java:113)
 	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsIndependent(BuyGermShieldServiceTest.java:131)
@@ -768,10 +1080,20 @@ Session ID: 9a137298c2b6e5c6c3a9d8339a20afb5
 ... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace748127799", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
 <div class='stack-trace' id='stack-trace748127799'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;?  1,500&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:347)
+	at com.droom.automation.page.droomweb.GermShieldForOfficePage.germShieldValidationForHomeAsIndependentBuilding(GermShieldForOfficePage.java:84)
+	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForOfficeAsIndependentBuilding(BuyGermShieldServiceTest.java:199)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace870748514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace870748514'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;?  3,000&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54231}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: 9a137298c2b6e5c6c3a9d8339a20afb5
 *** Element info: {Using=xpath, value=//strong[text()=&apos;?  1,500&apos;]}
@@ -779,6 +1101,16 @@ Session ID: 9a137298c2b6e5c6c3a9d8339a20afb5
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61370}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a45d3b916479ba6325f4c95abc9ddef5
+*** Element info: {Using=xpath, value=//strong[text()=&apos;?  3,000&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -789,6 +1121,7 @@ Session ID: 9a137298c2b6e5c6c3a9d8339a20afb5
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:349)
 	at com.droom.automation.page.droomweb.GermShieldForHomePage.germShieldValidationForHomeAsIndependent(GermShieldForHomePage.java:113)
 	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsIndependent(BuyGermShieldServiceTest.java:131)
@@ -799,28 +1132,41 @@ Session ID: 9a137298c2b6e5c6c3a9d8339a20afb5
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:347)
+	at com.droom.automation.page.droomweb.GermShieldForOfficePage.germShieldValidationForHomeAsIndependentBuilding(GermShieldForOfficePage.java:84)
+	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForOfficeAsIndependentBuilding(BuyGermShieldServiceTest.java:199)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>77</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
 <tr>
@@ -846,27 +1192,82 @@ Session ID: 9a137298c2b6e5c6c3a9d8339a20afb5
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+<td>78</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest.buyRTOServiceAsLoggedInUser()'><b>buyRTOServiceAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[text()=&apos;Buy on Droom&apos;] (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.droom.automation.lib.SeleniumWrapper.findElement(SeleniumWrapper.java:86)
+	at com.droom.automation.lib.SeleniumWrapper.executeClickOnElement(SeleniumWrapper.java:281)
+	at com.droom.automation.page.droomweb.LoginPage.goToBuyViaMyAccount(LoginPage.java:172)
+	at com.droom.automation.page.droomweb.BuyPage.buyAutomobileServicesViaRTO(BuyPage.java:118)
+	at com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest.buyRTOServiceAsLoggedInUser(BuyFeatureTest.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Buy on Droom&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64765}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8823818c8d738f5674110ca814a91d91
+*** Element info: {Using=xpath, value=//a[text()=&apos;Buy on Droom&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 33 more
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1603407617", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1603407617'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[text()=&apos;Buy on Droom&apos;] (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.droom.automation.lib.SeleniumWrapper.findElement(SeleniumWrapper.java:86)
+	at com.droom.automation.lib.SeleniumWrapper.executeClickOnElement(SeleniumWrapper.java:281)
+	at com.droom.automation.page.droomweb.LoginPage.goToBuyViaMyAccount(LoginPage.java:172)
+	at com.droom.automation.page.droomweb.BuyPage.buyAutomobileServicesViaRTO(BuyPage.java:118)
+	at com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest.buyRTOServiceAsLoggedInUser(BuyFeatureTest.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<<<<<<< HEAD
 </pre></div></td>
 <td>30</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
@@ -898,10 +1299,15 @@ Session ID: 9315da3b94ca26de80398163eca5d4f1
 ... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2040008077", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
 <div class='stack-trace' id='stack-trace2040008077'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[text()=&apos;My Account&apos;])[2]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Buy on Droom&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53301}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: 9315da3b94ca26de80398163eca5d4f1
 *** Element info: {Using=xpath, value=(//a[text()=&apos;My Account&apos;])[2]}
@@ -909,6 +1315,16 @@ Session ID: 9315da3b94ca26de80398163eca5d4f1
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64765}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8823818c8d738f5674110ca814a91d91
+*** Element info: {Using=xpath, value=//a[text()=&apos;Buy on Droom&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -919,6 +1335,7 @@ Session ID: 9315da3b94ca26de80398163eca5d4f1
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByText(SeleniumWrapper.java:341)
 	at com.droom.automation.page.droomweb.GermShieldAntimicrobialCoatingPage.germShieldForOtherFacility(GermShieldAntimicrobialCoatingPage.java:120)
 	at com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForOtherFacility(BuyGermShieldServiceTest.java:56)
@@ -966,13 +1383,25 @@ Session ID: 9315da3b94ca26de80398163eca5d4f1
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Buy on Droom&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 33 more
+</pre></div></td>
+<td>76</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest@5562c41e</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest.buyVehicleAsLoggedInUser()'><b>buyVehicleAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;?32520&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58813}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: cca00cc3366a9239a146db5bcaaeb9ab
-*** Element info: {Using=xpath, value=//a[text()=&apos;Buy on Droom&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64631}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 30c18a392b1b3ff79ad8b5416fd20db1
+*** Element info: {Using=xpath, value=//div[text()=&apos;?32520&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -983,6 +1412,43 @@ Session ID: cca00cc3366a9239a146db5bcaaeb9ab
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByText(SeleniumWrapper.java:339)
+	at com.droom.automation.page.droomweb.BuyPage.selectBuyCategory(BuyPage.java:96)
+	at com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest.buyVehicleAsLoggedInUser(BuyFeatureTest.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace227634823", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace227634823'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;?32520&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58813}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cca00cc3366a9239a146db5bcaaeb9ab
+*** Element info: {Using=xpath, value=//a[text()=&apos;Buy on Droom&apos;]}
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64631}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 30c18a392b1b3ff79ad8b5416fd20db1
+*** Element info: {Using=xpath, value=//div[text()=&apos;?32520&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+>>>>>>> 01.12.20
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
 	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
@@ -1003,33 +1469,160 @@ Session ID: cca00cc3366a9239a146db5bcaaeb9ab
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByText(SeleniumWrapper.java:339)
+	at com.droom.automation.page.droomweb.BuyPage.selectBuyCategory(BuyPage.java:96)
+	at com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest.buyVehicleAsLoggedInUser(BuyFeatureTest.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>96</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest@5562c41e</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.CreateListingTest.createNormalListingAsLoggedInUser()'><b>createNormalListingAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.CreateListingTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Create Listing&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64219}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4c880b60fcf5d1b28af9269687171a35
+*** Element info: {Using=xpath, value=//a[text()=&apos;Create Listing&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:347)
+	at com.droom.automation.page.droomweb.CreateListingPage.createYourListing(CreateListingPage.java:77)
+	at com.droom.automation.droomweb.droomweb_prod.CreateListingTest.createNormalListingAsLoggedInUser(CreateListingTest.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace279645538", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace279645538'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Create Listing&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64219}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4c880b60fcf5d1b28af9269687171a35
+*** Element info: {Using=xpath, value=//a[text()=&apos;Create Listing&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:347)
+	at com.droom.automation.page.droomweb.CreateListingPage.createYourListing(CreateListingPage.java:77)
+	at com.droom.automation.droomweb.droomweb_prod.CreateListingTest.createNormalListingAsLoggedInUser(CreateListingTest.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<<<<<<< HEAD
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Buy on Droom&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+=======
+</pre></div></td>
+<td>74</td>
+<td>com.droom.automation.droomweb.droomweb_prod.CreateListingTest@53fdffa1</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.CreateListingTest.createPremiumListingAsLoggedInUser()'><b>createPremiumListingAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.CreateListingTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.111)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64305}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9ac726035b9a6fdef6f1ff036eb9a602
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
+	at com.droom.automation.lib.SeleniumWrapper.enterTextboxDetails(SeleniumWrapper.java:176)
+	at com.droom.automation.page.droomweb.CreateListingPage.pricing(CreateListingPage.java:108)
+	at com.droom.automation.droomweb.droomweb_prod.CreateListingTest.createPremiumListingAsLoggedInUser(CreateListingTest.java:44)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace891834590", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace891834590'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58813}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: cca00cc3366a9239a146db5bcaaeb9ab
 *** Element info: {Using=xpath, value=//a[text()=&apos;Buy on Droom&apos;]}
@@ -1037,12 +1630,22 @@ Session ID: cca00cc3366a9239a146db5bcaaeb9ab
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64305}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9ac726035b9a6fdef6f1ff036eb9a602
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<<<<<<< HEAD
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
@@ -1058,13 +1661,61 @@ Session ID: cca00cc3366a9239a146db5bcaaeb9ab
 <td title='com.droom.automation.droomweb.droomweb_prod.CreateListingTest.createNormalListingAsLoggedInUser()'><b>createNormalListingAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.CreateListingTest</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Create Listing&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
+	at com.droom.automation.lib.SeleniumWrapper.enterTextboxDetails(SeleniumWrapper.java:176)
+	at com.droom.automation.page.droomweb.CreateListingPage.pricing(CreateListingPage.java:108)
+	at com.droom.automation.droomweb.droomweb_prod.CreateListingTest.createPremiumListingAsLoggedInUser(CreateListingTest.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>98</td>
+<td>com.droom.automation.droomweb.droomweb_prod.CreateListingTest@53fdffa1</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.UserLoginTest.franchiseLoginValidation()'><b>franchiseLoginValidation</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.UserLoginTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;main-heading&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58443}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: c9a597dad8035de37c95082c61ef29c5
 *** Element info: {Using=xpath, value=//a[text()=&apos;Create Listing&apos;]}
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59168}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 07341f5969c7f3ce31b57de86447e2b4
+*** Element info: {Using=xpath, value=//li[@class=&apos;main-heading&apos;]}
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1075,6 +1726,7 @@ Session ID: c9a597dad8035de37c95082c61ef29c5
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:349)
 	at com.droom.automation.page.droomweb.CreateListingPage.createYourListing(CreateListingPage.java:77)
 	at com.droom.automation.droomweb.droomweb_prod.CreateListingTest.createNormalListingAsLoggedInUser(CreateListingTest.java:31)
@@ -1082,10 +1734,20 @@ Session ID: c9a597dad8035de37c95082c61ef29c5
 ... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2006507059", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
 <div class='stack-trace' id='stack-trace2006507059'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Create Listing&apos;]&quot;}
   (Session info: chrome=85.0.4183.102)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:347)
+	at com.droom.automation.page.droomweb.LoginPage.franchiseLoginValidation(LoginPage.java:203)
+	at com.droom.automation.droomweb.droomweb_prod.UserLoginTest.franchiseLoginValidation(UserLoginTest.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace287933084", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace287933084'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;main-heading&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+>>>>>>> 01.12.20
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-64JMFN9V&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Honey\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58443}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: c9a597dad8035de37c95082c61ef29c5
 *** Element info: {Using=xpath, value=//a[text()=&apos;Create Listing&apos;]}
@@ -1093,6 +1755,16 @@ Session ID: c9a597dad8035de37c95082c61ef29c5
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59168}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 07341f5969c7f3ce31b57de86447e2b4
+*** Element info: {Using=xpath, value=//li[@class=&apos;main-heading&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+>>>>>>> 01.12.20
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -1103,6 +1775,7 @@ Session ID: c9a597dad8035de37c95082c61ef29c5
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:349)
 	at com.droom.automation.page.droomweb.CreateListingPage.createYourListing(CreateListingPage.java:77)
 	at com.droom.automation.droomweb.droomweb_prod.CreateListingTest.createNormalListingAsLoggedInUser(CreateListingTest.java:31)
@@ -1113,28 +1786,41 @@ Session ID: c9a597dad8035de37c95082c61ef29c5
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+=======
+	at com.droom.automation.lib.SeleniumWrapper.verifyByContains(SeleniumWrapper.java:347)
+	at com.droom.automation.page.droomweb.LoginPage.franchiseLoginValidation(LoginPage.java:203)
+	at com.droom.automation.droomweb.droomweb_prod.UserLoginTest.franchiseLoginValidation(UserLoginTest.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+>>>>>>> 01.12.20
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<<<<<<< HEAD
 <td>44</td>
 <td>com.droom.automation.droomweb.droomweb_prod.CreateListingTest@61230f6a</td></tr>
 </table><p>
@@ -1245,14 +1931,161 @@ Session ID: c9a597dad8035de37c95082c61ef29c5
 <td></td>
 <td>66</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
+=======
+<td>45</td>
+<td>com.droom.automation.droomweb.droomweb_prod.UserLoginTest@16610890</td></tr>
 <tr>
-<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForOfficeAsIndependentBuilding()'><b>buyGermShieldForOfficeAsIndependentBuilding</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td title='com.droom.automation.droomweb.droomweb_prod.UserLoginTest.inValidPasswordloginAsIndividualUserViaPassword()'><b>inValidPasswordloginAsIndividualUserViaPassword</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.UserLoginTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;Incorrect Email or Password&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58560}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6c0969ce48384c99e6cc944be0c97141
+*** Element info: {Using=xpath, value=//div[text()=&apos;Incorrect Email or Password&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByText(SeleniumWrapper.java:339)
+	at com.droom.automation.page.droomweb.LoginPage.invalidLoginValidation(LoginPage.java:90)
+	at com.droom.automation.droomweb.droomweb_prod.UserLoginTest.inValidPasswordloginAsIndividualUserViaPassword(UserLoginTest.java:46)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace761533964", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace761533964'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;Incorrect Email or Password&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HONEY1012-TECH&apos;, ip: &apos;172.20.4.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\HONEYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58560}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6c0969ce48384c99e6cc944be0c97141
+*** Element info: {Using=xpath, value=//div[text()=&apos;Incorrect Email or Password&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.droom.automation.lib.SeleniumWrapper.verifyByText(SeleniumWrapper.java:339)
+	at com.droom.automation.page.droomweb.LoginPage.invalidLoginValidation(LoginPage.java:90)
+	at com.droom.automation.droomweb.droomweb_prod.UserLoginTest.inValidPasswordloginAsIndividualUserViaPassword(UserLoginTest.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>38</td>
+<td>com.droom.automation.droomweb.droomweb_prod.UserLoginTest@16610890</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.ValidatingFranchiseMyOrdersAsAutomobileGermShield()'><b>ValidatingFranchiseMyOrdersAsAutomobileGermShield</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
 <td></td>
+<td>40</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest.buyCarCareAndDetailingAsLoggedInUser()'><b>buyCarCareAndDetailingAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest</td>
+<td></td>
+<td>69</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest@5562c41e</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldElevatorService()'><b>buyGermShieldElevatorService</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>91</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsBike()'><b>buyGermShieldForAutomobileAsBike</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>85</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsBus()'><b>buyGermShieldForAutomobileAsBus</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>71</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsPremiumBike()'><b>buyGermShieldForAutomobileAsPremiumBike</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>73</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsScooter()'><b>buyGermShieldForAutomobileAsScooter</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>72</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForAutomobileAsSedan()'><b>buyGermShieldForAutomobileAsSedan</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>66</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+>>>>>>> 01.12.20
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsHelicopter()'><b>buyGermShieldForHeavyTransportAsHelicopter</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<<<<<<< HEAD
 <td>60</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
+=======
+<td>79</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
 <tr>
-<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldServiceViaHomePageAsLoggedInUser()'><b>buyGermShieldServiceViaHomePageAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsPlane()'><b>buyGermShieldForHeavyTransportAsPlane</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
 <td></td>
+<td>84</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+>>>>>>> 01.12.20
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHeavyTransportAsTrain()'><b>buyGermShieldForHeavyTransportAsTrain</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<<<<<<< HEAD
 <td>71</td>
 <td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@4a22f9e2</td></tr>
 <tr>
@@ -1385,6 +2218,180 @@ Session ID: c9a597dad8035de37c95082c61ef29c5
 <td></td>
 <td>63</td>
 <td>com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@3c419631</td></tr>
+=======
+<td>76</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsBungalow()'><b>buyGermShieldForHomeAsBungalow</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>77</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsFarmhouse()'><b>buyGermShieldForHomeAsFarmhouse</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>78</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsFlat()'><b>buyGermShieldForHomeAsFlat</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>83</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsIndependent()'><b>buyGermShieldForHomeAsIndependent</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>85</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsPenthouse()'><b>buyGermShieldForHomeAsPenthouse</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>77</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForHomeAsVilla()'><b>buyGermShieldForHomeAsVilla</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>84</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForOfficeAsCoWorkingSpace()'><b>buyGermShieldForOfficeAsCoWorkingSpace</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>62</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest.buyGermShieldForOtherFacility()'><b>buyGermShieldForOtherFacility</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest</td>
+<td></td>
+<td>67</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest@71def8f8</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest.buyJumpstartServiceAsLoggedInUser()'><b>buyJumpstartServiceAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest</td>
+<td></td>
+<td>65</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest@5562c41e</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest.buyRoadSideAssistanceServiceAsLogged()'><b>buyRoadSideAssistanceServiceAsLogged</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest</td>
+<td></td>
+<td>73</td>
+<td>com.droom.automation.droomweb.droomweb_prod.BuyFeatureTest@5562c41e</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.CreateListingTest.createConciergeListingAsLoggedInUser()'><b>createConciergeListingAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.CreateListingTest</td>
+<td></td>
+<td>154</td>
+<td>com.droom.automation.droomweb.droomweb_prod.CreateListingTest@53fdffa1</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.getEnterpriseFranchiseAsUpFrontPaymentForOneMonth()'><b>getEnterpriseFranchiseAsUpFrontPaymentForOneMonth</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>39</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.getEnterpriseFranchiseAsUpFrontPaymentForSixMonth()'><b>getEnterpriseFranchiseAsUpFrontPaymentForSixMonth</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>39</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth()'><b>getEnterpriseFranchiseAsUpFrontPaymentForThreeMonth</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>39</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.getSiteFranchiseAsEMIForOneMonth()'><b>getSiteFranchiseAsEMIForOneMonth</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>41</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.getSiteFranchiseAsEMIForSixMonth()'><b>getSiteFranchiseAsEMIForSixMonth</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>41</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.getSiteFranchiseAsEMIForThreeMonth()'><b>getSiteFranchiseAsEMIForThreeMonth</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>43</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.getSiteFranchiseAsUpFrontPaymentForOneMonth()'><b>getSiteFranchiseAsUpFrontPaymentForOneMonth</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>43</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.getSiteFranchiseAsUpFrontPaymentForSixMonth()'><b>getSiteFranchiseAsUpFrontPaymentForSixMonth</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>42</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.getSiteFranchiseAsUpFrontPaymentForThreeMonth()'><b>getSiteFranchiseAsUpFrontPaymentForThreeMonth</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>37</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.UserLoginTest.inValidIDloginAsIndividualUserViaPassword()'><b>inValidIDloginAsIndividualUserViaPassword</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.UserLoginTest</td>
+<td></td>
+<td>7</td>
+<td>com.droom.automation.droomweb.droomweb_prod.UserLoginTest@16610890</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.UserLoginTest.inValidLoginIDAsProSellerViaPassword()'><b>inValidLoginIDAsProSellerViaPassword</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.UserLoginTest</td>
+<td></td>
+<td>10</td>
+<td>com.droom.automation.droomweb.droomweb_prod.UserLoginTest@16610890</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.UserLoginTest.inValidLoginPasswordAsProSellerViaPassword()'><b>inValidLoginPasswordAsProSellerViaPassword</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.UserLoginTest</td>
+<td></td>
+<td>10</td>
+<td>com.droom.automation.droomweb.droomweb_prod.UserLoginTest@16610890</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.UserLoginTest.inValidOTPloginAsIndividualUserViaOTP()'><b>inValidOTPloginAsIndividualUserViaOTP</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.UserLoginTest</td>
+<td></td>
+<td>15</td>
+<td>com.droom.automation.droomweb.droomweb_prod.UserLoginTest@16610890</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.UserLoginTest.inValidOTPloginAsProSellerViaOTP()'><b>inValidOTPloginAsProSellerViaOTP</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.UserLoginTest</td>
+<td></td>
+<td>19</td>
+<td>com.droom.automation.droomweb.droomweb_prod.UserLoginTest@16610890</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.UserLoginTest.loginAsIndividualUserViaPassword()'><b>loginAsIndividualUserViaPassword</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.UserLoginTest</td>
+<td></td>
+<td>30</td>
+<td>com.droom.automation.droomweb.droomweb_prod.UserLoginTest@16610890</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.UserLoginTest.loginAsProSellerViaPassword()'><b>loginAsProSellerViaPassword</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.UserLoginTest</td>
+<td></td>
+<td>15</td>
+<td>com.droom.automation.droomweb.droomweb_prod.UserLoginTest@16610890</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.paymentAmountForBookingCityAsFranchise()'><b>paymentAmountForBookingCityAsFranchise</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>38</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.paymentAmountForSignUpAsFranchise()'><b>paymentAmountForSignUpAsFranchise</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>41</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.FranchiseTest.registerForFranchise()'><b>registerForFranchise</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.FranchiseTest</td>
+<td></td>
+<td>21</td>
+<td>com.droom.automation.droomweb.droomweb_prod.FranchiseTest@4d465b11</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest.serachForBikeValidationAsLoggedInUser()'><b>serachForBikeValidationAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest</td>
+<td></td>
+<td>62</td>
+<td>com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@383bfa16</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest.serachForScooterValidationAsLoggedInUserAtCheckout()'><b>serachForScooterValidationAsLoggedInUserAtCheckout</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest</td>
+<td></td>
+<td>47</td>
+<td>com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@383bfa16</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest.serachForVehicleValidationAsLoggedInUser()'><b>serachForVehicleValidationAsLoggedInUser</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest</td>
+<td></td>
+<td>79</td>
+<td>com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@383bfa16</td></tr>
+<tr>
+<td title='com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest.serachForVehicleValidationViaFacebookLogin()'><b>serachForVehicleValidationViaFacebookLogin</b><br>Test class: com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest</td>
+<td></td>
+<td>55</td>
+<td>com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@383bfa16</td></tr>
+>>>>>>> 01.12.20
 </table><p>
 </body>
 </html>
