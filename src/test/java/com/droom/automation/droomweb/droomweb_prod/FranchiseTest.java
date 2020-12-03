@@ -269,60 +269,60 @@ public class FranchiseTest extends AbstractBaseTest
 		franchisepage.franchiseMyOrdersAsAutomobileGermShield();
 	}
 	
-//	@Test(priority = 15)
-//	public void ValidatingFranchiseMyOrdersAsFacilityGermShield()
-//	{
-//		String username = eu.readData("FranchiseSheet", 11, 3);
-//		String password = eu.readData("FranchiseSheet", 11, 5);
-//		String enterCatogory = eu.readData("FranchiseSheet", 11, 17);
-//		String enterArea = eu.readData("FranchiseSheet", 11, 18);
-//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-//		franchisepage.enterPlaceAnOrder(username, password);
-//		franchisepage.selectYourProductViaRegisteredNumber();
-//		franchisepage.franchiseMyOrdersAsFacilityGermShield(enterCatogory, enterArea, enterAddress, enterPincode);
-//	}
+	@Test(priority = 15)
+	public void ValidatingFranchiseMyOrdersAsFacilityGermShield()
+	{
+		String username = eu.readData("FranchiseSheet", 11, 3);
+		String password = eu.readData("FranchiseSheet", 11, 5);
+		String enterCatogory = eu.readData("FranchiseSheet", 11, 17);
+		String enterArea = eu.readData("FranchiseSheet", 11, 18);
+		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+		franchisepage.enterPlaceAnOrder(username, password);
+		franchisepage.selectYourProductViaRegisteredNumber();
+		franchisepage.franchiseMyOrdersAsFacilityGermShield(enterCatogory, enterArea, enterAddress, enterPincode);
+	}
 	
-//	@Test(priority = 16)
-//	public void ValidatingFranchiseMyOrdersAsElevatorGermShield()
-//	{
-//		String username = eu.readData("FranchiseSheet", 11, 3);
-//		String password = eu.readData("FranchiseSheet", 11, 5);
-//		String enterCatogory = eu.readData("FranchiseSheet", 12, 17);
-//		String packageType = eu.readData("FranchiseSheet", 12, 19);
-//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-//		franchisepage.enterPlaceAnOrder(username, password);
-//		franchisepage.selectYourProductViaRegisteredNumber();
-//		franchisepage.franchiseMyOrdersAsElevatorGermShield(enterCatogory, packageType, enterAddress, enterPincode);
-//	}
-//	
-//	@Test(priority = 17)
-//	public void ValidatingFranchiseMyOrdersAsJumpstartService()
-//	{
-//		String username = eu.readData("FranchiseSheet", 11, 3);
-//		String password = eu.readData("FranchiseSheet", 11, 5);
-//		String enterCatogory = eu.readData("FranchiseSheet", 13, 17);
-//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-//		franchisepage.enterPlaceAnOrder(username, password);
-//		franchisepage.selectYourProductViaRegisteredNumber();
-//		franchisepage.franchiseMyOrdersAsJumpstartService(enterCatogory, enterAddress, enterPincode);
-//	}
-//	
-//	@Test(priority = 18)
-//	public void ValidatingFranchiseMyOrdersAsBigTransport()
-//	{
-//		String username = eu.readData("FranchiseSheet", 11, 3);
-//		String password = eu.readData("FranchiseSheet", 11, 5);
-//		String enterCatogory = eu.readData("FranchiseSheet", 14, 17);
-//		String enterArea = eu.readData("FranchiseSheet", 11, 18);
-//		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
-//		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
-//		franchisepage.enterPlaceAnOrder(username, password);
-//		franchisepage.selectYourProductViaRegisteredNumber();
-//		franchisepage.franchiseMyOrdersAsBigTransport(enterCatogory, enterArea, enterAddress, enterPincode);
-//	}
+	@Test(priority = 16)
+	public void ValidatingFranchiseMyOrdersAsElevatorGermShield()
+	{
+		String username = eu.readData("FranchiseSheet", 11, 3);
+		String password = eu.readData("FranchiseSheet", 11, 5);
+		String enterCatogory = eu.readData("FranchiseSheet", 12, 17);
+		String packageType = eu.readData("FranchiseSheet", 12, 19);
+		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+		franchisepage.enterPlaceAnOrder(username, password);
+		franchisepage.selectYourProductViaRegisteredNumber();
+		franchisepage.franchiseMyOrdersAsElevatorGermShield(enterCatogory, packageType, enterAddress, enterPincode);
+	}
+	
+	@Test(priority = 17)
+	public void ValidatingFranchiseMyOrdersAsJumpstartService()
+	{
+		String username = eu.readData("FranchiseSheet", 11, 3);
+		String password = eu.readData("FranchiseSheet", 11, 5);
+		String enterCatogory = eu.readData("FranchiseSheet", 13, 17);
+		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+		franchisepage.enterPlaceAnOrder(username, password);
+		franchisepage.selectYourProductViaRegisteredNumber();
+		franchisepage.franchiseMyOrdersAsJumpstartService(enterCatogory, enterAddress, enterPincode);
+	}
+	
+	@Test(priority = 18)
+	public void ValidatingFranchiseMyOrdersAsBigTransport()
+	{
+		String username = eu.readData("FranchiseSheet", 11, 3);
+		String password = eu.readData("FranchiseSheet", 11, 5);
+		String enterCatogory = eu.readData("FranchiseSheet", 14, 17);
+		String enterArea = eu.readData("FranchiseSheet", 11, 18);
+		String enterAddress = eu.readData("FranchiseSheet", 11, 6);
+		String enterPincode = eu.readData("FranchiseSheet", 11, 7);
+		franchisepage.enterPlaceAnOrder(username, password);
+		franchisepage.selectYourProductViaRegisteredNumber();
+		franchisepage.franchiseMyOrdersAsBigTransport(enterCatogory, enterArea, enterAddress, enterPincode);
+	}
 	
 	               // VALIDATING FACILITY VIA REGISTERED MOBILE NUMBER
 	

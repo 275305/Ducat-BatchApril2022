@@ -52,7 +52,8 @@ public class CreateListingPage extends SeleniumWrapper
 	{
 		lp.enterLoginPage();
 		lp.loginValidationForIndividualAccount(username, password);
-		executeClickOnElement(Go_To_Home);
+		demo();
+	//	executeClickOnElement(Go_To_Home);
 		sleep(3000);
 		hp.enterSellByTopPanel();
 		selectOptionByText( Select_Catogory, "Car");
@@ -64,20 +65,27 @@ public class CreateListingPage extends SeleniumWrapper
 		scrolling("(//li[text()='Delhi'])[3]");
 		sleep(2000);
 		executeClickOnElement(By.xpath("//span[text()='Select From']"));
-		selectOptionByText(Select_Make,"Ashok Leyland" );
-		verifyByContains(Select_Make, "Ashok Leyland");
-		selectOptionByText(Select_Model,"Stile" );
-		verifyByContains(Select_Model, "Stile");
+		selectOptionByText(Select_Make,"Fiat" );
+		verifyByContains(Select_Make, "Fiat");
+		selectOptionByText(Select_Model,"Punto" );
+		verifyByContains(Select_Model, "Punto");
 		selectOptionByText(Select_Year, "2014");
 		verifyByContains(Select_Year, "2014");
-		selectOptionByText(Select_Trim, "LE 7 SEATER");
-		verifyByContains(Select_Trim, "LE 7 SEATER");
+		selectOptionByText(Select_Trim, "ACTIVE 1.2");
+		verifyByContains(Select_Trim, "ACTIVE 1.2");
 		executeClickOnElement(Click_Create_Listing_Now);
 		sleep(5000);
 		verifyByContains(Login_To_Continue, "Create Listing");
 		executeClickOnElement(Login_To_Continue);
 		sleep(5000);
     }
+	
+	public void basicFacts()
+	{
+		waitForPageLoad();
+		executeClickOnElement(By.xpath("//input[@id='Basic_Facts']"));
+		
+	}
 	
 	
 	public void keyInformation()
@@ -95,18 +103,18 @@ public class CreateListingPage extends SeleniumWrapper
 		sleep(2000);
 		enterKey(Select_Registartion_Search);
 		sleep(2000);
-		enterTextboxDetails(findElement(Enter_KM_Driven), "15000");
-		verifyByAttribute(Enter_KM_Driven, "15000");
+		enterTextboxDetails(findElement(Enter_KM_Driven), "35000");
+		verifyByAttribute(Enter_KM_Driven, "35000");
 		executeClickOnElement(Continue_After_Key_Information);
 		sleep(5000);
     }
 	
 
-	public void pricing()
+	public void pricing(String sellingPrice)
 	{
 		sleep(4000);
-		enterTextboxDetails(findElement(Enter_Selling_Price), "300000");
-		verifyByAttribute(Enter_Selling_Price, "300000");
+		enterTextboxDetails(findElement(Enter_Selling_Price), sellingPrice);
+		verifyByAttribute(Enter_Selling_Price, sellingPrice);
 		executeScrollDownScript(1000);
 		executeClickOnElement(Click_Save_Continue_After_SellingPrice);
 	}
@@ -147,7 +155,10 @@ public class CreateListingPage extends SeleniumWrapper
 	public void conciergeListing()
 	{
 		verifyByText(Click_For_Concierge, "₹699/-");
-		executeClickOnElement(Click_For_Concierge);
+		waitForElementTobePresent(By.xpath("//div[@id='listing_concierge']"));
+		executeClickOnElement(By.xpath("//div[@id='listing_concierge']"));
+	    sleep(2000);
+	    waitForElementTobePresent(By.xpath("//input[@id='original_submit-button']"));
 		executeClickOnElement(By.xpath("//input[@id='original_submit-button']"));
 //		verifyByAttribute(Verify_Listing_Save_And_Continue, "Save & Continue");
 //		executeClickOnElement(Click_Save_And_Continue_After_Selecting_ListingType);
@@ -192,4 +203,58 @@ public class CreateListingPage extends SeleniumWrapper
 		executeClickOnElement(Verify_Listing_Save_And_Continue);
 	}
 	
+	//------------------------>>>>>>>>>>>>>>>>>>>>>--------------------------------------- TEMP Changes
+	
+	public void demo()
+	{
+		waitForElementTobePresent(By.xpath("(//button[@class='close']//span)[6]"));
+		executeClickOnElement(By.xpath("(//button[@class='close']//span)[6]"));
+		executeClickOnElement(By.xpath("//span[text()='Home']"));
+	}
+	
+	public void keyFactors(String kmDriver)
+	{
+		waitForPageLoad();
+	//	moveToElementAndClick(Select_Location);
+		driverClick(Select_Location);
+		enterTextboxDetails(findElement(Search_Location), "Allahabad");
+		enterKey(Search_Location);
+		verifyByText(Select_Location, "Allahabad");
+		String registerNumber = vehiclesRegistartionRandomNumber();
+		enterTextboxDetails(findElement(Select_Registration_Number),registerNumber );
+		verifyByAttribute(Select_Registration_Number, registerNumber);
+		moveToElementAndClick(Select_Registration_State);
+		enterTextboxDetails(findElement(Select_Registartion_Search), "Delhi");
+		sleep(2000);
+		enterKey(Select_Registartion_Search);
+		sleep(2000);
+		enterTextboxDetails(findElement(Enter_KM_Driven), kmDriver);
+		verifyByAttribute(Enter_KM_Driven, kmDriver);
+		executeClickOnElement(By.xpath("//input[@id='Key_Factors']"));
+		sleep(5000);
+    }
+	
+	public void transperancyFactors()
+	{
+		executeClickOnElement(By.xpath("//input[@id='opt_6031']"));
+		executeClickOnElement(By.xpath("//input[@id='opt_2101']"));
+		executeClickOnElement(By.xpath("//input[@id='opt_2231']"));
+		enterTextboxDetails(findElement(By.xpath("//input[@id='name_on_the_rc']")), "Eeshwar");
+		enterTextboxDetails(findElement(By.xpath("//textarea[@id='description']")), "I am the owner");
+		executeClickOnElement(By.xpath("//input[@id='Transparency_Factors']"));
+	}
+	
+	public void certificationToolQA()
+	{
+		waitForPageLoad();
+		executeScrollDownScript(1400);
+		executeClickOnElement(By.xpath("(//input[@value='Save and Continue'])[8]"));
+	}
+	
+	public void activateListingQA()
+	{
+		waitForPageLoad();
+		doPageRefresh();
+		executeClickOnElement(Click_Activate_Listing_Button);
+	}
 }

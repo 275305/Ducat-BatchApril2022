@@ -3,20 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest">
+      <class name="com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
-          <include name="buyGermShieldForHomeAsFlat"/>
-          <include name="buyGermShieldForHomeAsIndependent"/>
-          <include name="buyGermShieldForHomeAsBungalow"/>
-          <include name="buyGermShieldForOtherFacility"/>
           <include name="init"/>
-          <include name="buyGermShieldElevatorService"/>
-          <include name="buyGermShieldForAutomobileAsSedan"/>
+          <include name="serachForVehicleValidationAsLoggedInUser"/>
         </methods>
-      </class> <!-- com.droom.automation.droomweb.droomweb_prod.BuyGermShieldServiceTest -->
+      </class> <!-- com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

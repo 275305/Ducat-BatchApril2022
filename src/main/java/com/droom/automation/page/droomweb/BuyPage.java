@@ -38,7 +38,6 @@ public class BuyPage extends SeleniumWrapper
 //	private final static By Enter_For_Search_Model=By.xpath("//input[@id='search_make_model']");
 //	private final static By Select_Model_As_Hyundai=By.xpath("//label[text()='Hyundai']");
 	private final static By Select_Vehicle_New_Tab=By.xpath("(//div[@id='search_results']//img)[1]");
-	private final static By Verify_Token_Amount=By.xpath("//button[@id='cart_add']//span");
 //	private final static By Verify_Token_Amount_Popup=By.xpath("//span[text()='₹20,892']");
 //	private final static By Select_Car_As_Vehicle_Catogory=By.xpath("//label[text()='Car']");
 //	private final static By Select_Motorcycle_Bike_As_Vehicle_Catogory=By.xpath("//label[text()='Motorcycle/bike']");
@@ -81,36 +80,16 @@ public class BuyPage extends SeleniumWrapper
 		sleep(3000);
 		executeClickOnElement(By.xpath("//label[text()='Manual']"));
 		sleep(3000);
-//		executeClickOnElement(Select_Make_And_Model);
-//		sleep(2000);
-//		enterTextboxDetails(findElement(Enter_For_Search_Model), "Hyundai");
-//		sleep(2000);
-//		executeClickOnElement(Select_Model_As_Hyundai);
-//		sleep(2000);
-//		executeClickOnElement(Click_On_Apply);
 		executeClickOnElement(Click_On_View_Listing);
 		waitForPageLoad();
-		executeClickOnElement(By.xpath("//img[@alt='Hyundai Creta 1.6 E Petrol 2019']"));
+		executeClickOnElement(By.xpath("//img[@alt='Hyundai Creta 1.6 S 2016']"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
-		verifyByText(Verify_Token_Amount, "Pay Fully Refundable Token Amount - ₹ 20,892");
-		executeClickOnElement(Pay_Fully_Refundable_Token_Amount);
-		executeClickOnElement(Click_Proceed);
-		//verifyByText(Verify_Token_Amount_Popup, "₹20,892");
-		//verifyByWebElements(Verify_Token_Amount, Verify_Token_Amount_Popup);
-		executeClickOnElement(Proceed_To_Payment);
-		System.out.println(WebDriverFactory.getDriver().findElement(By.xpath("//strong[text()='₹  20,892']")).getText());
-		verifyByText(By.xpath("//strong[text()='₹  20,892']"), "₹ 20,892");
-		paymentpage.proceedToCheckout();
-		paymentpage.paymentViaNetBanking();
-		executeClickOnElement(Select_Vehicle_New_Tab);
-		switchToWindow("New Tab");
-		waitForPageLoad();
-		verifyByText(By.xpath("//div[text()='₹28020']"), "₹28020");
+		verifyByText(By.xpath("//div[text()='₹25500']"), "₹25500");
 		executeClickOnElement(Pay_Fully_Refundable_Token_Amount);
 		executeClickOnElement(Click_Proceed);
 		executeClickOnElement(Proceed_To_Payment);
-		verifyByText(By.xpath("//strong[text()='₹  28,020']"), "₹ 28,020");
+		verifyByText(By.xpath("//strong[text()='₹  25,500']"), "₹ 25,500");
 		PaymentPage paymentpage=new PaymentPage();
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
@@ -160,13 +139,10 @@ public class BuyPage extends SeleniumWrapper
 		executeClickOnElement(Click_Send_OTP);
 		sleep(2000);
 		executeClickOnElement(Click_Submit_Button);
-		paymentpage.proceedToCheckout();
-		paymentpage.paymentViaNetBanking();
 		waitForPageLoad();
 		verifyByContains(By.xpath("//strong[text()='₹  999']"), "₹ 999");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
-		
 	}
 	
 	public void buyAutomobileServicesViaJumpstart(String username, String password)
@@ -183,8 +159,6 @@ public class BuyPage extends SeleniumWrapper
 		sleep(3000);
 		executeClickOnElement(Click_Checkout_Now);
 		waitForPageLoad();
-		paymentpage.proceedToCheckout();
-		paymentpage.paymentViaNetBanking();
 		verifyByContains(By.xpath("//strong[text()='₹  999']"), "₹ 999");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
@@ -204,8 +178,6 @@ public class BuyPage extends SeleniumWrapper
 		executeClickOnElement(Click_Send_OTP);
 		sleep(2000);
 		executeClickOnElement(Click_Submit_Button);
-		paymentpage.proceedToCheckout();
-		paymentpage.paymentViaNetBanking();
 		waitForPageLoad();
 		verifyByContains(By.xpath("//strong[text()='₹  999']"), "₹ 999");
 		paymentpage.proceedToCheckout();

@@ -45,18 +45,15 @@ public class SearchFeaturePage extends SeleniumWrapper
 		waitForPageLoad();
 	//	executeClickOnElement(Click_To_Deselect_Used);
 		sleep(5000);
-		executeClickOnElement(By.xpath("(//img[@alt='Ford Figo Trend 1.5L TDCi 2019'])[1]"));
-		executeClickOnElement(By.xpath("//img[@alt='BMW X3 XDRIVE 20D 2013']"));
+		executeClickOnElement(By.xpath("//img[@alt='BMW X3 xDrive 20d Expedition 2015']"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
-		verifyByContains(By.xpath("//div[text()='₹45000']"), "₹45000");
+		verifyByContains(By.xpath("//div[text()='₹78000']"), "₹78000");
 		executeClickOnElement(Pay_Fully_Refundable_Token_Amount);
 		executeClickOnElement(Click_Proceed);
 		executeClickOnElement(Proceed_To_Payment);
 		waitForPageLoad();
-		String finalAmount = WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  15,696']")).getText();
-//		Assert.assertTrue(initialAmount.contains(finalAmount));
-		verifyByContains(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  45,000']"), "₹ 45,000");
+		verifyByContains(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  78,000']"), "₹ 78,000");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
 	}
@@ -67,19 +64,15 @@ public class SearchFeaturePage extends SeleniumWrapper
 		loginpage.loginValidationForIndividualAccount(username, password);
 		homepage.enterSearchBox("bike");
 		waitForPageLoad();
-		executeClickOnElement(By.xpath("(//img[@alt='Hero HF Deluxe Eco 100cc 2019'])[1]"));
-		executeClickOnElement(By.xpath("//img[@alt='Royal Enfield Thunderbird 350cc 2015']"));
+		executeClickOnElement(By.xpath("//img[@alt='Ducati Scrambler 1100 2020']"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
-		verifyByContains(By.xpath("//div[text()='₹3300']"), "₹3300");
+		verifyByContains(By.xpath("//div[text()='₹41250']"), "₹41250");
 		executeClickOnElement(Pay_Fully_Refundable_Token_Amount);
 		executeClickOnElement(Click_Proceed);
 		executeClickOnElement(Proceed_To_Payment);
 		waitForPageLoad();
-		String finalAmount = WebDriverFactory.getDriver().findElement(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  1,665']")).getText();
-		System.out.println(finalAmount);
-	//	Assert.assertTrue(initialAmount.contains(finalAmount));
-		verifyByContains(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  3,300']"), "₹ 3,300");
+		verifyByContains(By.xpath("//label[text()='Pay Online']/parent::div/strong[text()='₹  41,250']"), "₹ 41,250");
 		paymentpage.proceedToCheckout();
 		paymentpage.paymentViaNetBanking();
 	}
@@ -88,18 +81,15 @@ public class SearchFeaturePage extends SeleniumWrapper
 	{
 		homepage.enterSearchBox("Scooty");
 		waitForPageLoad();
-		executeClickOnElement(By.xpath("(//img[@alt='Ved Motors Scoopy 60V Standard 2019'])[1]"));
 		executeClickOnElement(By.xpath("(//img[@alt='TVS Scooty Pep+ 90cc 2012'])[1]"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
-		verifyByContains(By.xpath("//div[text()='₹1125']"), "₹1125");
+		verifyByContains(By.xpath("//div[text()='₹900']"), "₹900");
 		executeClickOnElement(Pay_Fully_Refundable_Token_Amount);
 		executeClickOnElement(Click_On_Home_Delivery);
 		executeClickOnElement(Proceed_To_Payment);
 		waitForPageLoad();
-		String finalAmount = WebDriverFactory.getDriver().findElement(By.xpath("//div[@class='payAmount']//strong[text()='₹  1,820']")).getText();
-//		Assert.assertTrue(initialAmount.contains(finalAmount));
-		verifyByContains(By.xpath("//div[@class='payAmount']//strong[text()='₹  1,125']"), "₹ 1,125");
+		verifyByContains(By.xpath("//div[@class='payAmount']//strong[text()='₹  900']"), "₹ 900");
 		paymentpage.proceedToCheckoutWithoutLoggedIn();
 		loginpage.loginAtCheckout(username, password);
 		paymentpage.continueToAddressToContinueToPayment();
@@ -110,21 +100,18 @@ public class SearchFeaturePage extends SeleniumWrapper
 	{
 		homepage.enterSearchBox("Scooty");
 		waitForPageLoad();
-		executeClickOnElement(By.xpath("(//img[@alt='Ved Motors Scoopy 60V Standard 2019'])[1]"));
 		executeClickOnElement(By.xpath("(//img[@alt='TVS Scooty Pep+ 90cc 2012'])[1]"));
 		switchToWindow("New Tab");
 		waitForPageLoad();
-		verifyByContains(By.xpath("//div[text()='₹1125']"), "₹1125");
+		verifyByContains(By.xpath("//div[text()='₹900']"), "₹900");
 		executeClickOnElement(Pay_Fully_Refundable_Token_Amount);
 		executeClickOnElement(Click_On_Home_Delivery);
 		executeClickOnElement(Proceed_To_Payment);
 		waitForPageLoad();
-		String finalAmount = WebDriverFactory.getDriver().findElement(By.xpath("//div[@class='payAmount']//strong[text()='₹  1,820']")).getText();
-//		Assert.assertTrue(initialAmount.contains(finalAmount));
-		verifyByContains(By.xpath("//div[@class='payAmount']//strong[text()='₹  1,125']"), "₹ 1,125");
+		verifyByContains(By.xpath("//div[@class='payAmount']//strong[text()='₹  900']"), "₹ 900");
 		paymentpage.proceedToCheckoutWithoutLoggedIn();
 		loginpage.loginViaFacebookAtCheckout();
-		sleep(8000);
+		sleep(5000);
 		paymentpage.continueToAddressToContinueToPayment();
 		paymentpage.paymentViaNetBanking();
 	}
