@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-03T19:05:33 IST" name="Default suite" finished-at="2020-12-03T19:09:55 IST" duration-ms="262629">
+  <suite started-at="2020-12-04T16:33:26 IST" name="Default suite" finished-at="2020-12-04T16:34:54 IST" duration-ms="88442">
     <groups>
     </groups>
-    <test started-at="2020-12-03T19:05:33 IST" name="Default test" finished-at="2020-12-03T19:09:55 IST" duration-ms="262629">
-      <class name="com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:05:32 IST" name="beforeSuite" finished-at="2020-12-03T19:05:33 IST" duration-ms="57" status="PASS">
+    <test started-at="2020-12-04T16:33:26 IST" name="Default test" finished-at="2020-12-04T16:34:54 IST" duration-ms="88442">
+      <class name="com.droom.automation.droomweb.droomweb_qa.NewVehicleTest">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b]" started-at="2020-12-04T16:33:26 IST" name="beforeSuite" finished-at="2020-12-04T16:33:26 IST" duration-ms="43" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,87 +18,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:05:33 IST" name="beforeTest" finished-at="2020-12-03T19:05:33 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b]" started-at="2020-12-04T16:33:26 IST" name="beforeTest" finished-at="2020-12-04T16:33:26 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:05:33 IST" name="init" finished-at="2020-12-03T19:05:44 IST" duration-ms="10942" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b]" started-at="2020-12-04T16:33:26 IST" name="init" finished-at="2020-12-04T16:33:44 IST" duration-ms="18701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="serachForVehicleValidationAsLoggedInUser()[pri:1, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:05:44 IST" name="serachForVehicleValidationAsLoggedInUser" finished-at="2020-12-03T19:06:45 IST" duration-ms="61415" status="PASS">
+        <test-method signature="validateCarAsHatchback()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b]" started-at="2020-12-04T16:33:44 IST" name="validateCarAsHatchback" finished-at="2020-12-04T16:34:54 IST" duration-ms="69702" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- serachForVehicleValidationAsLoggedInUser -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:06:45 IST" name="afterMethod" finished-at="2020-12-03T19:06:45 IST" duration-ms="5" status="PASS">
+        </test-method> <!-- validateCarAsHatchback -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b]" started-at="2020-12-04T16:34:54 IST" name="afterMethod" finished-at="2020-12-04T16:34:54 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=serachForVehicleValidationAsLoggedInUser status=SUCCESS method=SearchFeatureTest.serachForVehicleValidationAsLoggedInUser()[pri:1, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c] output={null}]]]>
+                <![CDATA[[TestResult name=validateCarAsHatchback status=SUCCESS method=NewVehicleTest.validateCarAsHatchback()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:06:45 IST" name="init" finished-at="2020-12-03T19:06:54 IST" duration-ms="9503" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method signature="serachForBikeValidationAsLoggedInUser()[pri:2, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:06:54 IST" name="serachForBikeValidationAsLoggedInUser" finished-at="2020-12-03T19:07:47 IST" duration-ms="52445" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- serachForBikeValidationAsLoggedInUser -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:07:47 IST" name="afterMethod" finished-at="2020-12-03T19:07:47 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=serachForBikeValidationAsLoggedInUser status=SUCCESS method=SearchFeatureTest.serachForBikeValidationAsLoggedInUser()[pri:2, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:07:47 IST" name="init" finished-at="2020-12-03T19:07:58 IST" duration-ms="10685" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method signature="serachForScooterValidationAsLoggedInUserAtCheckout()[pri:3, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:07:58 IST" name="serachForScooterValidationAsLoggedInUserAtCheckout" finished-at="2020-12-03T19:08:36 IST" duration-ms="38173" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- serachForScooterValidationAsLoggedInUserAtCheckout -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:08:36 IST" name="afterMethod" finished-at="2020-12-03T19:08:36 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=serachForScooterValidationAsLoggedInUserAtCheckout status=SUCCESS method=SearchFeatureTest.serachForScooterValidationAsLoggedInUserAtCheckout()[pri:3, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:08:36 IST" name="init" finished-at="2020-12-03T19:08:48 IST" duration-ms="11972" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method signature="serachForVehicleValidationViaFacebookLogin()[pri:4, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:08:48 IST" name="serachForVehicleValidationViaFacebookLogin" finished-at="2020-12-03T19:09:55 IST" duration-ms="67422" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- serachForVehicleValidationViaFacebookLogin -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c]" started-at="2020-12-03T19:09:55 IST" name="afterMethod" finished-at="2020-12-03T19:09:55 IST" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=serachForVehicleValidationViaFacebookLogin status=SUCCESS method=SearchFeatureTest.serachForVehicleValidationViaFacebookLogin()[pri:4, instance:com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest@6d3a388c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.droom.automation.droomweb.droomweb_prod.SearchFeatureTest -->
+      </class> <!-- com.droom.automation.droomweb.droomweb_qa.NewVehicleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

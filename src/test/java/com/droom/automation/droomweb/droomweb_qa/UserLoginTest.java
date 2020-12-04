@@ -7,16 +7,11 @@ import com.droom.automation.page.droomweb.LoginPage;
 
 public class UserLoginTest extends AbstractBaseTest
 {
-	
-	String filepath;
 	ExcelUtilities eu;
-	LoginPage loginpage;
 	
 	public UserLoginTest()
 	{
-		this.filepath="C:/Users/Honey Maurya/Desktop/QA Automation TestData.xlsx";
-		this.eu=new ExcelUtilities(filepath);
-		loginpage = new LoginPage();
+		this.eu=new ExcelUtilities("C:/Users/Honey Maurya/Desktop/QA Automation TestData.xlsx");
 	}
 	
 	
@@ -25,8 +20,8 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("LoginTest", 1, 1);
 		String password = eu.readData("LoginTest", 1, 2);
-		loginpage.enterLoginPage();
-		loginpage.loginValidationForIndividualAccount(username,password);
+		LoginPage.enterLoginPage();
+		LoginPage.loginValidationForIndividualAccount(username,password);
 	}
 	
 	@Test(priority=2)
@@ -34,8 +29,8 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("LoginTest", 2, 1);
 		String password = eu.readData("LoginTest", 2, 2);
-		loginpage.enterLoginPage();
-		loginpage.invalidLoginValidation(username,password);
+		LoginPage.enterLoginPage();
+		LoginPage.invalidLoginValidation(username,password);
 	}
 	
 	@Test(priority=3)
@@ -43,8 +38,8 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("LoginTest", 3, 1);
 		String password = eu.readData("LoginTest", 3, 2);
-		loginpage.enterLoginPage();
-		loginpage.invalidLoginValidation(username,password);
+		LoginPage.enterLoginPage();
+		LoginPage.invalidLoginValidation(username,password);
 	}
 	
 	@Test(priority=4)
@@ -52,8 +47,8 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("LoginTest", 4, 1);
 		System.out.println(username);
-		loginpage.enterLoginPage();
-		loginpage.loginValidationByOTPForIndividualAccount(username);
+		LoginPage.enterLoginPage();
+		LoginPage.loginValidationByOTPForIndividualAccount(username);
 	}
 	
 	@Test(priority=5)
@@ -61,8 +56,8 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("LoginTest", 5, 1);
 		String otp = eu.readData("LoginTest", 5, 3);
-		loginpage.enterLoginPage();
-		loginpage.invalidOTPloginValidation(username, otp);
+		LoginPage.enterLoginPage();
+		LoginPage.invalidOTPloginValidation(username, otp);
 	}
 
 	
@@ -71,8 +66,8 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("LoginTest", 8, 1);
 		String password = eu.readData("LoginTest", 8, 2);
-		loginpage.enterLoginPage();
-		loginpage.loginValidationForProSellerAccount(username,password);
+		LoginPage.enterLoginPage();
+		LoginPage.loginValidationForProSellerAccount(username,password);
 	}
 	
 	
@@ -81,8 +76,8 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("LoginTest", 9, 1);
 		String password = eu.readData("LoginTest", 9, 2);
-		loginpage.enterLoginPage();
-		loginpage.invalidLoginValidation(username,password);
+		LoginPage.enterLoginPage();
+		LoginPage.invalidLoginValidation(username,password);
 	}
 	
 	@Test(priority=8)
@@ -90,8 +85,8 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("LoginTest", 10, 1);
 		String password = eu.readData("LoginTest", 10, 2);
-		loginpage.enterLoginPage();
-		loginpage.invalidLoginValidation(username,password);
+		LoginPage.enterLoginPage();
+		LoginPage.invalidLoginValidation(username,password);
 	}
 	
 	
@@ -100,8 +95,8 @@ public class UserLoginTest extends AbstractBaseTest
 	public void loginAsProSellerViaOTP() throws Exception
 	{
 		String username = eu.readData("LoginTest", 11, 1);
-		loginpage.enterLoginPage();
-		loginpage.loginValidationForProSellerByOTP(username);
+		LoginPage.enterLoginPage();
+		LoginPage.loginValidationForProSellerByOTP(username);
 	}
 	
 	@Test(priority=10)
@@ -109,8 +104,8 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("LoginTest", 12, 1);
 		String otp = eu.readData("LoginTest", 12, 3);
-		loginpage.enterLoginPage();
-		loginpage.invalidOTPloginValidation(username,otp);
+		LoginPage.enterLoginPage();
+		LoginPage.invalidOTPloginValidation(username,otp);
 	}
 
 	@Test(priority = 11)
@@ -118,6 +113,6 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("FranchiseSheet", 11, 3);
 		String password = eu.readData("FranchiseSheet", 11, 5);
-		loginpage.franchiseLoginValidation(username,password);
+		LoginPage.franchiseLoginValidation(username,password);
 	}
 }

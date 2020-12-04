@@ -37,14 +37,14 @@ import java.util.concurrent.TimeUnit;
 public class SeleniumWrapper extends JavaLibrary
 {
 
-    private int timeout = 60;
+    private static int timeout = 60;
     private static final Logger LOG = LoggerFactory.getLogger(SeleniumWrapper.class);
 
-    public boolean isPageLoadComplete(final WebDriver driverObj) {
+    public static boolean isPageLoadComplete(final WebDriver driverObj) {
         return ((JavascriptExecutor)driverObj).executeScript("return document.readyState").equals("complete");
     }
 
-    public void waitForPageLoad(final WebDriver driver) {
+    public static void waitForPageLoad(final WebDriver driver) {
 
         int timeLimitInSec = timeout;
 
@@ -66,13 +66,13 @@ public class SeleniumWrapper extends JavaLibrary
         }
     }
 
-    public WebDriverWait getWebDriverWait() {
+    public static WebDriverWait getWebDriverWait() {
         final WebDriver webDriver = WebDriverFactory.getDriver();
         WebDriverWait wait = new WebDriverWait(webDriver, timeout);
         return wait;
     }
 
-    public void sleep(long milliseconds){
+    public static void sleep(long milliseconds){
         try {
             Thread.sleep(milliseconds);
         }
@@ -81,7 +81,7 @@ public class SeleniumWrapper extends JavaLibrary
         }
     }
 
-    public WebElement findElement(final By by) 
+    public static WebElement findElement(final By by) 
     {
         return getWebDriverWait().until(ExpectedConditions.presenceOfElementLocated(by));
     }
@@ -147,7 +147,7 @@ public class SeleniumWrapper extends JavaLibrary
         });
     }
 
-    public void waitForElementTobePresent(final By locator) {
+    public static void waitForElementTobePresent(final By locator) {
         final long startTime = System.currentTimeMillis();
         getWebDriverWait().until(ExpectedConditions.presenceOfElementLocated(locator));
         final long endTime = System.currentTimeMillis();
@@ -171,7 +171,7 @@ public class SeleniumWrapper extends JavaLibrary
         });
     }
 
-    public void enterTextboxDetails(final WebElement webelement, final String keysToSend) 
+    public static void enterTextboxDetails(final WebElement webelement, final String keysToSend) 
     {
         webelement.clear();
         webelement.sendKeys(keysToSend);
@@ -276,7 +276,7 @@ public class SeleniumWrapper extends JavaLibrary
         executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
 
-    public void executeClickOnElement(final By locator)
+    public static void executeClickOnElement(final By locator)
     {
         ((JavascriptExecutor)WebDriverFactory.getDriver() ).executeScript("arguments[0].click();", findElement(locator));
     }
@@ -311,7 +311,7 @@ public class SeleniumWrapper extends JavaLibrary
         WebDriverFactory.getDriver().switchTo().window(windowHandle);
     }
 
-    public void switchToWindow(final String title)
+    public static void switchToWindow(final String title)
     {
         final WebDriver driver = WebDriverFactory.getDriver();
         for (final String windowHandle : driver.getWindowHandles())
@@ -324,7 +324,7 @@ public class SeleniumWrapper extends JavaLibrary
         }
     }
 
-    public void waitForPageLoad()
+    public static void waitForPageLoad()
     {
         waitForPageLoad(WebDriverFactory.getDriver());
     }
@@ -334,7 +334,7 @@ public class SeleniumWrapper extends JavaLibrary
     	return  WebDriverFactory.getDriver().findElement(by).getText();
     }
     
-    public void verifyByText(final By by, String text)
+    public static void verifyByText(final By by, String text)
 	{
 		String actual_text = WebDriverFactory.getDriver().findElement(by).getText();
 		String expected_Text = text;
@@ -342,7 +342,7 @@ public class SeleniumWrapper extends JavaLibrary
 		System.out.println(actual_text+" is displaying hence verified");
 	}
 	
-	public void verifyByContains(final By by, String text)
+	public static void verifyByContains(final By by, String text)
 	{
 		String actual_text = WebDriverFactory.getDriver().findElement(by).getText();
 		Assert.assertTrue(actual_text.contains(text));
@@ -423,7 +423,7 @@ public class SeleniumWrapper extends JavaLibrary
 		js.executeScript(jscode); 
 	}
 	
-	public void scrolling(String path)
+	public static void scrolling(String path)
 	{
 		String jsCode = "arguments[0].scrollIntoView";
 		String xpath = path;

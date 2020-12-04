@@ -16,7 +16,6 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		this.filepath="C:/Users/Honey Maurya/Desktop/Prod Automation Test Data.xlsx";
 		this.eu=new ExcelUtilities(filepath);
-		loginpage = new LoginPage();
 	}
 	
 	@Test(priority=1)
@@ -24,8 +23,8 @@ public class UserLoginTest extends AbstractBaseTest
 	{
 		String username = eu.readData("LoginTest", 1, 1);
 		String password = eu.readData("LoginTest", 1, 2);
-		loginpage.enterLoginPage();
-		loginpage.loginValidationForIndividualAccount(username,password);
+		LoginPage.enterLoginPage();
+		LoginPage.loginValidationForIndividualAccount(username,password);
 	}
 	
 	@Test(priority=2)

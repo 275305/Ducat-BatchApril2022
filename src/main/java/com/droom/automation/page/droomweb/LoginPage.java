@@ -1,9 +1,6 @@
 package com.droom.automation.page.droomweb;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import com.droom.automation.lib.DataBaseDemo;
-import com.droom.automation.lib.SeleniumDataBaseTest;
 import com.droom.automation.lib.SeleniumWrapper;
 import com.droom.automation.lib.WebDriverFactory;
 
@@ -55,7 +52,7 @@ public class LoginPage extends SeleniumWrapper
 		executeClickOnElement(Login_Icon);
 	}
 	
-	public void goToHome()
+	public static void goToHome()
 	{
 		verifyByText(Click_On_My_Account, "My Account");
 		sleep(2000);
@@ -64,13 +61,13 @@ public class LoginPage extends SeleniumWrapper
 		executeClickOnElement(Click_To_Close_To_Do_PopUp);
 	}
 	
-	public void enterLoginPage()
+	public static void enterLoginPage()
 	{
 		executeClickOnElement(Login_Icon);
 		executeClickOnElement(Login_Button);
 	}
 
-	public void loginValidationForIndividualAccount(String username, String password)
+	public static void loginValidationForIndividualAccount(String username, String password)
 	{
 		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
 		executeClickOnElement(Login_Via_Password);
@@ -80,7 +77,7 @@ public class LoginPage extends SeleniumWrapper
 		executeClickOnElement(Login_Button_To_Home);
 	}
 	
-	public void invalidLoginValidation(String username, String password)
+	public static void invalidLoginValidation(String username, String password)
 	{
 		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
 		executeClickOnElement(Login_Via_Password);
@@ -92,7 +89,7 @@ public class LoginPage extends SeleniumWrapper
 	}
 	
 	
-	public void loginValidationByOTPForIndividualAccount(String username) throws Exception
+	public static void loginValidationByOTPForIndividualAccount(String username) throws Exception
 	{
 		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
 		sleep(3000);
@@ -111,7 +108,7 @@ public class LoginPage extends SeleniumWrapper
 	}
 	
 	
-	public void invalidOTPloginValidation(String username, String otp)
+	public static void invalidOTPloginValidation(String username, String otp)
 	{
 		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
 		sleep(3000);
@@ -126,7 +123,7 @@ public class LoginPage extends SeleniumWrapper
 	}
 	
 	
-	public void loginValidationForProSellerAccount(String username, String password)
+	public static void loginValidationForProSellerAccount(String username, String password)
 	{
 		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
 		executeClickOnElement(Login_Via_Password);
@@ -138,7 +135,7 @@ public class LoginPage extends SeleniumWrapper
 		verifyByText(Verify_Text_For_ProSeller_Registration, "Register As a Pro-Seller");
 	}
 	
-	public void loginValidationForProSellerByOTP(String username) throws Exception
+	public static void loginValidationForProSellerByOTP(String username) throws Exception
 	{
 		enterTextboxDetails(findElement(Enter_MAIL_ID), username);
 		sleep(3000);
@@ -155,7 +152,7 @@ public class LoginPage extends SeleniumWrapper
 		verifyByText(Verify_Text_For_ProSeller_Registration, "Register As a Pro-Seller");
 	}
 	
-	public void loginValidationByForgotYourPassword()
+	public static void loginValidationByForgotYourPassword()
 	{
 		enterLoginPage();
 		executeClickOnElement(Click_On_Forgot_Your_Password);
@@ -165,14 +162,14 @@ public class LoginPage extends SeleniumWrapper
 		sleep(3000);
 	}
 	
-	public void goToBuyViaMyAccount(String username, String password)
+	public static void goToBuyViaMyAccount(String username, String password)
 	{
 		enterLoginPage();
 		loginValidationForIndividualAccount(username, password);
 		executeClickOnElement(Go_To_Buy_Via_My_Account_Page);
 	}
 	
-	public void loginAtCheckout(String username, String password)
+	public static void loginAtCheckout(String username, String password)
 	{
 		enterTextboxDetails(findElement(Enter_Mail_At_Checkout), username);
 		executeClickOnElement(Click_Login_Via_Password_At_Checkout);
@@ -181,7 +178,7 @@ public class LoginPage extends SeleniumWrapper
 		
 	}
 	
-	public void loginViaFacebookAtCheckout()
+	public static void loginViaFacebookAtCheckout()
 	{
 		executeClickOnElement(Click_Fb_Link_At_Checkout);
 		sleep(2000);
@@ -195,7 +192,7 @@ public class LoginPage extends SeleniumWrapper
 		WebDriverFactory.getDriver().switchTo().window(parent);
 	}
 
-	 public void franchiseLoginValidation(String username, String password)
+	 public static void franchiseLoginValidation(String username, String password)
 	    {
 	    	enterLoginPage();
 	    	loginValidationForIndividualAccount(username, password);
