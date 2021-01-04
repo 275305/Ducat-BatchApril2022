@@ -14,14 +14,14 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtilities 
 {
-    String filepath;
+    static String filepath;
     
     public ExcelUtilities(String filepath)    
     {
     	this.filepath=filepath;	
     }
 
-	public String readData(String sheetName,int row,int cell)
+	public static String readData(String sheetName,int row,int cell)
 	{
 		String value=null;
 		

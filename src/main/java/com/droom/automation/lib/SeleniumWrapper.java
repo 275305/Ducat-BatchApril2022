@@ -254,7 +254,7 @@ public class SeleniumWrapper extends JavaLibrary
         ((JavascriptExecutor)WebDriverFactory.getDriver()).executeScript(javaScript);
     }
 
-    public void executeScript(final String javaScript, final Object... object) 
+    public static void executeScript(final String javaScript, final Object... object) 
     {
         ((JavascriptExecutor)WebDriverFactory.getDriver()).executeScript(javaScript, object);
     }
@@ -267,11 +267,11 @@ public class SeleniumWrapper extends JavaLibrary
         ((JavascriptExecutor)WebDriverFactory.getDriver()).executeScript("window.scrollBy(0, " + -(pixels) + ")", "");
     }
 
-    public void executeScrollDownScript(final int pixels) {
+    public static void executeScrollDownScript(final int pixels) {
         ((JavascriptExecutor)WebDriverFactory.getDriver()).executeScript("window.scrollBy(0, " + pixels + ")");
     }
 
-    public void executeScrollIntoViewScript(final WebElement webElement) 
+    public static void executeScrollIntoViewScript(final By webElement) 
     {
         executeScript("arguments[0].scrollIntoView(true);", webElement);
     }

@@ -11,7 +11,7 @@ public class UserLoginTest extends AbstractBaseTest
 	
 	public UserLoginTest()
 	{
-		this.eu=new ExcelUtilities("C:/Users/Honey Maurya/Desktop/QA Automation TestData.xlsx");
+		this.eu=new ExcelUtilities("D:/QA Automation TestData.xlsx");
 	}
 	
 	

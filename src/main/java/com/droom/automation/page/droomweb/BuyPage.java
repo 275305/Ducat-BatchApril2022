@@ -64,7 +64,7 @@ public class BuyPage extends SeleniumWrapper
 	}
 	
 	
-	public void shoppingForVehiclesAsCoupeCars(String username, String password, String bodytype) throws InterruptedException
+	public void shoppingForVehiclesAsCoupeCars(String username, String password) throws InterruptedException
 	{
 		loginpage.goToBuyViaMyAccount(username, password);
 		waitForPageLoad();
@@ -74,7 +74,7 @@ public class BuyPage extends SeleniumWrapper
 		sleep(3000);
 		selectVehicleCategoryAsAllCars();
 		sleep(3000);
-		selectBodyType(bodytype);
+		//selectBodyType(bodytype);
 		sleep(3000);
 		executeClickOnElement(By.xpath("//label[text()='Petrol']"));
 		sleep(3000);

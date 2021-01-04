@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-04T16:33:26 IST" name="Default suite" finished-at="2020-12-04T16:34:54 IST" duration-ms="88442">
+  <suite name="Default suite" duration-ms="138112" started-at="2020-12-28T10:54:43Z" finished-at="2020-12-28T10:57:01Z">
     <groups>
     </groups>
-    <test started-at="2020-12-04T16:33:26 IST" name="Default test" finished-at="2020-12-04T16:34:54 IST" duration-ms="88442">
-      <class name="com.droom.automation.droomweb.droomweb_qa.NewVehicleTest">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b]" started-at="2020-12-04T16:33:26 IST" name="beforeSuite" finished-at="2020-12-04T16:33:26 IST" duration-ms="43" status="PASS">
+    <test name="Default test" duration-ms="138112" started-at="2020-12-28T10:54:43Z" finished-at="2020-12-28T10:57:01Z">
+      <class name="com.droom.automation.droomweb.droomweb_qa.GiftCertificateTest">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.GiftCertificateTest@64bf3bbf]" name="beforeSuite" is-config="true" duration-ms="27" started-at="2020-12-28T16:24:43Z" finished-at="2020-12-28T16:24:43Z">
           <params>
             <param index="0">
               <value>
@@ -18,30 +18,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b]" started-at="2020-12-04T16:33:26 IST" name="beforeTest" finished-at="2020-12-04T16:33:26 IST" duration-ms="10" status="PASS">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.GiftCertificateTest@64bf3bbf]" name="beforeTest" is-config="true" duration-ms="11" started-at="2020-12-28T16:24:43Z" finished-at="2020-12-28T16:24:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b]" started-at="2020-12-04T16:33:26 IST" name="init" finished-at="2020-12-04T16:33:44 IST" duration-ms="18701" status="PASS">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.GiftCertificateTest@64bf3bbf]" name="init" is-config="true" duration-ms="26656" started-at="2020-12-28T16:24:43Z" finished-at="2020-12-28T16:25:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="validateCarAsHatchback()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b]" started-at="2020-12-04T16:33:44 IST" name="validateCarAsHatchback" finished-at="2020-12-04T16:34:54 IST" duration-ms="69702" status="PASS">
+        <test-method status="PASS" signature="buyCarAsLoggedInUser()[pri:1, instance:com.droom.automation.droomweb.droomweb_qa.GiftCertificateTest@64bf3bbf]" name="buyCarAsLoggedInUser" duration-ms="111429" started-at="2020-12-28T16:25:10Z" finished-at="2020-12-28T16:27:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCarAsHatchback -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b]" started-at="2020-12-04T16:34:54 IST" name="afterMethod" finished-at="2020-12-04T16:34:54 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- buyCarAsLoggedInUser -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.GiftCertificateTest@64bf3bbf]" name="afterMethod" is-config="true" duration-ms="4" started-at="2020-12-28T16:27:01Z" finished-at="2020-12-28T16:27:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateCarAsHatchback status=SUCCESS method=NewVehicleTest.validateCarAsHatchback()[pri:0, instance:com.droom.automation.droomweb.droomweb_qa.NewVehicleTest@272ed83b] output={null}]]]>
+                <![CDATA[[TestResult name=buyCarAsLoggedInUser status=SUCCESS method=GiftCertificateTest.buyCarAsLoggedInUser()[pri:1, instance:com.droom.automation.droomweb.droomweb_qa.GiftCertificateTest@64bf3bbf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.droom.automation.droomweb.droomweb_qa.NewVehicleTest -->
+      </class> <!-- com.droom.automation.droomweb.droomweb_qa.GiftCertificateTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

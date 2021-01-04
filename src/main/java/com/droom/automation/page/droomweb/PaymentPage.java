@@ -53,7 +53,7 @@ public class PaymentPage extends SeleniumWrapper
 		waitForPageLoad();
 	}
 	
-	public void paymendMethod()
+	public static void paymendMethod()
 	{
 		waitForPageLoad();
 		WebDriverFactory.getDriver().switchTo().frame(0);
